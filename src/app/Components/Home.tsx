@@ -88,15 +88,17 @@ export default function ServicesPage() {
         Real brands. Lasting impact. Proven stories.
       </p>
     </div>
-    {/* Right “image” card instead of video */}
-<div className="relative">
+    <div className="relative">
   <div className="rounded-2xl overflow-hidden border border-gray-800 bg-black/40 shadow-xl">
     <div className="relative aspect-[16/12] sm:aspect-[16/10]">
-      <Image 
-        src={man}  // 👈 Use your static image path here
-        alt="BMS Operator at work" 
-        fill 
-        className="object-cover" 
+      <Image
+        src={man} // 👈 Your static image
+        alt="BMS Operator at work"
+        fill
+        className="object-cover"
+        priority // ✅ Ensures it's fetched early (improves LCP)
+        loading="eager" // ✅ Prevents lazy loading for LCP image
+        fetchPriority="high" // ✅ Gives browser hint for faster fetching
       />
     </div>
   </div>
