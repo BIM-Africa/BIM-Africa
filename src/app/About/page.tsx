@@ -237,9 +237,9 @@ export default function ServicesPage() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-10">
             {/* Excellence */}
-            <div className="rounded-2xl border border-[#ff1f00]/20 p-8 bg-black/40 text-left">
-              <div className="w-16 h-16 rounded-full bg-black/60 border border-[#ff1f00]/40 flex items-center justify-center mx-auto">
-                <ShieldCheck className="w-6 h-6 text-[#ff6f6f]" />
+            <div className="rounded-2xl border border-[#ff1f00] p-8 bg-black/40 text-left">
+              <div className="w-16 h-16 rounded-full bg-black/60 border border-[#ff1f00] flex items-center justify-center mx-auto">
+                <ShieldCheck className="w-6 h-6 text-[#ff1f00]" />
               </div>
               <h4 className="text-white text-xl mt-6 text-center">Excellence</h4>
               <p className="text-white text-center mt-4 text-sm">
@@ -249,9 +249,9 @@ export default function ServicesPage() {
             </div>
 
             {/* Integrity */}
-            <div className="rounded-2xl border border-[#ff1f00]/20 p-8 bg-black/40 text-left">
-              <div className="w-16 h-16 rounded-full bg-black/60 border border-[#ff1f00]/40 flex items-center justify-center mx-auto">
-                <Shield className="w-6 h-6 text-[#ff6f6f]" />
+            <div className="rounded-2xl border border-[#ff1f00] p-8 bg-black/40 text-left">
+              <div className="w-16 h-16 rounded-full bg-black/60 border border-[#ff1f00] flex items-center justify-center mx-auto">
+                <Shield className="w-6 h-6 text-[#ff1f00]" />
               </div>
               <h4 className="text-white text-xl mt-6 text-center">Integrity</h4>
               <p className="text-white text-center mt-4 text-sm">
@@ -261,9 +261,9 @@ export default function ServicesPage() {
             </div>
 
             {/* Client-Centricity */}
-            <div className="rounded-2xl border border-[#ff1f00]/20 p-8 bg-black/40 text-left">
-              <div className="w-16 h-16 rounded-full bg-black/60 border border-[#ff1f00]/40 flex items-center justify-center mx-auto">
-                <Globe className="w-6 h-6 text-[#ff6f6f]" />
+            <div className="rounded-2xl border border-[#ff1f00] p-8 bg-black/40 text-left">
+              <div className="w-16 h-16 rounded-full bg-black/60 border border-[#ff1f00] flex items-center justify-center mx-auto">
+                <Globe className="w-6 h-6 text-[#ff1f00]" />
               </div>
               <h4 className="text-white text-xl mt-6 text-center">
                 Client-Centricity
@@ -275,9 +275,9 @@ export default function ServicesPage() {
             </div>
 
             {/* Security & Trust */}
-            <div className="rounded-2xl border border-[#ff1f00]/20 p-8 bg-black/40 text-left">
-              <div className="w-16 h-16 rounded-full bg-black/60 border border-[#ff1f00]/40 flex items-center justify-center mx-auto">
-                <ShieldCheck className="w-6 h-6 text-[#ff6f6f]" />
+            <div className="rounded-2xl border border-[#ff1f00] p-8 bg-black/40 text-left">
+              <div className="w-16 h-16 rounded-full bg-black/60 border border-[#ff1f00] flex items-center justify-center mx-auto">
+                <ShieldCheck className="w-6 h-6 text-[#ff1f00]" />
               </div>
               <h4 className="text-white text-xl mt-6 text-center">
                 Security & Trust
