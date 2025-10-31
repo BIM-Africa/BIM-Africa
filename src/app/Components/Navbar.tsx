@@ -132,7 +132,7 @@ export default function Navbar() {
                     />
                     <motion.button
                       onClick={() => setShowMobileNav(false)}
-                      className="text-white hover:text-red-500 p-2"
+                      className="text-white hover:text-[#ff1f00] p-2"
                       aria-label="Close menu"
                       whileTap={{ scale: 0.92, rotate: 6 }}
                     >
@@ -158,8 +158,8 @@ export default function Navbar() {
                           onClick={() => setShowMobileNav(false)}
                           className={`flex-1 text-left text-lg font-medium ${
                             pathname === item.href
-                              ? "text-red-500"
-                              : "text-white hover:text-red-300"
+                              ? "text-[#ff1f00]"
+                              : "text-white hover:text-[#ff1f00]"
                           }`}
                         >
                           {item.name}
@@ -227,7 +227,7 @@ export default function Navbar() {
                 key={i}
                 href={item.href}
                 className={`wave-link relative font-medium text-base ${
-                  pathname === item.href ? "text-red-500" : "text-white"
+                  pathname === item.href ? "text-[#ff1f00]" : "text-white"
                 }`}
               >
                 {item.name}
@@ -258,7 +258,7 @@ export default function Navbar() {
               rel="noopener noreferrer"
               className="inline-block"
             >
-              <button className="text-red-500 border border-red-500 px-4 py-2 sm:px-6 sm:py-2 rounded-full text-xs sm:text-sm font-medium transition-all whitespace-nowrap hover:bg-red-500 hover:text-white">
+              <button className="text-[#ff1f00] border border-red-500 px-4 py-2 sm:px-6 sm:py-2 rounded-full text-xs sm:text-sm font-medium transition-all whitespace-nowrap hover:bg-red-500 hover:text-white">
                 Instant Quotation
               </button>
             </a>
@@ -268,7 +268,7 @@ export default function Navbar() {
               onClick={() => setLanguage(language === "EN" ? "FR" : "EN")}
               className="bg-white rounded-full p-1 sm:p-2 flex items-center space-x-1"
             >
-              <div className="w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-red-500 flex items-center justify-center">
+              <div className="w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-[#ff1f00] flex items-center justify-center">
                 <span className="text-white text-xs font-bold">+</span>
               </div>
               <span className="text-black text-xs sm:text-sm font-medium px-1 sm:px-2">
