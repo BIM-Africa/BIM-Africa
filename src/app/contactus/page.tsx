@@ -1,5 +1,7 @@
-"use client";
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
+"use client";
+
+
 declare global {
   interface Window {
     grecaptcha: any;
