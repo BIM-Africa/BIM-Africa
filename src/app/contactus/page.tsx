@@ -1,10 +1,10 @@
 "use client";
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 declare global {
   interface Window {
     grecaptcha: any;
   }
 }
-
 import React, { useState } from "react";
 import Image from "next/image";
 import {
