@@ -1,12 +1,14 @@
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-"use client";
+/* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable @typescript-eslint/no-explicit-any */
 
+"use client";
 
 declare global {
   interface Window {
     grecaptcha: any;
   }
 }
+
 import React, { useState } from "react";
 import Image from "next/image";
 import {
