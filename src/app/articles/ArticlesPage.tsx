@@ -7,6 +7,23 @@ import Image from 'next/image';
 import Navbar from '../Components/Navbar';
 import { useSearchParams } from 'next/navigation';
 import Footer from '../Components/Footer';
+import NextDynamic from "next/dynamic";
+
+const MarkdownPreview = NextDynamic(
+  () => import("@uiw/react-markdown-preview"),
+  { ssr: false }
+);
+
+// ⭐ ADD THIS FUNCTION HERE
+function autoParagraph(text: string = "") {
+  return text
+    .split(/\.(\s+|$)/)
+    .map((t) => t.trim())
+    .filter(Boolean)
+    .map((t) => t + ".")
+    .join("\n\n");
+}
+
 
 import {
   X,
@@ -230,7 +247,10 @@ export default function ArticlePage(): React.JSX.Element {
           </div>
 
           <h1 className="mt-4 text-4xl sm:text-5xl lg:text-6xl leading-tight">{currentArticle?.title}</h1>
-          <p className="mt-5 text-gray-200 max-w-4xl text-lg">{currentArticle?.desc}</p>
+          <div className="mt-5 text-gray-200 max-w-4xl text-lg">
+  <MarkdownPreview source={autoParagraph(currentArticle?.desc || "")} />
+</div>
+
 
           <div className="mt-8 flex flex-wrap items-center gap-4">
             <div className="flex items-center gap-3">
@@ -273,7 +293,9 @@ export default function ArticlePage(): React.JSX.Element {
               </div>
 
               <article className="mt-6 space-y-8 leading-relaxed">
-                <p>{currentArticle?.extraDesc}</p>
+                <div className="text-gray-200">
+  <MarkdownPreview source={autoParagraph(currentArticle?.extraDesc || "")} />
+</div>
 
                 <h3 className="text-2xl sm:text-3xl text-white">Key Technologies Driving Change</h3>
                 <div className="rounded-2xl bg-[#ff1f00] p-5 sm:p-6">
