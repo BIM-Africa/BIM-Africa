@@ -25,6 +25,8 @@ import {
 import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
 import WorkTogether from "../Components/WorkTogether";
+import Script from "next/script";
+
 
 import logoBg from "../../Assests/srv.svg";
 async function getCaptchaToken() {
@@ -111,6 +113,11 @@ export default function ContactPage() {
         backgroundRepeat: "no-repeat",
       }}
     >
+      <Script
+  src="https://www.google.com/recaptcha/api.js?render=6LcPmRgsAAAAAK2lz2Pf-iR5l-yV7x98mKR3GMFj"
+  strategy="afterInteractive"
+/>
+
       <Navbar />
 
      {/* ✅ Hero Section */}
