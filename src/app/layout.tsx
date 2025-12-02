@@ -89,10 +89,7 @@ export default function RootLayout({
         <meta name="theme-color" content="#ffffff" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="author" content="BIM Africa" />
-        <script
-    src="https://www.google.com/recaptcha/api.js?render=6LcPmRgsAAAAAK2lz2Pf-iR5l-yV7x98mKR3GMFj"
-    async
-  ></script>
+        
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
