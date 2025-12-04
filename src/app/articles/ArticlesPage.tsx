@@ -430,7 +430,7 @@ export default function ArticlePage(): React.JSX.Element {
               return (
                 <Link
                   key={targetId}
-                  href={`/articles?id=${targetId}`}
+                  href={`/articles/${targetId}`}
                   className="group rounded-3xl overflow-hidden bg-black/40 border border-white/10 hover:-translate-y-0.5 hover:border-red-500/40 hover:shadow-[0_10px_28px_rgba(255,31,0,0.15)] transition-all block"
                 >
                   <div className="relative h-44 overflow-hidden">
