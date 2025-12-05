@@ -103,17 +103,17 @@ export default function ServicesPage() {
   <div className="rounded-2xl overflow-hidden border border-gray-800 bg-black/40 shadow-xl">
     
     {/* ✅ Image Section */}
-    <div className="relative aspect-[16/12] sm:aspect-[16/10]">
-      <Image
-        src={man} // 👈 Your static image
-        alt="BMS Operator at work"
-        fill
-        className="object-cover"
-        priority
-        loading="eager"
-        fetchPriority="high"
-      />
-    </div>
+    <div className="relative w-full aspect-[16/12] sm:aspect-[16/10] min-h-[250px]">
+  <Image
+    src={man}
+    alt="BMS Operator at work"
+    fill
+    className="object-cover"
+    priority
+    loading="eager"
+    fetchPriority="high"
+  />
+</div>
 
   </div>
 </div>
