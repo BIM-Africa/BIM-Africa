@@ -6,7 +6,7 @@ export default function WorkTogether() {
         <section className="py-10 sm:py-10 lg:py-10 relative overflow-hidden text-center">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
           <p className="text-white text-lg sm:text-xl lg:text-2xl mb-6 sm:mb-8">
-            Strategic. <span className="text-[#ff1f00]">Secure</span> Scalable.
+            Strategic. <span className="text-[#ff1f00]">Secure.</span> Scalable.
           </p>
           <h2 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-10xl text-white tracking-tight">  LET&apos;S WORK</h2>
 
