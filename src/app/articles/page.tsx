@@ -30,7 +30,7 @@ async function getBlog(id: string | null): Promise<BlogType | null> {
   }
 }
 
-// Extract keywords automatically from title + desc
+// Extract keywords automatically
 function generateKeywords(blog: BlogType | null): string[] {
   if (!blog) return ["Cybersecurity", "Technology", "BIM Africa"];
 
@@ -42,9 +42,11 @@ function generateKeywords(blog: BlogType | null): string[] {
     .slice(0, 12);
 }
 
-// ⭐ BEST Dynamic SEO
-export async function generateMetadata(props: any) {
-  const id = props?.searchParams?.id ?? null;
+// ⭐ BEST Dynamic SEO — NOW 100% BUILD SAFE
+export async function generateMetadata(
+  props: { searchParams?: Record<string, string> }
+) {
+  const id = props.searchParams?.id ?? null;
   const blog = await getBlog(id);
 
   if (!blog) {
@@ -64,7 +66,9 @@ export async function generateMetadata(props: any) {
     title: `${blog.title} | BIM Africa`,
     description: shortDesc,
     keywords,
-    alternates: { canonical: pageUrl },
+    alternates: {
+      canonical: pageUrl,
+    },
 
     robots: {
       index: true,
@@ -97,6 +101,7 @@ export async function generateMetadata(props: any) {
       creator: "@bim_africa",
     },
 
+    // ⭐⭐ Google Rich Results (Schema.org)
     other: {
       "script:ld+json": JSON.stringify({
         "@context": "https://schema.org",
@@ -119,8 +124,6 @@ export async function generateMetadata(props: any) {
     },
   };
 }
-
-
 
 export default function Page() {
   return (
