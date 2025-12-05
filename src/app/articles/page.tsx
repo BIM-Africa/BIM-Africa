@@ -43,12 +43,10 @@ function generateKeywords(blog: BlogType | null): string[] {
 }
 
 // ⭐ BEST Dynamic SEO
-export async function generateMetadata({
-  searchParams,
-}: {
-  searchParams: { id?: string };
-}) {
-  const id = searchParams?.id ?? null;
+export async function generateMetadata(
+  props: { searchParams?: { id?: string } }
+) {
+  const id = props.searchParams?.id ?? null;
   const blog = await getBlog(id);
 
   if (!blog) {
@@ -101,7 +99,6 @@ export async function generateMetadata({
       creator: "@bim_africa",
     },
 
-    // ⭐⭐ Google Rich Results (Article Schema)
     other: {
       "script:ld+json": JSON.stringify({
         "@context": "https://schema.org",
@@ -124,6 +121,7 @@ export async function generateMetadata({
     },
   };
 }
+
 
 export default function Page() {
   return (
