@@ -43,10 +43,8 @@ function generateKeywords(blog: BlogType | null): string[] {
 }
 
 // ⭐ BEST Dynamic SEO
-export async function generateMetadata(
-  props: { searchParams?: { id?: string } }
-) {
-  const id = props.searchParams?.id ?? null;
+export async function generateMetadata(props: any) {
+  const id = props?.searchParams?.id ?? null;
   const blog = await getBlog(id);
 
   if (!blog) {
@@ -121,6 +119,7 @@ export async function generateMetadata(
     },
   };
 }
+
 
 
 export default function Page() {
