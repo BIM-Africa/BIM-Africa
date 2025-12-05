@@ -10,7 +10,7 @@ interface BlogType {
   date?: string;
 }
 
-// Fetch article for SEO
+// Fetch article for SEO (server-side)
 async function getBlog(id: string | null): Promise<BlogType | null> {
   if (!id) return null;
 
@@ -19,7 +19,7 @@ async function getBlog(id: string | null): Promise<BlogType | null> {
       `https://bim-africa-backend2.vercel.app/api/blog/${id}`,
       {
         cache: "no-store",
-        next: { revalidate: 60 },
+        next: { revalidate: 60 }, // revalidate for faster crawling
       }
     );
 
@@ -30,7 +30,7 @@ async function getBlog(id: string | null): Promise<BlogType | null> {
   }
 }
 
-// Extract keywords automatically
+// Auto-generate SEO keywords
 function generateKeywords(blog: BlogType | null): string[] {
   if (!blog) return ["Cybersecurity", "Technology", "BIM Africa"];
 
@@ -42,11 +42,13 @@ function generateKeywords(blog: BlogType | null): string[] {
     .slice(0, 12);
 }
 
-// ⭐ BEST Dynamic SEO — NOW 100% BUILD SAFE
-export async function generateMetadata(
-  props: { searchParams?: Record<string, string> }
-) {
-  const id = props.searchParams?.id ?? null;
+// ⭐ FIXED — Next.js 15 requires searchParams as Promise
+export async function generateMetadata(props: {
+  searchParams: Promise<Record<string, string>>;
+}) {
+  const searchParams = await props.searchParams;
+  const id = searchParams?.id ?? null;
+
   const blog = await getBlog(id);
 
   if (!blog) {
@@ -101,7 +103,7 @@ export async function generateMetadata(
       creator: "@bim_africa",
     },
 
-    // ⭐⭐ Google Rich Results (Schema.org)
+    // ⭐⭐ Google Structured Data (Schema.org)
     other: {
       "script:ld+json": JSON.stringify({
         "@context": "https://schema.org",
@@ -125,6 +127,7 @@ export async function generateMetadata(
   };
 }
 
+// Client Render
 export default function Page() {
   return (
     <Suspense fallback={<div className="text-white p-10">Loading article...</div>}>
