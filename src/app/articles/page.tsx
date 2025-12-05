@@ -1,3 +1,6 @@
+export const dynamic = "force-dynamic";     // ⭐ forces SSR on each request
+export const fetchCache = "force-no-store"; // ⭐ prevents cached metadata
+
 import { Suspense } from "react";
 import ArticlesPage from "../../app/articles/ArticlesPage";
 
@@ -19,7 +22,7 @@ async function getBlog(id: string | null): Promise<BlogType | null> {
       `https://bim-africa-backend2.vercel.app/api/blog/${id}`,
       {
         cache: "no-store",
-        next: { revalidate: 60 }, // revalidate for faster crawling
+        next: { revalidate: 60 },
       }
     );
 
@@ -103,7 +106,6 @@ export async function generateMetadata(props: {
       creator: "@bim_africa",
     },
 
-    // ⭐⭐ Google Structured Data (Schema.org)
     other: {
       "script:ld+json": JSON.stringify({
         "@context": "https://schema.org",
@@ -127,7 +129,7 @@ export async function generateMetadata(props: {
   };
 }
 
-// Client Render
+// Render Page
 export default function Page() {
   return (
     <Suspense fallback={<div className="text-white p-10">Loading article...</div>}>
