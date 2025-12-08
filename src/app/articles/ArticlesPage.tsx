@@ -297,31 +297,30 @@ export default function ArticlePage(): React.JSX.Element {
   <MarkdownPreview source={autoParagraph(currentArticle?.extraDesc || "")} />
 </div>
 
-                <h3 className="text-2xl sm:text-3xl text-white">Key Technologies Driving Change</h3>
+                <h3 className="text-2xl sm:text-3xl text-white">Modern Digital Practices & Platforms</h3>
                 <div className="rounded-2xl bg-[#ff1f00] p-5 sm:p-6">
                   <div className="flex items-center gap-2 text-lg font-semibold">
-                    <Zap className="w-5 h-5 text-white" /> Machine Learning Algorithms
+                    <Zap className="w-5 h-5 text-white" /> Cybersecurity Technologies
                   </div>
                   <ul className="mt-3 space-y-2">
                     <li className="flex items-start gap-2">
-                      <CheckCircle className="mt-1 w-4 h-4 text-white" /> Supervised learning for known threat classification
+                      <CheckCircle className="mt-1 w-4 h-4 text-white" /> Proactive protection against modern cyber threats
                     </li>
                     <li className="flex items-start gap-2">
-                      <CheckCircle className="mt-1 w-4 h-4 text-white" /> Unsupervised learning for anomaly detection
+                      <CheckCircle className="mt-1 w-4 h-4 text-white" /> Continuous monitoring to detect suspicious activities
                     </li>
                     <li className="flex items-start gap-2">
-                      <CheckCircle className="mt-1 w-4 h-4 text-white" /> Deep learning for complex pattern recognition
+                      <CheckCircle className="mt-1 w-4 h-4 text-white" /> Advanced security measures to safeguard digital systems
                     </li>
                   </ul>
                 </div>
 
                 <div className="rounded-2xl bg-black/40 border border-white/10 p-5 sm:p-6">
                   <div className="flex items-center gap-2 text-lg font-semibold">
-                    <BookOpen className="w-5 h-5 text-[#ff1f00]" /> Natural Language Processing (NLP)
+                    <BookOpen className="w-5 h-5 text-[#ff1f00]" /> Next.js Framework
                   </div>
                   <p className="mt-2">
-                    NLP lets AI analyze threat-intel feeds, security reports, and even dark-web chatter to surface emerging threats
-                    and attack vectors.
+                    Next.js enables the development of fast, secure, and scalable web applications using modern rendering techniques and performance optimizations. Currently used by Netflix.
                   </p>
                 </div>
               </article>
