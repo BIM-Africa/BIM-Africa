@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Main Pages -->
+  <url>
+    <loc>https://www.bim.africa/</loc>
+  </url>
+
+  <url>
+    <loc>https://www.bim.africa/articles</loc>
+  </url>
+
+  <url>
+    <loc>https://www.bim.africa/service</loc>
+  </url>
+
+  <url>
+    <loc>https://www.bim.africa/contactus</loc>
+  </url>
+
+  <!-- ✅ REAL ARTICLE PAGES (Manual Solution) -->
+  <url>
+    <loc>https://www.bim.africa/articles?id=692fe67a07488c01f66b1cbf</loc>
+  </url>
+
+  <url>
+    <loc>https://www.bim.africa/articles?id=692fdfa5e74f377075ce7edd</loc>
+  </url>
+
+  <url>
+    <loc>https://www.bim.africa/articles?id=692e8518a0d2907f14b1e961</loc>
+  </url>
+
+  <url>
+    <loc>https://www.bim.africa/articles?id=692fe2b3af8663aae087d1cf</loc>
+  </url>
+
+</urlset>
