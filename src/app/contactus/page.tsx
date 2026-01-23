@@ -1,4 +1,13 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable @typescript-eslint/no-explicit-any */
+
 "use client";
+
+declare global {
+  interface Window {
+    grecaptcha: any;
+  }
+}
 
 import React, { useState } from "react";
 import Image from "next/image";
@@ -19,6 +28,14 @@ import Footer from "../Components/Footer";
 import WorkTogether from "../Components/WorkTogether";
 
 import logoBg from "../../Assests/srv.svg";
+async function getCaptchaToken() {
+  if (!window.grecaptcha) return "";
+  return await window.grecaptcha.execute(
+    "6LcPmRgsAAAAAK2lz2Pf-iR5l-yV7x98mKR3GMFj",
+    { action: "contact_form" }
+  );
+}
+
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -47,44 +64,43 @@ export default function ContactPage() {
 
   // Submit form
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    if (isSubmitting) return;
-    setIsSubmitting(true);
-    setShowQuote(false);
+  e.preventDefault();
+  setIsSubmitting(true);
+  setShowQuote(false);
 
-    try {
-      const emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email);
-      if (!emailOk) {
-        alert(
-          language === "EN"
-            ? "Please enter a valid email address."
-            : "Veuillez saisir une adresse e-mail valide."
-        );
-        return;
-      }
+  try {
+    const captchaToken = await getCaptchaToken();
 
-      const fd = new FormData();
-      fd.append("name", formData.name);
-      fd.append("email", formData.email);
-      fd.append("phone", formData.phone);
-      fd.append("message", formData.message);
-      fd.append("_cc", "info@bim.africa");
-      fd.append("_captcha", "false");
-      fd.append("_template", "table");
-      fd.append("_subject", "New Contact Us Form");
-
-      await fetch("https://formsubmit.co/info@bim.africa", {
-        method: "POST",
-        body: fd,
-      });
-
-      setShowQuote(true);
-      setTimeout(() => setShowQuote(false), 5000);
-      setFormData({ name: "", email: "", phone: "", message: "" });
-    } finally {
+    if (!captchaToken) {
+      alert("Captcha failed. Try again.");
       setIsSubmitting(false);
+      return;
     }
-  };
+
+    const res = await fetch("https://bim-africa-backend-six.vercel.app/contact", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ ...formData, captchaToken }),
+    });
+
+    const data = await res.json();
+
+    if (!res.ok) {
+      alert(data.error || "Submission failed.");
+      setIsSubmitting(false);
+      return;
+    }
+
+    // SUCCESS
+    setShowQuote(true);
+    setFormData({ name: "", email: "", phone: "", message: "" });
+    setTimeout(() => setShowQuote(false), 5000);
+  } catch (error) {
+    alert("Network error.");
+  }
+
+  setIsSubmitting(false);
+};
 
   return (
     <div

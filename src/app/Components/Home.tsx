@@ -154,7 +154,7 @@ export default function ServicesPage() {
 
           {/* Card 3 */}
           <article className="bg-black/40 border border-[#ff1f00] rounded-[24px] p-6 hover:bg-black/60 transition">
-            <div className="text-[#ff1f00] text-xl sm:text-2xl lg:text[26px] mb-4">Lifestyle & Training</div>
+            <div className="text-[#ff1f00] text-xl sm:text-2xl lg:text[26px] mb-4">Travel & Tourism</div>
             <div className="text-white text-xl sm:text-2xl lg:text-sm  mb-4">Mauritius Travel & Tour</div>
             <div className="w-14 h-14 mb-4">
               <Image src={mauritiustraveltour} alt="" className="w-14 h-14 object-contain" />

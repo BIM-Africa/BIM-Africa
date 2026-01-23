@@ -39,7 +39,7 @@ export default function Navbar() {
   // ✅ Navigation items
   const navigationItems = [
     { name: "Home", href: "/" },
-    { name: "About", href: "/About" },
+    { name: "About Us", href: "/About" },
     { name: "Services", href: "/service" },
     { name: "Blog", href: "/blog" },
     { name: "Contact Us", href: "/contactus" },

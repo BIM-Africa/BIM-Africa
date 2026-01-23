@@ -8,7 +8,7 @@ import {
   Calendar, Clock, Eye, Star, Users, BookOpen, Mail, User, TrendingUp
 } from 'lucide-react';
 
-import logoBg from '../../Assests/srv.svg';
+
 import Footer from '../Components/Footer';
 import WorkTogether from '../Components/WorkTogether';
 import Navbar from '../Components/Navbar';
@@ -39,7 +39,7 @@ export default function BlogPage() {
   const getBlogs = async () => {
     try {
       setLoading(true);
-      const res = await fetch('ttps://bim-africa-backend2.vercel.app/api/blogs');
+      const res = await fetch('https://bim-africa-backend2.vercel.app/api/blogs');
       const data = await res.json();
 
       const blogs = data.blogs.filter((blog: Blog) => blog.isFeature === false);
@@ -62,7 +62,7 @@ export default function BlogPage() {
     <div
       className="min-h-screen text-white"
       style={{
-        backgroundImage: `url(${logoBg.src})`,
+        backgroundImage: "url(/srv.svg)",
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',

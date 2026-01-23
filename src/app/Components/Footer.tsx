@@ -27,8 +27,8 @@ export default function Footer() {
               <h3 className="text-[#ff1f00] text-sm font-bold uppercase mb-4">Support</h3>
               <div className="space-y-2">
                 <Link href="/contactus" className="block text-white text-sm">Contact Us</Link>
-                <a href="#" className="block text-white text-sm">Privacy Policy</a>
-                <a href="#" className="block text-white text-sm">Terms of Service</a>
+                <a href="/PrivacyPolicy" className="block text-white text-sm">Privacy Policy</a>
+                <a href="/TermsofService" className="block text-white text-sm">Terms of Service</a>
               </div>
             </div>
           </div>
@@ -84,9 +84,9 @@ export default function Footer() {
           </div>
 
           <div className="text-center text-white text-xs border-t border-gray-800 pt-6">
-            <a href="#" className="hover:text-[#ff1f00]">Privacy Policy</a>
+            <a href="/PrivacyPolicy" className="hover:text-[#ff1f00]">Privacy Policy</a>
             <span className="mx-2">|</span>
-            <a href="#" className="hover:text-[#ff1f00]">Terms</a>
+            <a href="/TermsofService" className="hover:text-[#ff1f00]">Terms</a>
           </div>
         </div>
 
@@ -117,8 +117,8 @@ export default function Footer() {
             <h3 className="text-[#ff1f00] text-base sm:text-lg uppercase">SUPPORT</h3>
             <div className="space-y-2 sm:space-y-3 mt-4">
               <Link href="/contactus" className="block text-white text-sm sm:text-base">Contact Us</Link>
-              <a href="#" className="block text-white text-sm sm:text-base">Privacy Policy</a>
-              <a href="#" className="block text-white text-sm sm:text-base">Terms of Service</a>
+              <a href="/PrivacyPolicy" className="block text-white text-sm sm:text-base">Privacy Policy</a>
+              <a href="/TermsofService" className="block text-white text-sm sm:text-base">Terms of Service</a>
             </div>
           </div>
 
@@ -158,7 +158,7 @@ export default function Footer() {
 
         {/* ---------- Desktop Bottom ---------- */}
         <div className="hidden sm:block border-t border-gray-800 mt-8 sm:mt-12 pt-6 sm:pt-8 text-center text-white text-xs sm:text-sm">
-          <a href="#" className="hover:text-white">Privacy Policy</a> | <a href="#" className="hover:text-white">Terms of Service</a>
+          <a href="/PrivacyPolicy" className="hover:text-white">Privacy Policy</a> | <a href="/TermsofService" className="hover:text-white">Terms of Service</a>
         </div>
       </div>
     </footer>

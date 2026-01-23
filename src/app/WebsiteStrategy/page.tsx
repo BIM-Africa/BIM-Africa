@@ -407,51 +407,40 @@ const t = {
 
             <p className="text-base sm:text-lg md:text-xl mt-6 text-gray-300 max-w-3xl">{t.hero.subtitle}</p>
 
-            {/* CTA row (mobile: stacked, 2-line labels; ≥sm: in-row, 1-line labels) */}
-<div className="mt-8 w-full">
-  <div className="flex flex-col sm:flex-row sm:items-center gap-3 w-full max-w-md">
-    {/* Get Instant Quote */}
-    <a
-      href="https://quotation.bim.africa/"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="w-full"
-    >
-      <button
-        className="w-full sm:w-auto bg-[#333333] border border-transparent hover:border-[#ff1f00] text-white px-8 sm:px-10 lg:px-8 py-3 sm:py-4 rounded-full transition-all hover:scale-105 text-sm sm:text-base whitespace-nowrap"
-      >
-        {/* icon (optional) */}
-        {/* <ExternalLink className="w-4 h-4" /> */}
+          {/* CTA buttons: exact mobile stacking like Contact page */}
+            <div className="flex flex-col sm:flex-row gap-3 pt-6 sm:gap-4 justify-center lg:justify-start">
+              <a 
+  href="https://quotation.bim.africa/" 
+  target="_blank" 
+  rel="noopener noreferrer" 
+  className="inline-block w-full sm:w-auto"
+>
+  <button
+    className="
+      w-full sm:w-auto 
+      bg-[#333333] 
+      border border-transparent 
+      hover:border-[#ff1f00] 
+      text-white 
+      px-8 sm:px-10 lg:px-12 
+      py-3 sm:py-4 
+      rounded-full 
+      transition-all hover:scale-105 
+      text-sm sm:text-base 
+      whitespace-nowrap
+    "
+  >
+    Get Instant Quote
+  </button>
+</a>
 
-        {/* mobile: 2 lines | desktop: 1 line */}
-        <span className="sm:hidden leading-tight">
-          Get Instant<br />Quote
-        </span>
-        <span className="hidden sm:inline">Get Instant Quote</span>
-      </button>
-    </a>
+              <a href="https://wa.me/352661784276" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
+                <button className="w-full sm:w-auto bg-[#333333] border border-transparent hover:border-[#ff1f00] text-white px-6 sm:px-8 lg:px-12 py-3 sm:py-4 rounded-full transition-all hover:scale-105 text-sm sm:text-base whitespace-nowrap">
+                  WHATSAPP US
+                </button>
+              </a>
+            </div>
 
-    {/* WhatsApp (same pre-filled message) */}
-    <a
-      href={waLink(WA_LU)}
-      target="_blank"
-      rel="noopener noreferrer"
-      aria-label="WhatsApp Us"
-      className="w-full"
-    >
-      <button
-        className="w-full sm:w-auto bg-[#333333] border border-transparent hover:border-[#ff1f00] text-white px-8 sm:px-10 lg:px-12 py-3 sm:py-4 rounded-full transition-all hover:scale-105 text-sm sm:text-base whitespace-nowrap"
-      >
-        {/* <MessageCircle className="w-4 h-4" /> */}
-
-        <span className="sm:hidden leading-tight">
-          Whatsapp<br />Us
-        </span>
-        <span className="hidden sm:inline">Whatsapp Us</span>
-      </button>
-    </a>
-  </div>
-</div>
 
 
             {/* ratings row */}
