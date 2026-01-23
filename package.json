@@ -9,10 +9,11 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@uiw/react-markdown-preview": "^5.1.5",
     "framer-motion": "^12.23.12",
     "lucide-react": "^0.544.0",
     "mongoose": "^8.18.3",
-    "next": "^15.5.3",
+    "next": "^16.0.7",
     "react": "^19.1.0",
     "react-dom": "^19.1.0"
   },

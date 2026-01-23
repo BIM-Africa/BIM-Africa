@@ -2,13 +2,12 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
 "use client";
-
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 declare global {
   interface Window {
     grecaptcha: any;
   }
 }
-
 import React, { useState } from "react";
 import Image from "next/image";
 import {
@@ -26,6 +25,8 @@ import {
 import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
 import WorkTogether from "../Components/WorkTogether";
+import Script from "next/script";
+
 
 import logoBg from "../../Assests/srv.svg";
 async function getCaptchaToken() {
@@ -77,7 +78,7 @@ export default function ContactPage() {
       return;
     }
 
-    const res = await fetch("https://bim-africa-backend-six.vercel.app/contact", {
+    const res = await fetch("https://bim-africa-backend2.vercel.app/api/contact", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ ...formData, captchaToken }),
@@ -112,6 +113,11 @@ export default function ContactPage() {
         backgroundRepeat: "no-repeat",
       }}
     >
+      <Script
+  src="https://www.google.com/recaptcha/api.js?render=6LcPmRgsAAAAAK2lz2Pf-iR5l-yV7x98mKR3GMFj"
+  strategy="afterInteractive"
+/>
+
       <Navbar />
 
      {/* ✅ Hero Section */}

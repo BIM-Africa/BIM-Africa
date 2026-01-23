@@ -99,7 +99,7 @@ export default function ArticlePage(): React.JSX.Element {
   // --- Fetch all blogs ---
   const getBlogs = async () => {
     try {
-      const res = await fetch('https://bim-africa-backend2.vercel.app/api/blogs');
+      const res = await fetch('https://bim-africa-backend-six.vercel.app/api/blogs');
       const data: unknown = await res.json();
       const raw = extractBlogs(data);
 
