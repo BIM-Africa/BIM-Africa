@@ -133,7 +133,7 @@ const getBlog = async (slug: string | undefined) => {
     try {
       setLoading(true); // ⬅️ START LOADING
 
-      const res = await fetch(`https://bim-africa-backend2.vercel.app/api/blog/slug/${slug}`);
+      const res = await fetch(`https://bim-africa-backend-six.vercel.app/api/blog/slug/${slug}`);
       const data: unknown = await res.json();
 
       let payload: unknown;

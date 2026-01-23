@@ -5,7 +5,7 @@ export const dynamic = "force-dynamic";
 export const fetchCache = "force-no-store";
 
 const API_URL =
-  process.env.NEXT_PUBLIC_API_URL || "https://bim-africa-backend2.vercel.app";
+  process.env.NEXT_PUBLIC_API_URL || "https://bim-africa-backend-six.vercel.app";
 
 // 🔹 server fetch (only for validation / SEO)
 async function getBlog(slug: string) {
