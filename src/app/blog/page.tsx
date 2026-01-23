@@ -22,6 +22,7 @@ interface Blog {
   read: string;
   views: string;
   title: string;
+  slug: string;
   desc: string;
   extraDesc?: string;
   author: string;
@@ -39,7 +40,7 @@ export default function BlogPage() {
   const getBlogs = async () => {
     try {
       setLoading(true);
-      const res = await fetch('https://bim-africa-backend2.vercel.app/api/blogs');
+      const res = await fetch('https://bim-africa-backend-six.vercel.app/api/blogs');
       const data = await res.json();
 
       const blogs = data.blogs.filter((blog: Blog) => blog.isFeature === false);
@@ -164,7 +165,7 @@ export default function BlogPage() {
                       </div>
                     </div>
                     <Link
-                      href={`/articles?id=${featured?._id}`}
+                        href={`/blog/${encodeURIComponent(String(featured.slug))}`}
                       className="w-full sm:w-auto bg-[#333333] border border-transparent hover:border-[#ff1f00] text-white px-8 sm:px-10 lg:px-12 py-3 sm:py-4 rounded-full transition-all hover:scale-105 text-sm sm:text-base whitespace-nowrap"
                     >
                       📚 Read Article →
@@ -230,7 +231,7 @@ export default function BlogPage() {
                       {a.author}
                     </div>
                     <Link
-                      href={`/articles?id=${a._id}`}
+                      href={`/blog/${encodeURIComponent(String(a.slug))}`}
                       className="text-[#ff1f00] hover:text-[#ff1f00] text-lg"
                       aria-label="Read article"
                     >

@@ -5,7 +5,8 @@ import React, { useEffect, useState, Suspense } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import Navbar from '../Components/Navbar';
-import { useSearchParams } from 'next/navigation';
+import { useParams } from 'next/navigation';
+
 import Footer from '../Components/Footer';
 import NextDynamic from "next/dynamic";
 
@@ -55,6 +56,7 @@ interface Article {
   id: string | number;
   img: string;
   tag: string;
+  slug?: string;
   date: string;
   read: string;
   views: string;
@@ -64,6 +66,7 @@ interface Article {
   role?: string;
   extraDesc?: string;
 }
+
 
 type BackendBlog = Partial<Article> & { _id?: string | number; id?: string | number };
 
@@ -83,8 +86,8 @@ function extractBlogs(input: unknown): BackendBlog[] {
 }
 
 export default function ArticlePage(): React.JSX.Element {
-  const searchParams = useSearchParams();
-  const [id, setId] = useState<string | null>(null);
+  const params = useParams<{ slug: string }>();
+  const slug = params.slug;
   const [currentArticle, setCurrrentArticle] = useState<Article | null>(null);
   const [allSuggested, setAllSuggested] = useState<Article[]>([]);
   const [suggested, setSuggested] = useState<Article[]>([]);
@@ -92,26 +95,18 @@ export default function ArticlePage(): React.JSX.Element {
 
   const [loading, setLoading] = useState(true); // ✅ NEW
 
-  // --- keep id in sync with URL query ---
-  useEffect(() => {
-    try {
-      const q = searchParams?.get('id') ?? null;
-      setId(q);
-    } catch {
-      setId(null);
-    }
-  }, [searchParams]);
 
   // --- Fetch all blogs ---
   const getBlogs = async () => {
     try {
-      const res = await fetch('https://bim-africa-backend2.vercel.app/api/blogs');
+      const res = await fetch('https://bim-africa-backend-six.vercel.app/api/blogs');
       const data: unknown = await res.json();
       const raw = extractBlogs(data);
 
       const normalized: Article[] = raw.map((b: BackendBlog) => ({
         id: (b._id ?? b.id ?? '').toString(),
         img: (b.img ?? '') as string,
+          slug: (b.slug ?? "") as string,
         tag: (b.tag ?? '') as string,
         date: (b.date ?? '') as string,
         read: (b.read ?? '') as string,
@@ -133,12 +128,12 @@ export default function ArticlePage(): React.JSX.Element {
   };
 
   // --- Fetch single blog ---
-  const getBlog = async (currentId: string | null) => {
-    if (!currentId) return;
+const getBlog = async (slug: string | undefined) => {
+  if (!slug) return;
     try {
       setLoading(true); // ⬅️ START LOADING
 
-      const res = await fetch(`https://bim-africa-backend2.vercel.app/api/blog/${currentId}`);
+      const res = await fetch(`https://bim-africa-backend-six.vercel.app/api/blog/slug/${slug}`);
       const data: unknown = await res.json();
 
       let payload: unknown;
@@ -150,8 +145,9 @@ export default function ArticlePage(): React.JSX.Element {
 
       if (isRecord(payload)) {
         setCurrrentArticle({
-          id: (payload._id ?? payload.id ?? currentId).toString(),
+          id: (payload._id ?? payload.id ?? slug).toString(),
           img: (payload.img ?? '') as string,
+          slug: (payload.slug ?? "") as string, 
           tag: (payload.tag ?? '') as string,
           date: (payload.date ?? '') as string,
           read: (payload.read ?? '') as string,
@@ -173,9 +169,9 @@ export default function ArticlePage(): React.JSX.Element {
   };
 
   useEffect(() => {
-    getBlog(id);
+    getBlog(slug);
     getBlogs();
-  }, [id]);
+  }, [slug]);
 
   // ----------------------------------------------------
   // ✅ LOADING SKELETON (Sidebar loads instantly, as requested)
@@ -228,6 +224,7 @@ export default function ArticlePage(): React.JSX.Element {
         <Navbar />
 
         {/* ===== Hero Section ===== */}
+        
         <section className="max-w-7xl mx-auto px-4 sm:px-6 py-8 sm:py-10">
           <div className="flex items-center gap-3 text-sm">
             <span className="inline-flex items-center gap-1 bg-red-900/40 border border-[#ff1f00] text-red-200 px-3 py-1 rounded-full">
@@ -429,7 +426,7 @@ export default function ArticlePage(): React.JSX.Element {
               return (
                 <Link
                   key={targetId}
-                  href={`/articles?id=${targetId}`}
+                  href={`/blog/${encodeURIComponent(String(c.slug))}`}
                   className="group rounded-3xl overflow-hidden bg-black/40 border border-white/10 hover:-translate-y-0.5 hover:border-red-500/40 hover:shadow-[0_10px_28px_rgba(255,31,0,0.15)] transition-all block"
                 >
                   <div className="relative h-44 overflow-hidden">
