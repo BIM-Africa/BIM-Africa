@@ -40,7 +40,7 @@ export default function BlogPage() {
   const getBlogs = async () => {
     try {
       setLoading(true);
-      const res = await fetch('https://bim-africa-backend-six.vercel.app/api/blogs');
+      const res = await fetch('https://bim-africa-backend2.vercel.app/api/blogs');
       const data = await res.json();
 
       const blogs = data.blogs.filter((blog: Blog) => blog.isFeature === false);
