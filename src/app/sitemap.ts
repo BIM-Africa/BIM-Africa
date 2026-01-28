@@ -13,7 +13,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       : "https://bim-africa-backend2.vercel.app/api/blogs";
 
   // ===============================
-  // ✅ STATIC PAGES (IMPORTANT)
+  // ✅ STATIC PAGES (ALL ROUTES)
   // ===============================
   const staticPages: MetadataRoute.Sitemap = [
     {
@@ -52,11 +52,47 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       changeFrequency: "yearly",
       priority: 0.4,
     },
+
+    // ✅ Blog listing + articles listing
     {
       url: `${BASE_URL}/blog`,
       lastModified: new Date(),
       changeFrequency: "weekly",
       priority: 0.9,
+    },
+    {
+      url: `${BASE_URL}/articles`,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.8,
+    },
+
+    // ✅ Case Studies
+    {
+      url: `${BASE_URL}/CaseStudy1`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.6,
+    },
+    {
+      url: `${BASE_URL}/CaseStudy2`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.6,
+    },
+    {
+      url: `${BASE_URL}/CaseStudy3`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.6,
+    },
+
+    // ✅ Website Strategy
+    {
+      url: `${BASE_URL}/WebsiteStrategy`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.7,
     },
   ];
 
@@ -68,8 +104,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   try {
     const res = await fetch(API_URL, { cache: "no-store" });
     if (res.ok) data = await res.json();
-  } catch (err) {
-    // fallback safe
+  } catch {
+    // safe fallback
   }
 
   const blogEntries: MetadataRoute.Sitemap = data.blogs
@@ -82,7 +118,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     }));
 
   // ===============================
-  // ✅ FINAL RETURN
+  // ✅ FINAL SITEMAP
   // ===============================
   return [...staticPages, ...blogEntries];
 }

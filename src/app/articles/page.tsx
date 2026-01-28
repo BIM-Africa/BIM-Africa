@@ -1,139 +1,95 @@
-export const dynamic = "force-dynamic";     // ⭐ forces SSR on each request
-export const fetchCache = "force-no-store"; // ⭐ prevents cached metadata
+'use client';
 
-import { Suspense } from "react";
-import ArticlesPage from "../../app/articles/ArticlesPage";
+import { useEffect, useState } from "react";
+import Link from "next/link";
+import Image from "next/image";
+import Navbar from "../Components/Navbar";
+import Footer from "../Components/Footer";
 
-// --- Types ---
-interface BlogType {
-  title?: string;
-  desc?: string;
-  img?: string;
-  author?: string;
-  date?: string;
+interface Article {
+  _id: string;
+  title: string;
+  slug: string;
+  img: string;
+  desc: string;
+  author: string;
+  date: string;
+  read: string;
 }
 
-// Fetch article for SEO (server-side)
-async function getBlog(id: string | null): Promise<BlogType | null> {
-  if (!id) return null;
+export default function ArticlesPage() {
+  const [articles, setArticles] = useState<Article[]>([]);
+  const [loading, setLoading] = useState(true);
 
-  try {
-    const res = await fetch(
-      `https://bim-africa-backend2.vercel.app/api/blog/${id}`,
-      {
-        cache: "no-store",
-        next: { revalidate: 60 },
+  useEffect(() => {
+    async function fetchArticles() {
+      try {
+        const res = await fetch(
+          "https://bim-africa-backend2.vercel.app/api/blogs",
+          { cache: "no-store" }
+        );
+        const data = await res.json();
+        setArticles(data.blogs || []);
+      } catch (err) {
+        console.error("Failed to fetch articles");
+      } finally {
+        setLoading(false);
       }
+    }
+
+    fetchArticles();
+  }, []);
+
+  if (loading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center text-white">
+        Loading articles...
+      </div>
     );
-
-    const data = await res.json();
-    return (data.blog || data) as BlogType;
-  } catch {
-    return null;
-  }
-}
-
-// Auto-generate SEO keywords
-function generateKeywords(blog: BlogType | null): string[] {
-  if (!blog) return ["Cybersecurity", "Technology", "BIM Africa"];
-
-  const text = `${blog.title ?? ""} ${blog.desc ?? ""}`.toLowerCase();
-  const common = ["the", "and", "with", "from", "this", "that", "your"];
-
-  return Array.from(new Set(text.split(/\W+/)))
-    .filter((w) => w.length > 3 && !common.includes(w))
-    .slice(0, 12);
-}
-
-// ⭐ FIXED — Next.js 15 requires searchParams as Promise
-export async function generateMetadata(props: {
-  searchParams: Promise<Record<string, string>>;
-}) {
-  const searchParams = await props.searchParams;
-  const id = searchParams?.id ?? null;
-
-  const blog = await getBlog(id);
-
-  if (!blog) {
-    return {
-      title: "Article Not Found – BIM Africa",
-      description: "This article could not be found.",
-      robots: "index, follow",
-    };
   }
 
-  const shortDesc =
-    blog.desc?.slice(0, 160) || "Read this article on BIM Africa.";
-  const pageUrl = `https://bim.africa/articles?id=${id}`;
-  const keywords = generateKeywords(blog);
-
-  return {
-    title: `${blog.title} | BIM Africa`,
-    description: shortDesc,
-    keywords,
-    alternates: {
-      canonical: pageUrl,
-    },
-
-    robots: {
-      index: true,
-      follow: true,
-      "max-image-preview": "large",
-      "max-snippet": -1,
-      "max-video-preview": -1,
-    },
-
-    openGraph: {
-      title: blog.title,
-      description: shortDesc,
-      url: pageUrl,
-      type: "article",
-      images: [
-        {
-          url: blog.img || "https://bim.africa/default-og.jpg",
-          width: 1200,
-          height: 630,
-        },
-      ],
-      siteName: "BIM Africa",
-    },
-
-    twitter: {
-      card: "summary_large_image",
-      title: blog.title,
-      description: shortDesc,
-      images: [blog.img],
-      creator: "@bim_africa",
-    },
-
-    other: {
-      "script:ld+json": JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "Article",
-        headline: blog.title,
-        description: shortDesc,
-        image: blog.img,
-        author: {
-          "@type": "Person",
-          name: blog.author || "BIM Africa",
-        },
-        publisher: {
-          "@type": "Organization",
-          name: "BIM Africa",
-          logo: "https://bim.africa/logo.png",
-        },
-        datePublished: blog.date || "",
-        mainEntityOfPage: pageUrl,
-      }),
-    },
-  };
-}
-
-// Render Page
-export default function Page() {
   return (
-    <Suspense fallback={<div className="text-white p-10">Loading article...</div>}>
-      <ArticlesPage />
-    </Suspense>
+    <div className="min-h-screen text-white">
+      <Navbar />
+
+      <section className="max-w-7xl mx-auto px-4 py-12">
+        <h1 className="text-4xl font-bold mb-8">All Articles</h1>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {articles.map((article) => (
+            <Link
+              key={article._id}
+              href={`/blog/${article.slug}`}
+              className="group bg-black/40 border border-white/10 rounded-2xl overflow-hidden hover:border-red-500 transition"
+            >
+              <div className="relative h-48">
+                <Image
+                  src={article.img || "/fallback.jpg"}
+                  alt={article.title}
+                  fill
+                  className="object-cover"
+                />
+              </div>
+
+              <div className="p-5">
+                <h3 className="text-lg font-semibold group-hover:text-red-400">
+                  {article.title}
+                </h3>
+                <p className="text-sm text-gray-300 mt-2 line-clamp-2">
+                  {article.desc}
+                </p>
+
+                <div className="mt-4 text-xs text-gray-400 flex justify-between">
+                  <span>{article.author}</span>
+                  <span>{article.read}</span>
+                </div>
+              </div>
+            </Link>
+          ))}
+        </div>
+      </section>
+
+      <Footer />
+    </div>
   );
 }
