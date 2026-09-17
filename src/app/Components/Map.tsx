@@ -5,7 +5,9 @@ export default function Map() {
 
   // ✅ FIXED: Added TypeScript type to parameter
   const openWhatsApp = (number: string) => {
-    const url = `https://wa.me/${number}`;
+    const url = number === "23058010730"
+      ? "https://wa.me/message/VLID27EWBIPND1"
+      : `https://wa.me/${number}`;
     window.open(url, "_blank");
   };
 
@@ -85,7 +87,7 @@ export default function Map() {
                   href="#"
                   onClick={(e) => {
                     e.preventDefault();
-                    openWhatsApp("23054514176");
+                    openWhatsApp("23058010730");
                   }}
                   className="ml-auto text-[#ff1f00] cursor-pointer"
                 >

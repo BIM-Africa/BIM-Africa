@@ -162,18 +162,18 @@ export default function ContactPage() {
       </button>
       <div>
         <h3 className="font-medium text-sm mb-1 text-white">Phone</h3>
-        <p className="text-gray-300 text-xs">MU: +230 5451 4176</p>
+        <p className="text-gray-300 text-xs">MU: +230 58010730</p>
         <p className="text-gray-300 text-xs">LU: +352 661 784 276</p>
       </div>
 
       {showWA && (
-        <div className="absolute left-0 top-full mt-1 w-64 z-50 rounded-lg border border-white/10 bg-black/90 shadow-lg overflow-hidden text-sm">
+        <div className="absolute left-0 top-full mt-1 w-64 max-w-full z-50 rounded-lg border border-white/10 bg-black/90 shadow-lg overflow-hidden text-sm">
           <div className="px-3 py-2 font-medium border-b border-white/10 text-white/90">
             Open WhatsApp
           </div>
 
           {[
-            { c: "MU (Mauritius)", n: "+230 5451 4176", link: "23054514176" },
+            { c: "MU (Mauritius)", n: "+230 58010730", link: "message/VLID27EWBIPND1" },
             { c: "LU (Luxembourg)", n: "+352 661 784 276", link: "352661784276" },
           ].map((x) => (
             <button
@@ -317,7 +317,7 @@ export default function ContactPage() {
             </p>
 
           <a
-  href="tel:+23054514176"
+  href="tel:+23058010730"
   className="block w-full bg-white text-[#ff1f00] font-semibold px-6 py-3 rounded-lg hover:shadow-lg transition"
 >
   <div className="flex items-center justify-center gap-2">
@@ -326,7 +326,7 @@ export default function ContactPage() {
   </div>
 </a>
            <a
-  href="https://wa.me/352661784276"
+  href="https://wa.me/message/VLID27EWBIPND1"
   target="_blank"
   rel="noopener noreferrer"
   className="block w-full mt-4 bg-white text-[#ff1f00] font-semibold px-6 py-3 rounded-lg hover:shadow-lg transition"

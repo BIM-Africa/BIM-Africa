@@ -74,7 +74,7 @@ export default function ServicesPage() {
               </Link>
 
               <a
-                href="https://wa.me/352661784276"
+                href="https://wa.me/message/VLID27EWBIPND1"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full sm:w-auto"
@@ -107,7 +107,7 @@ export default function ServicesPage() {
             </Link>
 
             <a
-              href="https://wa.me/352661784276"
+              href="https://wa.me/message/VLID27EWBIPND1"
               target="_blank"
               rel="noopener noreferrer"
               className="w-full"

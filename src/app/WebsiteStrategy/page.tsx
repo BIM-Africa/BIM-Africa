@@ -53,9 +53,7 @@ export default function WebsiteStrategy() {
   const [openService, setOpenService] = useState<{ [key: string]: boolean }>({});
 
   /* WhatsApp helpers (SAME message everywhere) */
-  const WA_LU = "352661784276"; // change to "23054514176" if you want MU instead
-  const WA_MSG = "Hi, I want to join your referal program";
-  const waLink = (phone: string) => `https://wa.me/${phone}?text=${encodeURIComponent(WA_MSG)}`;
+  const whatsappUrl = "https://wa.me/message/VLID27EWBIPND1";
 
   /* copy */
 const t = {
@@ -179,7 +177,7 @@ const t = {
       {/* Backdrop animation */}
       <motion.div
         key="backdrop"
-        className="fixed inset-0 z-[95] md:hidden bg-black"
+        className="fixed inset-0 z-[95] xl:hidden bg-black"
         variants={{
           hidden: { opacity: 0 },
           visible: { opacity: 0.6, transition: { duration: 0.3, ease: "easeInOut" } },
@@ -193,7 +191,7 @@ const t = {
       {/* Panel animation */}
       <motion.aside
         key="panel"
-        className="fixed inset-0 z-[100] md:hidden"
+        className="fixed inset-0 z-[100] xl:hidden overflow-y-auto"
         variants={{
           hidden: {
             opacity: 0,
@@ -231,7 +229,7 @@ const t = {
           style={{
             backgroundImage: `url(${mobileBg.src})`,
             minHeight: "100svh",
-            height: "100vh",
+            height: "100dvh",
           }}
         >
           <div className="flex flex-col min-h-full pt-1 pb-6 relative">
@@ -280,7 +278,7 @@ const t = {
 
             {/* Bottom Button */}
             <div
-              className="fixed left-0 right-0 bottom-8 px-6"
+              className="mt-6 shrink-0 px-6 pb-6"
               style={{
                 paddingBottom:
                   "calc(env(safe-area-inset-bottom, 1rem) + 0.75rem)",
@@ -315,7 +313,7 @@ const t = {
             <Image src={logo2} alt="BIM" width={110} height={44} priority className="w-20 sm:w-24 md:w-28 lg:w-[110px] h-auto" />
           </Link>
 
-          <nav className="hidden md:flex items-center space-x-6 lg:space-x-16 relative">
+          <nav className="hidden xl:flex items-center space-x-6 xl:space-x-10 relative">
             {navigationItems.map((link) => (
               <Link key={link.name} href={link.href} className={`wave-link relative font-medium ${link.href === "/contactus" ? "text-red-500" : "text-white"}`}>
                 {link.name}
@@ -332,8 +330,8 @@ const t = {
             ))}
           </nav>
 
-          <div className="flex items-center space-x-2 md:space-x-4">
-            <a href="https://quotation.bim.africa/" target="_blank" rel="noopener noreferrer" className="inline-block">
+          <div className="flex items-center gap-1 sm:gap-2 xl:gap-4">
+            <a href="https://quotation.bim.africa/" target="_blank" rel="noopener noreferrer" className="hidden min-[400px]:inline-block">
               <button className="text-red-500 border border-red-500 px-4 py-2 sm:px-6 sm:py-2 rounded-full text-xs sm:text-sm font-medium transition-all whitespace-nowrap hover:bg-red-500 hover:text-white">
                 {t.buttons.instantQuotation}
               </button>
@@ -349,7 +347,7 @@ const t = {
               <span className="text-black text-xs sm:text-sm font-medium px-1 sm:px-2">FR</span>
             </button>
 
-            <button onClick={() => setMobileOpen((o) => !o)} className="md:hidden text-white" aria-label="Toggle menu">
+            <button onClick={() => setMobileOpen((o) => !o)} className="xl:hidden text-white" aria-label="Toggle menu">
               {mobileOpen ? <X size={28} /> : <Image src={header} alt="menu" className="w-10 h-auto" priority />}
             </button>
           </div>
@@ -434,7 +432,7 @@ const t = {
   </button>
 </a>
 
-              <a href="https://wa.me/352661784276" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
+              <a href="https://wa.me/message/VLID27EWBIPND1" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
                 <button className="w-full sm:w-auto bg-[#333333] border border-transparent hover:border-[#ff1f00] text-white px-6 sm:px-8 lg:px-12 py-3 sm:py-4 rounded-full transition-all hover:scale-105 text-sm sm:text-base whitespace-nowrap">
                   WHATSAPP US
                 </button>
@@ -572,13 +570,13 @@ const t = {
       {/* CTAs row */}
       <div className="mt-6 flex items-center justify-between">
         {isWhatsAppOnly ? (
-          <a href={waLink(WA_LU)} target="_blank" rel="noopener noreferrer" aria-label="WhatsApp Us">
+          <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" aria-label="WhatsApp Us">
             <div className="bg-[#333333] border border-transparent hover:border-[#ff1f00] text-white px-4 py-2 rounded-full text-sm transition-all">
               Whatsapp Us
             </div>
           </a>
         ) : (
-          <a href="https://quotation.bim.africa/" target="_blank" rel="noopener noreferrer">
+          <a href="https://quotation.bim.africa/" target="_blank" rel="noopener noreferrer" >
             <button className="inline-flex items-center gap-2 bg-[#333333] border border-transparent hover:border-[#ff1f00] text-white px-4 py-2 rounded-full text-sm transition-colors">
               Instant Quote
             </button>

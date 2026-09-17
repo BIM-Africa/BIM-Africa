@@ -112,7 +112,7 @@ export default function ServiceCards() {
         <p className="text-white text-sm sm:text-base">
           Your vision, our expertise — let&apos;s make it happen.{" "}
           <a
-            href="https://wa.me/352661784276"
+            href="https://wa.me/message/VLID27EWBIPND1"
             target="_blank"
             rel="noopener noreferrer"
             className="text-[#ff1f00] hover:text-red-400"

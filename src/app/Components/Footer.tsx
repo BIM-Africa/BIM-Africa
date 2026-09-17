@@ -35,7 +35,7 @@ export default function Footer() {
 
           {/* Referral + Socials */}
           <div className="mb-8">
-            <div className="flex justify-between items-start mb-6">
+            <div className="flex flex-col min-[400px]:flex-row gap-4 justify-between items-start mb-6">
               <div className="flex-1 pr-4">
                 <h3 className="text-[#ff1f00] text-sm font-bold uppercase mb-3">Referral Program</h3>
                 <p className="text-white text-xs leading-relaxed">
@@ -45,10 +45,10 @@ export default function Footer() {
 
               <div className="flex flex-col items-end space-y-4">
                 <a
-                  href="https://wa.me/352661784276?text=Hi%2C%20I%20want%20to%20join%20your%20referral%20program"
+                  href="https://wa.me/message/VLID27EWBIPND1"
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label="Join referral program on WhatsApp (Luxembourg)"
+                  aria-label="Join referral program on WhatsApp (Mauritius)"
                 >
                   <button className="bg-[#333333] border border-transparent hover:border-[#ff1f00] text-white px-6 py-2 rounded-full text-sm font-medium transition-colors whitespace-nowrap">
                     JOIN NOW
@@ -95,7 +95,7 @@ export default function Footer() {
           {/* Logo + Info */}
           <div className="text-left">
             <div className="text-[#ff1f00] font-black text-4xl sm:text-5xl lg:text-6xl tracking-tight">
-              <Image src={newlogo} className="w-64 sm:w-80 lg:w-[500px] h-auto" alt="BIM Logo" width={500} height={120} />
+              <Image src={newlogo} className="w-full max-w-80 h-auto" alt="BIM Logo" width={500} height={120} />
             </div>
             <p className="text-white text-sm mt-4">Copyright © 2025 BIM. All Rights Reserved.</p>
             <p className="text-white text-sm">Mauritius & Luxembourg</p>
@@ -128,8 +128,8 @@ export default function Footer() {
             <p className="text-white text-xs sm:text-sm mt-4">
               Know someone who needs elite digital solutions? Refer them — and earn through our tiered incentive program. Simple to join. Profitable to share.
             </p>
-            <div className="flex items-start gap-3 sm:gap-4 mt-6">
-              <a href="https://wa.me/352661784276?text=Hi%2C%20I%20want%20to%20join%20your%20referral%20program" target="_blank" rel="noopener noreferrer">
+            <div className="flex flex-wrap items-start gap-3 sm:gap-4 mt-6">
+              <a href="https://wa.me/message/VLID27EWBIPND1" target="_blank" rel="noopener noreferrer">
                 <button className="bg-[#333333] border border-transparent hover:border-[#ff1f00] text-white px-4 sm:px-6 lg:px-8 py-2 sm:py-3 lg:py-4 rounded-full font-medium whitespace-nowrap text-xs sm:text-sm lg:text-base">
                   JOIN NOW
                 </button>

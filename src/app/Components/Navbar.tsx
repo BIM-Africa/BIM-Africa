@@ -30,9 +30,7 @@ export default function Navbar() {
 
   // ✅ WhatsApp click handler
   const handleWhatsAppClick = () => {
-    const phoneNumber = "352661784276"; // Luxembourg number (without +)
-    const message = encodeURIComponent("Hi I want to join your referral program ok?");
-    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
+    const whatsappUrl = "https://wa.me/message/VLID27EWBIPND1";
     window.open(whatsappUrl, "_blank");
   };
 
@@ -99,7 +97,7 @@ export default function Navbar() {
         {showMobileNav && (
           <>
             <motion.div
-              className="fixed inset-0 z-[95] md:hidden bg-black"
+              className="fixed inset-0 z-[95] xl:hidden bg-black"
               variants={backdropVariants}
               initial="hidden"
               animate="visible"
@@ -107,7 +105,7 @@ export default function Navbar() {
             />
 
             <motion.aside
-              className="fixed inset-0 z-[100] md:hidden"
+              className="fixed inset-0 z-[100] xl:hidden overflow-y-auto"
               variants={panelVariants}
               initial="hidden"
               animate="visible"
@@ -117,7 +115,7 @@ export default function Navbar() {
                 className="bg-cover bg-center relative"
                 style={{
                   backgroundImage: `url(${mobile.src})`,
-                  minHeight: "100vh",
+                  minHeight: "100dvh",
                 }}
               >
                 <div className="flex flex-col min-h-full pt-1 pb-6 relative">
@@ -180,7 +178,7 @@ export default function Navbar() {
 
                   {/* Mobile CTA Button */}
                   <div
-                    className="fixed left-0 right-0 bottom-8 px-6"
+                    className="mt-6 shrink-0 px-6 pb-6"
                     style={{
                       paddingBottom:
                         "calc(env(safe-area-inset-bottom, 1rem) + 0.75rem)",
@@ -221,7 +219,7 @@ export default function Navbar() {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-6 lg:space-x-16 relative">
+          <nav className="hidden xl:flex items-center space-x-6 xl:space-x-10 relative">
             {navigationItems.map((item, i) => (
               <Link
                 key={i}
@@ -251,12 +249,12 @@ export default function Navbar() {
           </nav>
 
           {/* CTA + Language + Mobile Menu */}
-          <div className="flex items-center space-x-2 md:space-x-4">
+          <div className="flex items-center gap-1 sm:gap-2 xl:gap-4">
             <a
               href="https://quotation.bim.africa/"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block"
+              className="hidden min-[400px]:inline-block"
             >
               <button className="text-[#ff1f00] border border-red-500 px-4 py-2 sm:px-6 sm:py-2 rounded-full text-xs sm:text-sm font-medium transition-all whitespace-nowrap hover:bg-red-500 hover:text-white">
                 Instant Quotation
@@ -279,7 +277,7 @@ export default function Navbar() {
             {/* Mobile Menu Button */}
             <button
               onClick={() => setShowMobileNav(true)}
-              className="md:hidden text-white"
+              className="xl:hidden text-white"
               aria-label="Toggle menu"
             >
               <Image src={header} alt="menu" className="w-10 h-auto" />

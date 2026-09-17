@@ -244,14 +244,14 @@ export default function ServicesPage() {
   {showMobileNav && (
     <>
       <motion.div
-        className="fixed inset-0 z-[95] md:hidden bg-black"
+        className="fixed inset-0 z-[95] xl:hidden bg-black"
         variants={backdropVariants}
         initial="hidden"
         animate="visible"
         exit="exit"
       />
      <motion.aside
-  className="fixed inset-0 z-[100] md:hidden"
+  className="fixed inset-0 z-[100] xl:hidden overflow-y-auto"
   variants={{
     hidden: {
       opacity: 0,
@@ -289,7 +289,7 @@ export default function ServicesPage() {
     style={{
       backgroundImage: `url(${mobile.src})`,
       minHeight: "100svh",
-      height: "100vh",
+      height: "100dvh",
     }}
   >
     <div className="flex flex-col min-h-full pt-1 pb-6 relative">
@@ -365,7 +365,7 @@ export default function ServicesPage() {
       </motion.nav>
 
       <div
-        className="fixed left-0 right-0 bottom-8 px-6"
+        className="mt-6 shrink-0 px-6 pb-6"
         style={{
           paddingBottom:
             "calc(env(safe-area-inset-bottom, 1rem) + 0.75rem)",
@@ -401,7 +401,7 @@ export default function ServicesPage() {
           </Link>
 
           {/* Desktop nav with wave underline */}
-          <nav className="hidden md:flex items-center space-x-6 lg:space-x-16 relative">
+          <nav className="hidden xl:flex items-center space-x-6 xl:space-x-10 relative">
             {navigationItems.map((item, i) => (
               <Link
                 key={i}
@@ -422,8 +422,8 @@ export default function ServicesPage() {
             ))}
           </nav>
 
-          <div className="flex items-center space-x-2 md:space-x-4">
-            <a href="https://quotation.bim.africa/" target="_blank" rel="noopener noreferrer" className="inline-block">
+          <div className="flex items-center gap-1 sm:gap-2 xl:gap-4">
+            <a href="https://quotation.bim.africa/" target="_blank" rel="noopener noreferrer" className="hidden min-[400px]:inline-block">
               <button className="text-red-500 border border-red-500 px-4 py-2 sm:px-6 sm:py-2 rounded-full text-xs sm:text-sm font-medium transition-all whitespace-nowrap hover:bg-red-500 hover:text-white">
                 {language === "EN" ? "Instant Quotation" : "Devis Instantané"}
               </button>
@@ -436,7 +436,7 @@ export default function ServicesPage() {
               <span className="text-black text-xs sm:text-sm font-medium px-1 sm:px-2">{language === "EN" ? "FR" : "EN"}</span>
             </button>
 
-            <button onClick={() => setShowMobileNav(true)} className="md:hidden text-white" aria-label="Toggle menu">
+            <button onClick={() => setShowMobileNav(true)} className="xl:hidden text-white" aria-label="Toggle menu">
               {showMobileNav ? <X size={28} /> : <Image src={header} alt="menu" className="w-10 h-auto" />}
             </button>
           </div>
@@ -473,7 +473,7 @@ export default function ServicesPage() {
                   {t.hero.contactUs}
                 </button>
               </Link>
-              <a href="https://wa.me/352661784276" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
+              <a href="https://wa.me/message/VLID27EWBIPND1" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
                 <button className="w-full sm:w-auto bg-[#333333] border border-transparent hover:border-[#ff1f00] text-white px-6 sm:px-8 lg:px-12 py-3 sm:py-4 rounded-full transition-all hover:scale-105 text-sm sm:text-base whitespace-nowrap">
                   {t.hero.whatsappUs}
                 </button>
@@ -524,7 +524,7 @@ export default function ServicesPage() {
         <div className="text-center mt-8 sm:mt-12 relative z-10 px-4">
           <p className="text-white text-sm sm:text-base">
             {t.cta.vision}{" "}
-            <a href="https://wa.me/352661784276" target="_blank" rel="noopener noreferrer" className="text-[#ff1f00] hover:text-red-400">
+            <a href="https://wa.me/message/VLID27EWBIPND1" target="_blank" rel="noopener noreferrer" className="text-[#ff1f00] hover:text-red-400">
               {t.cta.whatsapp}
             </a>
           </p>
@@ -547,7 +547,7 @@ export default function ServicesPage() {
                 {t.hero.contactUs}
               </button>
             </Link>
-            <a href="https://wa.me/352661784276" target="_blank" rel="noopener noreferrer" className="w-full">
+            <a href="https://wa.me/message/VLID27EWBIPND1" target="_blank" rel="noopener noreferrer" className="w-full">
               <button className="w-full bg-[#333333] border border-transparent hover:border-[#ff1f00] text-white px-6 sm:px-8 lg:px-12 py-3 sm:py-4 rounded-full transition-all hover:scale-105 text-sm sm:text-base">
                 {t.hero.whatsappUs}
               </button>
@@ -678,7 +678,7 @@ export default function ServicesPage() {
 
           {/* round quote button */}
           <div className="flex justify-center relative -mt-4 sm:-mt-6 md:-mt-8 lg:-mt-3 xl:-mt-10 mb-[-1rem] sm:mb-[-1.5rem] md:mb-[-1.75rem] lg:mb-[-2rem] xl:mb-[-2rem] z-10">
-            <a href="https://quotation.bim.africa/" target="_blank" rel="noopener noreferrer">
+            <a href="https://quotation.bim.africa/" target="_blank" rel="noopener noreferrer" >
               <button
                 className="bg-[#ff1f00] text-white rounded-full w-20 h-20 sm:w-24 sm:h-24 lg:w-32 lg:h-32
                 flex flex-col items-center justify-center font-bold text-xs sm:text-sm
@@ -723,7 +723,7 @@ export default function ServicesPage() {
             </div>
 
             <div className="mb-8">
-              <div className="flex justify-between items-start mb-6">
+              <div className="flex flex-col min-[400px]:flex-row gap-4 justify-between items-start mb-6">
                 <div className="flex-1 pr-4">
                   <h3 className="text-[#ff1f00] text-sm font-bold uppercase mb-3">{t.footer.referralProgram}</h3>
                   <p className="text-white text-xs leading-relaxed">{t.footer.referralDesc}</p>
@@ -731,10 +731,10 @@ export default function ServicesPage() {
 
                 <div className="flex flex-col items-end space-y-4">
                   <a
-                    href="https://wa.me/352661784276?text=Hi%2C%20I%20want%20to%20join%20your%20referal%20program"
+                    href="https://wa.me/message/VLID27EWBIPND1"
                     target="_blank"
                     rel="noopener noreferrer"
-                    aria-label="Join referral program on WhatsApp (Luxembourg)"
+                    aria-label="Join referral program on WhatsApp (Mauritius)"
                   >
                     <button className="bg-[#333333] border border-transparent hover:border-[#ff1f00] text-white px-6 py-2 rounded-full text-sm font-medium transition-colors whitespace-nowrap">
                       {t.footer.joinNow}
@@ -779,7 +779,7 @@ export default function ServicesPage() {
           <div className="hidden sm:grid sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
             <div className="text-left">
               <div className="text-[#ff1f00] font-black text-4xl sm:text-5xl lg:text-6xl tracking-tight">
-                <Image src={logo2} className="w-64 sm:w-80 lg:w-[500px] h-auto" alt="" width={500} height={120} />
+                <Image src={logo2} className="w-full max-w-80 h-auto" alt="" width={500} height={120} />
               </div>
               <p className="text-white text-sm mt-4">{t.footer.copyright}</p>
               <p className="text-white text-sm">{t.footer.location}</p>
@@ -807,9 +807,9 @@ export default function ServicesPage() {
             <div className="text-left">
               <h3 className="text-[#ff1f00] text-base sm:text-lg uppercase">{t.footer.referralProgram}</h3>
               <p className="text-white text-xs sm:text-sm mt-4">{t.footer.referralDesc}</p>
-              <div className="flex items-start gap-3 sm:gap-4 mt-6">
+              <div className="flex flex-wrap items-start gap-3 sm:gap-4 mt-6">
                 <a
-                  href="https://wa.me/352661784276?text=Hi%2C%20I%20want%20to%20join%20your%20referal%20program"
+                  href="https://wa.me/message/VLID27EWBIPND1"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
