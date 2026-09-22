@@ -36,7 +36,7 @@ export async function generateMetadata(props: {
     title: `${blog.title} | BIM Africa`,
     description: blog.desc?.slice(0, 160),
     alternates: {
-      canonical: `https://www.bim.africa/blog/${slug}`,
+      canonical: `https://bim.africa/blog/${slug}`,
     },
   };
 }
