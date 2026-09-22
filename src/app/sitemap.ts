@@ -5,7 +5,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const BASE_URL =
     process.env.NODE_ENV === "development"
       ? "http://localhost:3000"
-      : "https://www.bim.africa";
+      : "https://bim.africa";
 
   const API_URL =
     process.env.NODE_ENV === "development"
