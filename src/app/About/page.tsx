@@ -15,7 +15,6 @@ import Navbar from "../Components/Navbar";
 import Footer from "../../app/Components/Footer";
 import Map from "../../app/Components/Map";
 import WorkTogether from "../Components/WorkTogether";
-import type { Metadata } from "next";
 
 /* Assets */
 import logo from "../../Assests/srv.svg";
@@ -24,16 +23,6 @@ import hasan from "../../Assests/hassan2.png";
 import rahul from "../../Assests/rahul2.png";
 import ronit from "../../Assests/ronit.png"
 import man from "../../Assests/about.jpeg"
-
-/* ✅ SEO Metadata */
-export const metadata: Metadata = {
-  title: "About BIM Africa | Web Development & Digital Solutions Mauritius",
-  description:
-    "BIM Africa is a Mauritius-based digital technology partner helping businesses build, protect and support their digital presence through website development, cybersecurity and digital support outsourcing.",
-  alternates: {
-    canonical: "https://www.bim.africa/About",
-  },
-};
 
 /* ✅ Visionaries Data */
 const visionaries = [
