@@ -13,4 +13,6 @@ export default function DigitalSupportLayout({
   children,
 }: {
   children: React.ReactNode;
+}) {
+  return children;
 }
