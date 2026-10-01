@@ -16,7 +16,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   // ✅ FIXED LAST MOD FOR STATIC PAGES (IMPORTANT)
   // =====================================================
   // Use website launch / major update date
-  const STATIC_LAST_MOD = new Date("2025-12-01");
+  const STATIC_LAST_MOD = new Date("2026-10-01");
 
   // =====================================================
   // ✅ STATIC PAGES (ALL ROUTES)
@@ -100,6 +100,20 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       changeFrequency: "monthly",
       priority: 0.7,
     },
+    
+    {
+      url: `${BASE_URL}/CyberSecurity`,
+      lastModified: STATIC_LAST_MOD,
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
+      url: `${BASE_URL}/DigitalSupport`,
+      lastModified: STATIC_LAST_MOD,
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+
   ];
 
   // =====================================================
