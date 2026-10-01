@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Cybersecurity & Threat Management Mauritius | BIM Africa",
+  title: "BIM Africa | Cybersecurity & Website Security in Mauritius",
   description:
-    "BIM Africa provides cybersecurity and threat management services in Mauritius, including security audits, malware removal, website monitoring and proactive protection for businesses.",
+    "Professional cybersecurity, website security and malware removal for businesses in Mauritius, Africa and Europe. Protect your website, data and digital operations.",
   alternates: {
     canonical: "https://www.bim.africa/CyberSecurity",
   },
