@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Website Strategy & Development Mauritius | BIM Africa",
+  title: "BIM Africa | Website Development & Web Design & Strategy in Mauritius",
   description:
-    "Build a stronger digital presence with BIM Africa's website strategy and development services in Mauritius, from strategic planning and UX to professional website development and ongoing support.",
+    "Professional website development and web design for businesses in Mauritius, Africa and Europe. Build a fast, secure and effective website that grows with your business.",
   alternates: {
     canonical: "https://www.bim.africa/WebsiteStrategy",
   },
