@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Terms of Service | BIM Africa",
+  title: "BIM Africa | Terms of Service & Website Use in Mauritius",
   description:
-    "Read the BIM Africa Terms of Service governing the use of our website, digital services and business engagements.",
+    "Read BIM Africa's Terms of Service covering website development, cybersecurity, digital support, payments, service use and your responsibilities as a client.",
   alternates: {
     canonical: "https://www.bim.africa/TermsofService",
   },
