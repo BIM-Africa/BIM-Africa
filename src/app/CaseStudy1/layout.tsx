@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "BIM Africa Case Study | Website Development Mauritius",
+  title: "BIM Africa | Case Study: NouMarmite's Creole Website in Mauritius",
   description:
-    "Explore how BIM Africa approaches website strategy and development for businesses, combining professional design, performance, responsive experiences and ongoing digital support.",
+    "Discover how BIM Africa created NouMarmite's first Mauritian Creole website in 2019, combining local culture, mobile-first design and digital innovation.",
   alternates: {
     canonical: "https://www.bim.africa/CaseStudy1",
   },
