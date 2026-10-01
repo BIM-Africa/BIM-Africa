@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Digital Support Outsourcing Mauritius | BIM Africa",
+  title: "BIM Africa | Digital Support & IT Outsourcing in Mauritius",
   description:
-    "BIM Africa provides digital support outsourcing for businesses in Mauritius, including web designers, developers, technical support and managed digital assistance.",
+    "Professional digital support and IT outsourcing for businesses in Mauritius, Africa and Europe. Get reliable technical support, website maintenance and ongoing assistance.",
   alternates: {
     canonical: "https://www.bim.africa/DigitalSupport",
   },
