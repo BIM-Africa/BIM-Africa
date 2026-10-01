@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   title:
     "BIM Africa | Professional Websites, Cybersecurity & Digital Support Mauritius",
   description:
-    "BIM Africa helps businesses build, protect and support their digital presence with professional website development, cybersecurity and threat management, and digital support outsourcing from Mauritius while covering Africa and Europe.",
+    "Professional website development, cybersecurity and digital support for businesses in Mauritius, Africa and Europe. Build, protect and support your business.",
 keywords: [
   "BIM Africa",
   "Brand Image Marketer",
@@ -38,7 +38,7 @@ keywords: [
     title:
       "BIM Africa | Professional Websites, Cybersecurity & Digital Support Mauritius",
     description:
-      "BIM Africa helps businesses build, protect and support their digital presence with professional website development, cybersecurity and threat management, and digital support outsourcing from Mauritius while covering Africa and Europe.",
+      "Professional website development, cybersecurity and digital support for businesses in Mauritius, Africa and Europe. Build, protect and support your business.",
     url: "https://bim.africa",
     siteName: "BIM Africa",
     images: [
