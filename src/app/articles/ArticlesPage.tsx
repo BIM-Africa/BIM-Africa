@@ -294,31 +294,39 @@ const getBlog = async (slug: string | undefined) => {
   <MarkdownPreview source={autoParagraph(currentArticle?.extraDesc || "")} />
 </div>
 
-                <h3 className="text-2xl sm:text-3xl text-white">Modern Digital Practices & Platforms</h3>
+                <h3 className="text-2xl sm:text-3xl text-white">How BIM Africa Can Help Your Business?</h3>
                 <div className="rounded-2xl bg-[#ff1f00] p-5 sm:p-6">
                   <div className="flex items-center gap-2 text-lg font-semibold">
-                    <Zap className="w-5 h-5 text-white" /> Cybersecurity Technologies
+                    <Zap className="w-5 h-5 text-white" /> Website Strategy & Development
                   </div>
                   <ul className="mt-3 space-y-2">
                     <li className="flex items-start gap-2">
-                      <CheckCircle className="mt-1 w-4 h-4 text-white" /> Proactive protection against modern cyber threats
+                      <CheckCircle className="mt-1 w-4 h-4 text-white" /> Build a professional website that represents your business, attracts customers and supports your long-term growth.
                     </li>
+                  </ul>
+                  <div className="flex items-center gap-2 text-lg font-semibold">
+                    <Zap className="w-5 h-5 text-white" /> Cybersecurity & Threat Management
+                  </div>
+                  <ul className="mt-3 space-y-2">
                     <li className="flex items-start gap-2">
-                      <CheckCircle className="mt-1 w-4 h-4 text-white" /> Continuous monitoring to detect suspicious activities
+                      <CheckCircle className="mt-1 w-4 h-4 text-white" /> Protect your website and business from security threats with website audits, vulnerability checks, malware removal and security solutions.
                     </li>
+                  </ul>
+                  <div className="flex items-center gap-2 text-lg font-semibold">
+                    <Zap className="w-5 h-5 text-white" /> Technical Support & Outsourcing
+                  </div>
+                  <ul className="mt-3 space-y-2">
                     <li className="flex items-start gap-2">
-                      <CheckCircle className="mt-1 w-4 h-4 text-white" /> Advanced security measures to safeguard digital systems
-                    </li>
+                      <CheckCircle className="mt-1 w-4 h-4 text-white" /> Get reliable technical expertise when you need it, from website maintenance and updates to troubleshooting and ongoing technical support.
                   </ul>
                 </div>
 
                 <div className="rounded-2xl bg-black/40 border border-white/10 p-5 sm:p-6">
                   <div className="flex items-center gap-2 text-lg font-semibold">
-                    <BookOpen className="w-5 h-5 text-[#ff1f00]" /> Next.js Framework
+                    <BookOpen className="w-5 h-5 text-[#ff1f00]" /> Build. Protect. Support.
                   </div>
                   <p className="mt-2">
-                    Next.js enables the development of fast, secure, and scalable web applications using modern rendering techniques and performance optimizations. Currently used by Netflix.
-                  </p>
+Whether you are starting from scratch, improving an existing website or dealing with security and technical challenges, BIM Africa provides the expertise to build, protect and support the technology your business depends on.                  </p>
                 </div>
               </article>
             </div>
