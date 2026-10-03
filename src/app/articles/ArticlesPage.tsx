@@ -318,6 +318,7 @@ const getBlog = async (slug: string | undefined) => {
                   <ul className="mt-3 space-y-2">
                     <li className="flex items-start gap-2">
                       <CheckCircle className="mt-1 w-4 h-4 text-white" /> Get reliable technical expertise when you need it, from website maintenance and updates to troubleshooting and ongoing technical support.
+                    </li>                    
                   </ul>
                 </div>
 
@@ -326,7 +327,7 @@ const getBlog = async (slug: string | undefined) => {
                     <BookOpen className="w-5 h-5 text-[#ff1f00]" /> Build. Protect. Support.
                   </div>
                   <p className="mt-2">
-Whether you are starting from scratch, improving an existing website or dealing with security and technical challenges, BIM Africa provides the expertise to build, protect and support the technology your business depends on.                  </p>
+                  Whether you are starting from scratch, improving an existing website or dealing with security and technical challenges, BIM Africa provides the expertise to build, protect and support the technology your business depends on.</p>
                 </div>
               </article>
             </div>
