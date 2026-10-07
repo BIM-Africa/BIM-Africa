@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   description:
     "Professional digital support and IT outsourcing for businesses in Mauritius, Africa and Europe. Get reliable technical support, website maintenance and ongoing assistance.",
   alternates: {
-    canonical: "https://www.bim.africa/DigitalSupport",
+    canonical: "https://bim.africa/DigitalSupport",
   },
 };
 
