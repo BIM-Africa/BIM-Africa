@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   description:
     "Read BIM Africa's Terms of Service covering website development, cybersecurity, digital support, payments, service use and your responsibilities as a client.",
   alternates: {
-    canonical: "https://www.bim.africa/TermsofService",
+    canonical: "https://bim.africa/TermsofService",
   },
 };
 
