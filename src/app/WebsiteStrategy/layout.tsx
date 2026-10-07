@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   description:
     "Professional website development and web design for businesses in Mauritius, Africa and Europe. Build a fast, secure and effective website that grows with your business.",
   alternates: {
-    canonical: "https://www.bim.africa/WebsiteStrategy",
+    canonical: "https://bim.africa/WebsiteStrategy",
   },
 };
 
