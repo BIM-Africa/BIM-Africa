@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   description:
     "Discover how BIM Africa created NouMarmite's first Mauritian Creole website in 2019, combining local culture, mobile-first design and digital innovation.",
   alternates: {
-    canonical: "https://www.bim.africa/CaseStudy1",
+    canonical: "https://bim.africa/CaseStudy1",
   },
 };
 
