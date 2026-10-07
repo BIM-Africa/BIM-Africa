@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   description:
     "Discover how BIM Africa built a secure, high-performance website for Mauritius Health Travel, connecting patients with leading medical providers in India.",
   alternates: {
-    canonical: "https://www.bim.africa/CaseStudy2",
+    canonical: "https://bim.africa/CaseStudy2",
   },
 };
 
