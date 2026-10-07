@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   description:
     "See how BIM Africa built a high-performance Next.js website for Mauritius Travel & Tour, delivering fast loading, SEO-ready architecture and global reach.",
   alternates: {
-    canonical: "https://www.bim.africa/CaseStudy3",
+    canonical: "https://bim.africa/CaseStudy3",
   },
 };
 
