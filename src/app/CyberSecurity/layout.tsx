@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   description:
     "Professional cybersecurity, website security and malware removal for businesses in Mauritius, Africa and Europe. Protect your website, data and digital operations.",
   alternates: {
-    canonical: "https://www.bim.africa/CyberSecurity",
+    canonical: "https://bim.africa/CyberSecurity",
   },
 };
 
