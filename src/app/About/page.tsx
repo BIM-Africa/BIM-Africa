@@ -10,6 +10,7 @@ import {
   Globe,
   Target,
   Rocket,
+  FileText,
 } from "lucide-react";
 import Navbar from "../Components/Navbar";
 import Footer from "../../app/Components/Footer";
@@ -29,13 +30,15 @@ const visionaries = [
     src: rahul,
     name: "Rahul Mohabir",
     roleTitle: "Chief Executive Officer",
-    role: "Leading BIM Africa’s innovation, growth, and excellence through strategic vision and leadership.",
+    profilePdf: "/profiles/rahul-mohabir.pdf",
+    role: "With a background spanning technology, business informatics, global business, investment, compliance and corporate services, Rahul brings a multidisciplinary perspective to BIM Africa. He leads the company’s strategic direction and growth, combining business insight with a strong understanding of technology to shape solutions that create real commercial value for clients.",
   },
   {
     src: hasan,
     name: "Hassan Omar",
-    roleTitle: "Lead Developer",
-    role: "MERN Stack Engineer driving technical excellence and delivering cutting-edge digital solutions.",
+    roleTitle: "Head of Engineering",
+    profilePdf: "/profiles/hassan-omar.pdf",
+    role: "Hassan leads BIM Africa’s engineering function, bringing strong expertise in MERN stack development, software architecture, cybersecurity and modern web technologies. He oversees the technical development of BIM Africa’s solutions, combining secure engineering practices with scalable architecture to deliver reliable, high-performance digital platforms.",
   },
 ];
 
@@ -144,7 +147,23 @@ export default function ServicesPage() {
                     placeholder="blur"
                   />
 
-                 
+                  {/* Profile summary PDF button (hover on desktop, always visible on mobile) */}
+                  <div className="absolute inset-0 flex items-end justify-center pb-6 bg-gradient-to-t from-black/80 via-black/20 to-transparent
+                  opacity-100 sm:opacity-0 sm:group-hover:opacity-100 sm:focus-within:opacity-100 transition-opacity duration-500">
+                    <a
+                      href={person.profilePdf}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={`View ${person.name}'s profile summary (PDF)`}
+                      className="inline-flex items-center gap-2 rounded-full bg-[#ff1f00] px-6 py-3 text-sm font-semibold uppercase tracking-wide text-white
+                      shadow-[0_0_20px_#ff1f00aa] border border-white/20
+                      translate-y-0 sm:translate-y-4 sm:group-hover:translate-y-0 transition-all duration-500
+                      hover:bg-white hover:text-[#ff1f00] focus-visible:opacity-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
+                    >
+                      <FileText className="w-4 h-4" />
+                      View Profile
+                    </a>
+                  </div>
                 </div>
 
                 {/* Content Section */}
