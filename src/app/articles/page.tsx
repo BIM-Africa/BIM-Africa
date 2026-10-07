@@ -25,7 +25,7 @@ export default function ArticlesPage() {
     async function fetchArticles() {
       try {
         const res = await fetch(
-          "https://bim-africa-backend2.vercel.app/api/blogs",
+          "https://bim-africa-backend-six.vercel.app/api/blogs",
           { cache: "no-store" }
         );
         const data = await res.json();

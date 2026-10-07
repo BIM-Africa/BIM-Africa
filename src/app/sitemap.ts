@@ -10,7 +10,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const API_URL =
     process.env.NODE_ENV === "development"
       ? "http://localhost:5000/api/blogs"
-      : "https://bim-africa-backend2.vercel.app/api/blogs";
+      : "https://bim-africa-backend-six.vercel.app/api/blogs";
 
   // =====================================================
   // ✅ FIXED LAST MOD FOR STATIC PAGES (IMPORTANT)

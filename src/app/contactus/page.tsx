@@ -78,7 +78,7 @@ export default function ContactPage() {
       return;
     }
 
-    const res = await fetch("https://bim-africa-backend2.vercel.app/api/contact", {
+    const res = await fetch("https://bim-africa-backend-six.vercel.app/api/contact", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ ...formData, captchaToken }),
