@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   description:
     "Read BIM Africa's Privacy Policy to learn how we collect, use, protect and manage personal data when you use our website and digital services.",
   alternates: {
-    canonical: "https://www.bim.africa/PrivacyPolicy",
+    canonical: "https://bim.africa/PrivacyPolicy",
   },
 };
 
