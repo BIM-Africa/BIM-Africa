@@ -19,9 +19,8 @@ import WorkTogether from "../Components/WorkTogether";
 /* Assets */
 import logo from "../../Assests/srv.svg";
 import webStrategy from "../../Assests/WebsiteStrategy.png";
-import hasan from "../../Assests/hassan2.png";
-import rahul from "../../Assests/rahul2.png";
-import ronit from "../../Assests/ronit.png"
+import hasan from "../../Assests/hassan.jpeg";
+import rahul from "../../Assests/rahul.jpeg";
 import man from "../../Assests/about.jpeg"
 
 /* ✅ Visionaries Data */
@@ -37,12 +36,6 @@ const visionaries = [
     name: "Hassan Omar",
     roleTitle: "Lead Developer",
     role: "MERN Stack Engineer driving technical excellence and delivering cutting-edge digital solutions.",
-  },
-  {
-    src: ronit,
-    name: "Ronit Roy",
-    roleTitle: "Lead Designer",
-    role: "Crafting seamless user experiences and elegant design systems that define digital creativity.",
   },
 ];
 
@@ -134,7 +127,7 @@ export default function ServicesPage() {
             vision to transform your ideas into reality.
           </p>
 
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 mt-12 items-stretch">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 mt-12 items-stretch max-w-[800px] mx-auto">
             {visionaries.map((person, idx) => (
               <div
                 key={idx}
