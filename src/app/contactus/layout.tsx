@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   description:
     "Contact BIM Africa for website development, cybersecurity and digital support for businesses in Mauritius, Africa and Europe. Get a fast response.",
   alternates: {
-    canonical: "https://www.bim.africa/contactus",
+    canonical: "https://bim.africa/contactus",
   },
 };
 
