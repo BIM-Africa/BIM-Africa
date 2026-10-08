@@ -124,7 +124,7 @@ export default function TermsOfService() {
             <h2 className="text-[#ff1f00] font-semibold mb-2">10. Contact Us</h2>
             <p className="text-white/90 mb-2">For inquiries about these Terms, please contact:</p>
             <p className="text-white/90">
-            Email: <span className="text-[#ff1f00]">legal@bim.africa</span>
+            Email: <span className="text-[#ff1f00]">info@bim.africa</span>
             </p>
 
           </article>
