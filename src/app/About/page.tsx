@@ -91,8 +91,7 @@ export default function ServicesPage() {
 
 
             <p className="text-white mt-6 max-w-3xl mx-auto">
-              Founded by Rahul in 2019 and incorporated in Mauritius in 2022, BIM Africa helps businesses build, protect and support the digital systems they rely on. Today, we provide websites, cybersecurity and digital support built around practical business needs, in Mauritius, Africa, Luxembourg and beyond.
-            </p>
+Founded by Rahul in 2019 and incorporated in Mauritius in 2022, BIM Africa helps businesses build, protect and support the digital systems they rely on. Today, we provide websites, cybersecurity and digital support built around practical business needs, in Mauritius, Africa, Luxembourg and beyond. From our roots in Mauritius, we continue to build lasting relationships with businesses that value clear thinking, reliable support and solutions that work.            </p>
           </div>
 
          <div className="relative mx-auto mt-2 lg:mx-0">
