@@ -24,14 +24,14 @@ export default function Map() {
         />
 
         {/* Content */}
-        <div className="mx-auto w-full max-w-[1200px] px-6 md:px-10 text-center">
+        <div className="mx-auto w-full max-w-[1200px] px-6 md:px-10">
 
-          <h2 className="text-white text-3xl sm:text-4xl md:text-5xl leading-tight tracking-tight">
+          <h2 className="text-white text-3xl sm:text-4xl md:text-5xl leading-tight tracking-tight text-center">
             Where We <span className="text-[#ff1f00]">Work</span>
           </h2>
 
           <div className="relative mb-10 max-w-[1200px]">
-            <p className="text-white mt-6 max-w-3xl mx-auto">
+            <p className="text-white mt-6 max-w-3xl mx-auto text-center">
               BIM Africa is rooted in Mauritius, with growing relationships across Africa, Luxembourg and international markets. We work with businesses that value clear thinking, practical solutions and reliable support, helping them build what they need, protect what they have and keep things running as their needs evolve.
             </p>
           </div>
