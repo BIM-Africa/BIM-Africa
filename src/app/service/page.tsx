@@ -55,7 +55,7 @@ export default function ServicesPage() {
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl text-white leading-tight">
               <span className="text-[#ff1f00]">Build</span>. <span className="text-[#ff1f00]">Protect</span>. <span className="text-[#ff1f00]">Support</span>.
               <br />
-              Services That Matter. 
+              One Partner for the Work That Matters.
             </h1>
           </div>
 
@@ -92,9 +92,11 @@ export default function ServicesPage() {
       <section className="py-10 sm:py-4 lg:py-[2px] relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 text-center relative z-10">
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-white leading-tight">
-            Shaping premium <br />
-            <span className="text-[#ff1f00]">digital experiences</span> <br />
-            for brands that want more.
+            We Like
+
+            <span className="text-[#ff1f00]">Simple</span>. <span className="text-[#ff1f00]">Clear</span>. 
+            <br />
+            <span className="text-[#ff1f00]">Practical</span>. <span className="text-[#ff1f00]">Responsive</span>. 
           </h2>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 w-full max-w-[460px] mx-auto mt-6 sm:mt-8">
