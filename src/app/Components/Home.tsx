@@ -85,7 +85,7 @@ export default function ServicesPage() {
     </h1>
 
 
-      <p className="text-gray-300 mt-6 text-base sm:text-lg  max-w-[560px] mx-auto lg:mx-0">
+      <p className="text-white mt-6 max-w-3xl mx-auto">
       Businesses we've helped build, protect and support through practical work focused on meaningful results. Every project starts with understanding what the business needs and finding the right way to move it forward.      </p>
     </div>
     <div className="relative">
