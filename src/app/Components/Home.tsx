@@ -76,12 +76,13 @@ export default function ServicesPage() {
         Customer Stories
       </div>
 
-     <h1 className="text-white sm:text-4xl md:text-5xl lg:text-5xl leading-[1.1]">
-  <span className="whitespace-nowrap font-bold sm:font-normal">
-   Real <span className="text-[#ff1f00] font-normal">Businesses.</span>
-  </span>{" "}
-  Real<span className="text-[#ff1f00]"> Work</span>.
-</h1>
+    <h1 className="text-white sm:text-4xl md:text-5xl lg:text-5xl leading-[1.1]">
+      <span className="text-white text-3xl sm:text-4xl md:text-5xl leading-tight">
+        Real <span className="text-[#ff1f00] font-normal">Businesses.</span>
+        <br />
+        <span className="text-[#ff1f00]">Real </span>Work.
+      </span>
+    </h1>
 
 
       <p className="text-gray-300 mt-6 text-base sm:text-lg  max-w-[560px] mx-auto lg:mx-0">
