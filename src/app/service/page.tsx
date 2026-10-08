@@ -188,8 +188,7 @@ export default function ServicesPage() {
                     22+
                   </div>
                   <p className="text-white text-xs sm:text-sm mt-2">
-                    Years of Combined Experience. <br />
-                    Across web development, technology, security and digital support.
+                    <br /> Years of Combined Experience. 
                   </p>
                 </div>
 
@@ -198,8 +197,7 @@ export default function ServicesPage() {
                     100%
                   </div>
                   <p className="text-white text-xs sm:text-sm mt-2">
-                    Client Focused <br />
-                    Clear communication, practical work and responsive support built around your business.
+                   <br /> Client Focused
                   </p>
                 </div>
               </div>
@@ -210,7 +208,7 @@ export default function ServicesPage() {
                   <h3 className="text-[#ff1f00] text-xl sm:text-2xl">
                     Modern Technology. Built for Business.
                   </h3>
-                  <p className="text-white text-sm sm:text-base mt-4">
+                  <p className="text-white text-xs sm:text-sm mt-2">
                   We use modern technologies such as Next.js, React, Tailwind CSS, Node.js, MongoDB and Cloudflare to build fast, reliable and maintainable websites. Our technology choices are based on your business needs, ensuring the right balance of performance, flexibility and long-term reliability.                  
                   </p>
                 </div>
@@ -220,7 +218,7 @@ export default function ServicesPage() {
                   <h3 className="text-[#ff1f00] text-xl sm:text-2xl">
                     Security Built Into the Work
                   </h3>
-                  <p className="text-white text-sm sm:text-base mt-4">
+                  <p className="text-white text-xs sm:text-sm mt-2">
                   Security is considered throughout the development and deployment process, using SSL, Cloudflare protection, secure configurations and access controls. We also provide ongoing maintenance, security monitoring and threat response to help keep your website protected as your business grows.
                   </p>
                 </div>
@@ -240,8 +238,7 @@ export default function ServicesPage() {
                       22+
                     </div>
                     <p className="text-white text-xs sm:text-sm">
-                      Years of Combined Experience. <br />
-                    Across web development, technology, security and digital support.
+                      <br /> Years of Combined Experience.
                     </p>
                   </div>
 
@@ -250,8 +247,7 @@ export default function ServicesPage() {
                       100%
                     </div>
                     <p className="text-white text-xs sm:text-sm">
-                      Client Focused <br />
-                    Clear communication, practical work and responsive support built around your business.
+                      <br /> Client Focused
                     </p>
                   </div>
                 </div>
