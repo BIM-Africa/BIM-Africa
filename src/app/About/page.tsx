@@ -74,7 +74,7 @@ export default function ServicesPage() {
       <Navbar />
 
       {/* ✅ HERO SECTION */}
-      <section className="relative overflow-hidden py-8">
+      <section className="relative overflow-hidden py-10 sm:py-14 lg:py-16">
         <div className="mx-auto w-full max-w-[1200px] px-6 md:px-10 grid lg:grid-cols-2 gap-10 lg:gap-12 items-center">
           {/* Left copy */}
           <div className="text-center lg:text-left mx-auto">
@@ -207,7 +207,7 @@ The people behind BIM Africa, bringing together strategy, technical expertise an
                 <ShieldCheck className="w-6 h-6 text-[#ff1f00]" />
               </div>
               <h4 className="text-white text-xl mt-6 text-center">CLEAR</h4>
-              <p className="text-white mt-6 max-w-3xl mx-auto">
+              <p className="text-white text-center mt-4 text-sm">
                 Straightforward communication, transparent recommendations and clear expectations from the beginning. You should always know what we're doing, what it costs and why it matters.
               </p>
             </div>
