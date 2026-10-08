@@ -223,7 +223,7 @@ export default function ServicesPage() {
       <h2 className="qs-heading text-4xl sm:text-5xl md:text-6xl font-medium leading-tight">
         <span className="text-[#ff1f00]">Instant</span> Website <br /> Quotation Tool
       </h2>
-
+      
       <p className="qs-sub text-white/90 text-base sm:text-lg mt-4 sm:mt-6 max-w-2xl">
         Know what your website could cost before you get started. Get a clear, upfront estimate in under 2 minutes, based on your requirements.
       </p>
