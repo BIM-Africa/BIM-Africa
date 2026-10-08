@@ -20,7 +20,7 @@ import quote from "../../Assests/quoteimg.jpeg";
 /* Assets */
 import logo from "../../Assests/srv.svg";
 import webStrategy from "../../Assests/WebsiteStrategy.png";
-import man from "../../Assests/man.png"
+import man from "../../Assests/bim-africa-rahul-mohabir.jpg"
 import noumarmite from "../../Assests/noumarmite.png";
 import mauritiushealthtravel from "../../Assests/mauritiushealthtravel.png";
 import mauritiustraveltour from "../../Assests/mauritiustraveltour.png"
