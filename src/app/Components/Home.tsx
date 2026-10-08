@@ -86,8 +86,7 @@ export default function ServicesPage() {
 
 
       <p className="text-gray-300 mt-6 text-base sm:text-lg  max-w-[560px] mx-auto lg:mx-0">
-        Businesses we've helped build, protect and support. Practical work. Meaningful results. Every project starts with understanding what the business actually needs.
-      </p>
+      Businesses we've helped build, protect and support through practical work focused on meaningful results. Every project starts with understanding what the business needs and finding the right way to move it forward.      </p>
     </div>
     <div className="relative">
   <div className="rounded-2xl overflow-hidden border border-gray-800 bg-black/40 shadow-xl">
@@ -175,9 +174,9 @@ export default function ServicesPage() {
         <div className="mx-auto w-full max-w-[1200px]">
           <div className="flex items-end justify-between md:px-10 px-6 gap-4 mb-6 sm:mb-8">
             <h2 className="text-white text-3xl sm:text-4xl md:text-5xl leading-tight">
-              Services We Provide to
+              Build<span className="text-[#ff1f00]">.</span> Protect<span className="text-[#ff1f00]">.</span>  Support<span className="text-[#ff1f00]">.</span> 
               <br />
-              <span className="text-[#ff1f00]">Elevate Your Business</span>
+              Services Built Around <span className="text-[#ff1f00]">Your Business</span>
             </h2>
             <Link href="/service" className="hidden sm:inline-block">
               <button className="w-full sm:w-auto bg-[#333333] border border-transparent hover:border-[#ff1f00] text-white px-8 sm:px-10 lg:px-12 py-3 sm:py-4 rounded-full transition-all hover:scale-105 text-sm sm:text-base whitespace-nowrap">
