@@ -93,7 +93,7 @@ export default function ServicesPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 text-center relative z-10">
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-white leading-tight">
             We Like
-
+            <br />
             <span className="text-[#ff1f00]">Simple</span>. <span className="text-[#ff1f00]">Clear</span>. 
             <br />
             <span className="text-[#ff1f00]">Practical</span>. <span className="text-[#ff1f00]">Responsive</span>. 
@@ -185,20 +185,20 @@ export default function ServicesPage() {
               <div className="flex gap-6 sm:gap-8 justify-center mb-8 sm:mb-12">
                 <div className="text-center border border-[#ff1f00] rounded-2xl p-4 sm:p-6">
                   <div className="text-[#ff1f00] text-2xl sm:text-3xl font-bold">
-                    +60%
+                    22+
                   </div>
                   <p className="text-white text-xs sm:text-sm mt-2">
-                    By optimizing your website for search engines.
+                    Years of Combined Experience. <br />
+                    Across web development, technology, security and digital support.
                   </p>
                 </div>
 
                 <div className="text-center border border-[#ff1f00] rounded-2xl p-4 sm:p-6">
                   <div className="text-[#ff1f00] text-2xl sm:text-3xl font-bold">
-                    +30%
+                    1 Partner
                   </div>
                   <p className="text-white text-xs sm:text-sm mt-2">
-                    Rise in revenue as more visitors convert into paying
-                    customers.
+                    One partner for the work that matters.
                   </p>
                 </div>
               </div>
