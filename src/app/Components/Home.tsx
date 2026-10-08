@@ -80,7 +80,7 @@ export default function ServicesPage() {
   <span className="whitespace-nowrap font-bold sm:font-normal">
    Real <span className="text-[#ff1f00] font-normal">Businesses.</span>
   </span>{" "}
-  <span className="text-[#ff1f00]">Real</span> Work.
+  Real<span className="text-[#ff1f00]"> Work</span>.
 </h1>
 
 
