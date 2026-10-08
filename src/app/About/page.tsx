@@ -258,7 +258,7 @@ The people behind BIM Africa, bringing together strategy, technical expertise an
         </div>
       </section>
 
-      {/* ✅ Mission & Vision */}
+      {/* ✅ Mission & Vision 
       <section className="px-4 sm:px-6 lg:px-12 mb-20 sm:mb-32 overflow-hidden">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
@@ -275,7 +275,7 @@ The people behind BIM Africa, bringing together strategy, technical expertise an
             <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-2 h-80 bg-red-700 rounded-full hidden lg:block shadow-xl"></div>
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 sm:gap-20 lg:gap-40 items-center">
-              {/* Mission */}
+             
               <div className="relative flex justify-center">
   <Card className="bg-black backdrop-blur-xl border border-[#ff1f00] shadow-2xl rounded-3xl sm:rounded-[4rem] overflow-hidden relative group w-full max-w-[450px]">
     <CardContent className="p-6 sm:p-10 lg:p-8 relative z-10">
@@ -299,7 +299,7 @@ The people behind BIM Africa, bringing together strategy, technical expertise an
   </Card>
 </div>
 
-              {/* Vision */}
+              
               <div className="relative lg:mt-32 flex justify-center">
   <Card className="bg-black backdrop-blur-xl border border-[#ff1f00] shadow-2xl rounded-3xl sm:rounded-[4rem] overflow-hidden relative group w-full max-w-[450px]">
     <CardContent className="p-6 sm:p-10 lg:p-6 relative z-10">
@@ -324,7 +324,7 @@ The people behind BIM Africa, bringing together strategy, technical expertise an
             </div>
           </div>
         </div>
-      </section>
+      </section> End of Comment */}
 
       {/* ✅ Work Together + Footer */}
       <WorkTogether />
