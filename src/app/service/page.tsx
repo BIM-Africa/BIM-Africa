@@ -179,7 +179,7 @@ export default function ServicesPage() {
             {/* mobile layout */}
             <div className="block lg:hidden">
               <h2 className="text-lg sm:text-2xl md:text-3xl font-medium text-white mb-6 sm:mb-8 text-center">
-                Expertise that drives digital success
+                Expertise That Works for Your Business
               </h2>
 
               <div className="flex gap-6 sm:gap-8 justify-center mb-8 sm:mb-12">
@@ -195,10 +195,11 @@ export default function ServicesPage() {
 
                 <div className="text-center border border-[#ff1f00] rounded-2xl p-4 sm:p-6">
                   <div className="text-[#ff1f00] text-2xl sm:text-3xl font-bold">
-                    1 Partner
+                    100%
                   </div>
                   <p className="text-white text-xs sm:text-sm mt-2">
-                    One partner for the work that matters.
+                    Client Focused <br />
+                    Clear communication, practical work and responsive support built around your business.
                   </p>
                 </div>
               </div>
@@ -207,26 +208,19 @@ export default function ServicesPage() {
                 {/* FIXED BLOCK 1 */}
                 <div className="text-center">
                   <h3 className="text-[#ff1f00] text-xl sm:text-2xl">
-                    Next-Gen Website Performance
+                    Modern Technology. Built for Business.
                   </h3>
                   <p className="text-white text-sm sm:text-base mt-4">
-                    We craft A+ grade websites using Next.js for ultra-fast
-                    performance and scalability. From custom design and
-                    development to robust cybersecurity, we build secure,
-                    high-performance platforms that grow with your business.
-                  </p>
+We use modern technologies such as Next.js, React, Tailwind CSS, Node.js, MongoDB and Cloudflare to build fast, reliable and maintainable websites. Our technology choices are based on your business needs, ensuring the right balance of performance, flexibility and long-term reliability.                  </p>
                 </div>
 
                 {/* FIXED BLOCK 2 */}
                 <div className="text-center">
                   <h3 className="text-[#ff1f00] text-xl sm:text-2xl">
-                    Uncompromising Cybersecurity
+                    Security Built Into the Work
                   </h3>
                   <p className="text-white text-sm sm:text-base mt-4">
-                    Our proactive security solutions protect your site with
-                    real-time threat detection, malware removal, and continuous
-                    monitoring. Built for scalability and speed, your website
-                    stays secure while growing seamlessly.
+Security is considered throughout the development and deployment process, using SSL, Cloudflare protection, secure configurations and access controls. We also provide ongoing maintenance, security monitoring and threat response to help keep your website protected as your business grows.
                   </p>
                 </div>
               </div>
@@ -236,26 +230,27 @@ export default function ServicesPage() {
             <div className="hidden lg:grid lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16">
               <div>
                 <h2 className="text-lg sm:text-2xl md:text-3xl lg:text-5xl font-medium text-white mb-6 sm:mb-8 text-center lg:text-left">
-                  Expertise that drives digital success
+                  Expertise That Works for Your Business
                 </h2>
 
                 <div className="flex gap-6 sm:gap-8 lg:gap-12 justify-center lg:justify-start">
                   <div className="text-center lg:text-left">
                     <div className="text-[#ff1f00] text-2xl sm:text-3xl lg:text-4xl">
-                      +60%
+                      22+
                     </div>
                     <p className="text-white text-xs sm:text-sm">
-                      By optimizing your website for search engines.
+                      Years of Combined Experience. <br />
+                    Across web development, technology, security and digital support.
                     </p>
                   </div>
 
                   <div className="text-center lg:text-left">
                     <div className="text-[#ff1f00] text-2xl sm:text-3xl lg:text-4xl">
-                      +30%
+                      100%
                     </div>
                     <p className="text-white text-xs sm:text-sm">
-                      Rise in revenue as more visitors convert into paying
-                      customers.
+                      Client Focused <br />
+                    Clear communication, practical work and responsive support built around your business.
                     </p>
                   </div>
                 </div>
@@ -264,24 +259,20 @@ export default function ServicesPage() {
               <div className="space-y-8 sm:space-y-12">
                 <div>
                   <h3 className="text-[#ff1f00] text-xl sm:text-2xl lg:text-3xl text-center lg:text-left">
-                    Social Media Management
+                    Modern Technology. Built for Business.
                   </h3>
                   <p className="text-white text-sm sm:text-base text-center lg:text-left">
-                    Our social media management services focus on building and
-                    enhancing your brand’s online presence. We create engaging
-                    content, manage your social media accounts, and analyze
-                    performance.
+We use modern technologies such as Next.js, React, Tailwind CSS, Node.js, MongoDB and Cloudflare to build fast, reliable and maintainable websites. Our technology choices are based on your business needs, ensuring the right balance of performance, flexibility and long-term reliability.                  </p>
+
                   </p>
                 </div>
 
                 <div>
                   <h3 className="text-[#ff1f00] text-xl sm:text-2xl lg:text-3xl text-center lg:text-left">
-                    E-commerce Solutions
+                    Security Built Into the Work
                   </h3>
                   <p className="text-white text-sm sm:text-base text-center lg:text-left">
-                    Our e-commerce solutions create seamless online shopping
-                    experiences — from user-friendly design to secure payment
-                    processing and inventory management.
+Security is considered throughout the development and deployment process, using SSL, Cloudflare protection, secure configurations and access controls. We also provide ongoing maintenance, security monitoring and threat response to help keep your website protected as your business grows.
                   </p>
                 </div>
               </div>
