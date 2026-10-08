@@ -90,7 +90,7 @@ export default function ServicesPage() {
 </h1>
 
 
-            <p className="text-gray-300 mt-6 text-base sm:text-lg max-w-[560px] mx-auto lg:mx-0 hidden md:block">
+            <p className="text-white mt-6 max-w-3xl mx-auto">
               Founded by Rahul in 2019 and incorporated in Mauritius in 2022, BIM Africa helps businesses build, protect and support the digital systems they rely on. Today, we provide websites, cybersecurity and digital support built around practical business needs, in Mauritius, Africa, Luxembourg and beyond.
             </p>
           </div>
@@ -124,7 +124,7 @@ export default function ServicesPage() {
             Meet the <span className="text-[#ff1f00]">Team</span>
           </h2>
 
-          <p className="text-white/80 mt-6 max-w-3xl mx-auto text-lg leading-relaxed">
+          <p className="text-white mt-6 max-w-3xl mx-auto">
 The people behind BIM Africa, bringing together strategy, technical expertise and practical digital experience to help businesses build, protect and support what matters.
           </p>
 
@@ -207,7 +207,7 @@ The people behind BIM Africa, bringing together strategy, technical expertise an
                 <ShieldCheck className="w-6 h-6 text-[#ff1f00]" />
               </div>
               <h4 className="text-white text-xl mt-6 text-center">CLEAR</h4>
-              <p className="text-white text-center mt-4 text-sm">
+              <p className="text-white mt-6 max-w-3xl mx-auto">
                 Straightforward communication, transparent recommendations and clear expectations from the beginning. You should always know what we're doing, what it costs and why it matters.
               </p>
             </div>
@@ -215,7 +215,7 @@ The people behind BIM Africa, bringing together strategy, technical expertise an
             {/* Integrity */}
             <div className="rounded-2xl border border-[#ff1f00] p-8 bg-black/40 text-left">
               <div className="w-16 h-16 rounded-full bg-black/60 border border-[#ff1f00] flex items-center justify-center mx-auto">
-                <Shield className="w-6 h-6 text-[#ff1f00]" />
+                <ShieldCheck className="w-6 h-6 text-[#ff1f00]" />
               </div>
               <h4 className="text-white text-xl mt-6 text-center">PRACTICAL</h4>
               <p className="text-white text-center mt-4 text-sm">
@@ -226,7 +226,7 @@ The people behind BIM Africa, bringing together strategy, technical expertise an
             {/* Client-Centricity */}
             <div className="rounded-2xl border border-[#ff1f00] p-8 bg-black/40 text-left">
               <div className="w-16 h-16 rounded-full bg-black/60 border border-[#ff1f00] flex items-center justify-center mx-auto">
-                <Globe className="w-6 h-6 text-[#ff1f00]" />
+                <ShieldCheck className="w-6 h-6 text-[#ff1f00]" />
               </div>
               <h4 className="text-white text-xl mt-6 text-center">
                 RESPONSIVE
