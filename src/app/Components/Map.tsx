@@ -30,7 +30,7 @@ export default function Map() {
             Where We <span className="text-[#ff1f00]">Work</span>
           </h2>
 
-          <div className="relative mb-10 max-w-3xl">
+          <div className="relative mb-10 max-w-[1200px]">
             <p className="text-white mt-6 max-w-3xl mx-auto">
               BIM Africa is rooted in Mauritius, with growing relationships across Africa, Luxembourg and international markets. We work with businesses that value clear thinking, practical solutions and reliable support, helping them build what they need, protect what they have and keep things running as their needs evolve.
             </p>
