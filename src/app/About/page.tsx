@@ -117,7 +117,7 @@ Founded by Rahul in 2019 and incorporated in Mauritius in 2022, BIM Africa helps
       </section>
 
       {/* ✅ MEET THE VISIONARIES SECTION */}
-      <section className="pt-12 pb-8">
+      <section className="relative overflow-hidden py-10 sm:py-14 lg:py-16">
         <div className="mx-auto w-full max-w-[1200px] px-6 md:px-10 text-center">
           <h2 className="text-white text-3xl sm:text-4xl md:text-5xl leading-tight tracking-tight">
             Meet the <span className="text-[#ff1f00]">Team</span>
