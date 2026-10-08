@@ -193,13 +193,11 @@ The people behind BIM Africa, bringing together strategy, technical expertise an
       <section className="pb-16">
         <div className="mx-auto w-full max-w-[1200px] px-6 md:px-10 text-center">
           <h2 className="text-white text-3xl sm:text-4xl md:text-5xl leading-tight">
-            Our <span className="text-[#ff1f00]">Core Values</span>
+            What You Can <span className="text-[#ff1f00]">Expect</span>
           </h2>
 
           <p className="text-white mt-6 max-w-3xl mx-auto">
-            The fundamental principles that guide every decision, every project,
-            and every client relationship. These values define who we are and
-            how we deliver exceptional results.
+            We keep things clear, focus on what is practical, stay responsive when you need us, and build relationships that extend beyond the initial project.
           </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-10">
@@ -208,10 +206,9 @@ The people behind BIM Africa, bringing together strategy, technical expertise an
               <div className="w-16 h-16 rounded-full bg-black/60 border border-[#ff1f00] flex items-center justify-center mx-auto">
                 <ShieldCheck className="w-6 h-6 text-[#ff1f00]" />
               </div>
-              <h4 className="text-white text-xl mt-6 text-center">Excellence</h4>
+              <h4 className="text-white text-xl mt-6 text-center">CLEAR</h4>
               <p className="text-white text-center mt-4 text-sm">
-                Every project reflects world-class quality, precision, and the
-                best technologies available.
+                Straightforward communication, transparent recommendations and clear expectations from the beginning. You should always know what we're doing, what it costs and why it matters.
               </p>
             </div>
 
@@ -220,10 +217,9 @@ The people behind BIM Africa, bringing together strategy, technical expertise an
               <div className="w-16 h-16 rounded-full bg-black/60 border border-[#ff1f00] flex items-center justify-center mx-auto">
                 <Shield className="w-6 h-6 text-[#ff1f00]" />
               </div>
-              <h4 className="text-white text-xl mt-6 text-center">Integrity</h4>
+              <h4 className="text-white text-xl mt-6 text-center">PRACTICAL</h4>
               <p className="text-white text-center mt-4 text-sm">
-                We deliver what we promise, with honesty, transparency, and
-                accountability.
+                We focus on solutions that solve real business needs rather than adding complexity for the sake of it. The right approach is the one that works for your business.
               </p>
             </div>
 
@@ -233,11 +229,10 @@ The people behind BIM Africa, bringing together strategy, technical expertise an
                 <Globe className="w-6 h-6 text-[#ff1f00]" />
               </div>
               <h4 className="text-white text-xl mt-6 text-center">
-                Client-Centricity
+                RESPONSIVE
               </h4>
               <p className="text-white text-center mt-4 text-sm">
-                Every decision we make begins with our client&apos;s growth and
-                long-term success in mind.
+                When something needs attention, you should be able to reach the people responsible for it. We believe support should be accessible, timely and straightforward.
               </p>
             </div>
 
@@ -247,11 +242,10 @@ The people behind BIM Africa, bringing together strategy, technical expertise an
                 <ShieldCheck className="w-6 h-6 text-[#ff1f00]" />
               </div>
               <h4 className="text-white text-xl mt-6 text-center">
-                Security & Trust
+                LONG-TERM
               </h4>
               <p className="text-white text-center mt-4 text-sm">
-                We safeguard our clients&apos; digital assets using cutting-edge
-                security and compliance standards.
+                A project does not end simply because it has been delivered. We aim to build lasting client relationships and remain available as your requirements change and grow.
               </p>
             </div>
           </div>
