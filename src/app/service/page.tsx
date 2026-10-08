@@ -187,7 +187,7 @@ export default function ServicesPage() {
                     22+
                   </div>
                   <p className="text-white text-xs sm:text-sm mt-2">
-                    <br /> Years of Combined Experience. <br />
+                    <br /> <span className="text-[#ff1f00]">Years of Combined Experience.</span> <br />
                     Our team brings together more than 22 years of experience across web development, technology, cybersecurity and business support.
                   </p>
                 </div>
@@ -197,7 +197,7 @@ export default function ServicesPage() {
                     100%
                   </div>
                   <p className="text-white text-xs sm:text-sm mt-2">
-                   <br /> Client Focused <br />
+                   <br /> <span className="text-[#ff1f00]">Client Focused.</span> <br />
                     We keep your business at the centre of every project, with clear communication, practical solutions and responsive support.
                   </p>
                 </div>
@@ -239,7 +239,8 @@ export default function ServicesPage() {
                       22+
                     </div>
                     <p className="text-white text-xs sm:text-sm">
-                      <br /> Years of Combined Experience.
+                      <br /> <span className="text-[#ff1f00]">Years of Combined Experience.</span> <br />
+                    Our team brings together more than 22 years of experience across web development, technology, cybersecurity and business support.
                     </p>
                   </div>
 
@@ -248,7 +249,8 @@ export default function ServicesPage() {
                       100%
                     </div>
                     <p className="text-white text-xs sm:text-sm">
-                      <br /> Client Focused
+                      <br /> <span className="text-[#ff1f00]">Client Focused.</span> <br />
+                    We keep your business at the centre of every project, with clear communication, practical solutions and responsive support.
                     </p>
                   </div>
                 </div>
