@@ -174,9 +174,9 @@ export default function ServicesPage() {
         <div className="mx-auto w-full max-w-[1200px]">
           <div className="flex items-end justify-between md:px-10 px-6 gap-4 mb-6 sm:mb-8">
             <h2 className="text-white text-3xl sm:text-4xl md:text-5xl leading-tight">
-              Build<span className="text-[#ff1f00]">.</span> Protect<span className="text-[#ff1f00]">.</span>  Support<span className="text-[#ff1f00]">.</span> 
+              <span className="text-[#ff1f00]">Build</span>. <span className="text-[#ff1f00]">Protect</span>. <span className="text-[#ff1f00]">Support</span>.
               <br />
-              Services Built Around <span className="text-[#ff1f00]">Your Business</span>
+              Our Services
             </h2>
             <Link href="/service" className="hidden sm:inline-block">
               <button className="w-full sm:w-auto bg-[#333333] border border-transparent hover:border-[#ff1f00] text-white px-8 sm:px-10 lg:px-12 py-3 sm:py-4 rounded-full transition-all hover:scale-105 text-sm sm:text-base whitespace-nowrap">
@@ -205,7 +205,7 @@ export default function ServicesPage() {
   {/* Badge */}
   <div className="inline-flex items-center gap-2 rounded-full bg-black/30 border border-red-700 px-3 py-1.5 sm:px-4 sm:py-2 mb-4 sm:mb-6">
     <Clock className="w-4 h-4 text-[#ff1f00]" />
-    <span className="text-xs sm:text-sm text-white">Premium Digital Solutions</span>
+    <span className="text-xs sm:text-sm text-white">GET A QUOTE IN 2 MINUTES</span>
   </div>
 
   <style>{`
@@ -225,7 +225,7 @@ export default function ServicesPage() {
       </h2>
 
       <p className="qs-sub text-white/90 text-base sm:text-lg mt-4 sm:mt-6 max-w-2xl">
-        Revolutionary pricing transparency. Know your website cost in under 2 minutes — accurate, automatic, and completely secure.
+        Know what your website could cost before you get started. Get a clear, upfront estimate in under 2 minutes, based on your requirements.
       </p>
 
       {/* Features */}
