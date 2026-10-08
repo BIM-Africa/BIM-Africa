@@ -211,7 +211,8 @@ export default function ServicesPage() {
                     Modern Technology. Built for Business.
                   </h3>
                   <p className="text-white text-sm sm:text-base mt-4">
-We use modern technologies such as Next.js, React, Tailwind CSS, Node.js, MongoDB and Cloudflare to build fast, reliable and maintainable websites. Our technology choices are based on your business needs, ensuring the right balance of performance, flexibility and long-term reliability.                  </p>
+                  We use modern technologies such as Next.js, React, Tailwind CSS, Node.js, MongoDB and Cloudflare to build fast, reliable and maintainable websites. Our technology choices are based on your business needs, ensuring the right balance of performance, flexibility and long-term reliability.                  
+                  </p>
                 </div>
 
                 {/* FIXED BLOCK 2 */}
@@ -220,7 +221,7 @@ We use modern technologies such as Next.js, React, Tailwind CSS, Node.js, MongoD
                     Security Built Into the Work
                   </h3>
                   <p className="text-white text-sm sm:text-base mt-4">
-Security is considered throughout the development and deployment process, using SSL, Cloudflare protection, secure configurations and access controls. We also provide ongoing maintenance, security monitoring and threat response to help keep your website protected as your business grows.
+                  Security is considered throughout the development and deployment process, using SSL, Cloudflare protection, secure configurations and access controls. We also provide ongoing maintenance, security monitoring and threat response to help keep your website protected as your business grows.
                   </p>
                 </div>
               </div>
@@ -262,8 +263,7 @@ Security is considered throughout the development and deployment process, using 
                     Modern Technology. Built for Business.
                   </h3>
                   <p className="text-white text-sm sm:text-base text-center lg:text-left">
-We use modern technologies such as Next.js, React, Tailwind CSS, Node.js, MongoDB and Cloudflare to build fast, reliable and maintainable websites. Our technology choices are based on your business needs, ensuring the right balance of performance, flexibility and long-term reliability.                  </p>
-
+                  We use modern technologies such as Next.js, React, Tailwind CSS, Node.js, MongoDB and Cloudflare to build fast, reliable and maintainable websites. Our technology choices are based on your business needs, ensuring the right balance of performance, flexibility and long-term reliability.
                   </p>
                 </div>
 
