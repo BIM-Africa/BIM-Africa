@@ -82,9 +82,9 @@ export default function ServicesPage() {
               About BIM Africa
             </div>
 
-           <h1 className="text-white sm:text-4xl md:text-5xl lg:text-5xl leading-[1.1]">
+           <h1 className="text-white text-3xl sm:text-4xl md:text-5xl leading-tight">
   <span className="whitespace-nowrap font-bold sm:font-normal">
-    Mauritius Roots. 
+    Mauritian Roots. 
   </span>{" "}
   <span className="text-[#ff1f00]">Global Reach.</span>
 </h1>
