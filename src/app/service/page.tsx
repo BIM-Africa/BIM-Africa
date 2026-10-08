@@ -53,17 +53,15 @@ export default function ServicesPage() {
         <div className="mx-auto w-full max-w-[1200px] px-6 md:px-10 grid lg:grid-cols-2 gap-8 lg:gap-12 items-center relative z-10">
           <div className="text-center lg:text-left">
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl text-white leading-tight">
-              High-Impact <br />
-              <span className="text-[#ff1f00]">Digital Services</span> <br />
-              for Ambitious Brands
+              <span className="text-[#ff1f00]">Build</span>. <span className="text-[#ff1f00]">Protect</span>. <span className="text-[#ff1f00]">Support</span>.
+              <br />
+              Services That Matter. 
             </h1>
           </div>
 
           <div className="space-y-6 sm:space-y-8 lg:space-y-10">
             <p className="text-gray-300 text-sm sm:text-base leading-relaxed max-w-full lg:w-[460px] text-center lg:text-left">
-              We believe in partnerships that go beyond projects. We collaborate
-              with forward-thinking businesses and professionals to innovate,
-              scale, and thrive in the digital age.
+              BIM Africa works with businesses to build what they need, protect what they have and keep things running. From websites and cybersecurity to flexible support, we focus on practical work that helps your business move forward.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start">
