@@ -22,7 +22,7 @@ import logo from "../../Assests/srv.svg";
 import webStrategy from "../../Assests/WebsiteStrategy.png";
 import hasan from "../../Assests/hassan.jpeg";
 import rahul from "../../Assests/rahul.jpeg";
-import man from "../../Assests/about.jpeg"
+import man from "../../Assests/bim-about-incorporated.jpg"
 
 /* ✅ Visionaries Data */
 const visionaries = [
@@ -79,19 +79,19 @@ export default function ServicesPage() {
           {/* Left copy */}
           <div className="text-center lg:text-left mx-auto">
             <div className="text-[#ff1f00] text-xs tracking-[0.15em] font-medium uppercase mb-4">
-              Our Philosophy
+              About BIM Africa
             </div>
 
            <h1 className="text-white sm:text-4xl md:text-5xl lg:text-5xl leading-[1.1]">
   <span className="whitespace-nowrap font-bold sm:font-normal">
-    Excellence <span className="font-normal">isn&apos;t an</span>
+    Built in Mauritius.
   </span>{" "}
-  option <span className="text-[#ff1f00]">it&apos;s a standard</span>
+  <span className="text-[#ff1f00]">Built to go further.</span>
 </h1>
 
 
             <p className="text-gray-300 mt-6 text-base sm:text-lg max-w-[560px] mx-auto lg:mx-0 hidden md:block">
-              Real brands. Lasting impact. Proven stories.
+              Founded by Rahul in 2019 as a freelance venture and duly incorporated as a company in 2022, BIM Africa was built to help businesses overcome the gap between having a digital presence and having one that truly works. Today, we help businesses Build stronger digital experiences, Protect their digital assets, and Support them beyond launch. From Mauritius to Luxembourg and international markets, our ambition is simple: build a company known for strategy, reliability and real results.
             </p>
           </div>
 
@@ -120,8 +120,8 @@ export default function ServicesPage() {
       {/* ✅ MEET THE VISIONARIES SECTION */}
       <section className="pt-12 pb-8">
         <div className="mx-auto w-full max-w-[1200px] px-6 md:px-10 text-center">
-          <h2 className="text-white text-5xl sm:text-6xl md:text-[72px] leading-tight tracking-tight">
-            Meet the <span className="text-[#ff1f00]">Visionaries</span>
+          <h2 className="text-white text-3xl sm:text-4xl md:text-5xl leading-tight tracking-tight">
+            Meet the <span className="text-[#ff1f00]">Management Team</span>
           </h2>
 
           <p className="text-white/80 mt-6 max-w-3xl mx-auto text-lg leading-relaxed">
@@ -194,7 +194,7 @@ export default function ServicesPage() {
       {/* ✅ OUR CORE VALUES */}
       <section className="pb-16">
         <div className="mx-auto w-full max-w-[1200px] px-6 md:px-10 text-center">
-          <h2 className="text-white text-5xl sm:text-6xl md:text-[72px] leading-tight">
+          <h2 className="text-white text-3xl sm:text-4xl md:text-5xl leading-tight">
             Our <span className="text-[#ff1f00]">Core Values</span>
           </h2>
 
@@ -264,7 +264,7 @@ export default function ServicesPage() {
       <section className="px-4 sm:px-6 lg:px-12 mb-20 sm:mb-32 overflow-hidden">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-white text-5xl sm:text-6xl md:text-[72px] leading-tight">
+            <h2 className="text-white text-3xl sm:text-4xl md:text-5xl leading-tight">
               Our <span className="text-[#ff1f00]">Purpose</span>
             </h2>
             <p className="text-lg sm:text-2xl text-gray-200 max-w-3xl sm:max-w-4xl mx-auto leading-relaxed px-2">
