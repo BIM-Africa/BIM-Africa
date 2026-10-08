@@ -123,7 +123,7 @@ export default function PrivacyPolicy() {
 
                         <p className="text-white/90 mb-6">
                             Requests can be made by contacting us at{" "}
-                            <span className="text-[#ff1f00]">legal@bim.africa</span>.
+                            <span className="text-[#ff1f00]">info@bim.africa</span>.
                         </p>
 
                         {/* ===================== 7 ===================== */}
@@ -147,7 +147,7 @@ export default function PrivacyPolicy() {
                         <p className="text-white/90 mb-2">For any privacy-related concerns:</p>
                         <p className="text-white/90">
                             Email:{" "}
-                            <span className="text-[#ff1f00]">legal@bim.africa</span>
+                            <span className="text-[#ff1f00]">info@bim.africa</span>
                         </p>
 
                     </article>
