@@ -36,10 +36,7 @@ export default function ServiceCards() {
             Website Strategy & Development
           </h3>
           <p className="text-white text-xs sm:text-sm lg:text-[12px] mt-2">
-            We craft bespoke websites that combine design excellence with
-            technical precision. Every platform is built for speed, scalability,
-            and measurable impact. From design to upgrades, your digital
-            presence stays modern and growth-driven.
+          Make your business look as good as it is. We design and develop websites around your business, your customers and what you need them to do. From strategy and design through development, upgrades and maintenance.
           </p>
         </div>
 
@@ -68,10 +65,7 @@ export default function ServiceCards() {
             Cybersecurity & Threat Management
           </h3>
           <p className="text-white text-xs sm:text-sm lg:text-[12px] mt-2">
-            Your business deserves uncompromising protection. We secure websites
-            with proactive audits, advanced threat detection, and rapid malware
-            removal. Around-the-clock monitoring ensures compliance, trust, and
-            peace of mind.
+            Protect the digital side of your business. We help identify vulnerabilities, remove threats and respond when something goes wrong. From security audits and malware removal to emergency response and ongoing protection.
           </p>
         </div>
 
@@ -100,17 +94,14 @@ export default function ServiceCards() {
             Digital Support Outsourcing
           </h3>
           <p className="text-white text-xs sm:text-sm lg:text-[12px] mt-2">
-            Scale your business with our dedicated digital experts. From web
-            designers and developers to managed chat and technical support, we
-            provide flexible solutions tailored to your needs. Premium talent,
-            without the overhead.
+            Expertise when you need it. We provide flexible technical and digital support that complements your internal team, whether you need additional expertise, customer experience support or help with technical processes.
           </p>
         </div>
       </div>
 
       <div className="text-center mt-8 sm:mt-12 relative z-10 px-4">
         <p className="text-white text-sm sm:text-base">
-          Your vision, our expertise — let&apos;s make it happen.{" "}
+          Build What You Need. Protect What You Have. Keep Things Running.{" "}
           <a
             href="https://wa.me/message/VLID27EWBIPND1"
             target="_blank"
