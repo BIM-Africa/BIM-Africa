@@ -95,7 +95,6 @@ export default function ServicesPage() {
             We Like
             <br />
             <span className="text-[#ff1f00]">Simple</span>. <span className="text-[#ff1f00]">Clear</span>. 
-            <br />
             <span className="text-[#ff1f00]">Practical</span>. <span className="text-[#ff1f00]">Responsive</span>. 
           </h2>
 
@@ -188,7 +187,8 @@ export default function ServicesPage() {
                     22+
                   </div>
                   <p className="text-white text-xs sm:text-sm mt-2">
-                    <br /> Years of Combined Experience. 
+                    <br /> Years of Combined Experience. <br />
+                    Our team brings together more than 22 years of experience across web development, technology, cybersecurity and business support.
                   </p>
                 </div>
 
@@ -197,7 +197,8 @@ export default function ServicesPage() {
                     100%
                   </div>
                   <p className="text-white text-xs sm:text-sm mt-2">
-                   <br /> Client Focused
+                   <br /> Client Focused <br />
+                    We keep your business at the centre of every project, with clear communication, practical solutions and responsive support.
                   </p>
                 </div>
               </div>
