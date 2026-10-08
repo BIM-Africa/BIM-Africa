@@ -78,14 +78,14 @@ export default function ServicesPage() {
 
      <h1 className="text-white sm:text-4xl md:text-5xl lg:text-5xl leading-[1.1]">
   <span className="whitespace-nowrap font-bold sm:font-normal">
-    Trusted by <span className="text-[#ff1f00] font-normal">Ambitious</span>
+   Real <span className="text-[#ff1f00] font-normal">Businesses.</span>
   </span>{" "}
-  Businesses — Inspired by <span className="text-[#ff1f00]">Results</span>
+  <span className="text-[#ff1f00]">Real</span> Work.
 </h1>
 
 
       <p className="text-gray-300 mt-6 text-base sm:text-lg  max-w-[560px] mx-auto lg:mx-0">
-        Real brands. Lasting impact. Proven stories.
+        Businesses we've helped build, protect and support. Practical work. Meaningful results. Every project starts with understanding what the business actually needs.
       </p>
     </div>
     <div className="relative">
@@ -95,7 +95,7 @@ export default function ServicesPage() {
         src={man} // 👈 Your static image
         alt="BMS Operator at work"
         fill
-        className="object-cover"
+        className="object-contain"
         priority // ✅ Ensures it's fetched early (improves LCP)
         loading="eager" // ✅ Prevents lazy loading for LCP image
         fetchPriority="high" // ✅ Gives browser hint for faster fetching
