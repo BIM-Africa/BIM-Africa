@@ -26,15 +26,14 @@ export default function Map() {
         {/* Content */}
         <div className="relative z-20 mx-auto max-w-[1200px] px-4 sm:px-6 md:px-10">
 
-          <h2 className="text-white text-3xl sm:text-5xl md:text-6xl leading-tight mb-6 text-center sm:text-left">
-            Our <span className="text-[#ff1f00]">Global</span> Offices
+          <h2 className="text-white text-3xl sm:text-4xl md:text-5xl leading-tight tracking-tight">
+            Where We <span className="text-[#ff1f00]">Work</span> Offices
           </h2>
 
           <div className="relative mb-10 max-w-3xl">
             <span className="absolute left-0 top-2 bottom-2 w-[5px] bg-[#ff1f00] rounded-full" />
             <p className="text-white/80 pl-6">
-              We are proud to have a global presence with offices in two<br />
-              strategic locations, connecting Europe, Africa, and Asia.
+              BIM Africa is rooted in Mauritius, with growing relationships across Africa, Luxembourg and international markets. We work with businesses that value clear thinking, practical solutions and reliable support, helping them build what they need, protect what they have and keep things running as their needs evolve.
             </p>
           </div>
 
@@ -65,10 +64,10 @@ export default function Map() {
               </div>
 
               <p className="text-[#ff1f00] font-medium mb-2">
-                At the heart of Europe’s business hub.
+                Beyond Mauritius.
               </p>
               <p className="text-white/85 text-sm">
-                A trusted point of contact for our European clientele.
+                BIM Africa is building a stronger presence in Luxembourg, supported by our local contact while our core team operates from Mauritius. We also work with businesses and partners across Africa and other international markets.
               </p>
             </div>
 
@@ -97,10 +96,10 @@ export default function Map() {
               </div>
 
               <p className="text-[#ff1f00] font-medium mb-2">
-                At the heart of Africa’s business hub.
+                Our Home Base.
               </p>
               <p className="text-white/85 text-sm">
-                Connecting Africa to the world with excellence.
+                BIM Africa was founded and incorporated in Mauritius, where we work closely with businesses across the country to deliver websites, cybersecurity and digital support.
               </p>
             </div>
 
