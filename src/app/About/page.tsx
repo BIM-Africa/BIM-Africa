@@ -84,14 +84,14 @@ export default function ServicesPage() {
 
            <h1 className="text-white sm:text-4xl md:text-5xl lg:text-5xl leading-[1.1]">
   <span className="whitespace-nowrap font-bold sm:font-normal">
-    Built in Mauritius.
+    Mauritius Roots. 
   </span>{" "}
-  <span className="text-[#ff1f00]">Built to go further.</span>
+  <span className="text-[#ff1f00]">Global Reach.</span>
 </h1>
 
 
             <p className="text-gray-300 mt-6 text-base sm:text-lg max-w-[560px] mx-auto lg:mx-0 hidden md:block">
-              Founded by Rahul in 2019 as a freelance venture and duly incorporated as a company in 2022, BIM Africa was built to help businesses overcome the gap between having a digital presence and having one that truly works. Today, we help businesses Build stronger digital experiences, Protect their digital assets, and Support them beyond launch. From Mauritius to Luxembourg and international markets, our ambition is simple: build a company known for strategy, reliability and real results.
+              Founded by Rahul in 2019 and incorporated in Mauritius in 2022, BIM Africa helps businesses build, protect and support the digital systems they rely on. Today, we provide websites, cybersecurity and digital support built around practical business needs, in Mauritius, Africa, Luxembourg and beyond.
             </p>
           </div>
 
@@ -121,13 +121,11 @@ export default function ServicesPage() {
       <section className="pt-12 pb-8">
         <div className="mx-auto w-full max-w-[1200px] px-6 md:px-10 text-center">
           <h2 className="text-white text-3xl sm:text-4xl md:text-5xl leading-tight tracking-tight">
-            Meet the <span className="text-[#ff1f00]">Management Team</span>
+            Meet the <span className="text-[#ff1f00]">Team</span>
           </h2>
 
           <p className="text-white/80 mt-6 max-w-3xl mx-auto text-lg leading-relaxed">
-            The creative architects and technical innovators behind our premium
-            digital solutions, each bringing unique expertise and artistic
-            vision to transform your ideas into reality.
+The people behind BIM Africa, bringing together strategy, technical expertise and practical digital experience to help businesses build, protect and support what matters.
           </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 mt-12 items-stretch max-w-[800px] mx-auto">
