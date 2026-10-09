@@ -65,7 +65,7 @@ const t = {
   },
 
   hero: {
-    badge: "WEBSITES & WEB APPLICATIONS · MAURITIUS",
+    badge: "Websites & Web Applications",
     subtitle:
       "We design and develop business websites and custom web applications built around your objectives, your customers and the way you work. From company websites and e-commerce platforms to client onboarding systems and instant quotation tools, we build practical solutions that help your business operate more effectively.",
     stats: {
@@ -633,7 +633,7 @@ const t = {
         <div className="text-center mb-10">
           <div className="inline-flex items-center gap-2 rounded-full bg-black/30 border border-[#ff1f00] px-4 py-2">
             <Target className="w-4 h-4 text-[#ff1f00] " />
-            <span className="font-semibold">Proven Methodology</span>
+            <span className="font-semibold">A Project Example</span>
           </div>
         <h2 className="text-4xl sm:text-5xl md:text-6xl font-medium mt-4">{t.process.title}</h2>
 
@@ -672,7 +672,7 @@ const t = {
     {/* Badge */}
     <div className="inline-flex items-center gap-2 rounded-full bg-black/30 border border-red-700 px-3 py-1.5 sm:px-4 sm:py-2 mb-4 sm:mb-6">
       <Clock className="w-4 h-4 text-[#ff1f00]" />
-      <span className="text-xs sm:text-sm text-white">Premium Digital Solutions</span>
+      <span className="text-xs sm:text-sm text-white">Get a quote in 2 minutes</span>
     </div>
   
     <style>{`
@@ -692,7 +692,7 @@ const t = {
         </h2>
   
         <p className="qs-sub text-white/90 text-base sm:text-lg mt-4 sm:mt-6 max-w-2xl">
-          Revolutionary pricing transparency. Know your website cost in under 2 minutes — accurate, automatic, and completely secure.
+          Know what your website could cost before you get started. Get a clear, upfront estimate in under 2 minutes, based on your requirements.
         </p>
   
         {/* Features */}
