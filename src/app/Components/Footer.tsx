@@ -99,8 +99,9 @@ export default function Footer() {
             <div className="text-[#ff1f00] font-black text-4xl sm:text-5xl lg:text-6xl tracking-tight">
               <Image src={newlogo} className="w-full max-w-80 h-auto" alt="BIM Logo" width={500} height={120} />
             </div>
-            <p className="text-white text-sm mt-4">Copyright © 2025 BIM. All Rights Reserved.</p>
-            <p className="text-white text-sm">Mauritius & Luxembourg</p>
+            <p className="text-white text-sm mt-4">Copyright © 2026 BIM. All Rights Reserved.</p>
+            <p className="text-white text-sm">Incorproated in Mauritius <br />
+            Company Number: C190360</p>
           </div>
 
           {/* Quick Links */}
@@ -126,9 +127,9 @@ export default function Footer() {
 
           {/* Referral Program */}
           <div className="text-left">
-            <h3 className="text-[#ff1f00] text-base sm:text-lg uppercase">Referral Program</h3>
+            <h3 className="text-[#ff1f00] text-base sm:text-lg uppercase">Our Referral Program</h3>
             <p className="text-white text-xs sm:text-sm mt-4">
-              Know someone who needs elite digital solutions? Refer them — and earn through our tiered incentive program. Simple to join. Profitable to share.
+            Know a business that needs a website, stronger security or technical support? Introduce them to BIM Africa and earn referral rewards when they become a client. It's a straightforward way to build valuable business relationships while benefiting from the opportunities you create.
             </p>
             <div className="flex flex-wrap items-start gap-3 sm:gap-4 mt-6">
               <a href="https://wa.me/message/VLID27EWBIPND1" target="_blank" rel="noopener noreferrer">
