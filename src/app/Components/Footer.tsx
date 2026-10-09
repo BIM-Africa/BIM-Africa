@@ -159,21 +159,7 @@ export default function Footer() {
 
           {/* ---------- Desktop Bottom ---------- */}
           <div className="hidden sm:block border-t border-gray-800 mt-8 sm:mt-12 pt-6 sm:pt-8 text-center text-white text-xs sm:text-sm">
-            <div className="flex flex-wrap justify-center items-center gap-x-6 gap-y-3">
-              <a
-                href="tel:+23058010730"
-                className="hover:text-[#ff1f00] transition-colors"
-              >
-                +230 5801 0730
-              </a>
-          
-              <a
-                href="mailto:info@bim.africa"
-                className="hover:text-[#ff1f00] transition-colors"
-              >
-                info@bim.africa
-              </a>
-            </div>
+            <a href="/PrivacyPolicy" className="hover:text-white">Privacy Policy</a> | <a href="/TermsofService" className="hover:text-white">Terms of Service</a>
           </div>
         </div>
         </div>
