@@ -445,13 +445,18 @@ const t = {
             <div className="mt-6 flex flex-wrap items-center gap-8 text-sm">
               <div className="flex items-center gap-2 text-white/90">
                 <Star className="w-5 h-5 text-[#ff1f00]" />
-                <Star className="w-5 h-5 text-[#ff1f00]" />
-                <Star className="w-5 h-5 text-[#ff1f00]" />
-                <Star className="w-5 h-5 text-[#ff1f00]" />
-                <Star className="w-5 h-5 text-[#ff1f00]" />
-                <span>5.0 Google Rating · 7 Reviews</span>
+                <span>5.0 Client Ratin</span>
+              </div>
+              <div className="flex items-center gap-2 text-white/90">
+                <Award className="w-5 h-5 text-[#ff1f00]" />
+                <span>Recognized for Excellence</span>
+              </div>
+              <div className="flex items-center gap-2 text-white/90">
+                <ShieldCheck className="w-5 h-5 text-[#ff1f00]" />
+                <span>Industry-Leading Standards</span>
               </div>
             </div>
+          </div>
 
           {/* right stat card */}
           <div className="relative">
