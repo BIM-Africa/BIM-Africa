@@ -25,50 +25,14 @@ export default function Footer() {
             
           {/* Support Mobile */}
             <div>
-              <h3 className="text-[#ff1f00] text-sm font-bold uppercase mb-4">
-                Support
-              </h3>
-            
-              <div className="space-y-3">
-                <Link
-                  href="/contactus"
-                  className="block text-white text-sm hover:text-[#ff1f00] transition"
-                >
-                  Contact Us
-                </Link>
-            
-                <a
-                  href="tel:+230XXXXXXXX"
-                  className="block text-white text-sm hover:text-[#ff1f00] transition"
-                >
-                  +230 XXXXXXXX
-                </a>
-            
-                <a
-                  href="https://wa.me/message/VLID27EWBIPND1"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block text-white text-sm hover:text-[#ff1f00] transition"
-                >
-                  WhatsApp Us
-                </a>
-            
-                <a
-                  href="mailto:info@bim.africa"
-                  className="block text-white text-sm hover:text-[#ff1f00] transition"
-                >
-                  info@bim.africa
-                </a>
-            
-                <a href="/PrivacyPolicy" className="block text-white text-sm hover:text-[#ff1f00] transition">
-                  Privacy Policy
-                </a>
-            
-                <a href="/TermsofService" className="block text-white text-sm hover:text-[#ff1f00] transition">
-                  Terms of Service
-                </a>
+              <h3 className="text-[#ff1f00] text-sm font-bold uppercase mb-4">Support</h3>
+              <div className="space-y-2">
+                <Link href="/contactus" className="block text-white text-sm">Contact Us</Link>
+                <a href="/PrivacyPolicy" className="block text-white text-sm">Privacy Policy</a>
+                <a href="/TermsofService" className="block text-white text-sm">Terms of Service</a>
               </div>
             </div>
+          </div>
 
           {/* Referral + Socials */}
           <div className="mb-8">
@@ -151,50 +115,12 @@ export default function Footer() {
           </div>
 
           {/* Support */}
-
           <div className="text-left">
-            <h3 className="text-[#ff1f00] text-base sm:text-lg uppercase">
-              SUPPORT
-            </h3>
-          
+            <h3 className="text-[#ff1f00] text-base sm:text-lg uppercase">SUPPORT</h3>
             <div className="space-y-2 sm:space-y-3 mt-4">
-              <Link
-                href="/contactus"
-                className="block text-white text-sm sm:text-base hover:text-[#ff1f00] transition"
-              >
-                Contact Us
-              </Link>
-          
-              <a
-                href="tel:+230XXXXXXXX"
-                className="block text-white text-sm sm:text-base hover:text-[#ff1f00] transition"
-              >
-                +230 XXXXXXXX
-              </a>
-          
-              <a
-                href="https://wa.me/message/VLID27EWBIPND1"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block text-white text-sm sm:text-base hover:text-[#ff1f00] transition"
-              >
-                WhatsApp Us
-              </a>
-          
-              <a
-                href="mailto:info@bim.africa"
-                className="block text-white text-sm sm:text-base hover:text-[#ff1f00] transition"
-              >
-                info@bim.africa
-              </a>
-          
-              <a href="/PrivacyPolicy" className="block text-white text-sm sm:text-base hover:text-[#ff1f00] transition">
-                Privacy Policy
-              </a>
-          
-              <a href="/TermsofService" className="block text-white text-sm sm:text-base hover:text-[#ff1f00] transition">
-                Terms of Service
-              </a>
+              <Link href="/contactus" className="block text-white text-sm sm:text-base">Contact Us</Link>
+              <a href="/PrivacyPolicy" className="block text-white text-sm sm:text-base">Privacy Policy</a>
+              <a href="/TermsofService" className="block text-white text-sm sm:text-base">Terms of Service</a>
             </div>
           </div>
 
