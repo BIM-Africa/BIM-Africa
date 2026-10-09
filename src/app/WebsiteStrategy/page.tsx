@@ -80,34 +80,34 @@ const t = {
   services: {
     title: "Our Services",
     tagline:
-      "Choose the specific service that matches your needs, or combine multiple services for a comprehensive solution.",
+      "From business websites to custom web applications, we provide the strategy, development and ongoing support your business needs. Choose the service that fits your requirements.",
 
     designing: {
       title: "Website Designing",
       copy:
-        "Crafting visually stunning and user-centered designs that captivate your audience and reflect your brand identity.",
-      tags: ["UI/UX Design", "Brand Integration", "Visual Identity"],
+        "We design professional websites for businesses in Mauritius, Luxembourg and international markets. Every design reflects your brand, speaks to your audience and guides visitors towards meaningful action, combining clear communication, intuitive navigation and responsive layouts.",
+      tags: ["UI/UX Design", "Brand Integration", "Mobile-First Design"],
     },
 
     development: {
       title: "Website Development",
       copy:
-        "Building robust, scalable, and high-performance websites using cutting-edge technologies and best practices.",
-      tags: ["Custom Development", "CMS Integration", "API Development"],
+        "From company websites and e-commerce platforms to custom web applications, we develop solutions for businesses in Mauritius and beyond. Whether you need a client onboarding platform, an instant quotation tool or a tailored business system, we build around your requirements and how your business operates.",
+      tags: ["Custom Development", "E-commerce", "Web Applications"],
     },
 
     maintenance: {
       title: "Website Maintenance & Support",
       copy:
-        "Ensuring your website remains secure, updated, and performing optimally with ongoing maintenance and support.",
-      tags: ["Security Updates", "Performance Monitoring", "24/7 Support"],
+        "We help businesses keep their websites secure, updated and reliable through ongoing maintenance and technical support. Whether your business operates in Mauritius, Luxembourg or another market, we focus on resolving issues, reducing avoidable risks and keeping your website working as your needs evolve.",
+      tags: ["Security Updates", "Backups & Monitoring", "Technical Support"],
     },
 
     upgrade: {
-      title: "Website Upgrade",
+      title: "Website Upgrades",
       copy:
-        "Modernizing and enhancing existing websites with new features, improved performance, and contemporary design.",
-      tags: ["Technology Migration", "Feature Enhancement", "Performance Optimization"],
+        "As your business grows, your website may need new features, improved performance or a more effective design. We help businesses in Mauritius and international markets improve existing websites through practical upgrades, technical improvements and platform migrations without rebuilding everything unnecessarily.",
+      tags: ["Feature Enhancements", "Performance Improvements", "Redesign & Migration"],
     },
   },
 
@@ -398,7 +398,7 @@ const t = {
               <span className="text-sm text-white/90 blink"> {t.hero.badge} </span>
             </div>
 
-            <h1 className="text-[40px] sm:text-6xl md:text-7xl  leading-[1.05] tracking-tight">
+            <h1 className="text-white text-3xl sm:text-4xl md:text-5xl leading-tight">
               Custom <span className="text-[#ff1f00]">Websites</span> & 
               <span className="text-[#ff1f00]"> Web Applications.</span>
             </h1>
@@ -511,25 +511,25 @@ const t = {
   {
     icon: <LayoutDashboard className="w-6 h-6 text-[#ff1f00]" />,
     more:
-      "We deliver wireframes, moodboards, high-fidelity UI, and clickable prototypes. Accessibility, consistency, and brand voice are baked in from day one.",
+      "From page structure and user journeys to visual design and responsive layouts, we plan how your website should look, feel and work before development begins. We focus on clear communication, intuitive navigation and consistency across devices, ensuring the final design reflects your business and makes it easier for customers to engage with you.",
     ...t.services.designing,
   },
   {
     icon: <Code2 className="w-6 h-6 text-[#ff1f00]" />,
     more:
-      "Modern stacks, clean architecture, rigorous code review, and CI/CD. We ship fast without sacrificing stability or performance.",
+      "We turn your requirements and designs into working websites and applications, with attention to functionality, performance, usability and security. From integrating the features your business needs to connecting systems and automating processes, we select suitable technologies for each project and build with long-term maintenance and future improvements in mind.",
     ...t.services.development,
   },
   {
     icon: <Shield className="w-6 h-6 text-[#ff1f00]" />,
     more:
-      "Updates, backups, uptime monitoring, incident response, and continuous hardening—so your site stays fast, healthy, and secure.",
+      "Our maintenance work includes plugin updates, backups, security checks, troubleshooting and performance reviews, depending on your website and maintenance plan. When something needs attention, we help identify the problem and work towards a practical solution, giving you continued technical support without leaving you to manage every issue alone.",
     ...t.services.maintenance,
   },
   {
     icon: <Wrench className="w-6 h-6 text-[#ff1f00]" />,
     more:
-      "Refactors, re-platforms, and redesigns. We modernize UX, improve Core Web Vitals, and add features that move the needle.",
+      "Whether your website needs a refreshed appearance, additional functionality, a platform migration or improvements to speed and usability, we assess what is already there and identify the most practical way forward. We focus on meaningful improvements that support your business objectives, preserve what works and make your website more useful, reliable and maintainable.",
     ...t.services.upgrade,
   },
 ].map((svc: Service) => {
