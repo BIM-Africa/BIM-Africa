@@ -113,7 +113,7 @@ const t = {
 
   process: {
     badge: "An Illustrative Project Example",
-    title: "Illustrative Project: Headless E-commerce Platform",
+    title: "Headless E-commerce Platform",
     steps: [
       { n: "01", title: "Requirements & Discovery", copy: "Analyse the retailer's products, customer journeys and business requirements to define the project scope.", time: "Week 1" },
       { n: "02", title: "Architecture & Planning", copy: "Plan the Next.js and WooCommerce architecture, catalogue structure, pricing logic and required integrations.", time: "Week 2" },
@@ -633,7 +633,7 @@ const t = {
         <div className="text-center mb-10">
           <div className="inline-flex items-center gap-2 rounded-full bg-black/30 border border-[#ff1f00] px-4 py-2">
             <Target className="w-4 h-4 text-[#ff1f00] " />
-            <span className="font-semibold">A Project Example</span>
+            <span className="font-semibold">An Illustrative Project Example</span>
           </div>
         <h2 className="text-4xl sm:text-5xl md:text-6xl font-medium mt-4">{t.process.title}</h2>
 
@@ -687,7 +687,7 @@ const t = {
   
       {/* ✍️ Text section — FIRST on mobile, LEFT on desktop */}
       <div className="order-1">
-        <h2 className="qs-heading text-4xl sm:text-5xl md:text-6xl font-medium leading-tight">
+        <h2 className="text-white text-3xl sm:text-4xl md:text-5xl leading-tight">
           <span className="text-[#ff1f00]">Instant</span> Website <br /> Quotation Tool
         </h2>
   
@@ -780,7 +780,7 @@ const t = {
   </section>
 
 
-      {/* ==================== WHAT'S INCLUDED ===================== */}
+      {/* ==================== WHAT'S INCLUDED ===================== 
       <section className="px-4 sm:px-8 pb-16 max-w-7xl mx-auto">
         <div className="text-center mb-10">
           <div className="inline-flex items-center gap-2 rounded-full bg-black/30 border border-[#ff1f00] px-4 py-2 mb-4">
@@ -813,7 +813,7 @@ const t = {
             <span className="text-white/90">{t.included.guarantee}</span>
           </div>
         </div>
-      </section>
+      </section>*/}
 
    <Footer/>
     </div>
