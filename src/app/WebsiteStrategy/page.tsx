@@ -399,11 +399,11 @@ const t = {
             </div>
 
             <h1 className="text-[40px] sm:text-6xl md:text-7xl  leading-[1.05] tracking-tight">
-              From <span className="text-[#ff1f00]">Websites</span> to Custom Business 
+              Custom <span className="text-[#ff1f00]">Websites</span> & 
               <span className="text-[#ff1f00]">Web Applications.</span>
             </h1>
 
-            <p className="text-base sm:text-lg md:text-xl mt-6 text-gray-300 max-w-3xl">{t.hero.subtitle}</p>
+            <p className="text-white mt-6 max-w-3xl mx-auto">{t.hero.subtitle}</p>
 
           {/* CTA buttons: exact mobile stacking like Contact page */}
             <div className="flex flex-col sm:flex-row gap-3 pt-6 sm:gap-4 justify-center lg:justify-start">
@@ -506,7 +506,7 @@ const t = {
       <section className="px-4 sm:px-8 pb-12 sm:pb-16 max-w-7xl mx-auto">
         <div className="text-center mb-10 sm:mb-14">
           <h2 className="text-3xl sm:text-6xl [font-weight:400]">{t.services.title}</h2>
-          <p className="text-white mt-3 max-w-3xl mx-auto">{t.services.tagline}</p>
+          <p className="text-white mt-6 max-w-3xl mx-auto">{t.services.tagline}</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -640,7 +640,7 @@ const t = {
           </div>
         <h2 className="text-4xl sm:text-5xl md:text-6xl font-medium mt-4">{t.process.title}</h2>
 
-          <p className="text-white max-w-4xl mx-auto mt-4">
+          <p className="text-white mt-6 max-w-3xl mx-auto">
             Five strategic phases that transform your vision into digital excellence, backed by years of expertise and cutting-edge methodologies.
           </p>
         </div>
