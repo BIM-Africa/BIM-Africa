@@ -115,12 +115,11 @@ const t = {
     badge: "An Illustrative Project Example",
     title: "Illustrative Project: Headless E-commerce Platform",
     steps: [
-      { n: "01", title: "Requirements & Discovery", copy: "We analyse the retailer's products, customer journeys, purchasing rules and business workflows. This establishes the project scope, required functionality and priorities before development begins.", time: "Week 1" },
-      { n: "02", title: "System Architecture & Planning", copy: "We define how Next.js and WooCommerce will work together, planning product data, catalogue structure, search and filters, pricing logic, checkout and required integrations.", time: "Week 2" },
-      { n: "03", title: "Storefront Design & User Experience", copy: "We design the storefront, product pages, catalogue navigation, search experience, cart and checkout. The focus is on making large product ranges easier to browse and purchases or quotation requests simpler to complete.", time: "Weeks 3 - 4" },
-      { n: "04", title: "Development & Integration", copy: "We develop the Next.js storefront and connect it to WooCommerce, implementing product browsing, purchasing, quotation workflows and MIPS payment gateway integration. We also connect the required business systems and configure the agreed functionality to support a smooth, reliable purchasing experience.", time: "Weeks 5 - 9" },
-      { n: "05", title: "Testing & Optimisation", copy: "We test catalogue accuracy, search filters, pricing, checkout, integrations, mobile usability, performance and security. Issues are resolved before the platform is approved for launch.", time: "Week 10 - 11" },
-      { n: "06", title: "Deployment & Ongoing Support", copy: "We deploy the platform, verify everything is working as expected and guide the transition to live operation. Our involvement continues beyond launch through ongoing maintenance, security updates, performance monitoring and technical support, helping keep the platform reliable, secure and ready to evolve alongside the business.", time: "Week 12" },   
+      { n: "01", title: "Requirements & Discovery", copy: "Analyse the retailer's products, customer journeys and business requirements to define the project scope.", time: "Week 1" },
+      { n: "02", title: "Architecture & Planning", copy: "Plan the Next.js and WooCommerce architecture, catalogue structure, pricing logic and required integrations.", time: "Week 2" },
+      { n: "03", title: "Storefront Design", copy: "Design the storefront, product pages, catalogue navigation, search, cart and checkout.", time: "Weeks 3 - 4" },
+      { n: "04", title: "Development & Integration", copy: "Build the Next.js storefront, connect WooCommerce and integrate purchasing, quotation workflows and MIPS payments.", time: "Weeks 5 - 9" },
+      { n: "05", title: "Testing, Launch & Support", copy: "Test functionality, payments, performance and security before deployment. Continue with maintenance, security updates and technical support after launch.", time: "Week 10 - 12" },
     ],
   },
 
