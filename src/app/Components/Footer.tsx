@@ -3,7 +3,7 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { Instagram, Facebook, Linkedin, Phone, Mail as Linked } from "lucide-react";
+import { Instagram, Facebook, Linkedin as Linked } from "lucide-react";
 import newlogo from "../../Assests/newlogo.png"; // ✅ adjust path if needed
 
 export default function Footer() {
@@ -157,26 +157,23 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* ---------- Desktop Bottom ---------- */}
-        <div className="hidden sm:block border-t border-gray-800 mt-8 sm:mt-12 pt-6 sm:pt-8 text-center text-white text-xs sm:text-sm">
-          <div className="flex flex-wrap justify-center items-center gap-x-6 gap-y-3">
-        
-            <a
-              href="tel:+23058010730"
-              className="inline-flex items-center gap-2 hover:text-[#ff1f00] transition-colors"
-            >
-              <Phone size={15} />
-              <span>+230 5801 0730</span>
-            </a>
-        
-            <a
-              href="mailto:info@bim.africa"
-              className="inline-flex items-center gap-2 hover:text-[#ff1f00] transition-colors"
-            >
-              <Mail size={15} />
-              <span>info@bim.africa</span>
-            </a>
-        
+          {/* ---------- Desktop Bottom ---------- */}
+          <div className="hidden sm:block border-t border-gray-800 mt-8 sm:mt-12 pt-6 sm:pt-8 text-center text-white text-xs sm:text-sm">
+            <div className="flex flex-wrap justify-center items-center gap-x-6 gap-y-3">
+              <a
+                href="tel:+23058010730"
+                className="hover:text-[#ff1f00] transition-colors"
+              >
+                +230 5801 0730
+              </a>
+          
+              <a
+                href="mailto:info@bim.africa"
+                className="hover:text-[#ff1f00] transition-colors"
+              >
+                info@bim.africa
+              </a>
+            </div>
           </div>
         </div>
         </div>
