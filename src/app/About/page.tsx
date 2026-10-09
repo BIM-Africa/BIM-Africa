@@ -103,7 +103,7 @@ Founded by Rahul in 2019 and incorporated in Mauritius in 2022, BIM Africa helps
     src={man}
     alt="BMS Operator at work"
     fill
-    className="object-cover"
+    className="object-contain"
     priority
     loading="eager"
     fetchPriority="high"
