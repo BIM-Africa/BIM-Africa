@@ -161,9 +161,8 @@ export default function ContactPage() {
         <Phone className="w-5 h-5 text-white" />
       </button>
       <div>
-        <h3 className="font-medium text-sm mb-1 text-white">Phone</h3>
+        <h3 className="font-medium text-sm mb-1 text-white">Phone & Whatsapp</h3>
         <p className="text-gray-300 text-xs">MU: +230 58010730</p>
-        <p className="text-gray-300 text-xs">LU: +352 661 784 276</p>
       </div>
 
       {showWA && (
@@ -206,8 +205,8 @@ export default function ContactPage() {
         <Building className="w-5 h-5 text-white" />
       </div>
       <div>
-        <h3 className="font-medium text-sm mb-1 text-white">Offices</h3>
-        <p className="text-gray-300 text-xs">Mauritius & Luxembourg</p>
+        <h3 className="font-medium text-sm mb-1 text-white">Our Markets</h3>
+        <p className="text-gray-300 text-xs">Mauritius, Luxembourg & Beyond</p>
       </div>
     </div>
 
@@ -343,7 +342,7 @@ export default function ContactPage() {
           {/* Excellence Section */}
           <div className="bg-black/40 rounded-2xl p-8 border border-gray-700 text-left">
             <h2 className="text-2xl sm:text-3xl font-medium mb-6 text-center">
-              Excellence You Can Rely On
+              One Partner. The Bigger Picture.
             </h2>
 
             <div className="space-y-6">
@@ -352,10 +351,9 @@ export default function ContactPage() {
                   <Users className="w-6 h-6 text-white" />
                 </div>
                 <div>
-                  <h3 className="text-lg font-bold mb-1">Expert Team</h3>
+                  <h3 className="text-lg font-bold mb-1">We See Beyond the Website</h3>
                   <p className="text-gray-300 text-sm">
-                    International professionals with 10+ years of combined
-                    experience.
+                    A website is part of how your business operates, not an isolated project. We consider how it connects with your customers, processes and wider business needs.
                   </p>
                 </div>
               </div>
@@ -365,9 +363,9 @@ export default function ContactPage() {
                   <Zap className="w-6 h-6 text-white" />
                 </div>
                 <div>
-                  <h3 className="text-lg font-bold mb-1">24/7 Support</h3>
+                  <h3 className="text-lg font-bold mb-1">Technology With a Purpose</h3>
                   <p className="text-gray-300 text-sm">
-                    Always available when you need us most.
+                    From business websites to custom applications and security, we choose the right approach for the job. No unnecessary complexity, just technology that serves a clear business purpose.
                   </p>
                 </div>
               </div>
@@ -377,9 +375,9 @@ export default function ContactPage() {
                   <CheckSquare className="w-6 h-6 text-white" />
                 </div>
                 <div>
-                  <h3 className="text-lg font-bold mb-1">Proven Results</h3>
+                  <h3 className="text-lg font-bold mb-1">Here for What Comes Next</h3>
                   <p className="text-gray-300 text-sm">
-                    Trusted by businesses in Mauritius & Luxembourg & beyond.
+                    Our work doesn't have to end at launch. With ongoing maintenance, security and technical support, we can help you manage what you've built as your business evolves.
                   </p>
                 </div>
               </div>
