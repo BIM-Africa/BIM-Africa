@@ -89,7 +89,7 @@ export default function ServicesPage() {
       Businesses we've helped build, protect and support through practical work focused on meaningful results. Every project starts with understanding what the business needs and finding the right way to move it forward.      </p>
     </div>
     <div className="relative">
-  <div className="rounded-2xl overflow-hidden border border-gray-800 bg-black/40 shadow-xl">
+  <div className="rounded-2xl overflow-hidden bg-black/40 shadow-xl">
     <div className="relative aspect-[16/12] sm:aspect-[16/10]">
       <Image
         src={man} // 👈 Your static image
