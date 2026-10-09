@@ -205,7 +205,7 @@ export default function ServicesPage() {
   {/* Badge */}
   <div className="inline-flex items-center gap-2 rounded-full bg-black/30 border border-red-700 px-3 py-1.5 sm:px-4 sm:py-2 mb-4 sm:mb-6">
     <Clock className="w-4 h-4 text-[#ff1f00]" />
-    <span className="text-xs sm:text-sm text-white">GET A QUOTE IN 2 MINUTES</span>
+    <span className="text-xs sm:text-sm text-white">Get a quote in 2 minutes</span>
   </div>
 
   <style>{`
