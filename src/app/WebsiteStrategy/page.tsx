@@ -400,7 +400,7 @@ const t = {
 
             <h1 className="text-[40px] sm:text-6xl md:text-7xl  leading-[1.05] tracking-tight">
               Custom <span className="text-[#ff1f00]">Websites</span> & 
-              <span className="text-[#ff1f00]">Web Applications.</span>
+              <span className="text-[#ff1f00]"> Web Applications.</span>
             </h1>
 
             <p className="text-white mt-6 max-w-3xl mx-auto">{t.hero.subtitle}</p>
@@ -442,21 +442,22 @@ const t = {
 
 
             {/* ratings row */}
-            <div className="mt-6 flex flex-wrap items-center gap-8 text-sm">
+            <div className="mt-6 flex flex-wrap items-center gap-6 text-sm">
               <div className="flex items-center gap-2 text-white/90">
                 <Star className="w-5 h-5 text-[#ff1f00]" />
-                <span>5.0 Client Rating</span>
+                <span>5.0 Google Rating · 7 Reviews</span>
               </div>
+            
               <div className="flex items-center gap-2 text-white/90">
                 <Award className="w-5 h-5 text-[#ff1f00]" />
-                <span>Recognized for Excellence</span>
+                <span>Recognized by Our Clients</span>
               </div>
+            
               <div className="flex items-center gap-2 text-white/90">
                 <ShieldCheck className="w-5 h-5 text-[#ff1f00]" />
-                <span>Industry-Leading Standards</span>
+                <span>Security-Focused Development</span>
               </div>
             </div>
-          </div>
 
           {/* right stat card */}
           <div className="relative">
