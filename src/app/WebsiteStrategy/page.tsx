@@ -442,20 +442,14 @@ const t = {
 
 
             {/* ratings row */}
-            <div className="mt-6 flex flex-wrap items-center gap-6 text-sm">
+            <div className="mt-6 flex flex-wrap items-center gap-8 text-sm">
               <div className="flex items-center gap-2 text-white/90">
                 <Star className="w-5 h-5 text-[#ff1f00]" />
+                <Star className="w-5 h-5 text-[#ff1f00]" />
+                <Star className="w-5 h-5 text-[#ff1f00]" />
+                <Star className="w-5 h-5 text-[#ff1f00]" />
+                <Star className="w-5 h-5 text-[#ff1f00]" />
                 <span>5.0 Google Rating · 7 Reviews</span>
-              </div>
-            
-              <div className="flex items-center gap-2 text-white/90">
-                <Award className="w-5 h-5 text-[#ff1f00]" />
-                <span>Recognized by Our Clients</span>
-              </div>
-            
-              <div className="flex items-center gap-2 text-white/90">
-                <ShieldCheck className="w-5 h-5 text-[#ff1f00]" />
-                <span>Security-Focused Development</span>
               </div>
             </div>
 
