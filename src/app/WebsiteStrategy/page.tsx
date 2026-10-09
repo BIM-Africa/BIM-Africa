@@ -65,15 +65,15 @@ const t = {
   },
 
   hero: {
-    badge: "Premium Digital Solutions",
+    badge: "WEBSITES & WEB APPLICATIONS · MAURITIUS",
     subtitle:
-      "Crafting digital experiences that transcend expectations. We partner with visionary businesses to create websites that don't just exist—they excel, engage, and elevate your brand to new heights.",
+      "We design and develop business websites and custom web applications built around your objectives, your customers and the way you work. From company websites and e-commerce platforms to client onboarding systems and instant quotation tools, we build practical solutions that help your business operate more effectively.",
     stats: {
-      uptime: { value: "99.9%", label: "Uptime Guarantee" },
-      load: { value: "2.5s", label: "Load Time" },
-      security: { value: "A+", label: "Security Rating" },
-      support: { value: "24/7", label: "Support" },
-      powered: "Powered by Industry Leaders",
+      uptime: { value: "22+", label: "Years of Combined Experience" },
+      load: { value: "Custom", label: "Website and Web Applications" },
+      security: { value: "Security", label: "Considered From the Start" },
+      support: { value: "Ongoing", label: "Maintenance and Technical Assistance" },
+      powered: "Built With Proven Technology.",
     },
   },
 
@@ -399,8 +399,8 @@ const t = {
             </div>
 
             <h1 className="text-[40px] sm:text-6xl md:text-7xl  leading-[1.05] tracking-tight">
-              Website Strategy & <br />
-              <span className="text-[#ff1f00]">Development</span>
+              From <span className="text-[#ff1f00]">Websites</span> to Custom Business 
+              <span className="text-[#ff1f00]">Web Applications.</span>
             </h1>
 
             <p className="text-base sm:text-lg md:text-xl mt-6 text-gray-300 max-w-3xl">{t.hero.subtitle}</p>
