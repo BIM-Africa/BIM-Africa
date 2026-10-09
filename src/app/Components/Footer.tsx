@@ -22,24 +22,61 @@ export default function Footer() {
                 <Link href="/blog" className="block text-white text-sm">Blog</Link>
               </div>
             </div>
-
+            
+          {/* Support Mobile */}
             <div>
-              <h3 className="text-[#ff1f00] text-sm font-bold uppercase mb-4">Support</h3>
-              <div className="space-y-2">
-                <Link href="/contactus" className="block text-white text-sm">Contact Us</Link>
-                <a href="/PrivacyPolicy" className="block text-white text-sm">Privacy Policy</a>
-                <a href="/TermsofService" className="block text-white text-sm">Terms of Service</a>
+              <h3 className="text-[#ff1f00] text-sm font-bold uppercase mb-4">
+                Support
+              </h3>
+            
+              <div className="space-y-3">
+                <Link
+                  href="/contactus"
+                  className="block text-white text-sm hover:text-[#ff1f00] transition"
+                >
+                  Contact Us
+                </Link>
+            
+                <a
+                  href="tel:+230XXXXXXXX"
+                  className="block text-white text-sm hover:text-[#ff1f00] transition"
+                >
+                  +230 XXXXXXXX
+                </a>
+            
+                <a
+                  href="https://wa.me/message/VLID27EWBIPND1"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block text-white text-sm hover:text-[#ff1f00] transition"
+                >
+                  WhatsApp Us
+                </a>
+            
+                <a
+                  href="mailto:info@bim.africa"
+                  className="block text-white text-sm hover:text-[#ff1f00] transition"
+                >
+                  info@bim.africa
+                </a>
+            
+                <a href="/PrivacyPolicy" className="block text-white text-sm hover:text-[#ff1f00] transition">
+                  Privacy Policy
+                </a>
+            
+                <a href="/TermsofService" className="block text-white text-sm hover:text-[#ff1f00] transition">
+                  Terms of Service
+                </a>
               </div>
             </div>
-          </div>
 
           {/* Referral + Socials */}
           <div className="mb-8">
             <div className="flex flex-col min-[400px]:flex-row gap-4 justify-between items-start mb-6">
               <div className="flex-1 pr-4">
-                <h3 className="text-[#ff1f00] text-sm font-bold uppercase mb-3">Referral Program</h3>
+                <h3 className="text-[#ff1f00] text-sm font-bold uppercase mb-3">Our Referral Program</h3>
                 <p className="text-white text-xs leading-relaxed">
-                  Know someone who needs elite digital solutions? Refer them — and earn through our tiered incentive program. Simple to join. Profitable to share.
+                  Know a business that needs a website, stronger security or technical support? Introduce them to BIM Africa and earn referral rewards when they become a client. It's a straightforward way to build valuable business relationships while benefiting from the opportunities you create.
                 </p>
               </div>
 
@@ -79,8 +116,9 @@ export default function Footer() {
           {/* Footer Bottom (Mobile) */}
           <div className="text-center mb-8">
             <Image src={newlogo} className="w-48 mx-auto mb-4 h-auto" alt="BIM Logo" width={192} height={64} />
-            <p className="text-white text-sm mb-1">Copyright © 2025 BIM. All Rights Reserved.</p>
-            <p className="text-white text-sm">Mauritius & Luxembourg</p>
+            <p className="text-white text-sm mb-1">Copyright © 2026 BIM. All Rights Reserved.</p>
+            <p className="text-white text-sm">Incorproated in Mauritius <br />
+            Company Number: C190360</p>
           </div>
 
           <div className="text-center text-white text-xs border-t border-gray-800 pt-6">
@@ -113,12 +151,50 @@ export default function Footer() {
           </div>
 
           {/* Support */}
+
           <div className="text-left">
-            <h3 className="text-[#ff1f00] text-base sm:text-lg uppercase">SUPPORT</h3>
+            <h3 className="text-[#ff1f00] text-base sm:text-lg uppercase">
+              SUPPORT
+            </h3>
+          
             <div className="space-y-2 sm:space-y-3 mt-4">
-              <Link href="/contactus" className="block text-white text-sm sm:text-base">Contact Us</Link>
-              <a href="/PrivacyPolicy" className="block text-white text-sm sm:text-base">Privacy Policy</a>
-              <a href="/TermsofService" className="block text-white text-sm sm:text-base">Terms of Service</a>
+              <Link
+                href="/contactus"
+                className="block text-white text-sm sm:text-base hover:text-[#ff1f00] transition"
+              >
+                Contact Us
+              </Link>
+          
+              <a
+                href="tel:+230XXXXXXXX"
+                className="block text-white text-sm sm:text-base hover:text-[#ff1f00] transition"
+              >
+                +230 XXXXXXXX
+              </a>
+          
+              <a
+                href="https://wa.me/message/VLID27EWBIPND1"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block text-white text-sm sm:text-base hover:text-[#ff1f00] transition"
+              >
+                WhatsApp Us
+              </a>
+          
+              <a
+                href="mailto:info@bim.africa"
+                className="block text-white text-sm sm:text-base hover:text-[#ff1f00] transition"
+              >
+                info@bim.africa
+              </a>
+          
+              <a href="/PrivacyPolicy" className="block text-white text-sm sm:text-base hover:text-[#ff1f00] transition">
+                Privacy Policy
+              </a>
+          
+              <a href="/TermsofService" className="block text-white text-sm sm:text-base hover:text-[#ff1f00] transition">
+                Terms of Service
+              </a>
             </div>
           </div>
 
