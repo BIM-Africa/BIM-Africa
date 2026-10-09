@@ -15,24 +15,24 @@ export default function ServicesPage() {
 
   const premiumCards = [
     {
-      title: "Premium Value",
+      title: "Clarity From Day One",
       description:
-        "We don't compete on being cheap — we compete on delivering excellence. Every solution is crafted to provide lasting value and measurable growth.",
+        "We establish clear expectations, explain our recommendations and keep you informed throughout the process. You'll know what's happening, what it involves and what you're investing in, without the confusion or unnecessary jargon.",
     },
     {
-      title: "Shared Success",
+      title: "Work That Solves Real Problems",
       description:
-        "Your wins are our wins. We approach every project as a partnership, where your growth defines our success.",
+        "Every recommendation has a purpose. We focus on what your business actually needs, choosing practical approaches that address real challenges rather than adding complexity, features or costs without a clear reason.",
     },
     {
-      title: "Dedicated Support",
+      title: "People Who Take Responsibility",
       description:
-        "Exceptional service, whenever you need it. Our team is available to assist, advise, and ensure your digital journey is seamless and stress-free.",
+        "When you need help, you deserve more than automated replies or being passed from one person to another. We take your concerns seriously, communicate directly and work towards resolving the issues that matter to your business.",
     },
     {
-      title: "Innovation at Core",
+      title: "Committed Beyond Launch",
       description:
-        "Creativity meets strategy. We bring forward-looking ideas and innovative solutions that set your brand apart from the competition.",
+        "A website going live or a technical issue being resolved isn't the end of the story. We consider what happens next, with maintenance, improvements and ongoing protection helping your business stay reliable as its needs change.",
     },
   ];
 
@@ -92,10 +92,9 @@ export default function ServicesPage() {
       <section className="py-10 sm:py-4 lg:py-[2px] relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 text-center relative z-10">
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-white leading-tight">
-            We Like
+            The Difference Is In
             <br />
-            <span className="text-[#ff1f00]">Simple</span>. <span className="text-[#ff1f00]">Clear</span>. 
-            <span className="text-[#ff1f00]">Practical</span>. <span className="text-[#ff1f00]">Responsive</span>. 
+            <span className="text-[#ff1f00]">How We Work</span>.
           </h2>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 w-full max-w-[460px] mx-auto mt-6 sm:mt-8">
