@@ -78,7 +78,7 @@ const t = {
   },
 
   services: {
-    title: "Our Services",
+    title: "Our Website & Web Application Services",
     tagline:
       "From business websites to custom web applications, we provide the strategy, development and ongoing support your business needs. Choose the service that fits your requirements.",
 
@@ -112,14 +112,15 @@ const t = {
   },
 
   process: {
-    badge: "Proven Methodology",
-    title: "Our Process",
+    badge: "An Illustrative Project Example",
+    title: "Illustrative Project: Headless E-commerce Platform",
     steps: [
-      { n: "01", title: "Discovery", copy: "Strategic analysis of your business goals and competitive landscape.", time: "1–2 weeks" },
-      { n: "02", title: "Strategy", copy: "Comprehensive digital roadmap aligned with your objectives.", time: "1 week" },
-      { n: "03", title: "Design", copy: "Sophisticated user experience and visual design system.", time: "2–3 weeks" },
-      { n: "04", title: "Development", copy: "Building with cutting-edge technology for maximum performance.", time: "4–6 weeks" },
-      { n: "05", title: "Launch", copy: "Testing, optimization, and strategic go-live with ongoing support.", time: "1 week" },
+      { n: "01", title: "Requirements & Discovery", copy: "We analyse the retailer's products, customer journeys, purchasing rules and business workflows. This establishes the project scope, required functionality and priorities before development begins.", time: "Week 1" },
+      { n: "02", title: "System Architecture & Planning", copy: "We define how Next.js and WooCommerce will work together, planning product data, catalogue structure, search and filters, pricing logic, checkout and required integrations.", time: "Week 2" },
+      { n: "03", title: "Storefront Design & User Experience", copy: "We design the storefront, product pages, catalogue navigation, search experience, cart and checkout. The focus is on making large product ranges easier to browse and purchases or quotation requests simpler to complete.", time: "Weeks 3 - 4" },
+      { n: "04", title: "Development & Integration", copy: "We develop the Next.js storefront and connect it to WooCommerce, implementing product browsing, purchasing, quotation workflows and MIPS payment gateway integration. We also connect the required business systems and configure the agreed functionality to support a smooth, reliable purchasing experience.", time: "Weeks 5 - 9" },
+      { n: "05", title: "Testing & Optimisation", copy: "We test catalogue accuracy, search filters, pricing, checkout, integrations, mobile usability, performance and security. Issues are resolved before the platform is approved for launch.", time: "Week 10 - 11" },
+      { n: "06", title: "Deployment & Ongoing Support", copy: "We deploy the platform, verify everything is working as expected and guide the transition to live operation. Our involvement continues beyond launch through ongoing maintenance, security updates, performance monitoring and technical support, helping keep the platform reliable, secure and ready to evolve alongside the business.", time: "Week 12" },   
     ],
   },
 
@@ -638,7 +639,7 @@ const t = {
         <h2 className="text-4xl sm:text-5xl md:text-6xl font-medium mt-4">{t.process.title}</h2>
 
           <p className="text-white mt-6 max-w-3xl mx-auto">
-            Five strategic phases that transform your vision into digital excellence, backed by years of expertise and cutting-edge methodologies.
+            A growing retailer needs more than a standard online store. The project involves building a headless e-commerce platform using Next.js and WooCommerce, combining a fast, modern storefront handling thousands of products, advanced catalogue search, online purchasing and quotation requests. The goal is to simplify the customer journey, streamline business operations and create a scalable platform that can evolve with the business.
           </p>
         </div>
 
