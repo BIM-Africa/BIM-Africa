@@ -36,7 +36,7 @@ export default function Footer() {
 
           {/* Referral + Socials */}
           <div className="mb-8">
-            <div className="flex flex-col min-[400px]:flex-row gap-4 justify-between items-start mb-6">
+            <div className="flex flex-col min-[400px]:flex-row gap-4 items-center justify-center items-start mb-6">
               <div className="flex-1 pr-4">
                 <h3 className="text-[#ff1f00] text-sm font-bold uppercase mb-3">Our Referral Program</h3>
                 <p className="text-white text-xs leading-relaxed">
@@ -50,7 +50,7 @@ export default function Footer() {
                   rel="noopener noreferrer"
                   aria-label="Join referral program on WhatsApp (Mauritius)"
                 >
-                  <button className="bg-[#333333] border border-transparent hover:border-[#ff1f00] text-white px-6 rounded-full text-sm font-medium transition-colors whitespace-nowrap">
+                  <button className="bg-[#333333] border border-transparent hover:border-[#ff1f00] text-white px-6 py-2 rounded-full text-sm font-medium transition-colors whitespace-nowrap">
                     JOIN NOW
                   </button>
                 </a>
@@ -160,20 +160,25 @@ export default function Footer() {
         {/* ---------- Desktop Bottom ---------- */}
         <div className="hidden sm:block border-t border-gray-800 mt-8 sm:mt-12 pt-6 sm:pt-8 text-center text-white text-xs sm:text-sm">
           <div className="flex flex-wrap justify-center items-center gap-x-6 gap-y-3">
+        
             <a
               href="tel:+23058010730"
-              className="hover:text-[#ff1f00] transition-colors"
+              className="inline-flex items-center gap-2 hover:text-[#ff1f00] transition-colors"
             >
-              +230 5801 0730
+              <Phone size={15} />
+              <span>+230 5801 0730</span>
             </a>
         
             <a
               href="mailto:info@bim.africa"
-              className="hover:text-[#ff1f00] transition-colors"
+              className="inline-flex items-center gap-2 hover:text-[#ff1f00] transition-colors"
             >
-              info@bim.africa
+              <Mail size={15} />
+              <span>info@bim.africa</span>
             </a>
+        
           </div>
+        </div>
         </div>
       </div>
     </footer>
