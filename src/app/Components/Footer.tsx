@@ -3,7 +3,7 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { Instagram, Facebook, Linkedin as Linked } from "lucide-react";
+import { Instagram, Facebook, Linkedin, Phone, Mail as Linked } from "lucide-react";
 import newlogo from "../../Assests/newlogo.png"; // ✅ adjust path if needed
 
 export default function Footer() {
