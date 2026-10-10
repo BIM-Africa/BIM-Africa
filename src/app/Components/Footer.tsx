@@ -86,10 +86,15 @@ export default function Footer() {
           </div>
 
           <div className="text-center text-white text-xs border-t border-gray-800 pt-6">
-            <a href="/PrivacyPolicy" className="hover:text-[#ff1f00]">Privacy Policy</a>
-            <span className="mx-2">|</span>
-            <a href="/TermsofService" className="hover:text-[#ff1f00]">Terms</a>
+            <a href="tel:+23058010730" className="hover:text-white">
+              Call Us: <span className="text-[#ff1f00]">+230 5801 0730</span>
+            </a>
+            {" | "}
+            <a href="mailto:info@bim.africa" className="hover:text-white">
+              Email Us: <span className="text-[#ff1f00]">info@bim.africa</span>
+            </a>
           </div>
+          
         </div>
 
         {/* ---------- Desktop Footer ---------- */}
@@ -162,12 +167,12 @@ export default function Footer() {
 
         {/* ---------- Desktop Bottom ---------- */}
         <div className="hidden sm:block border-t border-gray-800 mt-8 sm:mt-12 pt-6 sm:pt-8 text-center text-white text-xs sm:text-sm">
-          <a href="/PrivacyPolicy" className="hover:text-white">
-            Privacy Policy
+          <a href="tel:+23058010730" className="hover:text-white">
+            Call Us: <span className="text-[#ff1f00]">+230 5801 0730</span>
           </a>
           {" | "}
-          <a href="/TermsofService" className="hover:text-white">
-            Terms of Service
+          <a href="mailto:info@bim.africa" className="hover:text-white">
+            Email Us: <span className="text-[#ff1f00]">info@bim.africa</span>
           </a>
         </div>
       </div>
