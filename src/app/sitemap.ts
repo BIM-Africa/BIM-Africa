@@ -101,7 +101,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 0.7,
     },
     
-    {
+   /* {
       url: `${BASE_URL}/CyberSecurity`,
       lastModified: STATIC_LAST_MOD,
       changeFrequency: "monthly",
@@ -112,7 +112,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       lastModified: STATIC_LAST_MOD,
       changeFrequency: "monthly",
       priority: 0.8,
-    },
+    },*/
 
   ];
 
