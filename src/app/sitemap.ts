@@ -16,7 +16,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   // ✅ FIXED LAST MOD FOR STATIC PAGES (IMPORTANT)
   // =====================================================
   // Use website launch / major update date
-  const STATIC_LAST_MOD = new Date("2026-10-01");
+  const STATIC_LAST_MOD = new Date("2026-10-10");
 
   // =====================================================
   // ✅ STATIC PAGES (ALL ROUTES)
