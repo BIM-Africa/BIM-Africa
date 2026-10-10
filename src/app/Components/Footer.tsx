@@ -44,7 +44,7 @@ export default function Footer() {
                 </p>
               </div>
 
-              <div className="flex flex-col items-end space-y-4">
+              <div className="flex flex-col items-start space-y-4">
                 <a
                   href="https://wa.me/message/VLID27EWBIPND1"
                   target="_blank"
