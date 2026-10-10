@@ -40,7 +40,8 @@ export default function Footer() {
               <div className="flex-1 pr-4">
                 <h3 className="text-[#ff1f00] text-sm font-bold uppercase mb-3">Our Referral Program</h3>
                 <p className="text-white text-xs leading-relaxed">
-                Know a business that needs a website, security or technical support? Refer them to BIM Africa and earn rewards for every successful referral.                </p>
+                Know a business that needs a website, security or technical support? Refer them to BIM Africa and earn rewards for every successful referral.                
+                </p>
               </div>
 
               <div className="flex flex-col items-end space-y-4">
@@ -50,8 +51,8 @@ export default function Footer() {
                   rel="noopener noreferrer"
                   aria-label="Join referral program on WhatsApp (Mauritius)"
                 >
-                  <button className="bg-[#333333] border border-transparent hover:border-[#ff1f00] text-white px-6 py-2 rounded-full text-sm font-medium transition-colors whitespace-nowrap">
-                    JOIN NOW
+            <button className="bg-[#333333] border border-transparent hover:border-[#ff1f00] text-white px-6 py-2 rounded-full text-sm font-medium transition-colors whitespace-nowrap">                    
+              JOIN NOW
                   </button>
                 </a>
 
@@ -128,7 +129,8 @@ export default function Footer() {
           <div className="text-left">
             <h3 className="text-[#ff1f00] text-base sm:text-lg uppercase">Our Referral Program</h3>
             <p className="text-white text-xs sm:text-sm mt-4">
-            Know a business that needs a website, security or technical support? Refer them to BIM Africa and earn rewards for every successful referral.            </p>
+            Know a business that needs a website, security or technical support? Refer them to BIM Africa and earn rewards for every successful referral.            
+            </p>
             <div className="flex flex-wrap items-start gap-3 sm:gap-4 mt-6">
               <a href="https://wa.me/message/VLID27EWBIPND1" target="_blank" rel="noopener noreferrer">
                 <button className="bg-[#333333] border border-transparent hover:border-[#ff1f00] text-white px-4 sm:px-6 lg:px-8 py-2 sm:py-3 lg:py-4 rounded-full font-medium whitespace-nowrap text-xs sm:text-sm lg:text-base">
@@ -159,8 +161,20 @@ export default function Footer() {
 
 
           {/* ---------- Desktop Bottom ---------- */}
-          <div className="hidden sm:block border-t border-gray-800 mt-8 sm:mt-12 pt-6 sm:pt-8 text-center text-white text-xs sm:text-sm">
-            <a href="/PrivacyPolicy" className="hover:text-white">Privacy Policy</a> | <a href="/TermsofService" className="hover:text-white">Terms of Service</a>
+           <div className="flex flex-wrap justify-center items-center gap-x-6 gap-y-3">
+            <a
+              href="tel:+23058010730"
+              className="hover:text-[#ff1f00] transition-colors"
+            >
+              +230 5801 0730
+            </a>
+        
+            <a
+              href="mailto:info@bim.africa"
+              className="hover:text-[#ff1f00] transition-colors"
+            >
+              info@bim.africa
+            </a>
           </div>
         </div>
       </div>
