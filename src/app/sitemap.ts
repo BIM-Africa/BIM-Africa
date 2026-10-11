@@ -1,16 +1,14 @@
 // src/app/sitemap.ts
 import type { MetadataRoute } from "next";
+import { getAllBlogs, type Blog } from "@/lib/blogs";
+
+export const revalidate = 300; // keep in sync with BLOG_REVALIDATE
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const BASE_URL =
     process.env.NODE_ENV === "development"
       ? "http://localhost:3000"
       : "https://bim.africa";
-
-  const API_URL =
-    process.env.NODE_ENV === "development"
-      ? "http://localhost:5000/api/blogs"
-      : "https://bim-africa-backend-six.vercel.app/api/blogs";
 
   // =====================================================
   // ✅ FIXED LAST MOD FOR STATIC PAGES (IMPORTANT)
@@ -117,29 +115,21 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   ];
 
   // =====================================================
-  // ✅ BLOGS (DYNAMIC)
+  // ✅ BLOGS (DYNAMIC) — every blog, not just the first API page
   // =====================================================
-  let data: { blogs: any[] } = { blogs: [] };
-
+  let blogs: Blog[] = [];
   try {
-    const res = await fetch(API_URL, { cache: "no-store" });
-    if (res.ok) {
-      data = await res.json();
-    }
+    blogs = await getAllBlogs();
   } catch {
     // Safe fallback – sitemap still works
   }
 
-  const blogEntries: MetadataRoute.Sitemap = data.blogs
-    .filter((b: any) => b?.slug)
-    .map((b: any) => ({
-      url: `${BASE_URL}/blog/${b.slug}`,
-      lastModified: new Date(
-        b.updatedAt || b.createdAt || "2025-12-01"
-      ),
-      changeFrequency: "weekly",
-      priority: 0.8,
-    }));
+  const blogEntries: MetadataRoute.Sitemap = blogs.map((b) => ({
+    url: `${BASE_URL}/blog/${b.slug}`,
+    lastModified: new Date(b.updatedAt || b.createdAt || STATIC_LAST_MOD),
+    changeFrequency: "weekly",
+    priority: 0.8,
+  }));
 
   // =====================================================
   // ✅ FINAL SITEMAP

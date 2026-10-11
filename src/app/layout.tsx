@@ -39,16 +39,7 @@ keywords: [
       "BIM Africa | Professional Websites, Cybersecurity & Digital Support Mauritius",
     description:
       "Professional website development, cybersecurity and digital support for businesses in Mauritius, Africa and Europe. Build, protect and support your business.",
-    url: "https://bim.africa",
     siteName: "BIM Africa",
-    images: [
-      {
-        url: "/favicon.ico",
-        width: 1200,
-        height: 630,
-        alt: "BIM Africa | Professional Websites, Cybersecurity & Digital Support Mauritius",
-      },
-    ],
     locale: "en_US",
     type: "website",
   },
@@ -63,16 +54,31 @@ keywords: [
   },
   manifest: "/site.webmanifest",
   other: {
-    "apple-mobile-web-app-title": "BIM Africa | Professional Websites, Cybersecurity & Digital Support Mauritius",
-  },
-  alternates: {
-    canonical: "https://bim.africa",
+    "apple-mobile-web-app-title": "BIM Africa",
   },
   metadataBase: new URL("https://bim.africa"),
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
+  twitter: {
+    card: "summary_large_image",
+  },
+};
+
+const organizationJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "BIM Africa",
+  alternateName: "Brand Image Marketer",
+  url: "https://bim.africa",
+  logo: "https://bim.africa/web-app-manifest-512x512.png",
 };
 
 // ✅ Root layout component
@@ -86,9 +92,11 @@ export default function RootLayout({
       <head>
         {/* ✅ Meta essentials not covered by Metadata API */}
         <meta name="theme-color" content="#ffffff" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="author" content="BIM Africa" />
-        
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
+        />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
