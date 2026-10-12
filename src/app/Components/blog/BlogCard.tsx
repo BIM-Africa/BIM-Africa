@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Clock, Eye, User, Calendar } from "lucide-react";
+import { Clock, Eye, User } from "lucide-react";
 import type { Blog } from "@/lib/blogs";
 
 export default function BlogCard({ blog }: { blog: Blog }) {
@@ -26,16 +26,16 @@ export default function BlogCard({ blog }: { blog: Blog }) {
 
       <div className="p-5">
         <div className="flex items-center gap-3 text-xs text-gray-300 mb-2">
-          <span className="inline-flex items-center gap-1">
+          {/*<span className="inline-flex items-center gap-1">
           <Calendar className="w-4 h-4" /> Posted on: 
             {article.createdAt ? (
               <time dateTime={article.createdAt}>{article.date}  </time>
             ) : (
               article.date
             )}
-          </span>
+          </span>*/}
           <span className="inline-flex items-center gap-1">
-            <Clock className="w-4 h-4" /> {blog.read}
+            <Clock className="w-4 h-4" />Read Time: {blog.read}
           </span>
         </div>
         <h3 className="text-lg font-semibold leading-snug group-hover:text-[#ff1f00] transition-colors">
@@ -45,7 +45,7 @@ export default function BlogCard({ blog }: { blog: Blog }) {
           <span className="inline-flex items-center gap-2">
             <User className="w-4 h-4" /> {blog.author}
           </span>
-          <span className="text-red-400 group-hover:text-[#ff1f00] text-lg">→</span>
+          <span className="text-red-400 group-hover:text-[#ff1f00] text-lg">Read →</span>
         </div>
       </div>
     </Link>
