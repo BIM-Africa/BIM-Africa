@@ -53,10 +53,11 @@ export default function ArticleView({
         </nav>
 
         <div className="flex flex-wrap items-center gap-3 text-sm">
+          {/* ===== Author Removed ===== 
           <span className="inline-flex items-center gap-1 bg-red-900/40 border border-[#ff1f00] text-red-200 px-3 py-1 rounded-full">
             <Shield className="w-4 h-4" /> {article.author}
-          </span>
-          <span className="inline-flex items-center gap-1">
+          </span>*/}
+          <span className="inline-flex items-center gap-1">Posted on: 
             <Calendar className="w-4 h-4" />
             {article.createdAt ? (
               <time dateTime={article.createdAt}>{article.date}</time>
@@ -64,13 +65,15 @@ export default function ArticleView({
               article.date
             )}
           </span>
-          <span className="inline-flex items-center gap-1">
+          <span className="inline-flex items-center gap-1">Read time: 
             <Clock className="w-4 h-4" />
             {article.read}
           </span>
+         {/* ===== Reviews Removed ===== 
           <span className="inline-flex items-center gap-1">
             <Eye className="w-4 h-4" /> {article.views}
           </span>
+          */}
         </div>
 
         <h1 className="mt-4 text-4xl sm:text-5xl lg:text-6xl leading-tight">{article.title}</h1>
