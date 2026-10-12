@@ -130,7 +130,7 @@ export default function ServicesPage() {
               <Image src={noumarmite} alt="" className="w-14 h-14 object-contain" />
             </div>
             <h3 className="text-white text-xs sm:text-xl lg:text-sm leading-snug">
-              Mauritius first Creole website,boosting cultural identity and brand trust.
+              Mauritius' first Creole-language snack website, bringing local flavours and culture online.
             </h3>
             <Link href="CaseStudy1" className="inline-flex items-center gap-2 mt-6 underline underline-offset-4 decoration-white/60 text-white text-sm sm:text-base hover:text-[#ff1f00]">
               Read the Story <ArrowRight size={16} />
@@ -139,13 +139,13 @@ export default function ServicesPage() {
 
           {/* Card 2 */}
           <article className="bg-black/40 border border-[#ff1f00] rounded-[24px] p-6 hover:bg-black/60 transition">
-            <div className="text-[#ff1f00] text-xl sm:text-2xl lg:text[26px] mb-4">Travel & Hospitality</div>
+            <div className="text-[#ff1f00] text-xl sm:text-2xl lg:text[26px] mb-4">Healthcare & Medical Tourism</div>
             <div className="text-white text-xl sm:text-2xl lg:text-sm  mb-4">Mauritius Health Travel</div>
             <div className="w-14 h-14 mb-4">
               <Image src={mauritiushealthtravel} alt=""  className="w-14 h-14 object-contain" />
             </div>
             <h3 className="text-white text-xs sm:text-xl lg:text-sm leading-snug">
-              High-Performance platform connecting patitents to world-class medical treatments
+              Connecting patients with medical providers through an accessible, purpose-built healthcare travel platform.
             </h3>
             <Link href="CaseStudy2" className="inline-flex items-center gap-2 text-white mt-6 underline underline-offset-4 decoration-white/60  text-sm sm:text-base hover:text-[#ff1f00]">
               Read the Story <ArrowRight size={16} />
@@ -160,7 +160,7 @@ export default function ServicesPage() {
               <Image src={mauritiustraveltour} alt="" className="w-14 h-14 object-contain" />
             </div>
             <h3 className="text-white text-xs sm:text-xl lg:text-sm leading-snug">
-              Boosting global reach with a fast, trusted and scalable website, tripling conversation
+              Powered by Next.js, delivering a fast, modern web experience built for performance and growth.
             </h3>
             <Link href="CaseStudy3" className="inline-flex items-center gap-2  mt-6 underline underline-offset-4 decoration-white/60 text-white text-sm sm:text-base hover:text-[#ff1f00]">
               Read the Story <ArrowRight size={16} />
