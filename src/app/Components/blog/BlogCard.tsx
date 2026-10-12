@@ -43,7 +43,13 @@ export default function BlogCard({ blog }: { blog: Blog }) {
         </h3>
         <div className="mt-4 flex items-center justify-between text-sm text-gray-300">
           <span className="inline-flex items-center gap-2">
-            <Calendar className="w-4 h-4" /> {blog.author}
+            <Calendar className="w-4 h-4" /> {/*{blog.author}*/}
+            Posted on: 
+            {article.createdAt ? (
+              <time dateTime={article.createdAt}>{article.date}  </time>
+            ) : (
+              article.date
+            )}
           </span>
           <span className="text-red-400 group-hover:text-[#ff1f00] text-lg">→</span>
         </div>
