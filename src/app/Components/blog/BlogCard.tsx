@@ -35,7 +35,7 @@ export default function BlogCard({ blog }: { blog: Blog }) {
             )}
           </span>*/}
           <span className="inline-flex items-center gap-1">
-            <Clock className="w-4 h-4" />Read Time: {blog.read}
+            <Clock className="w-4 h-4" />Read time: {blog.read}
           </span>
         </div>
         <h3 className="text-lg font-semibold leading-snug group-hover:text-[#ff1f00] transition-colors">
@@ -43,13 +43,7 @@ export default function BlogCard({ blog }: { blog: Blog }) {
         </h3>
         <div className="mt-4 flex items-center justify-between text-sm text-gray-300">
           <span className="inline-flex items-center gap-2">
-            <Calendar className="w-4 h-4" /> {/*{blog.author}*/}
-            Posted on: 
-            {article.createdAt ? (
-              <time dateTime={article.createdAt}>{article.date}  </time>
-            ) : (
-              article.date
-            )}
+            <Calendar className="w-4 h-4" /> Posted on: {blog.date}
           </span>
           <span className="text-red-400 group-hover:text-[#ff1f00] text-lg">→</span>
         </div>
