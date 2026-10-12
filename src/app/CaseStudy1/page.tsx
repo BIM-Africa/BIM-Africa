@@ -145,7 +145,8 @@ export default function ServicesPage() {
             </p>
           </article>
 
-          {/* ================== RIGHT: SIDEBAR ================== */}
+
+          {/* ================== RIGHT SIDEBAR ================== */}
           <aside className="space-y-6">
 
             {/* 🔥 Consultation Box */}
@@ -154,11 +155,9 @@ export default function ServicesPage() {
                 <TrendingUp className="w-7 h-7 text-white" />
               </div>
 
-              <h4 className="text-xl font-semibold text-center">
-                Ready to Secure Your Business?
-              </h4>
+              <h4 className="text-xl font-semibold text-center">Your Business Could Be Our Next Success Story.</h4>
               <p className="text-gray-200 text-center mt-2">
-                Get expert cybersecurity consultation tailored to your needs
+                Let's build a website that strengthens your brand, earns customer trust, and supports your business growth.
               </p>
 
               <a
@@ -168,21 +167,21 @@ export default function ServicesPage() {
                 className="block mt-4"
               >
                 <button className="w-full inline-flex items-center justify-center gap-2 bg-white text-[#ff1f00] hover:bg-red-50 px-5 py-3 rounded-xl font-semibold">
-                  <Globe className="w-4 h-4" /> Get Free Consultation
+                  <Globe className="w-4 h-4" /> Start Your Project
                 </button>
               </a>
 
               <div className="mt-4 grid grid-cols-2 gap-3 text-sm text-white">
                 <div className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-white" /> Free Assessment
+                  <CheckCircle className="w-4 h-4 text-white" /> Tailored to Your Business
                 </div>
                 <div className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-white" /> Expert Team
+                  <CheckCircle className="w-4 h-4 text-white" /> Built for Performance
                 </div>
               </div>
             </div>
 
-            {/* 🔥 Service List */}
+            {/* 🔥 Services List */}
             <div className="rounded-3xl bg-black/40 border border-white/10 p-6">
               <div className="flex items-center gap-2 text-lg font-semibold mb-3">
                 <Star className="w-5 h-5 text-[#ff1f00]" /> Our Services
@@ -190,18 +189,9 @@ export default function ServicesPage() {
 
               <div className="space-y-4">
                 {[
-                  {
-                    title: "Website Strategy & Development",
-                    desc: "We craft bespoke websites that combine design excellence with technical precision",
-                  },
-                  {
-                    title: "Cybersecurity & Threat Management",
-                    desc: "Your business deserves uncompromising protection",
-                  },
-                  {
-                    title: "Digital Support Outsourcing",
-                    desc: "Scale your business with our dedicated experts.",
-                  },
+                  { title: "Website Strategy & Development", desc: "High-performance websites built around your business objectives." },
+                  { title: "Cybersecurity & Threat Management", desc: "Practical protection to help safeguard your business and its digital assets." },
+                  { title: "Digital Support Outsourcing", desc: "Reliable digital support to help your business operate and grow." },
                 ].map((srv, i) => (
                   <div key={i} className="rounded-2xl border border-white/10 p-4">
                     <div className="font-semibold">{srv.title}</div>
@@ -223,17 +213,18 @@ export default function ServicesPage() {
                 <MessageSquare className="w-6 h-6" />
               </div>
 
-              <h4 className="text-lg font-semibold text-center">Need Expert Advice?</h4>
+              <h4 className="text-lg font-semibold text-center">Let's Talk About Your Business Needs</h4>
               <p className="text-gray-300 text-center mt-1">
-                Talk to our cybersecurity experts about your challenges.
+                Get practical advice on building, protecting, and improving the digital systems your business relies on.
               </p>
 
               <Link href="/contactus" className="block mt-4">
                 <button className="w-full bg-white text-[#ff1f00] hover:bg-red-50 px-5 py-3 rounded-xl font-semibold">
-                  Contact Us
+                  Talk to Our Team
                 </button>
               </Link>
             </div>
+
           </aside>
         </div>
       </main>
