@@ -144,7 +144,7 @@ export default async function BlogPage() {
                         <Calendar className="w-4 h-4 text-white" />
                       </div>
                       <span className="text-sm text-gray-300">
-                        Posted on: {post.date}
+                       Posted on: {post.date}
                       </span>
                     </div>
                     <Link
