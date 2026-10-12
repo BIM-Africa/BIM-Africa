@@ -28,7 +28,7 @@ import {
 } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
-/* Assets */
+/* Assets*/
 import logoBg from "../../Assests/srv.svg";
 import logo2 from "../../Assests/newlogo.png";
 import mobileBg from "../../Assests/new.jpeg";
