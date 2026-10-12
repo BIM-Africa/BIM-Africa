@@ -57,16 +57,16 @@ export default function ArticleView({
           <span className="inline-flex items-center gap-1 bg-red-900/40 border border-[#ff1f00] text-red-200 px-3 py-1 rounded-full">
             <Shield className="w-4 h-4" /> {article.author}
           </span>*/}
-          <span className="inline-flex items-center gap-1">Posted on: 
-            <Calendar className="w-4 h-4" />
+          <span className="inline-flex items-center gap-1">
+            <Calendar className="w-4 h-4" /> Posted on: 
             {article.createdAt ? (
-              <time dateTime={article.createdAt}>{article.date}</time>
+              <time dateTime={article.createdAt}>{article.date}  </time>
             ) : (
               article.date
             )}
           </span>
-          <span className="inline-flex items-center gap-1">Read time: 
-            <Clock className="w-4 h-4" />
+          <span className="inline-flex items-center gap-1">
+            <Clock className="w-4 h-4" /> Read time: 
             {article.read}
           </span>
          {/* ===== Reviews Removed ===== 
@@ -81,7 +81,7 @@ export default function ArticleView({
           <BlogMarkdown source={article.desc} />
         </div>
 
-        <div className="mt-8 flex flex-wrap items-center gap-4">
+       {/* ===== Reviews Removed =====  <div className="mt-8 flex flex-wrap items-center gap-4">
           <div className="flex items-center gap-3">
             <div className="w-14 h-14 rounded-full bg-[#ff1f00] border border-[#ff1f00] flex items-center justify-center">
               <User className="w-6 h-6" />
@@ -93,7 +93,7 @@ export default function ArticleView({
                 <Star className="w-3 h-3 fill-red-400" /> Top Contributor
               </div>
             </div>
-          </div>
+          </div>*/}
         </div>
       </section>
 
