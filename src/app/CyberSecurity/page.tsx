@@ -8,22 +8,24 @@ import {
   Activity,
   ServerCog,
   ArrowRight,
-  CheckCircle2,
   AlertTriangle,
   Eye,
   RefreshCw,
   FileCheck,
-  ChevronDown,
+  CheckCircle2,
+  Target,
+  Globe,
+  ChevronRight,
 } from "lucide-react";
 
 import logoBg from "../../Assests/srv.svg";
-import Footer from "../Components/Footer";
 import Navbar from "../Components/Navbar";
+import Footer from "../Components/Footer";
 
 export const metadata: Metadata = {
   title: "Cybersecurity & Website Security in Mauritius | BIM Africa",
   description:
-    "Protect your business with cybersecurity services in Mauritius. BIM Africa provides website security audits, vulnerability checks, malware removal, threat response and ongoing website protection.",
+    "Protect your business website with cybersecurity services in Mauritius. BIM Africa provides website security audits, vulnerability checks, malware removal, website hardening and ongoing security support.",
   keywords: [
     "cybersecurity Mauritius",
     "website security Mauritius",
@@ -40,7 +42,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Cybersecurity & Threat Management | BIM Africa",
     description:
-      "Identify vulnerabilities, remove threats and strengthen your website security with practical cybersecurity services from BIM Africa.",
+      "Identify vulnerabilities, address website security issues and strengthen your website protection with practical cybersecurity services from BIM Africa.",
     url: "https://bim.africa/CyberSecurity",
     siteName: "BIM Africa",
     type: "website",
@@ -51,243 +53,262 @@ const services = [
   {
     icon: Search,
     title: "Website Security Audits",
-    description:
-      "Understand how well your website is protected. We assess relevant security weaknesses, review potential exposure and identify areas that need attention.",
-    points: [
-      "Review of website security configuration",
-      "Identification of potential vulnerabilities",
-      "Practical recommendations based on findings",
-    ],
+    copy:
+      "Understand how well your website is protected. We review relevant security configurations, software components and potential weaknesses to identify areas that may require attention.",
+    tags: ["Security Review", "Risk Assessment", "Practical Recommendations"],
   },
   {
     icon: Bug,
     title: "Malware Detection & Removal",
-    description:
-      "Malicious code and unauthorised changes can affect your website's reliability and reputation. We help investigate suspected infections and address identified malware.",
-    points: [
-      "Investigation of suspected infections",
-      "Malware identification and removal",
-      "Follow-up checks and recovery guidance",
-    ],
+    copy:
+      "When a website shows signs of malicious activity, we help investigate the issue, identify suspicious files or behaviour and work towards removing threats and restoring normal operation.",
+    tags: ["Malware Checks", "Threat Investigation", "Website Recovery"],
   },
   {
     icon: LockKeyhole,
     title: "Website Hardening",
-    description:
-      "Reduce avoidable security risks by strengthening your website's configuration, access controls and software environment.",
-    points: [
-      "Security configuration improvements",
-      "Access and permission reviews",
-      "Recommendations for safer administration",
-    ],
+    copy:
+      "Strengthen your website's security through appropriate configuration improvements, access-control measures, software updates and other safeguards suited to your platform.",
+    tags: ["Access Controls", "Secure Configuration", "Updates"],
   },
   {
-    icon: AlertTriangle,
+    icon: Activity,
     title: "Threat Response & Recovery",
-    description:
-      "When a website is compromised or starts behaving suspiciously, the priority is to understand what happened, contain the issue and work towards a secure recovery.",
-    points: [
-      "Investigation of reported security incidents",
-      "Assistance with threat containment",
-      "Recovery and remediation recommendations",
-    ],
+    copy:
+      "If your website has been compromised or is behaving unexpectedly, we help assess the situation, prioritise the issues and identify practical steps towards recovery and improved security.",
+    tags: ["Incident Assessment", "Recovery Support", "Risk Reduction"],
   },
   {
     icon: RefreshCw,
-    title: "Security Maintenance",
-    description:
-      "Website security is not a one-time task. Ongoing maintenance helps address known weaknesses as software, plugins and website requirements change.",
-    points: [
-      "Review of updates and known vulnerabilities",
-      "Security maintenance recommendations",
-      "Continued attention to emerging risks",
-    ],
+    title: "Ongoing Security Maintenance",
+    copy:
+      "Security requires continued attention. Depending on your website and agreed scope, maintenance can include software updates, security checks, backup reviews and follow-up on identified issues.",
+    tags: ["Security Checks", "Software Updates", "Maintenance"],
   },
   {
-    icon: Eye,
+    icon: FileCheck,
     title: "Security Review & Guidance",
-    description:
-      "Not sure where your website stands? Get a clearer understanding of its security priorities and the practical steps that may help reduce exposure.",
-    points: [
-      "Review of current security concerns",
-      "Prioritisation of identified risks",
-      "Clear next steps for your business",
-    ],
+    copy:
+      "Receive clear recommendations on the security improvements that matter to your business. We help you understand identified risks and decide which corrective actions should be prioritised.",
+    tags: ["Clear Reporting", "Prioritised Actions", "Technical Guidance"],
   },
 ];
 
 const benefits = [
   {
     icon: ShieldCheck,
-    title: "Reduce Avoidable Risk",
-    description:
-      "Identify security weaknesses before they become more serious problems, where possible.",
+    title: "Reduce Security Risks",
+    copy:
+      "Identify weaknesses and address avoidable security issues before they become more serious business problems.",
   },
   {
-    icon: Activity,
-    title: "Protect Business Continuity",
-    description:
-      "Address issues that could interrupt website access, customer interactions or normal operations.",
+    icon: Eye,
+    title: "Improve Visibility",
+    copy:
+      "Gain a clearer understanding of your website's security condition, potential risks and areas that need attention.",
   },
   {
-    icon: FileCheck,
-    title: "Make Informed Decisions",
-    description:
-      "Understand the issues identified and receive practical recommendations for addressing them.",
+    icon: CheckCircle2,
+    title: "Support Business Continuity",
+    copy:
+      "Reduce the risk of preventable disruption and help keep your website available and useful to your customers.",
   },
   {
     icon: ServerCog,
-    title: "Maintain Your Website",
-    description:
-      "Keep security considerations part of your website's ongoing maintenance rather than an afterthought.",
+    title: "Maintain Better Control",
+    copy:
+      "Improve how your website, software, user access and security-related maintenance are managed over time.",
+  },
+];
+
+const processSteps = [
+  {
+    number: "01",
+    title: "Understand",
+    copy:
+      "We discuss your website, its purpose, your concerns and the areas you want us to review.",
+  },
+  {
+    number: "02",
+    title: "Assess",
+    copy:
+      "We examine the agreed areas of your website to identify relevant security concerns and weaknesses.",
+  },
+  {
+    number: "03",
+    title: "Prioritise",
+    copy:
+      "We explain our findings and identify the issues that require attention, starting with the most important risks.",
+  },
+  {
+    number: "04",
+    title: "Improve",
+    copy:
+      "We carry out or recommend appropriate corrective actions based on the agreed scope of work.",
+  },
+  {
+    number: "05",
+    title: "Maintain",
+    copy:
+      "Where ongoing support is required, we help keep security checks and maintenance part of your website routine.",
   },
 ];
 
 const faqs = [
   {
-    question: "What is website cybersecurity?",
+    question: "What is a website security audit?",
     answer:
-      "Website cybersecurity involves identifying and reducing risks that could compromise a website, its data, its users or its normal operation. This can include security reviews, vulnerability checks, malware removal, access controls, software maintenance and other appropriate protective measures.",
+      "A website security audit is a review of relevant security settings, software components and potential weaknesses. Its purpose is to identify areas of risk and provide practical recommendations for improving your website's protection.",
   },
   {
-    question: "What is included in a website security audit?",
+    question: "Can you help if my website has been hacked?",
     answer:
-      "The scope depends on your website and requirements. An assessment may include a review of security configuration, software and plugin exposure, access controls and potential vulnerabilities. Findings can be used to prioritise improvements. The precise scope should be agreed before work begins.",
+      "We can help assess the situation, investigate suspicious activity and identify appropriate remediation and recovery steps. The work required depends on the type of compromise, the platform involved and the condition of the website.",
   },
   {
-    question: "Can BIM Africa help if my website has malware?",
+    question: "Do you provide ongoing website security maintenance?",
     answer:
-      "BIM Africa can help investigate suspected website malware, identify malicious code where possible, and work on removal and remediation. The appropriate approach depends on the infection, the hosting environment and the condition of the website.",
+      "Yes. Ongoing support can be discussed based on your website, its technology and your requirements. Depending on the agreed scope, this may include security checks, software updates, backup reviews and follow-up on identified issues.",
   },
   {
-    question: "How often should website security be reviewed?",
+    question: "Is website security only important for e-commerce businesses?",
     answer:
-      "Security should be considered throughout the life of a website. The appropriate review frequency depends on factors such as the website's complexity, software, integrations, sensitivity of its data and exposure to threats. Updates and security concerns should also be addressed when they arise.",
+      "No. Company websites, service websites, blogs and online stores can all face security risks. Any website that represents your business, collects information or connects to other systems deserves appropriate protection.",
   },
   {
-    question: "Can any website be made completely secure?",
+    question: "Can you guarantee that my website will never be hacked?",
     answer:
-      "No website can be guaranteed completely secure. Good security practices help reduce risk, identify weaknesses and improve resilience, but threats and vulnerabilities can change over time. Protection should be proportionate to the website and the business it supports.",
+      "No responsible provider can guarantee complete protection against every possible attack. Security work helps identify weaknesses, reduce risks and improve resilience, but threats evolve and ongoing attention remains important.",
   },
   {
-    question: "How much do cybersecurity services cost in Mauritius?",
+    question: "Do you work with businesses outside Mauritius?",
     answer:
-      "Pricing depends on the type of service, website complexity, scope of the assessment and work required. A security review, malware remediation and ongoing maintenance involve different levels of effort. Contact BIM Africa to discuss your requirements and establish an appropriate scope.",
+      "BIM Africa serves businesses in Mauritius and international markets. We can discuss your website, technical environment and requirements to determine the appropriate scope of support.",
   },
 ];
 
 export default function CyberSecurity() {
   return (
     <div
-      className="min-h-screen flex flex-col overflow-x-hidden bg-[#080808] text-white"
+      className="min-h-screen text-white overflow-x-hidden"
       style={{
         backgroundImage: `url(${logoBg.src})`,
         backgroundSize: "cover",
-        backgroundPosition: "center top",
+        backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
       }}
     >
       <Navbar />
 
-      <main className="flex-1">
-        {/* Hero */}
-        <section className="relative px-5 sm:px-8 py-20 sm:py-28 lg:py-32">
-          <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+      <main>
+        {/* ========================== HERO ========================== */}
+
+        <section className="relative px-4 sm:px-8 py-10 sm:py-16 md:py-20 max-w-7xl mx-auto">
+          <div className="grid lg:grid-cols-2 gap-10 items-start">
+            {/* Left copy */}
+
             <div>
-              <div className="inline-flex items-center gap-2 rounded-full border border-[#ff1f00]/40 bg-[#ff1f00]/10 px-4 py-2 text-sm text-white mb-7">
-                <ShieldCheck className="w-4 h-4 text-[#ff1f00]" />
-                <span>PROTECT YOUR BUSINESS</span>
+              <div className="inline-flex items-center gap-2 rounded-full bg-black/30 border border-[#ff1f00] px-4 py-2 mb-6">
+                <ShieldCheck
+                  className="w-4 h-4 text-[#ff1f00]"
+                  strokeWidth={2}
+                />
+                <span className="text-sm text-white/90">
+                  Cybersecurity & Threat Management
+                </span>
               </div>
 
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight tracking-tight">
-                Cybersecurity &amp;{" "}
-                <span className="text-[#ff1f00]">
-                  Threat Management
-                </span>
+              <h1 className="text-white text-3xl sm:text-4xl md:text-5xl leading-tight">
+                Protect Your{" "}
+                <span className="text-[#ff1f00]">Website</span> & Your{" "}
+                <span className="text-[#ff1f00]">Business.</span>
               </h1>
 
-              <p className="mt-6 text-base sm:text-lg text-gray-300 leading-relaxed max-w-2xl">
-                Protect your website, reduce security risks and respond
-                when something goes wrong. BIM Africa helps businesses
-                identify vulnerabilities, remove threats and strengthen
-                the security of the websites they rely on.
+              <p className="text-white mt-6 max-w-3xl">
+                Your website is an important part of your business. Security
+                weaknesses, malicious software and outdated components can put
+                your website, information and business operations at risk.
+                BIM Africa helps businesses identify vulnerabilities, address
+                website security issues and improve protection through
+                practical cybersecurity services.
               </p>
 
-              <p className="mt-4 text-sm sm:text-base text-gray-400 leading-relaxed max-w-2xl">
-                From website security audits and malware removal to
-                practical security improvements and ongoing maintenance,
-                our approach focuses on identifying problems and helping
-                you take the right steps to address them.
-              </p>
-
-              <div className="mt-9 flex flex-col sm:flex-row gap-4">
+              <div className="flex flex-col sm:flex-row gap-3 pt-6 sm:gap-4 justify-center lg:justify-start">
                 <Link
                   href="/contactus"
-                  className="inline-flex items-center justify-center gap-2 rounded-full bg-[#ff1f00] px-7 py-4 font-semibold text-white transition-colors hover:bg-red-700"
+                  className="inline-flex items-center justify-center gap-2 w-full sm:w-auto bg-[#333333] border border-transparent hover:border-[#ff1f00] text-white px-8 sm:px-10 lg:px-12 py-3 sm:py-4 rounded-full transition-all hover:scale-105 text-sm sm:text-base whitespace-nowrap"
                 >
-                  Discuss Your Security Needs
+                  Request a Security Review
                   <ArrowRight className="w-4 h-4" />
                 </Link>
 
                 <Link
-                  href="#cybersecurity-services"
-                  className="inline-flex items-center justify-center gap-2 rounded-full border border-white/20 px-7 py-4 font-semibold text-white transition-colors hover:border-[#ff1f00]"
+                  href="/#services"
+                  className="inline-flex items-center justify-center gap-2 w-full sm:w-auto bg-[#333333] border border-transparent hover:border-[#ff1f00] text-white px-8 sm:px-10 py-3 sm:py-4 rounded-full transition-all hover:scale-105 text-sm sm:text-base whitespace-nowrap"
                 >
                   Explore Our Services
-                  <ChevronDown className="w-4 h-4" />
                 </Link>
               </div>
 
-              <div className="mt-8 flex flex-wrap gap-x-6 gap-y-3 text-sm text-gray-300">
-                <span className="inline-flex items-center gap-2">
+              <div className="mt-6 flex flex-wrap items-center gap-x-6 gap-y-3 text-sm text-white/90">
+                <div className="flex items-center gap-2">
                   <CheckCircle2 className="w-4 h-4 text-[#ff1f00]" />
-                  Practical Security Measures
-                </span>
-                <span className="inline-flex items-center gap-2">
+                  Practical Security Reviews
+                </div>
+
+                <div className="flex items-center gap-2">
                   <CheckCircle2 className="w-4 h-4 text-[#ff1f00]" />
                   Clear Recommendations
-                </span>
+                </div>
+
+                <div className="flex items-center gap-2">
+                  <CheckCircle2 className="w-4 h-4 text-[#ff1f00]" />
+                  Ongoing Support Options
+                </div>
               </div>
             </div>
 
-            <div className="relative">
-              <div className="absolute -inset-4 rounded-3xl bg-[#ff1f00]/10 blur-3xl" />
+            {/* Right information card */}
 
-              <div className="relative rounded-3xl border border-white/10 bg-black/60 p-6 sm:p-9 backdrop-blur-sm">
-                <div className="flex items-center justify-between gap-4 border-b border-white/10 pb-6">
-                  <div>
-                    <p className="text-sm text-gray-400">
-                      WEBSITE SECURITY
-                    </p>
-                    <h2 className="text-2xl font-semibold mt-2">
-                      Protection starts with visibility.
-                    </h2>
+            <div className="relative">
+              <div className="relative rounded-[28px] bg-gradient-to-b from-black/90 backdrop-blur-md to-black/30 border border-white/10 p-6 sm:p-8 shadow-[0_30px_80px_-20px_rgba(0,0,0,0.6)]">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="w-14 h-14 rounded-2xl bg-red-900/30 border border-[#ff1f00]/30 flex items-center justify-center shrink-0">
+                    <ShieldCheck className="w-7 h-7 text-[#ff1f00]" />
                   </div>
 
-                  <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-[#ff1f00]/15">
-                    <ShieldCheck className="h-8 w-8 text-[#ff1f00]" />
+                  <div>
+                    <p className="text-white/60 text-sm">
+                      Your Website Security
+                    </p>
+                    <h2 className="text-xl sm:text-2xl font-medium">
+                      Identify. Protect. Improve.
+                    </h2>
                   </div>
                 </div>
 
-                <div className="space-y-5 pt-6">
+                <p className="text-white/90 leading-relaxed">
+                  Effective website security starts with understanding your
+                  risks and taking the right actions. We focus on practical
+                  improvements that fit your website and business requirements.
+                </p>
+
+                <div className="mt-6 space-y-4">
                   {[
                     {
-                      title: "Identify weaknesses",
-                      description:
-                        "Understand where your website may be exposed.",
                       icon: Search,
+                      title: "Identify Weaknesses",
+                      copy: "Review potential vulnerabilities and security concerns.",
                     },
                     {
-                      title: "Address security issues",
-                      description:
-                        "Prioritise vulnerabilities and known threats.",
                       icon: LockKeyhole,
+                      title: "Strengthen Protection",
+                      copy: "Improve relevant security settings and controls.",
                     },
                     {
-                      title: "Maintain protection",
-                      description:
-                        "Keep security on the agenda as your website evolves.",
                       icon: RefreshCw,
+                      title: "Maintain Security",
+                      copy: "Keep important checks and updates on your radar.",
                     },
                   ].map((item) => {
                     const Icon = item.icon;
@@ -295,18 +316,18 @@ export default function CyberSecurity() {
                     return (
                       <div
                         key={item.title}
-                        className="flex items-start gap-4"
+                        className="flex items-start gap-4 rounded-xl bg-black/30 border border-white/10 p-4"
                       >
-                        <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-white/10 bg-white/5">
-                          <Icon className="h-5 w-5 text-[#ff1f00]" />
+                        <div className="w-10 h-10 rounded-full bg-red-900/30 flex items-center justify-center shrink-0">
+                          <Icon className="w-5 h-5 text-[#ff1f00]" />
                         </div>
 
                         <div>
-                          <h3 className="font-semibold">
+                          <h3 className="text-base sm:text-lg font-medium">
                             {item.title}
                           </h3>
-                          <p className="mt-1 text-sm leading-relaxed text-gray-400">
-                            {item.description}
+                          <p className="text-white/80 text-sm mt-1 leading-relaxed">
+                            {item.copy}
                           </p>
                         </div>
                       </div>
@@ -314,11 +335,12 @@ export default function CyberSecurity() {
                   })}
                 </div>
 
-                <div className="mt-7 rounded-2xl border border-[#ff1f00]/20 bg-[#ff1f00]/5 p-4">
-                  <p className="text-sm leading-relaxed text-gray-300">
-                    Effective security starts with understanding your
-                    website, identifying relevant risks and taking
-                    appropriate action.
+                <div className="mt-6 pt-5 border-t border-white/10 flex items-start gap-3">
+                  <AlertTriangle className="w-5 h-5 text-[#ff1f00] shrink-0 mt-0.5" />
+                  <p className="text-sm text-white/70 leading-relaxed">
+                    No website can be guaranteed completely secure. Regular
+                    reviews and appropriate maintenance help reduce risk and
+                    improve resilience.
                   </p>
                 </div>
               </div>
@@ -326,349 +348,356 @@ export default function CyberSecurity() {
           </div>
         </section>
 
-        {/* Introduction */}
-        <section className="border-y border-white/10 bg-black/40 px-5 py-16 sm:px-8 sm:py-20">
-          <div className="mx-auto max-w-5xl text-center">
-            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#ff1f00]">
-              Why Website Security Matters
-            </p>
+        {/* ====================== WHY SECURITY MATTERS ====================== */}
 
-            <h2 className="mt-4 text-3xl font-bold leading-tight sm:text-4xl">
-              Protect the Digital Side of Your Business
+        <section className="px-4 sm:px-8 pb-12 sm:pb-16 max-w-7xl mx-auto">
+          <div className="text-center mb-10 sm:mb-14">
+            <h2 className="text-3xl sm:text-6xl [font-weight:400]">
+              Why Website Security Matters
             </h2>
 
-            <p className="mx-auto mt-6 max-w-4xl leading-relaxed text-gray-300">
-              Your website may be responsible for attracting customers,
-              presenting your services, collecting enquiries or supporting
-              everyday business operations. If it is compromised, the
-              consequences can extend beyond the website itself. Security
-              incidents may interrupt operations, expose information,
-              damage customer confidence or require costly recovery work.
+            <p className="text-white mt-6 max-w-3xl mx-auto">
+              A website security issue can affect more than your website
+              itself. It can interrupt business activities, damage customer
+              confidence and create additional recovery costs. Taking
+              appropriate precautions helps you manage these risks before
+              they become more difficult to address.
             </p>
+          </div>
 
-            <p className="mx-auto mt-4 max-w-4xl leading-relaxed text-gray-300">
-              Cybersecurity is not simply about reacting to an attack.
-              It also involves understanding how a website is configured,
-              keeping its software maintained, managing access appropriately
-              and addressing known weaknesses. BIM Africa helps businesses
-              take a more considered approach to website security, with
-              practical recommendations based on their needs and the risks
-              identified.
-            </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {[
+              {
+                icon: Bug,
+                title: "Malware & Unauthorised Access",
+                copy:
+                  "Compromised accounts, malicious files and vulnerable software can give attackers opportunities to interfere with your website.",
+              },
+              {
+                icon: AlertTriangle,
+                title: "Website Disruption",
+                copy:
+                  "Security incidents can make your website unavailable, affect important functions or prevent customers from accessing information.",
+              },
+              {
+                icon: Eye,
+                title: "Customer Confidence",
+                copy:
+                  "Unexpected redirects, browser warnings and suspicious website behaviour can undermine trust in your business.",
+              },
+              {
+                icon: LockKeyhole,
+                title: "Information Exposure",
+                copy:
+                  "Weak access controls and security flaws can increase the risk of unauthorised access to information or administrative functions.",
+              },
+            ].map((item) => {
+              const Icon = item.icon;
+
+              return (
+                <div
+                  key={item.title}
+                  className="group rounded-2xl bg-black/40 border border-white/10 p-6 transition-colors hover:border-[#ff1f00]"
+                >
+                  <div className="flex items-center gap-4">
+                    <div className="w-12 h-12 rounded-full bg-red-900/40 flex items-center justify-center shrink-0">
+                      <Icon className="w-6 h-6 text-[#ff1f00]" />
+                    </div>
+
+                    <h3 className="text-xl sm:text-2xl font-medium transition-colors group-hover:text-[#ff1f00]">
+                      {item.title}
+                    </h3>
+                  </div>
+
+                  <p className="mt-4 text-white/90 leading-relaxed">
+                    {item.copy}
+                  </p>
+                </div>
+              );
+            })}
           </div>
         </section>
 
-        {/* Services */}
-        <section
-          id="cybersecurity-services"
-          className="scroll-mt-24 px-5 py-20 sm:px-8 sm:py-24"
-        >
-          <div className="mx-auto max-w-7xl">
-            <div className="max-w-3xl">
-              <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#ff1f00]">
-                What We Do
-              </p>
+        {/* ========================== OUR SERVICES ========================== */}
 
-              <h2 className="mt-4 text-3xl font-bold sm:text-4xl">
-                Cybersecurity Services for Businesses
-              </h2>
+        <section className="px-4 sm:px-8 pb-12 sm:pb-16 max-w-7xl mx-auto">
+          <div className="text-center mb-10 sm:mb-14">
+            <h2 className="text-3xl sm:text-6xl [font-weight:400]">
+              Our Cybersecurity Services
+            </h2>
 
-              <p className="mt-5 leading-relaxed text-gray-300">
-                Every website has different requirements. Our cybersecurity
-                and threat management services focus on identifying relevant
-                risks, addressing security issues and helping businesses
-                maintain more secure websites.
-              </p>
-            </div>
+            <p className="text-white mt-6 max-w-3xl mx-auto">
+              From website security audits to malware removal and ongoing
+              maintenance, we help businesses understand their security
+              requirements and take practical steps to protect their websites.
+              Choose the service that fits your situation.
+            </p>
+          </div>
 
-            <div className="mt-12 grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-3">
-              {services.map((service) => {
-                const Icon = service.icon;
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {services.map((service) => {
+              const Icon = service.icon;
 
-                return (
-                  <article
-                    key={service.title}
-                    className="group flex h-full flex-col rounded-2xl border border-white/10 bg-black/40 p-6 transition-all duration-300 hover:-translate-y-1 hover:border-[#ff1f00]/50 hover:bg-black/60 sm:p-8"
-                  >
-                    <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#ff1f00]/10 transition-colors group-hover:bg-[#ff1f00]/20">
-                      <Icon className="h-6 w-6 text-[#ff1f00]" />
+              return (
+                <div
+                  key={service.title}
+                  className="group rounded-2xl bg-black/40 border border-white/10 p-6 transition-colors hover:border-[#ff1f00]"
+                >
+                  <div className="flex items-center gap-4">
+                    <div className="w-12 h-12 rounded-full bg-red-900/40 flex items-center justify-center shrink-0">
+                      <Icon className="w-6 h-6 text-[#ff1f00]" />
                     </div>
 
-                    <h3 className="mt-6 text-xl font-semibold leading-snug">
+                    <h3 className="text-xl sm:text-2xl font-medium transition-colors group-hover:text-[#ff1f00]">
                       {service.title}
                     </h3>
-
-                    <p className="mt-3 text-sm leading-relaxed text-gray-300">
-                      {service.description}
-                    </p>
-
-                    <ul className="mt-5 space-y-3">
-                      {service.points.map((point) => (
-                        <li
-                          key={point}
-                          className="flex items-start gap-2 text-sm leading-relaxed text-gray-400"
-                        >
-                          <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-[#ff1f00]" />
-                          <span>{point}</span>
-                        </li>
-                      ))}
-                    </ul>
-
-                    <div className="mt-auto pt-7">
-                      <Link
-                        href="/contactus"
-                        className="inline-flex items-center gap-2 text-sm font-semibold text-white transition-colors hover:text-[#ff1f00]"
-                      >
-                        Discuss This Service
-                        <ArrowRight className="h-4 w-4" />
-                      </Link>
-                    </div>
-                  </article>
-                );
-              })}
-            </div>
-          </div>
-        </section>
-
-        {/* Benefits */}
-        <section className="border-y border-white/10 bg-black/40 px-5 py-20 sm:px-8 sm:py-24">
-          <div className="mx-auto max-w-7xl">
-            <div className="mx-auto max-w-3xl text-center">
-              <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#ff1f00]">
-                The Business Value
-              </p>
-
-              <h2 className="mt-4 text-3xl font-bold sm:text-4xl">
-                Security That Supports Business Continuity
-              </h2>
-
-              <p className="mt-5 leading-relaxed text-gray-300">
-                The purpose of website security is not to add complexity.
-                It is to help you understand the risks, make informed
-                decisions and reduce avoidable disruption to your business.
-              </p>
-            </div>
-
-            <div className="mt-12 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
-              {benefits.map((benefit) => {
-                const Icon = benefit.icon;
-
-                return (
-                  <div key={benefit.title} className="text-center sm:text-left">
-                    <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-xl bg-[#ff1f00]/10 sm:mx-0">
-                      <Icon className="h-6 w-6 text-[#ff1f00]" />
-                    </div>
-
-                    <h3 className="mt-5 text-lg font-semibold">
-                      {benefit.title}
-                    </h3>
-
-                    <p className="mt-3 text-sm leading-relaxed text-gray-400">
-                      {benefit.description}
-                    </p>
                   </div>
-                );
-              })}
-            </div>
+
+                  <p className="mt-4 text-white/90 leading-relaxed">
+                    {service.copy}
+                  </p>
+
+                  <div className="mt-4 flex flex-wrap gap-2">
+                    {service.tags.map((tag) => (
+                      <span
+                        key={tag}
+                        className="text-xs px-3 py-1 rounded-full border border-white/10 bg-white/5"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+
+                  <div className="mt-6">
+                    <Link
+                      href="/contactus"
+                      className="inline-flex items-center gap-2 bg-[#333333] border border-transparent hover:border-[#ff1f00] text-white px-4 py-2 rounded-full text-sm transition-all"
+                    >
+                      Discuss This Service
+                      <ArrowRight className="w-4 h-4" />
+                    </Link>
+                  </div>
+                </div>
+              );
+            })}
           </div>
         </section>
 
-        {/* Process */}
-        <section className="px-5 py-20 sm:px-8 sm:py-24">
-          <div className="mx-auto max-w-7xl">
-            <div className="max-w-3xl">
-              <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#ff1f00]">
-                Our Approach
-              </p>
+        {/* ========================== BUSINESS BENEFITS ========================== */}
 
-              <h2 className="mt-4 text-3xl font-bold sm:text-4xl">
-                A Clear, Practical Approach to Cybersecurity
-              </h2>
+        <section className="px-4 sm:px-8 py-12 sm:py-16 max-w-7xl mx-auto">
+          <div className="text-center mb-10 sm:mb-14">
+            <h2 className="text-3xl sm:text-6xl [font-weight:400]">
+              Security That Supports Your Business
+            </h2>
 
-              <p className="mt-5 leading-relaxed text-gray-300">
-                You should understand what needs attention, why it matters
-                and what can be done about it. Our approach centres on clear
-                communication and appropriate action rather than unnecessary
-                technical complexity.
-              </p>
+            <p className="text-white mt-6 max-w-3xl mx-auto">
+              Cybersecurity is not only a technical concern. It is part of
+              keeping your website dependable, protecting customer confidence
+              and supporting the services your business provides online.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {benefits.map((benefit) => {
+              const Icon = benefit.icon;
+
+              return (
+                <div
+                  key={benefit.title}
+                  className="group rounded-2xl bg-black/40 border border-white/10 p-6 transition-colors hover:border-[#ff1f00]"
+                >
+                  <div className="w-12 h-12 rounded-full bg-red-900/40 flex items-center justify-center mb-5">
+                    <Icon className="w-6 h-6 text-[#ff1f00]" />
+                  </div>
+
+                  <h3 className="text-xl sm:text-2xl font-medium transition-colors group-hover:text-[#ff1f00]">
+                    {benefit.title}
+                  </h3>
+
+                  <p className="mt-4 text-white/90 leading-relaxed">
+                    {benefit.copy}
+                  </p>
+                </div>
+              );
+            })}
+          </div>
+        </section>
+
+        {/* ========================== OUR PROCESS ========================== */}
+
+        <section className="px-4 sm:px-8 py-12 sm:py-16 max-w-7xl mx-auto">
+          <div className="text-center mb-10">
+            <div className="inline-flex items-center gap-2 rounded-full bg-black/30 border border-[#ff1f00] px-4 py-2">
+              <Target className="w-4 h-4 text-[#ff1f00]" />
+              <span className="text-sm text-white/90">
+                A Practical Approach
+              </span>
             </div>
 
-            <div className="mt-12 grid grid-cols-1 gap-5 md:grid-cols-3">
-              {[
-                {
-                  number: "01",
-                  title: "Understand",
-                  description:
-                    "We discuss your website, concerns and business requirements to establish an appropriate scope of work.",
-                },
-                {
-                  number: "02",
-                  title: "Assess & Address",
-                  description:
-                    "We review the relevant security concerns, identify findings and carry out agreed work within the defined scope.",
-                },
-                {
-                  number: "03",
-                  title: "Maintain & Improve",
-                  description:
-                    "We provide findings and practical next steps to help you maintain security and address future requirements.",
-                },
-              ].map((step) => (
-                <div
-                  key={step.number}
-                  className="rounded-2xl border border-white/10 bg-black/30 p-6 sm:p-8"
-                >
-                  <span className="text-3xl font-bold text-[#ff1f00]">
+            <h2 className="text-4xl sm:text-5xl md:text-6xl font-medium mt-4">
+              How We Approach Website Security
+            </h2>
+
+            <p className="text-white mt-6 max-w-3xl mx-auto">
+              Every website has different requirements. Our approach starts
+              with understanding your situation, reviewing the agreed areas,
+              and identifying realistic improvements based on the findings
+              and the scope of work.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
+            {processSteps.map((step) => (
+              <div
+                key={step.number}
+                className="relative group flex flex-col items-center text-center px-4 py-2"
+              >
+                <div className="relative mb-6 w-full flex justify-center">
+                  <span className="relative z-10 inline-flex w-20 h-16 items-center justify-center rounded-3xl border border-[#ff1f00] bg-red-900/10 text-[#ff1f00] text-2xl font-medium transition-transform duration-300 group-hover:scale-110">
                     {step.number}
                   </span>
 
-                  <h3 className="mt-5 text-xl font-semibold">
-                    {step.title}
-                  </h3>
-
-                  <p className="mt-3 text-sm leading-relaxed text-gray-300">
-                    {step.description}
-                  </p>
+                  <span className="hidden lg:block absolute top-1/2 left-0 right-0 -z-0 h-px bg-gradient-to-r from-transparent via-red-600/30 to-transparent" />
                 </div>
-              ))}
-            </div>
-          </div>
-        </section>
 
-        {/* Who we help */}
-        <section className="border-y border-white/10 bg-black/40 px-5 py-20 sm:px-8 sm:py-24">
-          <div className="mx-auto grid max-w-7xl grid-cols-1 items-start gap-10 lg:grid-cols-2 lg:gap-16">
-            <div>
-              <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#ff1f00]">
-                Who We Help
-              </p>
+                <h3 className="text-xl sm:text-2xl font-medium text-white transition-colors duration-300 group-hover:text-[#ff1f00]">
+                  {step.title}
+                </h3>
 
-              <h2 className="mt-4 text-3xl font-bold sm:text-4xl">
-                Website Security for Growing Businesses
-              </h2>
-
-              <p className="mt-5 leading-relaxed text-gray-300">
-                BIM Africa works with businesses that depend on their
-                websites to communicate with customers, generate enquiries
-                and support their operations. Whether you manage a company
-                website, an online catalogue or an e-commerce platform,
-                understanding your security requirements is an important
-                part of maintaining that investment.
-              </p>
-
-              <p className="mt-4 leading-relaxed text-gray-300">
-                We help businesses in Mauritius understand website security
-                concerns and identify practical next steps. The right
-                approach depends on the platform, its configuration,
-                integrations and the nature of the risks involved.
-              </p>
-
-              <Link
-                href="/contactus"
-                className="mt-7 inline-flex items-center gap-2 font-semibold text-white hover:text-[#ff1f00]"
-              >
-                Discuss Your Requirements
-                <ArrowRight className="h-4 w-4" />
-              </Link>
-            </div>
-
-            <div className="space-y-4">
-              {[
-                "Business and corporate websites",
-                "E-commerce and online stores",
-                "WordPress and content-managed websites",
-                "Websites experiencing suspicious activity",
-                "Businesses seeking security reviews",
-                "Organisations requiring ongoing website maintenance",
-              ].map((item) => (
-                <div
-                  key={item}
-                  className="flex items-start gap-3 rounded-xl border border-white/10 bg-black/30 p-4"
-                >
-                  <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-[#ff1f00]" />
-                  <span className="text-sm leading-relaxed text-gray-200">
-                    {item}
-                  </span>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* FAQs */}
-        <section className="px-5 py-20 sm:px-8 sm:py-24">
-          <div className="mx-auto max-w-4xl">
-            <div className="text-center">
-              <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#ff1f00]">
-                Frequently Asked Questions
-              </p>
-
-              <h2 className="mt-4 text-3xl font-bold sm:text-4xl">
-                Cybersecurity Questions Answered
-              </h2>
-
-              <p className="mx-auto mt-5 max-w-2xl leading-relaxed text-gray-300">
-                Learn more about website protection, security assessments
-                and the steps involved in addressing common security concerns.
-              </p>
-            </div>
-
-            <div className="mt-10 space-y-3">
-              {faqs.map((faq) => (
-                <details
-                  key={faq.question}
-                  className="group rounded-xl border border-white/10 bg-black/30 p-5 sm:p-6"
-                >
-                  <summary className="flex cursor-pointer list-none items-start justify-between gap-4 font-semibold leading-relaxed marker:hidden">
-                    <span>{faq.question}</span>
-                    <ChevronDown className="mt-1 h-5 w-5 shrink-0 text-[#ff1f00] transition-transform group-open:rotate-180" />
-                  </summary>
-
-                  <p className="mt-4 border-t border-white/10 pt-4 text-sm leading-relaxed text-gray-300">
-                    {faq.answer}
-                  </p>
-                </details>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Final CTA */}
-        <section className="px-5 pb-20 pt-4 sm:px-8 sm:pb-28">
-          <div className="relative mx-auto max-w-6xl overflow-hidden rounded-3xl border border-[#ff1f00]/30 bg-black/60 px-6 py-12 text-center sm:px-12 sm:py-16">
-            <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-[#ff1f00]/15 via-transparent to-transparent" />
-
-            <div className="relative">
-              <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-[#ff1f00]/15">
-                <ShieldCheck className="h-7 w-7 text-[#ff1f00]" />
+                <p className="text-white/90 mt-2 max-w-xs leading-relaxed">
+                  {step.copy}
+                </p>
               </div>
+            ))}
+          </div>
+        </section>
 
-              <h2 className="mx-auto mt-6 max-w-3xl text-3xl font-bold leading-tight sm:text-4xl">
-                Protect the Digital Side of Your Business
-              </h2>
+        {/* ========================== WHO WE HELP ========================== */}
 
-              <p className="mx-auto mt-5 max-w-2xl leading-relaxed text-gray-300">
-                Whether you need a website security review, help addressing
-                malware or guidance on protecting your website, start with
-                a conversation about your requirements.
-              </p>
+        <section className="px-4 sm:px-8 py-12 sm:py-16 max-w-7xl mx-auto">
+          <div className="text-center mb-10 sm:mb-14">
+            <h2 className="text-3xl sm:text-6xl [font-weight:400]">
+              Who We Help
+            </h2>
 
+            <p className="text-white mt-6 max-w-3xl mx-auto">
+              We support businesses that rely on their websites to present
+              their services, communicate with customers and carry out
+              important online activities.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {[
+              {
+                icon: Globe,
+                title: "Small & Medium Businesses",
+                copy:
+                  "Improve the security of your business website and take a more structured approach to managing technical risks.",
+              },
+              {
+                icon: ServerCog,
+                title: "E-commerce Websites",
+                copy:
+                  "Review the security considerations affecting online stores, including software, administrative access and important website functions.",
+              },
+              {
+                icon: ShieldCheck,
+                title: "Established Organisations",
+                copy:
+                  "Address website security concerns with practical reviews, clear recommendations and support aligned with your requirements.",
+              },
+            ].map((item) => {
+              const Icon = item.icon;
+
+              return (
+                <div
+                  key={item.title}
+                  className="group rounded-2xl bg-black/40 border border-white/10 p-6 transition-colors hover:border-[#ff1f00]"
+                >
+                  <div className="flex items-center gap-4">
+                    <div className="w-12 h-12 rounded-full bg-red-900/40 flex items-center justify-center shrink-0">
+                      <Icon className="w-6 h-6 text-[#ff1f00]" />
+                    </div>
+
+                    <h3 className="text-xl sm:text-2xl font-medium transition-colors group-hover:text-[#ff1f00]">
+                      {item.title}
+                    </h3>
+                  </div>
+
+                  <p className="mt-4 text-white/90 leading-relaxed">
+                    {item.copy}
+                  </p>
+                </div>
+              );
+            })}
+          </div>
+        </section>
+
+        {/* ========================== FAQ ========================== */}
+
+        <section className="px-4 sm:px-8 py-12 sm:py-16 max-w-7xl mx-auto">
+          <div className="text-center mb-10 sm:mb-14">
+            <h2 className="text-3xl sm:text-6xl [font-weight:400]">
+              Frequently Asked Questions
+            </h2>
+
+            <p className="text-white mt-6 max-w-3xl mx-auto">
+              Here are answers to common questions about website security,
+              cybersecurity reviews and ongoing protection.
+            </p>
+          </div>
+
+          <div className="max-w-4xl mx-auto space-y-4">
+            {faqs.map((faq) => (
+              <details
+                key={faq.question}
+                className="group rounded-2xl bg-black/40 border border-white/10 p-5 sm:p-6 transition-colors hover:border-[#ff1f00]"
+              >
+                <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-lg sm:text-xl font-medium">
+                  <span>{faq.question}</span>
+
+                  <ChevronRight className="w-5 h-5 shrink-0 text-[#ff1f00] transition-transform duration-300 group-open:rotate-90" />
+                </summary>
+
+                <p className="mt-4 text-white/90 leading-relaxed">
+                  {faq.answer}
+                </p>
+              </details>
+            ))}
+          </div>
+        </section>
+
+        {/* ========================== WORK TOGETHER ========================== */}
+
+        <section className="px-4 sm:px-8 py-12 sm:py-16 max-w-7xl mx-auto w-full">
+          <div className="rounded-3xl border border-white/10 bg-black/40 p-6 sm:p-10 md:p-14 text-center">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl leading-tight">
+              Let's Work Together
+            </h2>
+
+            <p className="text-white mt-6 max-w-3xl mx-auto">
+              Whether you need a website security audit, assistance with
+              malware removal or ongoing website protection, BIM Africa can
+              help you understand your requirements and identify practical
+              next steps.
+            </p>
+
+            <div className="flex flex-col sm:flex-row gap-3 pt-6 sm:gap-4 justify-center">
               <Link
                 href="/contactus"
-                className="mt-8 inline-flex w-full items-center justify-center gap-2 rounded-full bg-[#ff1f00] px-8 py-4 font-semibold text-white transition-colors hover:bg-red-700 sm:w-auto"
+                className="inline-flex items-center justify-center gap-2 w-full sm:w-auto bg-[#333333] border border-transparent hover:border-[#ff1f00] text-white px-8 sm:px-10 lg:px-12 py-3 sm:py-4 rounded-full transition-all hover:scale-105 text-sm sm:text-base whitespace-nowrap"
               >
                 Talk to Our Team
-                <ArrowRight className="h-4 w-4" />
+                <ArrowRight className="w-4 h-4" />
               </Link>
-
-              <p className="mt-5 text-sm text-gray-400">
-                Build. Protect. Support.
-              </p>
             </div>
           </div>
         </section>
       </main>
 
+      {/* Footer remains directly after the Work Together section */}
       <Footer />
     </div>
   );
