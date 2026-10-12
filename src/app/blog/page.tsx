@@ -143,7 +143,6 @@ export default async function BlogPage() {
                       <div className="w-10 h-10 rounded-full bg-[#ff1f00] flex items-center justify-center">
                         <Calendar className="w-4 h-4" /> Posted on: {post.date}
                       </div>
-                      </div>
                     </div>
                     <Link
                       href={`/blog/${post.slug}`}
