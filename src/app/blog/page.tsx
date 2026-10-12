@@ -140,15 +140,18 @@ export default async function BlogPage() {
 
                   <div className="mt-auto pt-5 flex flex-wrap gap-4 items-center justify-between">
                     <div className="flex items-center gap-3">
-                      <div className="w-10 h-10 rounded-full bg-[#ff1f00] flex items-center justify-center">
-                        <Calendar className="w-4 h-4" /> Posted on: {post.date}
+                      <div className="w-10 h-10 rounded-full bg-[#ff1f00] flex items-center justify-center shrink-0">
+                        <Calendar className="w-4 h-4 text-white" />
                       </div>
+                      <span className="text-sm text-gray-300">
+                        Posted on: {post.date}
+                      </span>
                     </div>
                     <Link
                       href={`/blog/${post.slug}`}
                       className="w-full sm:w-auto bg-[#333333] border border-transparent hover:border-[#ff1f00] text-white px-8 sm:px-10 lg:px-12 py-3 sm:py-4 rounded-full transition-all hover:scale-105 text-sm sm:text-base whitespace-nowrap text-center"
                     >
-                      Read →
+                      Read Post →
                     </Link>
                   </div>
                 </div>
