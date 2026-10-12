@@ -201,10 +201,10 @@ export default async function BlogPage() {
 
                   <div className="mt-5 flex items-center justify-between">
                     <div className="inline-flex items-center gap-2 text-sm text-gray-300">
-                      <div className="w-8 h-8 rounded-full bg-[#ff1f00] flex items-center justify-center">
-                        <Calendar className="w-4 h-4" /> 
-                      </div>
-                      Posted on: {a.date}
+                      <Calendar className="w-4 h-4 shrink-0" />
+                      <time dateTime={a.date}>
+                        Posted on: {a.date}
+                      </time>
                     </div>
                     <Link
                       href={`/blog/${a.slug}`}
