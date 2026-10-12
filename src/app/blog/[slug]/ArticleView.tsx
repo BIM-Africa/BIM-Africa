@@ -93,8 +93,8 @@ export default function ArticleView({
                 <Star className="w-3 h-3 fill-red-400" /> Top Contributor
               </div>
             </div>
-          </div>*/}
-        </div>
+          </div>
+        </div> */}
       </section>
 
       {/* ===== Main Content + Sidebar ===== */}
