@@ -27,7 +27,12 @@ export default function BlogCard({ blog }: { blog: Blog }) {
       <div className="p-5">
         <div className="flex items-center gap-3 text-xs text-gray-300 mb-2">
           <span className="inline-flex items-center gap-1">
-            <Eye className="w-4 h-4" /> {blog.views}
+          <Calendar className="w-4 h-4" /> Posted on: 
+            {article.createdAt ? (
+              <time dateTime={article.createdAt}>{article.date}  </time>
+            ) : (
+              article.date
+            )}
           </span>
           <span className="inline-flex items-center gap-1">
             <Clock className="w-4 h-4" /> {blog.read}
