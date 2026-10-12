@@ -70,10 +70,11 @@ export default async function BlogPage() {
       {/* ---------------- Hero Section ---------------- */}
       <section className="px-4 sm:px-8 pt-8 sm:pt-12 md:pt-14 max-w-7xl mx-auto text-center">
         <h1 className="text-4xl sm:text-5xl md:text-6xl font-medium">
-          BIM Africa <span className="text-[#ff1f00]">Blog</span>
+          <span className="text-[#ff1f00]">Blog</span> by BIM Africa
         </h1>
         <p className="text-white mt-4 max-w-4xl mx-auto">
-          Professional insights on technology and digital innovations
+          Technology moves fast. Make the right moves. <br />
+          Practical perspectives on websites, cybersecurity, and the technology shaping modern businesses.
         </p>
       </section>
 
@@ -85,9 +86,8 @@ export default async function BlogPage() {
               <div className="w-9 h-9 rounded-full bg-[#ff1f00] flex items-center justify-center">
                 <TrendingUp className="w-6 h-6 text-white" />
               </div>
-              <h2 className="text-2xl sm:text-3xl">Featured Article</h2>
+              <h2 className="text-2xl sm:text-3xl">Featured Post</h2>
             </div>
-            <p className="text-sm text-gray-300">Most Popular this week</p>
           </div>
 
           {featured.map((post, index) => (
@@ -118,7 +118,7 @@ export default async function BlogPage() {
                     />
                   )}
                   <span className="absolute top-4 left-4 text-xs font-semibold bg-red-600 text-white px-3 py-1 rounded-full flex items-center gap-1">
-                    <Star className="w-4 h-4" /> Featured Article
+                    <Star className="w-4 h-4" /> Featured Post
                   </span>
                 </Link>
 
@@ -128,14 +128,11 @@ export default async function BlogPage() {
                     {post.tag && (
                       <span className="bg-[#ff1f00] px-2 py-0.5 rounded-full">{post.tag}</span>
                     )}
-                    <span className="inline-flex items-center gap-1">
+                    <span className="inline-flex items-center gap-1"> Posted on: 
                       <Calendar className="w-4 h-4" /> {post.date}
                     </span>
-                    <span className="inline-flex items-center gap-1">
+                    <span className="inline-flex items-center gap-1"> Read time: 
                       <Clock className="w-4 h-4" /> {post.read}
-                    </span>
-                    <span className="inline-flex items-center gap-1">
-                      <Eye className="w-4 h-4" /> {post.views}
                     </span>
                   </div>
 
@@ -171,10 +168,10 @@ export default async function BlogPage() {
 
       {/* ---------------- Latest Articles ---------------- */}
       <section className="px-4 sm:px-8 py-10 max-w-7xl mx-auto">
-        <h2 className="text-2xl sm:text-3xl font-semibold mb-6">Latest Articles</h2>
+        <h2 className="text-2xl sm:text-3xl font-semibold mb-6">Latest Blog Posts</h2>
 
         {blogs.length === 0 ? (
-          <p className="text-gray-300">New articles are coming soon.</p>
+          <p className="text-gray-300">New blog posts are coming soon.</p>
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {latest.map((a) => (
@@ -201,9 +198,8 @@ export default async function BlogPage() {
 
                 <div className="p-6">
                   <div className="flex items-center flex-wrap gap-3 text-xs text-gray-300 mb-2">
-                    <span className="inline-flex items-center gap-1"><Calendar className="w-4 h-4" /> {a.date}</span>
-                    <span className="inline-flex items-center gap-1"><Clock className="w-4 h-4" /> {a.read}</span>
-                    <span className="inline-flex items-center gap-1"><Eye className="w-4 h-4" /> {a.views}</span>
+                    <span className="inline-flex items-center gap-1"></span>
+                    <span className="inline-flex items-center gap-1"><Clock className="w-4 h-4" /> Read time: {a.read}</span>
                   </div>
 
                   <h3 className="text-xl sm:text-2xl font-semibold leading-snug transition-colors duration-200 group-hover:text-[#ff1f00]">
@@ -214,16 +210,16 @@ export default async function BlogPage() {
                   <div className="mt-5 flex items-center justify-between">
                     <div className="inline-flex items-center gap-2 text-sm text-gray-300">
                       <div className="w-8 h-8 rounded-full bg-[#ff1f00] flex items-center justify-center">
-                        <User className="w-5 h-5 text-white" />
+                        <Calendar className="w-4 h-4" /> 
                       </div>
-                      {a.author}
+                      Posted on: {a.date}
                     </div>
                     <Link
                       href={`/blog/${a.slug}`}
-                      className="text-[#ff1f00] hover:text-[#ff1f00] text-lg"
+                      className="text-[#ff1f00] hover:text-[#ff1f00] text-sm"
                       aria-label={`Read article: ${a.title}`}
                     >
-                      →
+                     Read →
                     </Link>
                   </div>
                 </div>
