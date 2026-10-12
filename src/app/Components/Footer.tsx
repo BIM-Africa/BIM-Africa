@@ -81,7 +81,7 @@ export default function Footer() {
           <div className="text-center mb-8">
             <Image src={newlogo} className="w-48 mx-auto mb-4 h-auto" alt="BIM Logo" width={192} height={64} />
             <p className="text-white text-sm mb-1">Copyright © 2026 BIM. All Rights Reserved.</p>
-            <p className="text-white text-sm">Incorproated in Mauritius <br />
+            <p className="text-white text-sm">Incorporated in Mauritius <br />
             Company Number: C190360</p>
           </div>
 
@@ -105,7 +105,7 @@ export default function Footer() {
               <Image src={newlogo} className="w-full max-w-80 h-auto" alt="BIM Logo" width={500} height={120} />
             </div>
             <p className="text-white text-sm mt-4">Copyright © 2026 BIM. All Rights Reserved.</p>
-            <p className="text-white text-sm">Incorproated in Mauritius <br />
+            <p className="text-white text-sm">Incorporated in Mauritius <br />
             Company Number: C190360</p>
           </div>
 
