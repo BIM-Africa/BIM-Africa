@@ -1,165 +1,193 @@
-"use client";
-
-import React, { useState } from "react";
+import type { Metadata } from "next";
 import Link from "next/link";
-import Image from "next/image";
-import quote from "../../Assests/quoteimg.jpeg";
-import { usePathname } from "next/navigation"; 
 import {
-  Instagram,
-  Facebook,
-  Linkedin as LinkedinIcon,
-  X,
-  ArrowRight,
-  ChevronRight,
-  Star,
-  Award,
   ShieldCheck,
-  Shield,
-  Zap,
-  Globe,
-  Clock,
+  Search,
+  Bug,
+  LockKeyhole,
+  Activity,
+  ServerCog,
+  ArrowRight,
+  AlertTriangle,
+  Eye,
+  RefreshCw,
+  FileCheck,
   CheckCircle2,
-  Code2,
-  LayoutDashboard,
   Target,
-  Sparkles,
-  Wrench,
+  Globe,
+  ChevronRight,
 } from "lucide-react";
-import { motion, AnimatePresence } from "framer-motion";
 
-/* Assets */
 import logoBg from "../../Assests/srv.svg";
-import logo2 from "../../Assests/newlogo.png";
-import mobileBg from "../../Assests/new.jpeg";
-import selected from "../../Assests/selected.png";
-import nonselected from "../../Assests/nonselected.png";
-import header from "../../Assests/HEADER.png";
+import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
-interface Service {
-  icon: React.ReactNode;
-  title: string;
-  copy: string;
-  tags: string[];
-  more: string;
-}
 
-/* -------------------------------------------------------------------------- */
-/*                              Page Component                                */
-/* -------------------------------------------------------------------------- */
-
-export default function WebsiteStrategy() {
-  const [mobileOpen, setMobileOpen] = useState(false);
-  const [openService, setOpenService] = useState<{ [key: string]: boolean }>({});
-
-  /* WhatsApp helpers (SAME message everywhere) */
-  const whatsappUrl = "https://wa.me/message/VLID27EWBIPND1";
-
-  /* copy */
-const t = {
-  
-
-  buttons: { 
-    instantQuotation: "Instant Quotation", 
-    getQuote: "Get Your Quote in 2 Minutes" 
+export const metadata: Metadata = {
+  title: "Cybersecurity & Website Security in Mauritius | BIM Africa",
+  description:
+    "Protect your business website with cybersecurity services in Mauritius. BIM Africa provides website security audits, vulnerability checks, malware removal, website hardening and ongoing security support.",
+  keywords: [
+    "cybersecurity Mauritius",
+    "website security Mauritius",
+    "website security audit",
+    "malware removal Mauritius",
+    "website vulnerability assessment",
+    "cybersecurity services for businesses",
+    "website threat management",
+    "website protection",
+  ],
+  alternates: {
+    canonical: "https://bim.africa/CyberSecurity",
   },
-
-  hero: {
-    badge: "Websites & Web Applications",
-    subtitle:
-      "We design and develop business websites and custom web applications built around your objectives, your customers and the way you work. From company websites and e-commerce platforms to client onboarding systems and instant quotation tools, we build practical solutions that help your business operate more effectively.",
-    stats: {
-      uptime: { value: "22+", label: "Years of Combined Experience" },
-      load: { value: "Custom", label: "Website and Web Applications" },
-      security: { value: "Security", label: "Considered From the Start" },
-      support: { value: "Ongoing", label: "Maintenance and Technical Assistance" },
-      powered: "Built With Proven Technology.",
-    },
-  },
-
-  services: {
-    title: "Our Website & Web Application Services",
-    tagline:
-      "From business websites to custom web applications, we provide the strategy, development and ongoing support your business needs. Choose the service that fits your requirements.",
-
-    designing: {
-      title: "Website Designing",
-      copy:
-        "We design professional websites for businesses in Mauritius, Luxembourg and international markets. Every design reflects your brand, speaks to your audience and guides visitors towards meaningful action, combining clear communication, intuitive navigation and responsive layouts.",
-      tags: ["UI/UX Design", "Brand Integration", "Mobile-First Design"],
-    },
-
-    development: {
-      title: "Website Development",
-      copy:
-        "From company websites and e-commerce platforms to custom web applications, we develop solutions for businesses in Mauritius and beyond. Whether you need a client onboarding platform, an instant quotation tool or a tailored business system, we build around your requirements and how your business operates.",
-      tags: ["Custom Development", "E-commerce", "Web Applications"],
-    },
-
-    maintenance: {
-      title: "Website Maintenance & Support",
-      copy:
-        "We help businesses keep their websites secure, updated and reliable through ongoing maintenance and technical support. Whether your business operates in Mauritius, Luxembourg or another market, we focus on resolving issues, reducing avoidable risks and keeping your website working as your needs evolve.",
-      tags: ["Security Updates", "Backups & Monitoring", "Technical Support"],
-    },
-
-    upgrade: {
-      title: "Website Upgrades",
-      copy:
-        "As your business grows, your website may need new features, improved performance or a more effective design. We help businesses in Mauritius and international markets improve existing websites through practical upgrades, technical improvements and platform migrations without rebuilding everything unnecessarily.",
-      tags: ["Feature Enhancements", "Performance Improvements", "Redesign & Migration"],
-    },
-  },
-
-  process: {
-    badge: "An Illustrative Project Example",
-    title: "Headless E-commerce Platform",
-    steps: [
-      { n: "01", title: "Requirements & Discovery", copy: "Analyse the retailer's products, customer journeys and business requirements to define the project scope.", time: "Week 1" },
-      { n: "02", title: "Architecture & Planning", copy: "Plan the Next.js and WooCommerce architecture, catalogue structure, pricing logic and required integrations.", time: "Week 2" },
-      { n: "03", title: "Storefront Design", copy: "Design the storefront, product pages, catalogue navigation, search, cart and checkout.", time: "Weeks 3 - 4" },
-      { n: "04", title: "Development & Integration", copy: "Build the Next.js storefront, connect WooCommerce and integrate purchasing, quotation workflows and MIPS payments.", time: "Weeks 5 - 9" },
-      { n: "05", title: "Testing, Launch & Support", copy: "Test functionality, payments, performance and security before deployment. Continue with maintenance, security updates and technical support after launch.", time: "Week 10 - 12" },
-    ],
-  },
-
-  quote: {
-    badge: "Instant Quote Available",
-    steps: ["Basic Information", "Website Specifications", "Final Quote"],
-  },
-
-  included: {
-    title: "What's Included",
-    premium: "Premium Package",
-    sub: "Comprehensive premium services meticulously designed to maximize your digital success and accelerate business growth.",
-    items: [
-      "Strategic Business Analysis",
-      "Custom Design System",
-      "Responsive Development",
-      "Advanced SEO Setup",
-      "Performance Optimization",
-      "Premium Support Package",
-    ],
-    guarantee: "100% Satisfaction Guarantee",
+  openGraph: {
+    title: "Cybersecurity & Threat Management | BIM Africa",
+    description:
+      "Identify vulnerabilities, address website security issues and strengthen your website protection with practical cybersecurity services from BIM Africa.",
+    url: "https://bim.africa/CyberSecurity",
+    siteName: "BIM Africa",
+    type: "website",
   },
 };
 
-  /* mobile panel anims */
-  const backdropVariants = { hidden: { opacity: 0 }, visible: { opacity: 0.55 }, exit: { opacity: 0 } };
-  const panelVariants = {
-    hidden: { opacity: 0, y: -30, rotateX: 14, transformOrigin: "top center", scale: 0.995 },
-    visible: { opacity: 1, y: 0, rotateX: 0, scale: 1, transition: { duration: 0.3, ease: [0.22, 0.8, 0.2, 1] } },
-    exit: { opacity: 0, y: -28, rotateX: 12, scale: 0.995, transition: { duration: 0.22, ease: "easeInOut" } },
-  };
+const services = [
+  {
+    icon: Search,
+    title: "Website Security Audits",
+    copy:
+      "Understand how well your website is protected. We review relevant security configurations, software components and potential weaknesses to identify areas that may require attention.",
+    tags: ["Security Review", "Risk Assessment", "Practical Recommendations"],
+  },
+  {
+    icon: Bug,
+    title: "Malware Detection & Removal",
+    copy:
+      "When a website shows signs of malicious activity, we help investigate the issue, identify suspicious files or behaviour and work towards removing threats and restoring normal operation.",
+    tags: ["Malware Checks", "Threat Investigation", "Website Recovery"],
+  },
+  {
+    icon: LockKeyhole,
+    title: "Website Hardening",
+    copy:
+      "Strengthen your website's security through appropriate configuration improvements, access-control measures, software updates and other safeguards suited to your platform.",
+    tags: ["Access Controls", "Secure Configuration", "Updates"],
+  },
+  {
+    icon: Activity,
+    title: "Threat Response & Recovery",
+    copy:
+      "If your website has been compromised or is behaving unexpectedly, we help assess the situation, prioritise the issues and identify practical steps towards recovery and improved security.",
+    tags: ["Incident Assessment", "Recovery Support", "Risk Reduction"],
+  },
+  {
+    icon: RefreshCw,
+    title: "Ongoing Security Maintenance",
+    copy:
+      "Security requires continued attention. Depending on your website and agreed scope, maintenance can include software updates, security checks, backup reviews and follow-up on identified issues.",
+    tags: ["Security Checks", "Software Updates", "Maintenance"],
+  },
+  {
+    icon: FileCheck,
+    title: "Security Review & Guidance",
+    copy:
+      "Receive clear recommendations on the security improvements that matter to your business. We help you understand identified risks and decide which corrective actions should be prioritised.",
+    tags: ["Clear Reporting", "Prioritised Actions", "Technical Guidance"],
+  },
+];
 
-  const navigationItems = [
-    { name: "Home", href: "/" },
-    { name: "About", href: "/About" },
-    { name: "Services", href: "/service" },
-    { name: "Blog", href: "/blog" },
-    { name: "Contact Us", href: "/contactus" },
-  ];
+const benefits = [
+  {
+    icon: ShieldCheck,
+    title: "Reduce Security Risks",
+    copy:
+      "Identify weaknesses and address avoidable security issues before they become more serious business problems.",
+  },
+  {
+    icon: Eye,
+    title: "Improve Visibility",
+    copy:
+      "Gain a clearer understanding of your website's security condition, potential risks and areas that need attention.",
+  },
+  {
+    icon: CheckCircle2,
+    title: "Support Business Continuity",
+    copy:
+      "Reduce the risk of preventable disruption and help keep your website available and useful to your customers.",
+  },
+  {
+    icon: ServerCog,
+    title: "Maintain Better Control",
+    copy:
+      "Improve how your website, software, user access and security-related maintenance are managed over time.",
+  },
+];
 
+const processSteps = [
+  {
+    number: "01",
+    title: "Understand",
+    copy:
+      "We discuss your website, its purpose, your concerns and the areas you want us to review.",
+  },
+  {
+    number: "02",
+    title: "Assess",
+    copy:
+      "We examine the agreed areas of your website to identify relevant security concerns and weaknesses.",
+  },
+  {
+    number: "03",
+    title: "Prioritise",
+    copy:
+      "We explain our findings and identify the issues that require attention, starting with the most important risks.",
+  },
+  {
+    number: "04",
+    title: "Improve",
+    copy:
+      "We carry out or recommend appropriate corrective actions based on the agreed scope of work.",
+  },
+  {
+    number: "05",
+    title: "Maintain",
+    copy:
+      "Where ongoing support is required, we help keep security checks and maintenance part of your website routine.",
+  },
+];
+
+const faqs = [
+  {
+    question: "What is a website security audit?",
+    answer:
+      "A website security audit is a review of relevant security settings, software components and potential weaknesses. Its purpose is to identify areas of risk and provide practical recommendations for improving your website's protection.",
+  },
+  {
+    question: "Can you help if my website has been hacked?",
+    answer:
+      "We can help assess the situation, investigate suspicious activity and identify appropriate remediation and recovery steps. The work required depends on the type of compromise, the platform involved and the condition of the website.",
+  },
+  {
+    question: "Do you provide ongoing website security maintenance?",
+    answer:
+      "Yes. Ongoing support can be discussed based on your website, its technology and your requirements. Depending on the agreed scope, this may include security checks, software updates, backup reviews and follow-up on identified issues.",
+  },
+  {
+    question: "Is website security only important for e-commerce businesses?",
+    answer:
+      "No. Company websites, service websites, blogs and online stores can all face security risks. Any website that represents your business, collects information or connects to other systems deserves appropriate protection.",
+  },
+  {
+    question: "Can you guarantee that my website will never be hacked?",
+    answer:
+      "No responsible provider can guarantee complete protection against every possible attack. Security work helps identify weaknesses, reduce risks and improve resilience, but threats evolve and ongoing attention remains important.",
+  },
+  {
+    question: "Do you work with businesses outside Mauritius?",
+    answer:
+      "BIM Africa serves businesses in Mauritius and international markets. We can discuss your website, technical environment and requirements to determine the appropriate scope of support.",
+  },
+];
+
+export default function CyberSecurity() {
   return (
     <div
       className="min-h-screen text-white overflow-x-hidden"
@@ -170,652 +198,507 @@ const t = {
         backgroundRepeat: "no-repeat",
       }}
     >
-      {/* ====================== Mobile Panel ====================== */}
-<AnimatePresence>
-  {mobileOpen && (
-    <>
-      {/* Backdrop animation */}
-      <motion.div
-        key="backdrop"
-        className="fixed inset-0 z-[95] xl:hidden bg-black"
-        variants={{
-          hidden: { opacity: 0 },
-          visible: { opacity: 0.6, transition: { duration: 0.3, ease: "easeInOut" } },
-          exit: { opacity: 0, transition: { duration: 0.2, ease: "easeOut" } },
-        }}
-        initial="hidden"
-        animate="visible"
-        exit="exit"
-      />
+      <Navbar />
 
-      {/* Panel animation */}
-      <motion.aside
-        key="panel"
-        className="fixed inset-0 z-[100] xl:hidden overflow-y-auto"
-        variants={{
-          hidden: {
-            opacity: 0,
-            y: 100,
-            rotateX: 90,
-            transformOrigin: "top",
-            scale: 0.9,
-          },
-          visible: {
-            opacity: 1,
-            y: 0,
-            rotateX: 0,
-            scale: 1,
-            transition: {
-              duration: 0.4,
-              ease: "easeInOut", // ✅ Type-safe easing
-            },
-          },
-          exit: {
-            opacity: 0,
-            y: 50,
-            transition: {
-              duration: 0.3,
-              ease: "easeOut",
-            },
-          },
-        }}
-        initial="hidden"
-        animate="visible"
-        exit="exit"
-      >
-        {/* Background container */}
-        <div
-          className="bg-cover bg-center relative"
-          style={{
-            backgroundImage: `url(${mobileBg.src})`,
-            minHeight: "100svh",
-            height: "100dvh",
-          }}
-        >
-          <div className="flex flex-col min-h-full pt-1 pb-6 relative">
-            {/* Header */}
-            <div className="flex items-center justify-between pl-4 pr-4">
-              <Image
-                src={logo2}
-                alt="Logo"
-                className="object-contain"
-                width={80}
-                height={40}
-                priority
-              />
-              <motion.button
-                onClick={() => setMobileOpen(false)}
-                className="text-white hover:text-red-500 p-2"
-                aria-label="Close menu"
-                whileTap={{ scale: 0.92, rotate: 6 }}
-              >
-                <X size={32} />
-              </motion.button>
+      <main>
+        {/* ========================== HERO ========================== */}
+
+        <section className="relative px-4 sm:px-8 py-10 sm:py-16 md:py-20 max-w-7xl mx-auto">
+          <div className="grid lg:grid-cols-2 gap-10 items-start">
+            {/* Left copy */}
+
+            <div>
+              <div className="inline-flex items-center gap-2 rounded-full bg-black/30 border border-[#ff1f00] px-4 py-2 mb-6">
+                <ShieldCheck
+                  className="w-4 h-4 text-[#ff1f00]"
+                  strokeWidth={2}
+                />
+                <span className="text-sm text-white/90">
+                  Cybersecurity & Threat Management
+                </span>
+              </div>
+
+              <h1 className="text-white text-3xl sm:text-4xl md:text-5xl leading-tight">
+                Protect Your{" "}
+                <span className="text-[#ff1f00]">Website</span> & Your{" "}
+                <span className="text-[#ff1f00]">Business.</span>
+              </h1>
+
+              <p className="text-white mt-6 max-w-3xl">
+                Your website is an important part of your business. Security
+                weaknesses, malicious software and outdated components can put
+                your website, information and business operations at risk.
+                BIM Africa helps businesses identify vulnerabilities, address
+                website security issues and improve protection through
+                practical cybersecurity services.
+              </p>
+
+              <div className="flex flex-col sm:flex-row gap-3 pt-6 sm:gap-4 justify-center lg:justify-start">
+                <Link
+                  href="/contactus"
+                  className="inline-flex items-center justify-center gap-2 w-full sm:w-auto bg-[#333333] border border-transparent hover:border-[#ff1f00] text-white px-8 sm:px-10 lg:px-12 py-3 sm:py-4 rounded-full transition-all hover:scale-105 text-sm sm:text-base whitespace-nowrap"
+                >
+                  Request a Security Review
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+
+                <Link
+                  href="/#services"
+                  className="inline-flex items-center justify-center gap-2 w-full sm:w-auto bg-[#333333] border border-transparent hover:border-[#ff1f00] text-white px-8 sm:px-10 py-3 sm:py-4 rounded-full transition-all hover:scale-105 text-sm sm:text-base whitespace-nowrap"
+                >
+                  Explore Our Services
+                </Link>
+              </div>
+
+              <div className="mt-6 flex flex-wrap items-center gap-x-6 gap-y-3 text-sm text-white/90">
+                <div className="flex items-center gap-2">
+                  <CheckCircle2 className="w-4 h-4 text-[#ff1f00]" />
+                  Practical Security Reviews
+                </div>
+
+                <div className="flex items-center gap-2">
+                  <CheckCircle2 className="w-4 h-4 text-[#ff1f00]" />
+                  Clear Recommendations
+                </div>
+
+                <div className="flex items-center gap-2">
+                  <CheckCircle2 className="w-4 h-4 text-[#ff1f00]" />
+                  Ongoing Support Options
+                </div>
+              </div>
             </div>
 
-            {/* Navigation */}
-            <nav className="flex-1 flex flex-col justify-start px-8 gap-y-3 mt-6 overflow-auto">
-              {navigationItems.map((item, idx) => (
-                <div key={idx} className="flex items-center w-full max-w-full py-3">
-                  <Link
-                    href={item.href}
-                    onClick={() => setMobileOpen(false)}
-                    className="flex-1 text-left text-lg font-medium text-white hover:text-red-300"
-                  >
-                    {item.name}
-                  </Link>
-                  <div className="w-6 h-6 ml-4 relative">
-                    <Image
-                      src={item.href === "/WebsiteStrategy" ? selected : nonselected}
-                      alt=""
-                      fill
-                      className="object-contain"
-                    />
+            {/* Right information card */}
+
+            <div className="relative">
+              <div className="relative rounded-[28px] bg-gradient-to-b from-black/90 backdrop-blur-md to-black/30 border border-white/10 p-6 sm:p-8 shadow-[0_30px_80px_-20px_rgba(0,0,0,0.6)]">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="w-14 h-14 rounded-2xl bg-red-900/30 border border-[#ff1f00]/30 flex items-center justify-center shrink-0">
+                    <ShieldCheck className="w-7 h-7 text-[#ff1f00]" />
+                  </div>
+
+                  <div>
+                    <p className="text-white/60 text-sm">
+                      Your Website Security
+                    </p>
+                    <h2 className="text-xl sm:text-2xl font-medium">
+                      Identify. Protect. Improve.
+                    </h2>
                   </div>
                 </div>
-              ))}
-            </nav>
 
-            {/* Bottom Button */}
-            <div
-              className="mt-6 shrink-0 px-6 pb-6"
-              style={{
-                paddingBottom:
-                  "calc(env(safe-area-inset-bottom, 1rem) + 0.75rem)",
-              }}
-            >
-              <a
-                href="https://quotation.bim.africa/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block w-full"
-              >
-                <motion.button
-                  whileTap={{ scale: 0.98 }}
-                  className="w-full bg-[#ff1f00] hover:bg-red-600 text-white py-4 rounded-full text-lg font-medium"
+                <p className="text-white/90 leading-relaxed">
+                  Effective website security starts with understanding your
+                  risks and taking the right actions. We focus on practical
+                  improvements that fit your website and business requirements.
+                </p>
+
+                <div className="mt-6 space-y-4">
+                  {[
+                    {
+                      icon: Search,
+                      title: "Identify Weaknesses",
+                      copy: "Review potential vulnerabilities and security concerns.",
+                    },
+                    {
+                      icon: LockKeyhole,
+                      title: "Strengthen Protection",
+                      copy: "Improve relevant security settings and controls.",
+                    },
+                    {
+                      icon: RefreshCw,
+                      title: "Maintain Security",
+                      copy: "Keep important checks and updates on your radar.",
+                    },
+                  ].map((item) => {
+                    const Icon = item.icon;
+
+                    return (
+                      <div
+                        key={item.title}
+                        className="flex items-start gap-4 rounded-xl bg-black/30 border border-white/10 p-4"
+                      >
+                        <div className="w-10 h-10 rounded-full bg-red-900/30 flex items-center justify-center shrink-0">
+                          <Icon className="w-5 h-5 text-[#ff1f00]" />
+                        </div>
+
+                        <div>
+                          <h3 className="text-base sm:text-lg font-medium">
+                            {item.title}
+                          </h3>
+                          <p className="text-white/80 text-sm mt-1 leading-relaxed">
+                            {item.copy}
+                          </p>
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
+
+                <div className="mt-6 pt-5 border-t border-white/10 flex items-start gap-3">
+                  <AlertTriangle className="w-5 h-5 text-[#ff1f00] shrink-0 mt-0.5" />
+                  <p className="text-sm text-white/70 leading-relaxed">
+                    No website can be guaranteed completely secure. Regular
+                    reviews and appropriate maintenance help reduce risk and
+                    improve resilience.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ====================== WHY SECURITY MATTERS ====================== */}
+
+        <section className="px-4 sm:px-8 pb-12 sm:pb-16 max-w-7xl mx-auto">
+          <div className="text-center mb-10 sm:mb-14">
+            <h2 className="text-3xl sm:text-6xl [font-weight:400]">
+              Why Website Security Matters
+            </h2>
+
+            <p className="text-white mt-6 max-w-3xl mx-auto">
+              A website security issue can affect more than your website
+              itself. It can interrupt business activities, damage customer
+              confidence and create additional recovery costs. Taking
+              appropriate precautions helps you manage these risks before
+              they become more difficult to address.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {[
+              {
+                icon: Bug,
+                title: "Malware & Unauthorised Access",
+                copy:
+                  "Compromised accounts, malicious files and vulnerable software can give attackers opportunities to interfere with your website.",
+              },
+              {
+                icon: AlertTriangle,
+                title: "Website Disruption",
+                copy:
+                  "Security incidents can make your website unavailable, affect important functions or prevent customers from accessing information.",
+              },
+              {
+                icon: Eye,
+                title: "Customer Confidence",
+                copy:
+                  "Unexpected redirects, browser warnings and suspicious website behaviour can undermine trust in your business.",
+              },
+              {
+                icon: LockKeyhole,
+                title: "Information Exposure",
+                copy:
+                  "Weak access controls and security flaws can increase the risk of unauthorised access to information or administrative functions.",
+              },
+            ].map((item) => {
+              const Icon = item.icon;
+
+              return (
+                <div
+                  key={item.title}
+                  className="group rounded-2xl bg-black/40 border border-white/10 p-6 transition-colors hover:border-[#ff1f00]"
                 >
-                  {t.buttons.instantQuotation}
-                </motion.button>
-              </a>
-            </div>
-          </div>
-        </div>
-      </motion.aside>
-    </>
-  )}
-</AnimatePresence>
+                  <div className="flex items-center gap-4">
+                    <div className="w-12 h-12 rounded-full bg-red-900/40 flex items-center justify-center shrink-0">
+                      <Icon className="w-6 h-6 text-[#ff1f00]" />
+                    </div>
 
+                    <h3 className="text-xl sm:text-2xl font-medium transition-colors group-hover:text-[#ff1f00]">
+                      {item.title}
+                    </h3>
+                  </div>
 
-      {/* ======================== Header ========================= */}
-      <header className="bg-black backdrop-blur-md sticky top-0 z-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-2 flex items-center justify-between">
-          <Link href="/">
-            <Image src={logo2} alt="BIM" width={110} height={44} priority className="w-20 sm:w-24 md:w-28 lg:w-[110px] h-auto" />
-          </Link>
-
-          <nav className="hidden xl:flex items-center space-x-6 xl:space-x-10 relative">
-            {navigationItems.map((link) => (
-              <Link key={link.name} href={link.href} className={`wave-link relative font-medium ${link.href === "/contactus" ? "text-red-500" : "text-white"}`}>
-                {link.name}
-                <svg className="link__graphic link__graphic--slide" width="300%" height="100%" viewBox="0 0 1200 60" preserveAspectRatio="none">
-                  <path
-                    d="M0,56.5c0,0,298.666,0,399.333,0C448.336,56.5,513.994,46,597,46
-                       c77.327,0,135,10.5,200.999,10.5c95.996,0,402.001,0,402.001,0"
-                    fill="none"
-                    stroke={link.href === "/contactus" ? "#FF1F00" : "#FFF"}
-                    strokeWidth="2"
-                  />
-                </svg>
-              </Link>
-            ))}
-          </nav>
-
-          <div className="flex items-center gap-1 sm:gap-2 xl:gap-4">
-            <a href="https://quotation.bim.africa/" target="_blank" rel="noopener noreferrer" className="hidden min-[400px]:inline-block">
-              <button className="text-red-500 border border-red-500 px-4 py-2 sm:px-6 sm:py-2 rounded-full text-xs sm:text-sm font-medium transition-all whitespace-nowrap hover:bg-red-500 hover:text-white">
-                {t.buttons.instantQuotation}
-              </button>
-            </a>
-            <button
-              type="button"
-              aria-disabled="true"
-              className="bg-white rounded-full p-1 sm:p-2 flex items-center space-x-1 cursor-default select-none"
-            >
-              <div className="w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-red-500 flex items-center justify-center">
-                <span className="text-white text-xs font-bold">+</span>
-              </div>
-              <span className="text-black text-xs sm:text-sm font-medium px-1 sm:px-2">FR</span>
-            </button>
-
-            <button onClick={() => setMobileOpen((o) => !o)} className="xl:hidden text-white" aria-label="Toggle menu">
-              {mobileOpen ? <X size={28} /> : <Image src={header} alt="menu" className="w-10 h-auto" priority />}
-            </button>
-          </div>
-        </div>
-
-        <style>{`
-          a.wave-link{position:relative;padding:6px 0;background:transparent;border:0;white-space:nowrap;overflow:hidden}
-          .link__graphic{position:absolute;top:0;left:0;pointer-events:none;fill:none;stroke-width:1px}
-          .link__graphic--slide{top:-3px;stroke-width:2px;transition:transform .7s cubic-bezier(0,.25,.5,1)}
-          a.wave-link:hover .link__graphic--slide{transform:translate3d(-66.6%,0,0)}
-        `}</style>
-      </header>
-
-      {/* ========================== HERO ========================== */}
-      <section className="relative px-4 sm:px-8 py-10 sm:py-16 md:py-20 max-w-7xl mx-auto">
-        <style>{`
-  @keyframes floatY {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-6px); }
-  }
-  .float-y {
-    animation: floatY 2s ease-in-out infinite;
-  }
-
-  @keyframes glowBlink {
-    0%, 100% {
-      opacity: 1;
-      box-shadow: 0 0 16px rgba(255, 31, 0, 0.10),
-                  0 0 50px rgba(255, 31, 0, 0.35);
-    }
-    50% {
-      opacity: 1; /* ✅ no more opacity flicker */
-      box-shadow: 0 0 16px rgba(255, 31, 0, 0.10),
-                  0 0 50px rgba(255, 31, 0, 0.35);
-    }
-  }
-  .glow-blink {
-    animation: glowBlink 1.2s ease-in-out infinite;
-  }
-`}</style>
-
-
-        <div className="grid lg:grid-cols-2 gap-10 items-start">
-          {/* left copy */}
-          <div>
-            <div className="inline-flex items-center gap-2 rounded-full bg-black/30 border border-[#ff1f00] px-4 py-2 mb-6 ">
-              <Sparkles className="w-4 h-4 text-[#ff1f00] blink" strokeWidth={2} />
-              <span className="text-sm text-white/90 blink"> {t.hero.badge} </span>
-            </div>
-
-            <h1 className="text-white text-3xl sm:text-4xl md:text-5xl leading-tight">
-              Custom <span className="text-[#ff1f00]">Websites</span> & 
-              <span className="text-[#ff1f00]"> Web Applications.</span>
-            </h1>
-
-            <p className="text-white mt-6 max-w-3xl mx-auto">{t.hero.subtitle}</p>
-
-          {/* CTA buttons: exact mobile stacking like Contact page */}
-            <div className="flex flex-col sm:flex-row gap-3 pt-6 sm:gap-4 justify-center lg:justify-start">
-              <a 
-  href="https://quotation.bim.africa/" 
-  target="_blank" 
-  rel="noopener noreferrer" 
-  className="inline-block w-full sm:w-auto"
->
-  <button
-    className="
-      w-full sm:w-auto 
-      bg-[#333333] 
-      border border-transparent 
-      hover:border-[#ff1f00] 
-      text-white 
-      px-8 sm:px-10 lg:px-12 
-      py-3 sm:py-4 
-      rounded-full 
-      transition-all hover:scale-105 
-      text-sm sm:text-base 
-      whitespace-nowrap
-    "
-  >
-    Get Instant Quote
-  </button>
-</a>
-
-              <a href="https://wa.me/message/VLID27EWBIPND1" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
-                <button className="w-full sm:w-auto bg-[#333333] border border-transparent hover:border-[#ff1f00] text-white px-6 sm:px-8 lg:px-12 py-3 sm:py-4 rounded-full transition-all hover:scale-105 text-sm sm:text-base whitespace-nowrap">
-                  Whatsapp Us
-                </button>
-              </a>
-            </div>
-
-
-
-            {/* ratings row */}
-            <div className="mt-6 flex flex-wrap items-center gap-8 text-sm">
-              <div className="flex items-center gap-2 text-white/90">
-                <Star className="w-5 h-5 text-[#ff1f00]" />
-                <Star className="w-5 h-5 text-[#ff1f00]" />
-                <Star className="w-5 h-5 text-[#ff1f00]" />
-                <Star className="w-5 h-5 text-[#ff1f00]" />
-                <Star className="w-5 h-5 text-[#ff1f00]" />
-                <span>5/5 Google Rating · 7 Reviews</span>
-              </div>
-
-            </div>
-          </div>
-
-          {/* right stat card */}
-          <div className="relative">
-            <div className="relative rounded-[28px] bg-gradient-to-b from-black/98 backdrop-blur-md to-black/20 border border-white/10 p-6 sm:p-8 shadow-[0_30px_80px_-20px_rgba(0,0,0,0.6)]">
-              <span className="hidden md:block absolute -right-3 -top-3 w-8 h-8 rounded-full bg-[#ff1f00] shadow-[0_0_50px_rgba(255,31,0,0.35)] pointer-events-none float-y" />
-              <span className="hidden md:block absolute -left-3 -bottom-3 w-6 h-6 rounded-full bg-[#ff1f00] shadow-[0_0_50px_rgba(255,31,0,0.35)] pointer-events-none glow-blink" />
-
-              <div className="grid grid-cols-2 gap-6">
-                <div className="rounded-2xl bg-black/30 border border-white/10 px-6 py-8 text-center">
-                  <div className="text-4xl  text-[#ff1f00]">{t.hero.stats.uptime.value}</div>
-                  <div className="text-sm text-white/80 mt-2">{t.hero.stats.uptime.label}</div>
+                  <p className="mt-4 text-white/90 leading-relaxed">
+                    {item.copy}
+                  </p>
                 </div>
-                <div className="rounded-2xl bg-black/30 border border-white/10 px-6 py-8 text-center">
-                  <div className="text-4xl  text-[#ff1f00]">{t.hero.stats.load.value}</div>
-                  <div className="text-sm text-white/80 mt-2">{t.hero.stats.load.label}</div>
+              );
+            })}
+          </div>
+        </section>
+
+        {/* ========================== OUR SERVICES ========================== */}
+
+        <section className="px-4 sm:px-8 pb-12 sm:pb-16 max-w-7xl mx-auto">
+          <div className="text-center mb-10 sm:mb-14">
+            <h2 className="text-3xl sm:text-6xl [font-weight:400]">
+              Our Cybersecurity Services
+            </h2>
+
+            <p className="text-white mt-6 max-w-3xl mx-auto">
+              From website security audits to malware removal and ongoing
+              maintenance, we help businesses understand their security
+              requirements and take practical steps to protect their websites.
+              Choose the service that fits your situation.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {services.map((service) => {
+              const Icon = service.icon;
+
+              return (
+                <div
+                  key={service.title}
+                  className="group rounded-2xl bg-black/40 border border-white/10 p-6 transition-colors hover:border-[#ff1f00]"
+                >
+                  <div className="flex items-center gap-4">
+                    <div className="w-12 h-12 rounded-full bg-red-900/40 flex items-center justify-center shrink-0">
+                      <Icon className="w-6 h-6 text-[#ff1f00]" />
+                    </div>
+
+                    <h3 className="text-xl sm:text-2xl font-medium transition-colors group-hover:text-[#ff1f00]">
+                      {service.title}
+                    </h3>
+                  </div>
+
+                  <p className="mt-4 text-white/90 leading-relaxed">
+                    {service.copy}
+                  </p>
+
+                  <div className="mt-4 flex flex-wrap gap-2">
+                    {service.tags.map((tag) => (
+                      <span
+                        key={tag}
+                        className="text-xs px-3 py-1 rounded-full border border-white/10 bg-white/5"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+
+                  <div className="mt-6">
+                    <Link
+                      href="/contactus"
+                      className="inline-flex items-center gap-2 bg-[#333333] border border-transparent hover:border-[#ff1f00] text-white px-4 py-2 rounded-full text-sm transition-all"
+                    >
+                      Discuss This Service
+                      <ArrowRight className="w-4 h-4" />
+                    </Link>
+                  </div>
                 </div>
-                <div className="rounded-2xl bg-black/30 border border-white/10 px-6 py-8 text-center">
-                  <div className="text-4xl  text-[#ff1f00]">{t.hero.stats.security.value}</div>
-                  <div className="text-sm text-white/80 mt-2">{t.hero.stats.security.label}</div>
+              );
+            })}
+          </div>
+        </section>
+
+        {/* ========================== BUSINESS BENEFITS ========================== */}
+
+        <section className="px-4 sm:px-8 py-12 sm:py-16 max-w-7xl mx-auto">
+          <div className="text-center mb-10 sm:mb-14">
+            <h2 className="text-3xl sm:text-6xl [font-weight:400]">
+              Security That Supports Your Business
+            </h2>
+
+            <p className="text-white mt-6 max-w-3xl mx-auto">
+              Cybersecurity is not only a technical concern. It is part of
+              keeping your website dependable, protecting customer confidence
+              and supporting the services your business provides online.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {benefits.map((benefit) => {
+              const Icon = benefit.icon;
+
+              return (
+                <div
+                  key={benefit.title}
+                  className="group rounded-2xl bg-black/40 border border-white/10 p-6 transition-colors hover:border-[#ff1f00]"
+                >
+                  <div className="w-12 h-12 rounded-full bg-red-900/40 flex items-center justify-center mb-5">
+                    <Icon className="w-6 h-6 text-[#ff1f00]" />
+                  </div>
+
+                  <h3 className="text-xl sm:text-2xl font-medium transition-colors group-hover:text-[#ff1f00]">
+                    {benefit.title}
+                  </h3>
+
+                  <p className="mt-4 text-white/90 leading-relaxed">
+                    {benefit.copy}
+                  </p>
                 </div>
-                <div className="rounded-2xl bg-black/30 border border-white/10 px-6 py-8 text-center">
-                  <div className="text-4xl  text-[#ff1f00]">{t.hero.stats.support.value}</div>
-                  <div className="text-sm text-white/80 mt-2">{t.hero.stats.support.label}</div>
-                </div>
-              </div>
-
-              <div className="h-px w-full bg-white/10 my-6" />
-
-              <div className="text-center text-sm text-white/70 mb-4">{t.hero.stats.powered}</div>
-
-              <div className="flex justify-center gap-4">
-                {[ArrowRight, Shield, Zap, Globe].map((Icon, i) => (
-                  <button
-                    key={i}
-                    className="w-12 h-12 rounded-xl bg-black/40 border border-white/10 flex items-center justify-center hover:bg-white/5 transition"
-                  >
-                    <Icon className="w-5 h-5 text-white/80" />
-                  </button>
-                ))}
-              </div>
-            </div>
+              );
+            })}
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* ====================== OUR SERVICES ====================== */}
-      <section className="px-4 sm:px-8 pb-12 sm:pb-16 max-w-7xl mx-auto">
-        <div className="text-center mb-10 sm:mb-14">
-          <h2 className="text-3xl sm:text-6xl [font-weight:400]">{t.services.title}</h2>
-          <p className="text-white mt-6 max-w-3xl mx-auto">{t.services.tagline}</p>
-        </div>
+        {/* ========================== OUR PROCESS ========================== */}
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {[
-  {
-    icon: <LayoutDashboard className="w-6 h-6 text-[#ff1f00]" />,
-    more:
-      "From page structure and user journeys to visual design and responsive layouts, we plan how your website should look, feel and work before development begins. We focus on clear communication, intuitive navigation and consistency across devices, ensuring the final design reflects your business and makes it easier for customers to engage with you.",
-    ...t.services.designing,
-  },
-  {
-    icon: <Code2 className="w-6 h-6 text-[#ff1f00]" />,
-    more:
-      "We turn your requirements and designs into working websites and applications, with attention to functionality, performance, usability and security. From integrating the features your business needs to connecting systems and automating processes, we select suitable technologies for each project and build with long-term maintenance and future improvements in mind.",
-    ...t.services.development,
-  },
-  {
-    icon: <Shield className="w-6 h-6 text-[#ff1f00]" />,
-    more:
-      "Our maintenance work includes plugin updates, backups, security checks, troubleshooting and performance reviews, depending on your website and maintenance plan. When something needs attention, we help identify the problem and work towards a practical solution, giving you continued technical support without leaving you to manage every issue alone.",
-    ...t.services.maintenance,
-  },
-  {
-    icon: <Wrench className="w-6 h-6 text-[#ff1f00]" />,
-    more:
-      "Whether your website needs a refreshed appearance, additional functionality, a platform migration or improvements to speed and usability, we assess what is already there and identify the most practical way forward. We focus on meaningful improvements that support your business objectives, preserve what works and make your website more useful, reliable and maintainable.",
-    ...t.services.upgrade,
-  },
-].map((svc: Service) => {
-  const isOpen = !!openService[svc.title];
-  const isWhatsAppOnly =
-    svc.title === "Website Maintenance & Support" || svc.title === "Website Upgrade";
-
-  return (
-    <div
-      key={svc.title}
-      className="group rounded-2xl bg-black/40 border border-white/10 p-6 transition-colors hover:border-[#ff1f00]"
-    >
-      <div className="flex items-center gap-4">
-        <div className="w-12 h-12 rounded-full bg-red-900/40 flex items-center justify-center">
-          {svc.icon}
-        </div>
-        <h3 className="text-xl sm:text-2xl font-medium transition-colors group-hover:text-[#ff1f00]">
-          {svc.title}
-        </h3>
-      </div>
-
-      <p className="mt-4 text-white/90">{svc.copy}</p>
-
-      <div className="mt-4 flex flex-wrap gap-2">
-        {svc.tags.map((tag) => (
-          <span
-            key={tag}
-            className="text-xs px-3 py-1 rounded-full border border-white/10 bg-white/5"
-          >
-            {tag}
-          </span>
-        ))}
-      </div>
-
-      {/* CTAs row */}
-      <div className="mt-6 flex items-center justify-between">
-        {isWhatsAppOnly ? (
-          <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" aria-label="WhatsApp Us">
-            <div className="bg-[#333333] border border-transparent hover:border-[#ff1f00] text-white px-4 py-2 rounded-full text-sm transition-all">
-              Whatsapp Us
-            </div>
-          </a>
-        ) : (
-          <a href="https://quotation.bim.africa/" target="_blank" rel="noopener noreferrer" >
-            <button className="inline-flex items-center gap-2 bg-[#333333] border border-transparent hover:border-[#ff1f00] text-white px-4 py-2 rounded-full text-sm transition-colors">
-              Instant Quote
-            </button>
-          </a>
-        )}
-
-        <button
-          type="button"
-          onClick={() =>
-            setOpenService((s: Record<string, boolean>) => ({
-              ...s,
-              [svc.title]: !s[svc.title],
-            }))
-          }
-          className="text-white/90 hover:text-red-400 inline-flex items-center gap-2 text-sm"
-          aria-expanded={isOpen}
-          aria-controls={`${svc.title.replace(/\s+/g, "-")}-details`}
-        >
-          {isOpen ? "Hide details" : "Learn more"}
-          <ArrowRight
-            className={`w-4 h-4 transition-transform duration-300 ${
-              isOpen ? "rotate-90" : ""
-            }`}
-          />
-        </button>
-      </div>
-
-      <div
-        id={`${svc.title.replace(/\s+/g, "-")}-details`}
-        className={`overflow-hidden transition-all duration-300 ease-out ${
-          isOpen ? "max-h-64 opacity-100 mt-4" : "max-h-0 opacity-0"
-        }`}
-      >
-        <div className="rounded-xl bg-black/30 border border-white/10 p-4">
-          {/* ✅ FIXED: Removed (svc as any) */}
-          <p className="text-white/90 text-sm leading-relaxed">{svc.more}</p>
-          <ul className="mt-3 flex flex-wrap gap-2">
-            {svc.tags.slice(0, 3).map((tag) => (
-              <li
-                key={`${svc.title}-${tag}-more`}
-                className="text-xs px-2 py-1 rounded-full border border-white/10 bg-white/5"
-              >
-                {tag}
-              </li>
-            ))}
-          </ul>
-        </div>
-      </div>
-    </div>
-  );
-})}
-        </div>
-      </section>
-
-      {/* ========================= PROCESS ======================== */}
-      <section className="px-4 sm:px-8 py-12 sm:py-16 max-w-7xl mx-auto">
-        <div className="text-center mb-10">
-          <div className="inline-flex items-center gap-2 rounded-full bg-black/30 border border-[#ff1f00] px-4 py-2">
-            <Target className="w-4 h-4 text-[#ff1f00] " />
-            <span className="font-semibold">An Illustrative Project Example</span>
-          </div>
-        <h2 className="text-4xl sm:text-5xl md:text-6xl font-medium mt-4">{t.process.title}</h2>
-
-          <p className="text-white mt-6 max-w-3xl mx-auto">
-            A growing retailer needs more than a standard online store. The project involves building a headless e-commerce platform using Next.js and WooCommerce, combining a fast, modern storefront handling thousands of products, advanced catalogue search, online purchasing and quotation requests. The goal is to simplify the customer journey, streamline business operations and create a scalable platform that can evolve with the business.
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 lg:grid-cols-5 gap-6">
-          {t.process.steps.map((step) => (
-            <div key={step.n} className="relative group flex flex-col items-center text-center px-4 py-2">
-              <div className="relative mb-6 w-full flex justify-center">
-                <span className="relative z-10 inline-flex w-20 h-16 items-center justify-center rounded-3xl border border-[#ff1f00] bg-red-900/10 text-[#ff1f00] text-2xl font-medium transition-transform duration-300 group-hover:scale-110">
-                  {step.n}
-                </span>
-                <span className="hidden lg:block absolute top-1/2 left-0 right-0 -z-0 h-px bg-gradient-to-r from-transparent via-red-600/30 to-transparent" />
-              </div>
-
-              <h3 className="text-xl font-semibold text-white transition-colors duration-300 group-hover:text-[#ff1f00]">
-                {step.title}
-              </h3>
-
-              <p className="text-white mt-2 max-w-xs">{step.copy}</p>
-
-              <div className="mt-4 inline-flex items-center gap-2 rounded-full border border-white/20 bg-black/30 px-3 py-1 text-sm text-white">
-                <Clock className="w-4 h-4" />
-                {step.time}
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* =================== INSTANT QUOTE TOOL (XS-proof) =================== */}
-      <section className="relative px-4 sm:px-8 py-10 sm:py-16 max-w-7xl mx-auto">
-    {/* Badge */}
-    <div className="inline-flex items-center gap-2 rounded-full bg-black/30 border border-red-700 px-3 py-1.5 sm:px-4 sm:py-2 mb-4 sm:mb-6">
-      <Clock className="w-4 h-4 text-[#ff1f00]" />
-      <span className="text-xs sm:text-sm text-white">Get a quote in 2 minutes</span>
-    </div>
-  
-    <style>{`
-      @keyframes fastBlink { 0%,100%{opacity:1;} 50%{opacity:0;} }
-      @keyframes slowBlink { 0%,100%{opacity:1;} 50%{opacity:0;} }
-      .fast-blink{animation:fastBlink 1.5s infinite;}
-      .slow-blink{animation:slowBlink 5s infinite;}
-    `}</style>
-  
-    {/* ✅ Grid for responsive layout */}
-    <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
-  
-      {/* ✍️ Text section — FIRST on mobile, LEFT on desktop */}
-      <div className="order-1">
-        <h2 className="text-white text-3xl sm:text-4xl md:text-5xl leading-tight">
-          <span className="text-[#ff1f00]">Instant</span> Website <br /> Quotation Tool
-        </h2>
-  
-        <p className="qs-sub text-white/90 text-base sm:text-lg mt-4 sm:mt-6 max-w-2xl">
-          Know what your website could cost before you get started. Get a clear, upfront estimate in under 2 minutes, based on your requirements.
-        </p>
-  
-        {/* Features */}
-        <div className="mt-6 sm:mt-8 grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-4 max-w-2xl">
-          {[
-            { Icon: ShieldCheck, label: "SSL Encrypted" },
-            { Icon: Shield, label: "GDPR Compliant" },
-            { Icon: Globe, label: "Trusted Worldwide" },
-          ].map(({ Icon, label }) => (
-            <div key={label} className="qs-chip rounded-2xl bg-black/40 border border-white/10 px-4 py-4 sm:px-6 sm:py-5 flex items-center gap-3">
-              <Icon className="w-5 h-5 text-red-500" />
-              <span className="text-white/90 text-sm">{label}</span>
-            </div>
-          ))}
-        </div>
-  
-        {/* Steps */}
-        <div className="mt-6 sm:mt-8 flex flex-wrap items-center gap-4 sm:gap-6 text-white/90">
-          {["Basic Information", "Website Specifications", "Final Quote"].map((s, i, arr) => (
-            <div key={s} className="flex items-center gap-2 sm:gap-3">
-              <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-white/10 border border-white/15 flex items-center justify-center text-xs sm:text-sm">
-                {i + 1}
-              </div>
-              <span className="text-xs sm:text-sm">{s}</span>
-              {i < arr.length - 1 && <ChevronRight className="w-4 h-4 text-white/40" />}
-            </div>
-          ))}
-        </div>
-  
-        {/* 🖼️ Quote image (after all text + steps) */}
-        <div className="relative mt-10 lg:mt-0 lg:hidden">
-          <div
-            className="relative overflow-hidden rounded-[24px] sm:rounded-[28px]
-            bg-gradient-to-b from-black/40 to-black/10 border border-white/10
-            p-2.5 sm:p-3 shadow-[0_30px_80px_-20px_rgba(0,0,0,0.6)]"
-          >
-            <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden">
-              <Image
-                src={quote}
-                alt="Instant Website Quotation Tool"
-                fill
-                priority
-                className="object-contain object-center"
-              />
-            </div>
-          </div>
-        </div>
-  
-        {/* 🚀 Button (AFTER image) */}
-       <a
-    href="https://quotation.bim.africa/"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="block mt-6 sm:mt-8 text-center lg:text-left"
-  >
-    <button className="qs-btn inline-flex items-center gap-3 bg-[#ff1f00] hover:bg-red-600 text-white px-5 sm:px-6 py-3 sm:py-4 rounded-full transition-all hover:scale-105">
-      Get Your Quote in 2 Minutes
-    </button>
-  </a>
-      </div>
-  
-      {/* 🖼️ Image for desktop view only */}
-      <div className="relative hidden lg:block order-2">
-        <div
-          className="relative overflow-hidden rounded-[24px] sm:rounded-[28px]
-          bg-gradient-to-b from-black/40 to-black/10 border border-white/10
-          p-2.5 sm:p-3 md:p-5 shadow-[0_30px_80px_-20px_rgba(0,0,0,0.6)]"
-        >
-          <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden">
-            <Image
-              src={quote}
-              alt="Instant Website Quotation Tool"
-              fill
-              priority
-              className="object-contain object-center"
-            />
-          </div>
-        </div>
-  
-        {/* Glow dots */}
-        <span className="hidden md:block absolute z-20 -top-3 -right-3 w-8 h-8 rounded-full bg-red-600 shadow-[0_0_40px_rgba(255,31,0,0.55)] fast-blink pointer-events-none" />
-        <span className="hidden md:block absolute z-20 -bottom-3 -left-1 w-6 h-6 rounded-full bg-red-600 shadow-[0_0_40px_rgba(255,31,0,0.55)] slow-blink pointer-events-none" />
-      </div>
-    </div>
-  </section>
-
-
-      {/* ==================== WHAT'S INCLUDED ===================== 
-      <section className="px-4 sm:px-8 pb-16 max-w-7xl mx-auto">
-        <div className="text-center mb-10">
-          <div className="inline-flex items-center gap-2 rounded-full bg-black/30 border border-[#ff1f00] px-4 py-2 mb-4">
-            <Sparkles className="w-4 h-4 text-[#ff1f00] " strokeWidth={2} />
-            <span className="text-sm text-white/90 ">{t.included.premium}</span>
-          </div>
-
-          <h2 className="text-4xl sm:text-5xl md:text-6xl font-medium">{t.included.title}</h2>
-          <p className="text-white/80 max-w-3xl mx-auto mt-4">{t.included.sub}</p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {t.included.items.map((item) => (
-            <div
-              key={item}
-              className="group flex items-center gap-4 rounded-2xl border border-white/10 bg-gradient-to-b from-black/40 to-black/10 px-6 py-6 hover:border-red-600/40 transition"
-            >
-              <span className="relative inline-flex w-10 h-10 shrink-0 items-center justify-center rounded-full bg-[radial-gradient(ellipse_at_center,rgba(255,31,0,0.95),rgba(255,31,0,0.85)_60%,rgba(255,31,0,0.70)_100%)] shadow-[0_0_22px_rgba(255,31,0,0.45),0_10px_18px_-8px_rgba(0,0,0,0.6)]">
-                <CheckCircle2 className="w-5 h-5 text-white" />
-                <span className="pointer-events-none absolute -bottom-1 -left-1 w-10 h-10 rounded-full bg-[radial-gradient(ellipse_at_center,rgba(255,31,0,0.35),transparent_60%)] blur-md" />
+        <section className="px-4 sm:px-8 py-12 sm:py-16 max-w-7xl mx-auto">
+          <div className="text-center mb-10">
+            <div className="inline-flex items-center gap-2 rounded-full bg-black/30 border border-[#ff1f00] px-4 py-2">
+              <Target className="w-4 h-4 text-[#ff1f00]" />
+              <span className="text-sm text-white/90">
+                A Practical Approach
               </span>
-              <span className="text-white font-semibold tracking-tight">{item}</span>
             </div>
-          ))}
-        </div>
 
-        <div className="mt-10 flex justify-center">
-          <div className="inline-flex items-center gap-3 rounded-full bg-black/30 border border-[#ff1f00] px-6 py-3">
-            <ShieldCheck className="w-5 h-5 text-[#ff1f00]" />
-            <span className="text-white/90">{t.included.guarantee}</span>
+            <h2 className="text-4xl sm:text-5xl md:text-6xl font-medium mt-4">
+              How We Approach Website Security
+            </h2>
+
+            <p className="text-white mt-6 max-w-3xl mx-auto">
+              Every website has different requirements. Our approach starts
+              with understanding your situation, reviewing the agreed areas,
+              and identifying realistic improvements based on the findings
+              and the scope of work.
+            </p>
           </div>
-        </div>
-      </section>*/}
 
-   <Footer/>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
+            {processSteps.map((step) => (
+              <div
+                key={step.number}
+                className="relative group flex flex-col items-center text-center px-4 py-2"
+              >
+                <div className="relative mb-6 w-full flex justify-center">
+                  <span className="relative z-10 inline-flex w-20 h-16 items-center justify-center rounded-3xl border border-[#ff1f00] bg-red-900/10 text-[#ff1f00] text-2xl font-medium transition-transform duration-300 group-hover:scale-110">
+                    {step.number}
+                  </span>
+
+                  <span className="hidden lg:block absolute top-1/2 left-0 right-0 -z-0 h-px bg-gradient-to-r from-transparent via-red-600/30 to-transparent" />
+                </div>
+
+                <h3 className="text-xl sm:text-2xl font-medium text-white transition-colors duration-300 group-hover:text-[#ff1f00]">
+                  {step.title}
+                </h3>
+
+                <p className="text-white/90 mt-2 max-w-xs leading-relaxed">
+                  {step.copy}
+                </p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* ========================== WHO WE HELP ========================== */}
+
+        <section className="px-4 sm:px-8 py-12 sm:py-16 max-w-7xl mx-auto">
+          <div className="text-center mb-10 sm:mb-14">
+            <h2 className="text-3xl sm:text-6xl [font-weight:400]">
+              Who We Help
+            </h2>
+
+            <p className="text-white mt-6 max-w-3xl mx-auto">
+              We support businesses that rely on their websites to present
+              their services, communicate with customers and carry out
+              important online activities.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {[
+              {
+                icon: Globe,
+                title: "Small & Medium Businesses",
+                copy:
+                  "Improve the security of your business website and take a more structured approach to managing technical risks.",
+              },
+              {
+                icon: ServerCog,
+                title: "E-commerce Websites",
+                copy:
+                  "Review the security considerations affecting online stores, including software, administrative access and important website functions.",
+              },
+              {
+                icon: ShieldCheck,
+                title: "Established Organisations",
+                copy:
+                  "Address website security concerns with practical reviews, clear recommendations and support aligned with your requirements.",
+              },
+            ].map((item) => {
+              const Icon = item.icon;
+
+              return (
+                <div
+                  key={item.title}
+                  className="group rounded-2xl bg-black/40 border border-white/10 p-6 transition-colors hover:border-[#ff1f00]"
+                >
+                  <div className="flex items-center gap-4">
+                    <div className="w-12 h-12 rounded-full bg-red-900/40 flex items-center justify-center shrink-0">
+                      <Icon className="w-6 h-6 text-[#ff1f00]" />
+                    </div>
+
+                    <h3 className="text-xl sm:text-2xl font-medium transition-colors group-hover:text-[#ff1f00]">
+                      {item.title}
+                    </h3>
+                  </div>
+
+                  <p className="mt-4 text-white/90 leading-relaxed">
+                    {item.copy}
+                  </p>
+                </div>
+              );
+            })}
+          </div>
+        </section>
+
+        {/* ========================== FAQ ========================== */}
+
+        <section className="px-4 sm:px-8 py-12 sm:py-16 max-w-7xl mx-auto">
+          <div className="text-center mb-10 sm:mb-14">
+            <h2 className="text-3xl sm:text-6xl [font-weight:400]">
+              Frequently Asked Questions
+            </h2>
+
+            <p className="text-white mt-6 max-w-3xl mx-auto">
+              Here are answers to common questions about website security,
+              cybersecurity reviews and ongoing protection.
+            </p>
+          </div>
+
+          <div className="max-w-4xl mx-auto space-y-4">
+            {faqs.map((faq) => (
+              <details
+                key={faq.question}
+                className="group rounded-2xl bg-black/40 border border-white/10 p-5 sm:p-6 transition-colors hover:border-[#ff1f00]"
+              >
+                <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-lg sm:text-xl font-medium">
+                  <span>{faq.question}</span>
+
+                  <ChevronRight className="w-5 h-5 shrink-0 text-[#ff1f00] transition-transform duration-300 group-open:rotate-90" />
+                </summary>
+
+                <p className="mt-4 text-white/90 leading-relaxed">
+                  {faq.answer}
+                </p>
+              </details>
+            ))}
+          </div>
+        </section>
+
+        {/* ========================== WORK TOGETHER ========================== */}
+
+        <section className="px-4 sm:px-8 py-12 sm:py-16 max-w-7xl mx-auto w-full">
+          <div className="rounded-3xl border border-white/10 bg-black/40 p-6 sm:p-10 md:p-14 text-center">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl leading-tight">
+              Let's Work Together
+            </h2>
+
+            <p className="text-white mt-6 max-w-3xl mx-auto">
+              Whether you need a website security audit, assistance with
+              malware removal or ongoing website protection, BIM Africa can
+              help you understand your requirements and identify practical
+              next steps.
+            </p>
+
+            <div className="flex flex-col sm:flex-row gap-3 pt-6 sm:gap-4 justify-center">
+              <Link
+                href="/contactus"
+                className="inline-flex items-center justify-center gap-2 w-full sm:w-auto bg-[#333333] border border-transparent hover:border-[#ff1f00] text-white px-8 sm:px-10 lg:px-12 py-3 sm:py-4 rounded-full transition-all hover:scale-105 text-sm sm:text-base whitespace-nowrap"
+              >
+                Talk to Our Team
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      {/* Footer remains directly after the Work Together section */}
+      <Footer />
     </div>
   );
 }
