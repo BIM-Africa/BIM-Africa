@@ -187,6 +187,7 @@ export default function ServicesPage() {
 
           </article>
 
+
           {/* ================== RIGHT SIDEBAR ================== */}
           <aside className="space-y-6">
 
@@ -196,31 +197,33 @@ export default function ServicesPage() {
                 <TrendingUp className="w-7 h-7 text-white" />
               </div>
 
-              <h4 className="text-xl font-semibold text-center">
-                Ready to Secure Your Business?
-              </h4>
-
+              <h4 className="text-xl font-semibold text-center">Your Business Could Be Our Next Success Story.</h4>
               <p className="text-gray-200 text-center mt-2">
-                Get expert cybersecurity consultation tailored to your needs
+                Let's build a website that strengthens your brand, earns customer trust, and supports your business growth.
               </p>
 
-              <a href="https://quotation.bim.africa/" target="_blank" className="block mt-4">
-                <button className="w-full flex items-center justify-center gap-2 bg-white text-[#ff1f00] px-5 py-3 rounded-xl font-semibold">
-                  <Globe className="w-4 h-4" /> Get Free Consultation
+              <a
+                href="https://quotation.bim.africa/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block mt-4"
+              >
+                <button className="w-full inline-flex items-center justify-center gap-2 bg-white text-[#ff1f00] hover:bg-red-50 px-5 py-3 rounded-xl font-semibold">
+                  <Globe className="w-4 h-4" /> Start Your Project
                 </button>
               </a>
 
               <div className="mt-4 grid grid-cols-2 gap-3 text-sm text-white">
                 <div className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4" /> Free Assessment
+                  <CheckCircle className="w-4 h-4 text-white" /> Tailored to Your Business
                 </div>
                 <div className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4" /> Expert Team
+                  <CheckCircle className="w-4 h-4 text-white" /> Built for Performance
                 </div>
               </div>
             </div>
 
-            {/* 🔥 Service List */}
+            {/* 🔥 Services List */}
             <div className="rounded-3xl bg-black/40 border border-white/10 p-6">
               <div className="flex items-center gap-2 text-lg font-semibold mb-3">
                 <Star className="w-5 h-5 text-[#ff1f00]" /> Our Services
@@ -228,18 +231,9 @@ export default function ServicesPage() {
 
               <div className="space-y-4">
                 {[
-                  {
-                    title: "Website Strategy & Development",
-                    desc: "Professional, high-performance websites built with precision.",
-                  },
-                  {
-                    title: "Cybersecurity & Threat Management",
-                    desc: "Enterprise-grade protection for your business.",
-                  },
-                  {
-                    title: "Digital Support Outsourcing",
-                    desc: "Scale with dedicated digital support staff.",
-                  },
+                  { title: "Website Strategy & Development", desc: "High-performance websites built around your business objectives." },
+                  { title: "Cybersecurity & Threat Management", desc: "Practical protection to help safeguard your business and its digital assets." },
+                  { title: "Digital Support Outsourcing", desc: "Reliable digital support to help your business operate and grow." },
                 ].map((srv, i) => (
                   <div key={i} className="rounded-2xl border border-white/10 p-4">
                     <div className="font-semibold">{srv.title}</div>
@@ -249,7 +243,7 @@ export default function ServicesPage() {
               </div>
 
               <Link href="/service" className="mt-5 block">
-                <button className="w-full bg-[#ff1f00] px-5 py-3 rounded-xl font-semibold">
+                <button className="w-full inline-flex items-center justify-center gap-2 bg-[#ff1f00] px-5 py-3 rounded-xl font-semibold">
                   View All Services
                 </button>
               </Link>
@@ -261,14 +255,14 @@ export default function ServicesPage() {
                 <MessageSquare className="w-6 h-6" />
               </div>
 
-              <h4 className="text-lg font-semibold text-center">Need Expert Advice?</h4>
+              <h4 className="text-lg font-semibold text-center">Let's Talk About Your Business Needs</h4>
               <p className="text-gray-300 text-center mt-1">
-                Talk to our cybersecurity experts about your challenges.
+                Get practical advice on building, protecting, and improving the digital systems your business relies on.
               </p>
 
               <Link href="/contactus" className="block mt-4">
-                <button className="w-full bg-white text-[#ff1f00] px-5 py-3 rounded-xl font-semibold">
-                  Contact Us
+                <button className="w-full bg-white text-[#ff1f00] hover:bg-red-50 px-5 py-3 rounded-xl font-semibold">
+                  Talk to Our Team
                 </button>
               </Link>
             </div>
