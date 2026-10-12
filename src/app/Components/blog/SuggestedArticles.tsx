@@ -24,7 +24,7 @@ export default function SuggestedArticles({ cards }: { cards: ReactNode[] }) {
             onClick={() => setShowAll((v) => !v)}
             className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-black/40 border border-white/10 hover:border-white/25"
           >
-            <BookOpen className="w-4 h-4" /> {showAll ? "Show Less" : "View More Articles"}
+            <BookOpen className="w-4 h-4" /> {showAll ? "Show Less" : "View More Blogs"}
           </button>
         </div>
       )}
