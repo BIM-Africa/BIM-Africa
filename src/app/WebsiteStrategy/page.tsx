@@ -814,7 +814,6 @@ const t = {
           </div>
         </div>
       </section>*/}
-
    <Footer/>
     </div>
   );
