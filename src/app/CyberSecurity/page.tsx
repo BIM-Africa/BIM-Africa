@@ -205,8 +205,6 @@ export default function CyberSecurity() {
 
         <section className="relative px-4 sm:px-8 py-10 sm:py-16 md:py-20 max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-10 items-start">
-            {/* Left copy */}
-
             <div>
               <div className="inline-flex items-center gap-2 rounded-full bg-black/30 border border-[#ff1f00] px-4 py-2 mb-6">
                 <ShieldCheck
@@ -268,8 +266,6 @@ export default function CyberSecurity() {
               </div>
             </div>
 
-            {/* Right information card */}
-
             <div className="relative">
               <div className="relative rounded-[28px] bg-gradient-to-b from-black/90 backdrop-blur-md to-black/30 border border-white/10 p-6 sm:p-8 shadow-[0_30px_80px_-20px_rgba(0,0,0,0.6)]">
                 <div className="flex items-center gap-4 mb-6">
@@ -298,17 +294,20 @@ export default function CyberSecurity() {
                     {
                       icon: Search,
                       title: "Identify Weaknesses",
-                      copy: "Review potential vulnerabilities and security concerns.",
+                      copy:
+                        "Review potential vulnerabilities and security concerns.",
                     },
                     {
                       icon: LockKeyhole,
                       title: "Strengthen Protection",
-                      copy: "Improve relevant security settings and controls.",
+                      copy:
+                        "Improve relevant security settings and controls.",
                     },
                     {
                       icon: RefreshCw,
                       title: "Maintain Security",
-                      copy: "Keep important checks and updates on your radar.",
+                      copy:
+                        "Keep important checks and updates on your radar.",
                     },
                   ].map((item) => {
                     const Icon = item.icon;
@@ -673,7 +672,7 @@ export default function CyberSecurity() {
 
         <section className="px-4 sm:px-8 py-12 sm:py-16 max-w-7xl mx-auto w-full">
           <div className="rounded-3xl border border-white/10 bg-black/40 p-6 sm:p-10 md:p-14 text-center">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl leading-tight">
+            <h2 className="text-white text-3xl sm:text-4xl md:text-5xl leading-tight">
               Let's Work Together
             </h2>
 
@@ -697,7 +696,7 @@ export default function CyberSecurity() {
         </section>
       </main>
 
-      {/* Footer remains directly after the Work Together section */}
+      {/* Keep the footer immediately after Work Together */}
       <Footer />
     </div>
   );
