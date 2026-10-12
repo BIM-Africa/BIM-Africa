@@ -166,9 +166,9 @@ export default function ArticleView({
                 <TrendingUp className="w-7 h-7 text-white" />
               </div>
 
-              <h4 className="text-xl font-semibold text-center">Your Business Could Be Our Next Success Story.</h4>
+              <h4 className="text-xl font-semibold text-center">Have a Project in Mind?</h4>
               <p className="text-gray-200 text-center mt-2">
-                Let's build a website that strengthens your brand, earns customer trust, and supports your business growth.
+                From website development to cybersecurity, BIM Africa helps businesses build, protect, and support the systems they rely on.
               </p>
 
               <a
@@ -178,16 +178,16 @@ export default function ArticleView({
                 className="block mt-4"
               >
                 <button className="w-full inline-flex items-center justify-center gap-2 bg-white text-[#ff1f00] hover:bg-red-50 px-5 py-3 rounded-xl font-semibold">
-                  <Globe className="w-4 h-4" /> Start Your Project
+                  <Globe className="w-4 h-4" /> Talk to Our Team
                 </button>
               </a>
 
               <div className="mt-4 grid grid-cols-2 gap-3 text-sm text-white">
                 <div className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-white" /> Tailored to Your Business
+                  <CheckCircle className="w-4 h-4 text-white" /> Build Better
                 </div>
                 <div className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-white" /> Built for Performance
+                  <CheckCircle className="w-4 h-4 text-white" /> Stay Protected
                 </div>
               </div>
             </div>
