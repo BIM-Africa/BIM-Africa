@@ -156,7 +156,7 @@ export default async function BlogPage() {
                       href={`/blog/${post.slug}`}
                       className="w-full sm:w-auto bg-[#333333] border border-transparent hover:border-[#ff1f00] text-white px-8 sm:px-10 lg:px-12 py-3 sm:py-4 rounded-full transition-all hover:scale-105 text-sm sm:text-base whitespace-nowrap text-center"
                     >
-                      📚 Read Article →
+                      Read →
                     </Link>
                   </div>
                 </div>
