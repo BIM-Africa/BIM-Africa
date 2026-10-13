@@ -23,7 +23,7 @@ import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
 
 export const metadata: Metadata = {
-  title: "Cybersecurity & Website Security in Mauritius | BIM Africa",
+  title: "BIM Africa | Cybersecurity & Website Security in Mauritius",
   description:
     "Protect your business website with cybersecurity services in Mauritius. BIM Africa provides website security audits, vulnerability checks, malware removal, website hardening and ongoing security support.",
   keywords: [
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     canonical: "https://bim.africa/CyberSecurity",
   },
   openGraph: {
-    title: "Cybersecurity & Threat Management | BIM Africa",
+    title: "BIM Africa | Cybersecurity & Website Security in Mauritius",
     description:
       "Identify vulnerabilities, address website security issues and strengthen your website protection with practical cybersecurity services from BIM Africa.",
     url: "https://bim.africa/CyberSecurity",
@@ -117,7 +117,7 @@ const benefits = [
     icon: ServerCog,
     title: "Maintain Better Control",
     copy:
-      "Improve how your website, software, user access and security-related maintenance are managed over time.",
+      "Improve how your website, web applications, user access and security-related maintenance are managed over time.",
   },
 ];
 
@@ -158,7 +158,7 @@ const faqs = [
   {
     question: "What is a website security audit?",
     answer:
-      "A website security audit is a review of relevant security settings, software components and potential weaknesses. Its purpose is to identify areas of risk and provide practical recommendations for improving your website's protection.",
+      "A website security audit is a review of relevant security settings, web application components and potential weaknesses. Its purpose is to identify areas of risk and provide practical recommendations for improving your website's protection.",
   },
   {
     question: "Can you help if my website has been hacked?",
@@ -168,7 +168,7 @@ const faqs = [
   {
     question: "Do you provide ongoing website security maintenance?",
     answer:
-      "Yes. Ongoing support can be discussed based on your website, its technology and your requirements. Depending on the agreed scope, this may include security checks, software updates, backup reviews and follow-up on identified issues.",
+      "Yes. Ongoing support can be discussed based on your website, its technology and your requirements. Depending on the agreed scope, this may include security checks, plugin updates, backup reviews and follow-up on identified issues.",
   },
   {
     question: "Is website security only important for e-commerce businesses?",
@@ -239,14 +239,13 @@ export default function CyberSecurity() {
                   className="inline-flex items-center justify-center gap-2 w-full sm:w-auto bg-[#333333] border border-transparent hover:border-[#ff1f00] text-white px-8 sm:px-10 lg:px-12 py-3 sm:py-4 rounded-full transition-all hover:scale-105 text-sm sm:text-base whitespace-nowrap"
                 >
                   Request a Security Review
-                  <ArrowRight className="w-4 h-4" />
                 </Link>
 
                 <Link
-                  href="/#services"
+                  href="wa.me/message/VLID27EWBIPND1"
                   className="inline-flex items-center justify-center gap-2 w-full sm:w-auto bg-[#333333] border border-transparent hover:border-[#ff1f00] text-white px-8 sm:px-10 py-3 sm:py-4 rounded-full transition-all hover:scale-105 text-sm sm:text-base whitespace-nowrap"
                 >
-                  Explore Our Services
+                  Whatsapp Us
                 </Link>
               </div>
 
@@ -353,7 +352,7 @@ export default function CyberSecurity() {
         <section className="px-4 sm:px-8 pb-12 sm:pb-16 max-w-7xl mx-auto">
           <div className="text-center mb-10 sm:mb-14">
             <h2 className="text-3xl sm:text-6xl [font-weight:400]">
-              Why Website Security Matters
+              Why <span className="text-[#ff1f00]">Website Security</span> Matters
             </h2>
 
             <p className="text-white mt-6 max-w-3xl mx-auto">
@@ -423,7 +422,7 @@ export default function CyberSecurity() {
         <section className="px-4 sm:px-8 pb-12 sm:pb-16 max-w-7xl mx-auto">
           <div className="text-center mb-10 sm:mb-14">
             <h2 className="text-3xl sm:text-6xl [font-weight:400]">
-              Our Cybersecurity Services
+              Our <span className="text-[#ff1f00]">Cybersecurity</span> Services
             </h2>
 
             <p className="text-white mt-6 max-w-3xl mx-auto">
@@ -470,7 +469,7 @@ export default function CyberSecurity() {
 
                   <div className="mt-6">
                     <Link
-                      href="/contactus"
+                      href="https://wa.me/message/VLID27EWBIPND1"
                       className="inline-flex items-center gap-2 bg-[#333333] border border-transparent hover:border-[#ff1f00] text-white px-4 py-2 rounded-full text-sm transition-all"
                     >
                       Discuss This Service
@@ -488,7 +487,7 @@ export default function CyberSecurity() {
         <section className="px-4 sm:px-8 py-12 sm:py-16 max-w-7xl mx-auto">
           <div className="text-center mb-10 sm:mb-14">
             <h2 className="text-3xl sm:text-6xl [font-weight:400]">
-              Security That Supports Your Business
+              <span className="text-[#ff1f00]">Security</span> That <span className="text-[#ff1f00]">Supports</span> Your Business
             </h2>
 
             <p className="text-white mt-6 max-w-3xl mx-auto">
@@ -536,7 +535,7 @@ export default function CyberSecurity() {
             </div>
 
             <h2 className="text-4xl sm:text-5xl md:text-6xl font-medium mt-4">
-              How We Approach Website Security
+              <span className="text-[#ff1f00]">How We Approach</span> Website Security
             </h2>
 
             <p className="text-white mt-6 max-w-3xl mx-auto">
@@ -578,7 +577,7 @@ export default function CyberSecurity() {
         <section className="px-4 sm:px-8 py-12 sm:py-16 max-w-7xl mx-auto">
           <div className="text-center mb-10 sm:mb-14">
             <h2 className="text-3xl sm:text-6xl [font-weight:400]">
-              Who We Help
+              <span className="text-[#ff1f00]">Who</span> We Help
             </h2>
 
             <p className="text-white mt-6 max-w-3xl mx-auto">
@@ -600,13 +599,13 @@ export default function CyberSecurity() {
                 icon: ServerCog,
                 title: "E-commerce Websites",
                 copy:
-                  "Review the security considerations affecting online stores, including software, administrative access and important website functions.",
+                  "Review the security considerations affecting online stores, including payment gateways, administrative access and important website functions.",
               },
               {
                 icon: ShieldCheck,
                 title: "Established Organisations",
                 copy:
-                  "Address website security concerns with practical reviews, clear recommendations and support aligned with your requirements.",
+                  "Address website security concerns with in-depth 360 reviews, clear recommendations and support aligned with your requirements.",
               },
             ].map((item) => {
               const Icon = item.icon;
@@ -670,34 +669,10 @@ export default function CyberSecurity() {
         </section>
 
         {/* ========================== WORK TOGETHER ========================== */}
-
-        <section className="px-4 sm:px-8 py-12 sm:py-16 max-w-7xl mx-auto w-full">
-          <div className="rounded-3xl border border-white/10 bg-black/40 p-6 sm:p-10 md:p-14 text-center">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl leading-tight">
-              Let's Work Together
-            </h2>
-
-            <p className="text-white mt-6 max-w-3xl mx-auto">
-              Whether you need a website security audit, assistance with
-              malware removal or ongoing website protection, BIM Africa can
-              help you understand your requirements and identify practical
-              next steps.
-            </p>
-
-            <div className="flex flex-col sm:flex-row gap-3 pt-6 sm:gap-4 justify-center">
-              <Link
-                href="/contactus"
-                className="inline-flex items-center justify-center gap-2 w-full sm:w-auto bg-[#333333] border border-transparent hover:border-[#ff1f00] text-white px-8 sm:px-10 lg:px-12 py-3 sm:py-4 rounded-full transition-all hover:scale-105 text-sm sm:text-base whitespace-nowrap"
-              >
-                Talk to Our Team
-                <ArrowRight className="w-4 h-4" />
-              </Link>
-            </div>
-          </div>
-        </section>
       </main>
 
-      {/* Footer remains directly after the Work Together section */}
+{/* ================== Final CTA ================== */}
+      <WorkTogether />
       <Footer />
     </div>
   );
