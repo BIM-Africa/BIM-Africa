@@ -29,6 +29,7 @@ import {
 
 import logoBg from "../../Assests/srv.svg";
 import Navbar from "../Components/Navbar";
+import WorkTogether from "../Components/WorkTogether";
 import Footer from "../Components/Footer";
 
 export const metadata: Metadata = {
@@ -259,7 +260,7 @@ const faqs = [
   {
     question: "Can you assist with data protection policies and documentation?",
     answer:
-      "BIM Africa can explore administrative and technical documentation support, including policy drafts, procedures and documentation registers. Formal legal advice, statutory compliance opinions and regulated responsibilities require appropriately qualified professionals where applicable.",
+      "Yes. BIM Africa helps businesses prepare and maintain data protection policies, privacy documentation, internal procedures, data-handling guidelines and supporting records. We help organise documentation and establish practical processes for managing personal information and maintaining consistent data protection practices.",
   },
   {
     question: "How do we get started?",
@@ -315,14 +316,14 @@ export default function DigitalSupportOutsourcing() {
                   className="inline-flex items-center justify-center gap-2 bg-[#ff1f00] hover:bg-red-600 text-white px-7 sm:px-8 py-3.5 rounded-full transition-all hover:scale-[1.02] text-sm sm:text-base font-medium"
                 >
                   Discuss Your Requirements
-                  <ArrowRight className="w-4 h-4" />
+                  
                 </Link>
 
                 <a
-                  href="#outsourcing-services"
+                  href="https://wa.me/message/VLID27EWBIPND1"
                   className="inline-flex items-center justify-center gap-2 bg-[#333333] border border-white/10 hover:border-[#ff1f00] text-white px-7 sm:px-8 py-3.5 rounded-full transition-all text-sm sm:text-base"
                 >
-                  Explore Our Services
+                  WhatsApp Us
                 </a>
               </div>
 
@@ -472,7 +473,7 @@ export default function DigitalSupportOutsourcing() {
             </div>
 
             <h2 className="text-3xl sm:text-5xl md:text-6xl font-medium">
-              Digital Support Services
+              Digital <span className="text-[#ff1f00]">Support</span> Outsourcing
             </h2>
 
             <p className="text-white/80 leading-relaxed mt-6 max-w-3xl mx-auto">
@@ -552,7 +553,7 @@ export default function DigitalSupportOutsourcing() {
         <section className="px-4 sm:px-8 py-12 sm:py-16 max-w-7xl mx-auto">
           <div className="text-center mb-10 sm:mb-12">
             <h2 className="text-3xl sm:text-5xl md:text-6xl font-medium">
-              Flexible Ways to Work Together
+              Flexible Ways to <span className="text-[#ff1f00]">Work Together</span>
             </h2>
 
             <p className="text-white/80 leading-relaxed mt-5 max-w-3xl mx-auto">
@@ -650,7 +651,7 @@ export default function DigitalSupportOutsourcing() {
             </div>
 
             <h2 className="text-3xl sm:text-5xl md:text-6xl font-medium">
-              How We Work
+              How <span className="text-[#ff1f00]">We Work</span>
             </h2>
 
             <p className="text-white/80 leading-relaxed mt-5 max-w-3xl mx-auto">
@@ -695,7 +696,7 @@ export default function DigitalSupportOutsourcing() {
         <section className="px-4 sm:px-8 py-12 sm:py-16 max-w-7xl mx-auto">
           <div className="text-center mb-10 sm:mb-12">
             <h2 className="text-3xl sm:text-5xl md:text-6xl font-medium">
-              Who We Support
+              Who <span className="text-[#ff1f00]">We Support</span>
             </h2>
 
             <p className="text-white/80 leading-relaxed mt-5 max-w-3xl mx-auto">
@@ -876,12 +877,6 @@ export default function DigitalSupportOutsourcing() {
             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-48 h-1 bg-[#ff1f00]" />
 
             <div className="relative max-w-3xl mx-auto">
-              <div className="inline-flex items-center gap-2 rounded-full bg-black/50 border border-[#ff1f00]/50 px-4 py-2 mb-6">
-                <MessageCircle className="w-4 h-4 text-[#ff1f00]" />
-                <span className="text-sm text-white/90">
-                  Let's Work Together
-                </span>
-              </div>
 
               <h2 className="text-3xl sm:text-5xl md:text-6xl font-medium leading-tight">
                 Need an Extra Pair of{" "}
@@ -932,6 +927,7 @@ export default function DigitalSupportOutsourcing() {
       </main>
 
       {/* Keep the footer immediately after the final CTA */}
+      <WorkTogether />
       <Footer />
     </div>
   );
