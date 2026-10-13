@@ -528,12 +528,6 @@ export default function CyberSecurity() {
 
         <section className="px-4 sm:px-8 py-12 sm:py-16 max-w-7xl mx-auto">
           <div className="text-center mb-10">
-            <div className="inline-flex items-center gap-2 rounded-full bg-black/30 border border-[#ff1f00] px-4 py-2">
-              <Target className="w-4 h-4 text-[#ff1f00]" />
-              <span className="text-sm text-white/90">
-                A Practical Approach
-              </span>
-            </div>
 
             <h2 className="text-4xl sm:text-5xl md:text-6xl font-medium mt-4">
               <span className="text-[#ff1f00]">How We Approach</span> Website Security
@@ -578,7 +572,7 @@ export default function CyberSecurity() {
         <section className="px-4 sm:px-8 py-12 sm:py-16 max-w-7xl mx-auto">
           <div className="text-center mb-10 sm:mb-14">
             <h2 className="text-3xl sm:text-6xl [font-weight:400]">
-              <span className="text-[#ff1f00]">Who</span> We Help
+              Who <span className="text-[#ff1f00]">We Help</span> 
             </h2>
 
             <p className="text-white mt-6 max-w-3xl mx-auto">
