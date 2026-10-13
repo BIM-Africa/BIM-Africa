@@ -313,7 +313,7 @@ export default function DigitalSupportOutsourcing() {
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mt-8">
                 <Link
                   href="/contactus"
-                  className="inline-flex items-center justify-center gap-2 bg-[#ff1f00] hover:bg-red-600 text-white px-7 sm:px-8 py-3.5 rounded-full transition-all hover:scale-[1.02] text-sm sm:text-base font-medium"
+                  className="inline-flex items-center justify-center gap-2 bg-[#333333] border border-white/10 hover:border-[#ff1f00] text-white px-7 sm:px-8 py-3.5 rounded-full transition-all text-sm sm:text-base"
                 >
                   Discuss Your Requirements
                   
