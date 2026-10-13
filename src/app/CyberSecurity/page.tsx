@@ -20,6 +20,7 @@ import {
 
 import logoBg from "../../Assests/srv.svg";
 import Navbar from "../Components/Navbar";
+import WorkTogether from "../Components/WorkTogether";
 import Footer from "../Components/Footer";
 
 export const metadata: Metadata = {
