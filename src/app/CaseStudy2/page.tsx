@@ -77,7 +77,7 @@ export default function ServicesPage() {
     Service: Website Development
   </span>
   <a
-  href="https://mauritiushealthtravel.com/"
+  href="https://mauritiushealthtravel.bim.africa/"
   target="_blank"
   rel="noopener noreferrer"
   className="inline-flex items-center whitespace-nowrap px-4 py-2 bg-[#333333] border border-transparent hover:border-[#ff1f00] text-[#ff1f00] text-xs rounded-full"
