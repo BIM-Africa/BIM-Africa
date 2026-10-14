@@ -399,7 +399,7 @@ const t = {
             </div>
 
             <h1 className="text-white text-3xl sm:text-4xl md:text-5xl leading-tight">
-              Test Custom <span className="text-[#ff1f00]">Websites</span> & 
+              Custom <span className="text-[#ff1f00]">Websites</span> & 
               <span className="text-[#ff1f00]"> Web Applications.</span>
             </h1>
 
