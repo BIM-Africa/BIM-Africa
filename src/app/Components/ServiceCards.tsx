@@ -54,7 +54,7 @@ export default function ServiceCards() {
               href="/CyberSecurity"
               className="font-medium text-white text-sm sm:text-base hover:text-[#ff1f00] inline-flex items-center gap-1 group"
             >
-              {"Coming Soon"}
+              {"Know More"}
               <ArrowRight
                 size={16}
                 className="transition-transform group-hover:translate-x-0.5"
@@ -83,7 +83,7 @@ export default function ServiceCards() {
               href="/DigitalSupport"
               className="font-medium text-white text-sm sm:text-base hover:text-[#ff1f00] inline-flex items-center gap-1 group"
             >
-              {"Coming Soon"}
+              {"Know More"}
               <ArrowRight
                 size={16}
                 className="transition-transform group-hover:translate-x-0.5"
