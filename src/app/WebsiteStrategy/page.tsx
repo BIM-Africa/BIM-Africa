@@ -36,6 +36,7 @@ import selected from "../../Assests/selected.png";
 import nonselected from "../../Assests/nonselected.png";
 import header from "../../Assests/HEADER.png";
 import Footer from "../Components/Footer";
+import LanguageToggle from "../Components/LanguageToggle";
 interface Service {
   icon: React.ReactNode;
   title: string;
@@ -336,16 +337,7 @@ const t = {
                 {t.buttons.instantQuotation}
               </button>
             </a>
-            <button
-              type="button"
-              aria-disabled="true"
-              className="bg-white rounded-full p-1 sm:p-2 flex items-center space-x-1 cursor-default select-none"
-            >
-              <div className="w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-red-500 flex items-center justify-center">
-                <span className="text-white text-xs font-bold">+</span>
-              </div>
-              <span className="text-black text-xs sm:text-sm font-medium px-1 sm:px-2">FR</span>
-            </button>
+            <LanguageToggle />
 
             <button onClick={() => setMobileOpen((o) => !o)} className="xl:hidden text-white" aria-label="Toggle menu">
               {mobileOpen ? <X size={28} /> : <Image src={header} alt="menu" className="w-10 h-auto" priority />}

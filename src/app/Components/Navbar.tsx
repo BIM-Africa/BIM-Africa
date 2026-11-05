@@ -12,12 +12,12 @@ import logo from "../../Assests/srv.svg";
 import logo2 from "../../Assests/newlogo.png";
 import header from "../../Assests/HEADER.png";
 import mobile from "../../Assests/new.jpeg";
+import LanguageToggle from "./LanguageToggle";
 import selected from "../../Assests/selected.png";
 import nonselected from "../../Assests/nonselected.png";
 
 export default function Navbar() {
   const [showMobileNav, setShowMobileNav] = useState(false);
-  const [language, setLanguage] = useState<"EN" | "FR">("EN");
   const pathname = usePathname();
 
   // ✅ Prevent body scroll when mobile nav is open
@@ -262,17 +262,7 @@ export default function Navbar() {
             </a>
 
             {/* ✅ Language toggle */}
-            <button
-              onClick={() => setLanguage(language === "EN" ? "FR" : "EN")}
-              className="bg-white rounded-full p-1 sm:p-2 flex items-center space-x-1"
-            >
-              <div className="w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-[#ff1f00] flex items-center justify-center">
-                <span className="text-white text-xs font-bold">+</span>
-              </div>
-              <span className="text-black text-xs sm:text-sm font-medium px-1 sm:px-2">
-                {language === "EN" ? "FR" : "ENG"}
-              </span>
-            </button>
+            <LanguageToggle />
 
             {/* Mobile Menu Button */}
             <button

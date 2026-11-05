@@ -302,3 +302,11 @@ body {
 .blog-content table { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
 .blog-content th, .blog-content td { border: 1px solid rgba(255, 255, 255, 0.15); padding: 0.6rem 0.8rem; text-align: left; overflow-wrap: normal; }
 .blog-content th { background: rgba(255, 31, 0, 0.2); color: #fff; }
+
+/* Hide Google Translate's own UI; the Navbar toggle controls the language */
+body { top: 0 !important; }
+.skiptranslate iframe,
+.goog-te-banner-frame,
+.goog-te-balloon-frame,
+#goog-gt-tt { display: none !important; }
+.goog-text-highlight { background: none !important; box-shadow: none !important; }
