@@ -5,6 +5,7 @@ const base = process.env.SEO_TEST_URL || 'http://127.0.0.1:3101';
   for (const [route, target] of [
     ['/about?ref=audit', '/About?ref=audit'],
     ['/index.php?ref=audit', '/?ref=audit'],
+    ['/index.html?ref=audit', '/?ref=audit'],
     ['/websitestrategy', '/WebsiteStrategy'],
     ['/WebsiteStrategy/', '/WebsiteStrategy'],
     ['/DigitalSupportOutsourcing', '/DigitalSupport'],

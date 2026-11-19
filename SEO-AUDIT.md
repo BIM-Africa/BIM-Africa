@@ -120,3 +120,7 @@ Measured 2026-11-19T08:26:20.630Z on the local production homepage with Lighthou
 | seo | 100/100 |
 
 LCP: 2.9 s; total blocking time: 130 ms; CLS: 0. These are local lab results, not production field Core Web Vitals or guaranteed rankings.
+
+### Post-push deployment update
+
+Fresh public checks on 19 November confirm the new frontend title/main landmark, all 21 sitemap URLs returning 200, correct robots.txt, and the deployed support canonical/redirect. `/index.php` now returns 308 to `/`; its earlier Vercel 403 is no longer reproduced. Frontend deployment is therefore verified. GSC validation/indexing and backend/admin publishing verification remain separate steps. See the final section of `SEO-SEARCH-CONSOLE-REVIEW.md` for current status; earlier live-block observations are historical.

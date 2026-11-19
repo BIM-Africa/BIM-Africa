@@ -66,3 +66,23 @@ The read-only network check in `seo-reports/live.json` found:
 ## Additional Lighthouse verification
 
 The corrected local build was separately audited with Lighthouse 13.6.0's accessibility, SEO and Agentic Browsing categories. All three scored 100. The specific `agent-accessibility-tree` audit and `identical-links-same-purpose` audit both passed. See `seo-reports/agentic-final.json`.
+
+## Post-push live verification — 19 November 2026
+
+The user reported pushing the changes. A fresh live check now confirms the updated frontend:
+
+- Homepage title is now “Web Design Mauritius, Cybersecurity & Digital Support | BIM Africa”, with the main landmark present.
+- All 21 current sitemap URLs return HTTP 200. The sitemap itself returns 200.
+- `/robots.txt` returns 200, permits public pages, excludes `/api/`, and declares the correct sitemap.
+- HTTP and www root variants permanently redirect to the HTTPS apex homepage.
+- `/DigitalSupportOutsourcing` now permanently redirects to `/DigitalSupport`, whose canonical is correct.
+- **`/index.php` now returns HTTP 308 to `/`, with no `x-vercel-mitigated` header. The previous live 403 is no longer reproduced.** Earlier sections describe the historical investigation, not the current response. No firewall rule change is claimed by this audit.
+
+Next: inspect the legacy URL and destination in GSC, then start new validation for the historical 403 category. Request indexing for the intended canonical homepage/service/article URLs, not for the redirect aliases. GSC counts can continue to reflect older crawls until processed. These checks confirm the public frontend deployment; backend/admin deployment and the real publishing flow still require their own verification.
+
+## Latest supplied indexing screenshots
+
+- The overview now shows **11 indexed and 26 excluded** URLs. This is 37 known URLs, including historical/alternate URLs; it does not mean all 26 are current canonical sitemap pages that should be indexed.
+- The 403 `/index.php` validation started on 19 November and shows one pending, zero failed. Its listed last crawl is still 16 November. Current live testing confirms `/index.php` returns 308 to `/`; the validation is pending Google's processing, not confirmed passed.
+- The 404 example is now identified as **`https://bim.africa/index.html`**. The screenshot shows one pending, zero failed, and a 16 November last crawl. A fresh live request still returns 404. A specific permanent redirect `/index.html` to `/` has now been added locally, with a query-preservation regression check. This additional change needs a new deployment before the 404 category can be expected to validate successfully.
+- After deployment, `/index.php` and `/index.html` should be treated as redirect aliases, not additional URLs to request indexing for. The canonical homepage is the indexing target. It is acceptable for GSC to list these aliases under “Page with redirect”.
