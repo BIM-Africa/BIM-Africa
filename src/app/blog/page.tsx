@@ -83,6 +83,9 @@ export default async function BlogPage() {
           Technology moves fast. Make the right moves. <br />
           Practical perspectives on websites, cybersecurity, and the technology shaping modern businesses.
         </p>
+        <Link href="/articles" className="inline-flex mt-6 text-white underline underline-offset-4 hover:text-[#ff1f00]">
+          Browse all articles
+        </Link>
       </section>
 
       {/* ---------------- Featured Article ---------------- */}

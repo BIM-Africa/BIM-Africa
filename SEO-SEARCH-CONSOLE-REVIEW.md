@@ -86,3 +86,20 @@ Next: inspect the legacy URL and destination in GSC, then start new validation f
 - The 403 `/index.php` validation started on 19 November and shows one pending, zero failed. Its listed last crawl is still 16 November. Current live testing confirms `/index.php` returns 308 to `/`; the validation is pending Google's processing, not confirmed passed.
 - The 404 example is now identified as **`https://bim.africa/index.html`**. The screenshot shows one pending, zero failed, and a 16 November last crawl. A fresh live request still returns 404. A specific permanent redirect `/index.html` to `/` has now been added locally, with a query-preservation regression check. This additional change needs a new deployment before the 404 category can be expected to validate successfully.
 - After deployment, `/index.php` and `/index.html` should be treated as redirect aliases, not additional URLs to request indexing for. The canonical homepage is the indexing target. It is acceptable for GSC to list these aliases under “Page with redirect”.
+
+## Discovered URL examples now supplied
+
+The screenshots show 14 distinct readable URL examples out of 15; the first row on the first examples page is cropped. Visible URLs include `/CaseStudy3`, `/CyberSecurity`, `/DigitalSupport`, `/PrivacyPolicy`, `/TermsofService`, `/articles`, `/blog`, `/contactus`, `/service`, and five articles about Singapore website cost, e-commerce readiness, SEO in website design, small-business websites and mobile-responsive design.
+
+A fresh live check confirms all 14 visible examples return 200, have a matching self-canonical and no meta/header noindex. Every example is in the current sitemap. The current graph of the 21 checked sitemap pages also shows:
+
+- `/CyberSecurity`, `/DigitalSupport`, `/blog`, `/contactus` and `/service` each have links from 20 other checked pages.
+- Each of the five visible article examples has links from eight other checked pages.
+- `/CaseStudy3` has links from two other checked pages.
+- `/articles` has **zero incoming links from another checked public page**. A visible “Browse all articles” link has now been added to `/blog` locally. Deploy this additional link; it improves discovery but does not guarantee indexing. The static audit now detects unlinked public pages as a regression.
+
+The last-crawled values are N/A in the screenshots; this is consistent with the report's discovered-but-not-crawled classification. The 2024 “Validation passed” date is historical and does not establish that these current 15 examples are indexed.
+
+After the additional link is deployed, prioritise GSC live tests/indexing requests for `/service`, `/CyberSecurity`, `/DigitalSupport`, `/contactus`, `/blog`, and the useful article/case-study pages. Policy/terms pages are lower business priorities. Request the canonical pages, not old aliases. Do not bulk-change URLs or add noindex merely to reduce the exclusion counter. The unreadable 15th example and the two crawled-but-not-indexed examples are still needed for their individual assessment.
+
+Latest live alias check also confirms `/index.html` now redirects 308 to `/`, alongside `/index.php`; both historical homepage-alias fixes are deployed.

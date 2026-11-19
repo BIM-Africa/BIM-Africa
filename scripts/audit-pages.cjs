@@ -75,7 +75,11 @@ for (const file of pages) {
   if (!schemaTypes.includes('WebSite') || !schemaTypes.includes('Organization')) errors.push('Missing business/site schema');
   if (route !== '/' && !schemaTypes.includes('BreadcrumbList')) errors.push('Missing breadcrumb schema');
   if (['/WebsiteStrategy', '/CyberSecurity', '/DigitalSupport'].includes(route) && !schemaTypes.includes('Service')) errors.push('Missing service schema');
-  results.push({ route, title, descriptionLength: description?.length, h1, schemaTypes, errors: [...new Set(errors)], warnings });
+  const internalLinks = [...new Set(links.map(({ href }) => new URL(href.replaceAll('&amp;', '&'), origin + route)).filter(url => url.origin === origin).map(url => decodeURIComponent(url.pathname)))];
+  results.push({ route, title, descriptionLength: description?.length, h1, schemaTypes, internalLinks, errors: [...new Set(errors)], warnings });
+}
+for (const page of results) {
+  if (page.route !== '/' && !results.some(other => other.route !== page.route && other.internalLinks.includes(page.route))) page.errors.push('No crawlable incoming link from another public page');
 }
 const report = { generatedAt: new Date().toISOString(), pages: results.length, errors: results.reduce((n, r) => n + r.errors.length, 0), results };
 fs.mkdirSync('seo-reports', { recursive: true });
