@@ -20,7 +20,7 @@ export default function TermsOfService() {
     >
       <Navbar />
 
-      <main className="py-10">
+      <main id="main-content" className="py-10">
         <div className="mx-auto max-w-[1200px] px-6">
           <article className="bg-black/30 border border-white/6 rounded-2xl p-8 md:p-12">
 

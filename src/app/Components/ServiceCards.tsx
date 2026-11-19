@@ -23,6 +23,7 @@ export default function ServiceCards() {
             />
             <Link
               href="/WebsiteStrategy"
+              aria-label="Know more about website design and development services"
               className="font-medium text-white text-sm sm:text-base hover:text-[#ff1f00] inline-flex items-center gap-1 group"
             >
               Know more
@@ -52,6 +53,7 @@ export default function ServiceCards() {
             />
             <Link
               href="/CyberSecurity"
+              aria-label="Know more about cybersecurity and website security services"
               className="font-medium text-white text-sm sm:text-base hover:text-[#ff1f00] inline-flex items-center gap-1 group"
             >
               {"Know More"}
@@ -81,6 +83,7 @@ export default function ServiceCards() {
             />
             <Link
               href="/DigitalSupport"
+              aria-label="Know more about digital support outsourcing services"
               className="font-medium text-white text-sm sm:text-base hover:text-[#ff1f00] inline-flex items-center gap-1 group"
             >
               {"Know More"}

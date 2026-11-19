@@ -47,6 +47,7 @@ export default function ServicesPage() {
       }}
     >
       <Navbar />
+      <main id="main-content">
 
       {/* ================== Hero ================== */}
       <section className="min-h-screen relative overflow-hidden py-4 sm:py-15 lg:py-20">
@@ -85,6 +86,7 @@ export default function ServicesPage() {
           </div>
         </div>
 
+        <h2 className="mt-12 text-center text-2xl sm:text-3xl">Our services in Mauritius</h2>
         <ServiceCards />
       </section>
 
@@ -133,6 +135,8 @@ export default function ServicesPage() {
               <button
                 key={i}
                 onClick={() => setActiveSlide(i)}
+                aria-label={`Show ${premiumCards[i].title}`}
+                aria-pressed={activeSlide === i}
                 className={`w-4 h-4 rounded-full transition-all ${
                   activeSlide === i ? "bg-[#ff1f00]" : "bg-white"
                 }`}
@@ -281,6 +285,7 @@ Security is considered throughout the development and deployment process, using 
 
       {/* ================== Final CTA ================== */}
       <WorkTogether />
+      </main>
       <Footer />
     </div>
   );

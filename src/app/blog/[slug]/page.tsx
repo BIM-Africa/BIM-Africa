@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { notFound, permanentRedirect } from "next/navigation";
 import { cache } from "react";
+import { isoDate } from "@/lib/content";
+import { ORGANIZATION_ID } from "@/lib/site";
 import ArticleView from "./ArticleView";
 import {
   SITE_URL,
@@ -58,7 +60,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     return { title: "Article Not Found | BIM Africa", robots: { index: false } };
   }
 
-  const description = excerpt(blog.desc || blog.extraDesc);
+  const description = excerpt(blog.seoDescription || "") || excerpt(blog.desc || blog.extraDesc);
+  const brandedTitle = `${blog.title} | BIM Africa`;
+  const title = blog.seoTitle?.trim() || (brandedTitle.length > 65 ? blog.title : brandedTitle);
   const url = blogUrl(blog.slug);
   const keywords = blog.keywords
     ?.split(",")
@@ -66,7 +70,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     .filter(Boolean);
 
   return {
-    title: `${blog.title} | BIM Africa`,
+    title,
     description,
     keywords: keywords?.length ? keywords : undefined,
     authors: [{ name: blog.author || "BIM Africa" }],
@@ -74,19 +78,19 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     openGraph: {
       type: "article",
       url,
-      title: blog.title,
+      title,
       description,
       siteName: "BIM Africa",
-      locale: "en_US",
-      publishedTime: blog.createdAt,
-      modifiedTime: blog.updatedAt,
+      locale: "en_MU",
+      publishedTime: isoDate(blog.createdAt),
+      modifiedTime: isoDate(blog.updatedAt),
       authors: [blog.author || "BIM Africa"],
       section: blog.tag || undefined,
       images: blog.img ? [{ url: blog.img, alt: blog.title }] : undefined,
     },
     twitter: {
       card: "summary_large_image",
-      title: blog.title,
+      title,
       description,
       images: blog.img ? [blog.img] : undefined,
     },
@@ -115,10 +119,14 @@ export default async function BlogSlugPage({ params }: Props) {
       headline: blog.title,
       description: excerpt(blog.desc || blog.extraDesc),
       image: blog.img ? [blog.img] : undefined,
-      datePublished: blog.createdAt,
-      dateModified: blog.updatedAt || blog.createdAt,
-      author: { "@type": "Organization", name: blog.author || "BIM Africa", url: SITE_URL },
+      datePublished: isoDate(blog.createdAt),
+      dateModified: isoDate(blog.updatedAt) || isoDate(blog.createdAt),
+      inLanguage: "en-MU",
+      author: blog.author && blog.author !== "BIM Africa"
+        ? { "@type": "Person", name: blog.author }
+        : { "@id": ORGANIZATION_ID },
       publisher: {
+        "@id": ORGANIZATION_ID,
         "@type": "Organization",
         name: "BIM Africa",
         url: SITE_URL,

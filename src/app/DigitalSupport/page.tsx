@@ -1,3 +1,5 @@
+import PageSchema from "../Components/PageSchema";
+import { withSocialMetadata } from "@/lib/seo";
 import type { Metadata } from "next";
 import Link from "next/link";
 import {
@@ -32,10 +34,10 @@ import Navbar from "../Components/Navbar";
 import WorkTogether from "../Components/WorkTogether";
 import Footer from "../Components/Footer";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withSocialMetadata({
   title: "Digital Support Outsourcing in Mauritius | BIM Africa",
   description:
-    "BIM Africa provides digital support outsourcing, IT help desk services, customer support, data entry, application administration, policy documentation and knowledge base management.",
+    "Digital support outsourcing in Mauritius: IT help desk, customer support, data entry and application administration. Get flexible support from BIM Africa.",
   keywords: [
     "digital support outsourcing Mauritius",
     "IT help desk outsourcing",
@@ -50,17 +52,17 @@ export const metadata: Metadata = {
     "BIM Africa",
   ],
   alternates: {
-    canonical: "https://www.bim.africa/DigitalSupportOutsourcing",
+    canonical: "https://bim.africa/DigitalSupport",
   },
   openGraph: {
     title: "Digital Support Outsourcing | BIM Africa",
     description:
       "Outsource technical support, customer enquiries, digital administration and documentation to BIM Africa.",
-    url: "https://www.bim.africa/DigitalSupportOutsourcing",
+    url: "https://bim.africa/DigitalSupport",
     siteName: "BIM Africa",
     type: "website",
   },
-};
+});
 
 const services = [
   {
@@ -282,7 +284,8 @@ export default function DigitalSupportOutsourcing() {
     >
       <Navbar />
 
-      <main className="flex-1">
+      <main id="main-content" className="flex-1">
+      <PageSchema metadata={metadata} />
         {/* ========================== HERO ========================== */}
         <section className="relative px-4 sm:px-8 py-12 sm:py-16 md:py-20 max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-10 lg:gap-14 items-center">
@@ -402,7 +405,7 @@ export default function DigitalSupportOutsourcing() {
                 </div>
 
                 <div className="mt-6 pt-5 border-t border-white/10 flex items-center gap-3">
-                  <div className="w-9 h-9 rounded-full bg-[#ff1f00]/15 flex items-center justify-center">
+                  <div className="w-9 h-9 rounded-full bg-[#d92300]/15 flex items-center justify-center">
                     <Settings className="w-4 h-4 text-[#ff1f00]" />
                   </div>
                   <p className="text-sm text-white/70 leading-relaxed">
@@ -412,8 +415,8 @@ export default function DigitalSupportOutsourcing() {
                 </div>
               </div>
 
-              <span className="hidden md:block absolute -right-3 -top-3 w-7 h-7 rounded-full bg-[#ff1f00] shadow-[0_0_35px_rgba(255,31,0,0.4)] pointer-events-none" />
-              <span className="hidden md:block absolute -left-3 -bottom-3 w-5 h-5 rounded-full bg-[#ff1f00] shadow-[0_0_30px_rgba(255,31,0,0.35)] pointer-events-none" />
+              <span className="hidden md:block absolute -right-3 -top-3 w-7 h-7 rounded-full bg-[#d92300] shadow-[0_0_35px_rgba(255,31,0,0.4)] pointer-events-none" />
+              <span className="hidden md:block absolute -left-3 -bottom-3 w-5 h-5 rounded-full bg-[#d92300] shadow-[0_0_30px_rgba(255,31,0,0.35)] pointer-events-none" />
             </div>
           </div>
         </section>
@@ -771,7 +774,7 @@ export default function DigitalSupportOutsourcing() {
             </div>
 
             <div className="rounded-3xl bg-gradient-to-br from-[#180805] via-black/80 to-black/40 border border-[#ff1f00]/25 p-6 sm:p-9 flex flex-col justify-center">
-              <div className="w-12 h-12 rounded-2xl bg-[#ff1f00]/15 flex items-center justify-center mb-5">
+              <div className="w-12 h-12 rounded-2xl bg-[#d92300]/15 flex items-center justify-center mb-5">
                 <MessageCircle className="w-6 h-6 text-[#ff1f00]" />
               </div>
 
@@ -874,7 +877,7 @@ export default function DigitalSupportOutsourcing() {
         {/* ======================== FINAL CTA ======================== */}
         <section className="px-4 sm:px-8 py-12 sm:py-16 max-w-7xl mx-auto w-full">
           <div className="relative overflow-hidden rounded-3xl bg-black/50 border border-white/10 px-6 py-10 sm:px-10 sm:py-14 md:px-14 text-center">
-            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-48 h-1 bg-[#ff1f00]" />
+            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-48 h-1 bg-[#d92300]" />
 
             <div className="relative max-w-3xl mx-auto">
 
@@ -884,7 +887,7 @@ export default function DigitalSupportOutsourcing() {
               </h2>
 
               <p className="text-white/80 leading-relaxed mt-6 max-w-2xl mx-auto">
-                Tell us which tasks are taking up your team's time. We'll
+                Tell us which tasks are taking up your team&apos;s time. We&apos;ll
                 discuss your requirements and explore a practical support
                 arrangement that fits your workload.
               </p>
@@ -892,7 +895,7 @@ export default function DigitalSupportOutsourcing() {
               <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4 mt-8">
                 <Link
                   href="/contactus"
-                  className="inline-flex items-center justify-center gap-2 bg-[#ff1f00] hover:bg-red-600 text-white px-8 py-4 rounded-full transition-all hover:scale-[1.02] font-medium"
+                  className="inline-flex items-center justify-center gap-2 bg-[#d92300] hover:bg-red-600 text-white px-8 py-4 rounded-full transition-all hover:scale-[1.02] font-medium"
                 >
                   Talk to Our Team
                   <ArrowRight className="w-4 h-4" />
@@ -924,10 +927,8 @@ export default function DigitalSupportOutsourcing() {
             </div>
           </div>
         </section>
-      </main>
-
-      {/* Keep the footer immediately after the final CTA */}
       <WorkTogether />
+      </main>
       <Footer />
     </div>
   );

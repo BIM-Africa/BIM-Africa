@@ -12,6 +12,8 @@
 
 # testing
 /coverage
+/seo-reports/
+/seo-baseline.json
 
 # next.js
 /.next/

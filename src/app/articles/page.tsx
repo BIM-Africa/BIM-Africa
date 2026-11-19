@@ -1,19 +1,21 @@
+import PageSchema from "../Components/PageSchema";
+import { withSocialMetadata } from "@/lib/seo";
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
-import { SITE_URL, getAllBlogs } from "@/lib/blogs";
+import { SITE_URL, getAllBlogs, excerpt } from "@/lib/blogs";
 
 // ISR: article list is rendered on the server, no client-side loading state.
 export const revalidate = 300; // keep in sync with BLOG_REVALIDATE
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withSocialMetadata({
   title: "All Articles | BIM Africa",
   description:
     "Browse all BIM Africa articles on website development, cybersecurity, SEO and digital support for businesses in Mauritius, Africa and Europe.",
   alternates: { canonical: `${SITE_URL}/articles` },
-};
+});
 
 export default async function ArticlesPage() {
   const articles = await getAllBlogs();
@@ -21,6 +23,8 @@ export default async function ArticlesPage() {
   return (
     <div className="min-h-screen text-white">
       <Navbar />
+      <main id="main-content">
+      <PageSchema metadata={metadata} />
 
       <section className="max-w-7xl mx-auto px-4 py-12">
         <h1 className="text-4xl font-bold mb-8">All Articles</h1>
@@ -51,7 +55,7 @@ export default async function ArticlesPage() {
                   {article.title}
                 </h2>
                 <p className="text-sm text-gray-300 mt-2 line-clamp-2">
-                  {article.desc}
+                  {excerpt(article.desc)}
                 </p>
 
                 <div className="mt-4 text-xs text-gray-400 flex justify-between">
@@ -64,6 +68,7 @@ export default async function ArticlesPage() {
         </div>
       </section>
 
+      </main>
       <Footer />
     </div>
   );

@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import WebsiteQuestions from "../Components/WebsiteQuestions";
 import Link from "next/link";
 import Image from "next/image";
 import quote from "../../Assests/quoteimg.jpeg";
@@ -352,6 +353,7 @@ const t = {
           a.wave-link:hover .link__graphic--slide{transform:translate3d(-66.6%,0,0)}
         `}</style>
       </header>
+      <main id="main-content">
 
       {/* ========================== HERO ========================== */}
       <section className="relative px-4 sm:px-8 py-10 sm:py-16 md:py-20 max-w-7xl mx-auto">
@@ -391,8 +393,8 @@ const t = {
             </div>
 
             <h1 className="text-white text-3xl sm:text-4xl md:text-5xl leading-tight">
-              Custom <span className="text-[#ff1f00]">Websites</span> & 
-              <span className="text-[#ff1f00]"> Web Applications.</span>
+              Website <span className="text-[#ff1f00]">Design & Development</span>
+              {" "}in Mauritius.
             </h1>
 
             <p className="text-white mt-6 max-w-3xl mx-auto">{t.hero.subtitle}</p>
@@ -455,19 +457,19 @@ const t = {
 
               <div className="grid grid-cols-2 gap-6">
                 <div className="rounded-2xl bg-black/30 border border-white/10 px-6 py-8 text-center">
-                  <div className="text-4xl  text-[#ff1f00]">{t.hero.stats.uptime.value}</div>
+                  <div className="text-2xl sm:text-4xl text-[#ff1f00]">{t.hero.stats.uptime.value}</div>
                   <div className="text-sm text-white/80 mt-2">{t.hero.stats.uptime.label}</div>
                 </div>
                 <div className="rounded-2xl bg-black/30 border border-white/10 px-6 py-8 text-center">
-                  <div className="text-4xl  text-[#ff1f00]">{t.hero.stats.load.value}</div>
+                  <div className="text-2xl sm:text-4xl text-[#ff1f00]">{t.hero.stats.load.value}</div>
                   <div className="text-sm text-white/80 mt-2">{t.hero.stats.load.label}</div>
                 </div>
                 <div className="rounded-2xl bg-black/30 border border-white/10 px-6 py-8 text-center">
-                  <div className="text-4xl  text-[#ff1f00]">{t.hero.stats.security.value}</div>
+                  <div className="text-2xl sm:text-4xl text-[#ff1f00]">{t.hero.stats.security.value}</div>
                   <div className="text-sm text-white/80 mt-2">{t.hero.stats.security.label}</div>
                 </div>
                 <div className="rounded-2xl bg-black/30 border border-white/10 px-6 py-8 text-center">
-                  <div className="text-4xl  text-[#ff1f00]">{t.hero.stats.support.value}</div>
+                  <div className="text-2xl sm:text-4xl text-[#ff1f00]">{t.hero.stats.support.value}</div>
                   <div className="text-sm text-white/80 mt-2">{t.hero.stats.support.label}</div>
                 </div>
               </div>
@@ -478,12 +480,13 @@ const t = {
 
               <div className="flex justify-center gap-4">
                 {[ArrowRight, Shield, Zap, Globe].map((Icon, i) => (
-                  <button
+                  <span
                     key={i}
+                    aria-hidden="true"
                     className="w-12 h-12 rounded-xl bg-black/40 border border-white/10 flex items-center justify-center hover:bg-white/5 transition"
                   >
                     <Icon className="w-5 h-5 text-white/80" />
-                  </button>
+                  </span>
                 ))}
               </div>
             </div>
@@ -740,9 +743,9 @@ const t = {
     rel="noopener noreferrer"
     className="block mt-6 sm:mt-8 text-center lg:text-left"
   >
-    <button className="qs-btn inline-flex items-center gap-3 bg-[#ff1f00] hover:bg-red-600 text-white px-5 sm:px-6 py-3 sm:py-4 rounded-full transition-all hover:scale-105">
+  <span className="qs-btn inline-flex items-center gap-3 bg-[#d92300] hover:bg-red-700 text-white px-5 sm:px-6 py-3 sm:py-4 rounded-full transition-all hover:scale-105">
       Get Your Quote in 2 Minutes
-    </button>
+  </span>
   </a>
       </div>
   
@@ -807,7 +810,9 @@ const t = {
         </div>
       </section>*/}
       
-   <Footer/>
+      <WebsiteQuestions />
+      </main>
+      <Footer />
     </div>
   );
 }

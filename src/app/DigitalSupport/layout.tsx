@@ -1,13 +1,14 @@
+import { withSocialMetadata } from "@/lib/seo";
 import type { Metadata } from "next";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withSocialMetadata({
   title: "BIM Africa | Digital Support & IT Outsourcing in Mauritius",
   description:
     "Professional digital support and IT outsourcing for businesses in Mauritius, Africa and Europe. Get reliable technical support, website maintenance and ongoing assistance.",
   alternates: {
     canonical: "https://bim.africa/DigitalSupport",
   },
-};
+});
 
 export default function DigitalSupportLayout({
   children,

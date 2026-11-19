@@ -36,6 +36,30 @@ html {
   overflow-x: clip;
 }
 
+.skip-link {
+  position: fixed;
+  top: -100px;
+  left: 16px;
+  z-index: 10000;
+  padding: 12px 20px;
+  background: #fff;
+  color: #111;
+  border-radius: 8px;
+}
+.skip-link:focus { top: 12px; }
+:focus-visible { outline: 2px solid #fff; outline-offset: 4px; }
+
+@keyframes menu-panel-enter {
+  from { opacity: 0; transform: translateY(-24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes menu-backdrop-enter { from { opacity: 0; } to { opacity: 1; } }
+.mobile-menu-panel { animation: menu-panel-enter 220ms ease-out; }
+.mobile-menu-backdrop { animation: menu-backdrop-enter 180ms ease-out; }
+@media (prefers-reduced-motion: reduce) {
+  .mobile-menu-panel, .mobile-menu-backdrop { animation: none; }
+}
+
 body {
   min-width: 0;
   overflow-x: clip;

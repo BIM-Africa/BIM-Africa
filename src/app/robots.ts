@@ -1,15 +1,13 @@
 import type { MetadataRoute } from "next";
 
 export default function robots(): MetadataRoute.Robots {
-  const BASE_URL =
-    process.env.NODE_ENV === "development"
-      ? "http://localhost:3000"
-      : "https://bim.africa";
+  const BASE_URL = "https://bim.africa";
 
   return {
     rules: {
       userAgent: "*",
       allow: "/",
+      disallow: "/api/",
     },
     sitemap: `${BASE_URL}/sitemap.xml`,
   };

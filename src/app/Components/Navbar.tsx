@@ -4,7 +4,6 @@ import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { X } from "lucide-react";
-import { motion, AnimatePresence, Variants } from "framer-motion";
 import { usePathname } from "next/navigation";
 
 /* Assets */
@@ -28,6 +27,34 @@ export default function Navbar() {
     };
   }, [showMobileNav]);
 
+  useEffect(() => {
+    if (!showMobileNav) return;
+    const previous = document.activeElement as HTMLElement | null;
+    const menu = document.getElementById("mobile-navigation");
+    const controls = () => menu?.querySelectorAll<HTMLElement>('a[href], button:not([disabled])');
+    controls()?.[0]?.focus();
+    const onKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") setShowMobileNav(false);
+      if (event.key !== "Tab") return;
+      const items = controls();
+      if (!items?.length) return;
+      const first = items[0];
+      const last = items[items.length - 1];
+      if (event.shiftKey && document.activeElement === first) {
+        event.preventDefault();
+        last.focus();
+      } else if (!event.shiftKey && document.activeElement === last) {
+        event.preventDefault();
+        first.focus();
+      }
+    };
+    document.addEventListener("keydown", onKeyDown);
+    return () => {
+      document.removeEventListener("keydown", onKeyDown);
+      previous?.focus();
+    };
+  }, [showMobileNav]);
+
   // ✅ WhatsApp click handler
   const handleWhatsAppClick = () => {
     const whatsappUrl = "https://wa.me/message/VLID27EWBIPND1";
@@ -44,43 +71,6 @@ export default function Navbar() {
   ];
 
   // ✅ Animation configs
-  const backdropVariants: Variants = {
-    hidden: { opacity: 0 },
-    visible: { opacity: 0.55 },
-    exit: { opacity: 0 },
-  };
-
-  const panelVariants: Variants = {
-    hidden: { opacity: 0, y: -30, rotateX: 14, scale: 0.995 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      rotateX: 0,
-      scale: 1,
-      transition: { duration: 0.3, ease: "easeOut" },
-    },
-    exit: {
-      opacity: 0,
-      y: -28,
-      rotateX: 12,
-      scale: 0.995,
-      transition: { duration: 0.22, ease: "easeInOut" },
-    },
-  };
-
-  const listContainer: Variants = {
-    hidden: {},
-    visible: { transition: { staggerChildren: 0.05, delayChildren: 0.06 } },
-  };
-
-  const listItem: Variants = {
-    hidden: { opacity: 0, y: 8 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.22, ease: "easeOut" },
-    },
-  };
 
   return (
     <div
@@ -93,24 +83,18 @@ export default function Navbar() {
       }}
     >
       {/* ✅ Mobile Navigation */}
-      <AnimatePresence>
+
         {showMobileNav && (
           <>
-            <motion.div
-              className="fixed inset-0 z-[95] xl:hidden bg-black"
-              variants={backdropVariants}
-              initial="hidden"
-              animate="visible"
-              exit="exit"
-            />
+            <div
+              className="mobile-menu-backdrop fixed inset-0 z-[95] xl:hidden bg-black/55"            />
 
-            <motion.aside
-              className="fixed inset-0 z-[100] xl:hidden overflow-y-auto"
-              variants={panelVariants}
-              initial="hidden"
-              animate="visible"
-              exit="exit"
-            >
+            <aside
+              role="dialog"
+              aria-modal="true"
+              aria-label="Navigation menu"
+              id="mobile-navigation"
+              className="mobile-menu-panel fixed inset-0 z-[100] xl:hidden overflow-y-auto"            >
               <div
                 className="bg-cover bg-center relative"
                 style={{
@@ -128,29 +112,21 @@ export default function Navbar() {
                       width={80}
                       height={40}
                     />
-                    <motion.button
+                    <button
                       onClick={() => setShowMobileNav(false)}
                       className="text-white hover:text-[#ff1f00] p-2"
-                      aria-label="Close menu"
-                      whileTap={{ scale: 0.92, rotate: 6 }}
-                    >
+                      aria-label="Close menu"                    >
                       <X size={32} />
-                    </motion.button>
+                    </button>
                   </div>
 
                   {/* Menu links */}
-                  <motion.nav
-                    className="flex-1 flex flex-col justify-start px-8 gap-y-3 mt-6 overflow-auto"
-                    variants={listContainer}
-                    initial="hidden"
-                    animate="visible"
-                  >
+                  <nav
+                    className="flex-1 flex flex-col justify-start px-8 gap-y-3 mt-6 overflow-auto"                  >
                     {navigationItems.map((item, idx) => (
-                      <motion.div
+                      <div
                         key={idx}
-                        className="flex items-center w-full max-w-full py-3"
-                        variants={listItem}
-                      >
+                        className="flex items-center w-full max-w-full py-3"                      >
                         <Link
                           href={item.href}
                           onClick={() => setShowMobileNav(false)}
@@ -172,9 +148,9 @@ export default function Navbar() {
                             className="object-contain"
                           />
                         </div>
-                      </motion.div>
+                      </div>
                     ))}
-                  </motion.nav>
+                  </nav>
 
                   {/* Mobile CTA Button */}
                   <div
@@ -190,20 +166,18 @@ export default function Navbar() {
                       rel="noopener noreferrer"
                       className="block w-full"
                     >
-                      <motion.button
-                        whileTap={{ scale: 0.98 }}
-                        className="w-full bg-[#ff1f00] hover:bg-red-600 text-white py-4 rounded-full text-lg font-medium"
+                      <button                        className="w-full bg-[#ff1f00] hover:bg-red-600 text-white py-4 rounded-full text-lg font-medium"
                       >
                         Instant Quotation
-                      </motion.button>
+                      </button>
                     </a>
                   </div>
                 </div>
               </div>
-            </motion.aside>
+            </aside>
           </>
         )}
-      </AnimatePresence>
+
 
       {/* ✅ Desktop Header */}
       <header className="bg-black/95 backdrop-blur-sm sticky top-0 z-50">
@@ -269,6 +243,8 @@ export default function Navbar() {
               onClick={() => setShowMobileNav(true)}
               className="xl:hidden text-white"
               aria-label="Toggle menu"
+              aria-expanded={showMobileNav}
+              aria-controls="mobile-navigation"
             >
               <Image src={header} alt="menu" className="w-10 h-auto" />
             </button>
@@ -289,6 +265,7 @@ export default function Navbar() {
         onClick={handleWhatsAppClick}
         className="fixed bottom-10 right-4 md:right-6 z-[9999] bg-[#ff1f00] hover:bg-[#e1291c] text-white rounded-full p-4 shadow-lg transition-all duration-300 hover:shadow-xl pointer-events-auto"
         title="Chat on WhatsApp"
+        aria-label="Chat with BIM Africa on WhatsApp"
       >
         <svg
           width="24"

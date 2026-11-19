@@ -1,11 +1,13 @@
 import ReactMarkdown, { type Components } from "react-markdown";
 import remarkGfm from "remark-gfm";
+import { contentHref } from "@/lib/content";
+import { Children } from "react";
 
 // Empty "##" lines in the editor would otherwise become empty headings.
 const heading = (Tag: "h2" | "h3" | "h4"): Components["h2"] =>
-  function Heading({ node: _node, children, ...props }) {
+  function Heading({ children, className, id }) {
     if (children == null || (typeof children === "string" && !children.trim())) return null;
-    return <Tag {...props}>{children}</Tag>;
+    return <Tag className={className} id={id}>{children}</Tag>;
   };
 
 // Rendered on the server so the article text is in the initial HTML.
@@ -15,19 +17,22 @@ const components: Components = {
   h2: heading("h2"),
   h3: heading("h3"),
   h4: heading("h4"),
-  a: ({ node: _node, href = "", ...props }) => {
-    const external = /^https?:\/\//.test(href) && !href.startsWith("https://bim.africa");
+  a: ({ href = "", children, title }) => {
+    const normalized = contentHref(href);
+    if (!normalized) return <span>{children}</span>;
+    const hasLabel = Children.toArray(children).some(child => typeof child === "string" ? !!child.trim() : true);
+    const external = /^https?:\/\//.test(normalized) && new URL(normalized).hostname !== "bim.africa";
     return (
       <a
-        href={href}
+        href={normalized}
         {...(external && { target: "_blank", rel: "noopener noreferrer" })}
-        {...props}
-      />
+        title={title}
+      >{hasLabel ? children : normalized}</a>
     );
   },
-  table: ({ node: _node, ...props }) => (
+  table: ({ children }) => (
     <div className="blog-table-wrap">
-      <table {...props} />
+      <table>{children}</table>
     </div>
   ),
 };

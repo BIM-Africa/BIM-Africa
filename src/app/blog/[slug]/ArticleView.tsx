@@ -21,6 +21,7 @@ import BlogMarkdown from "../../Components/blog/BlogMarkdown";
 import BlogCard from "../../Components/blog/BlogCard";
 import SuggestedArticles from "../../Components/blog/SuggestedArticles";
 import type { Blog } from "@/lib/blogs";
+import { isoDate, displayDate } from "@/lib/content";
 
 // Server component: the whole article is in the HTML response.
 export default function ArticleView({
@@ -30,6 +31,8 @@ export default function ArticleView({
   article: Blog;
   suggested: Blog[];
 }) {
+  const published = isoDate(article.createdAt);
+  const modified = isoDate(article.updatedAt);
   return (
     <div
       className="min-h-screen text-white"
@@ -41,6 +44,7 @@ export default function ArticleView({
       }}
     >
       <Navbar />
+      <main id="main-content">
 
       {/* ===== Hero Section ===== */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 py-8 sm:py-10">
@@ -59,12 +63,16 @@ export default function ArticleView({
           </span>*/}
           <span className="inline-flex items-center gap-1">
             <Calendar className="w-4 h-4" /> Posted on: 
-            {article.createdAt ? (
-              <time dateTime={article.createdAt}>{article.date}  </time>
+            {published ? (
+              <time dateTime={published}>{displayDate(published)}</time>
             ) : (
               article.date
             )}
           </span>
+          <span className="inline-flex items-center gap-1">By {article.author || "BIM Africa"}</span>
+          {modified && published && modified.slice(0, 10) !== published.slice(0, 10) && (
+            <span>Updated: <time dateTime={modified}>{displayDate(modified)}</time></span>
+          )}
           <span className="inline-flex items-center gap-1">
             <Clock className="w-4 h-4" /> Read time: 
             {article.read}
@@ -83,7 +91,7 @@ export default function ArticleView({
 
        {/* ===== Reviews Removed =====  <div className="mt-8 flex flex-wrap items-center gap-4">
           <div className="flex items-center gap-3">
-            <div className="w-14 h-14 rounded-full bg-[#ff1f00] border border-[#ff1f00] flex items-center justify-center">
+            <div className="w-14 h-14 rounded-full bg-[#d92300] border border-[#ff1f00] flex items-center justify-center">
               <User className="w-6 h-6" />
             </div>
             <div>
@@ -121,7 +129,7 @@ export default function ArticleView({
               </div>
 
               <h2 className="text-2xl sm:text-3xl text-white">How BIM Africa Can Help Your Business?</h2>
-              <div className="rounded-2xl bg-[#ff1f00] p-5 sm:p-6">
+              <div className="rounded-2xl bg-[#d92300] p-5 sm:p-6">
                 <div className="flex items-center gap-2 text-lg font-semibold">
                   <Zap className="w-5 h-5 text-white" /> Website Strategy & Development
                 </div>
@@ -164,13 +172,13 @@ export default function ArticleView({
           <aside className="space-y-6">
 
             {/* 🔥 Consultation Box */}
-            <div className="rounded-3xl bg-[#ff1f00] p-6">
+            <div className="rounded-3xl bg-[#d92300] p-6">
               <div className="mx-auto w-16 h-16 rounded-full border border-[#ff1f00] flex items-center justify-center mb-4">
                 <TrendingUp className="w-7 h-7 text-white" />
               </div>
 
-              <h4 className="text-xl font-semibold text-center">Have a Project in Mind?</h4>
-              <p className="text-gray-200 text-center mt-2">
+              <h2 className="text-xl font-semibold text-center">Have a Project in Mind?</h2>
+              <p className="text-white text-center mt-2">
                 From website development to cybersecurity, BIM Africa helps businesses build, protect, and support the systems they rely on.
               </p>
 
@@ -180,7 +188,7 @@ export default function ArticleView({
                 rel="noopener noreferrer"
                 className="block mt-4"
               >
-                <button className="w-full inline-flex items-center justify-center gap-2 bg-white text-[#ff1f00] hover:bg-red-50 px-5 py-3 rounded-xl font-semibold">
+                <button className="w-full inline-flex items-center justify-center gap-2 bg-white text-[#d92300] hover:bg-red-50 px-5 py-3 rounded-xl font-semibold">
                   <Globe className="w-4 h-4" /> Talk to Our Team
                 </button>
               </a>
@@ -203,19 +211,19 @@ export default function ArticleView({
 
               <div className="space-y-4">
                 {[
-                  { title: "Website Strategy & Development", desc: "High-performance websites built around your business objectives." },
-                  { title: "Cybersecurity & Threat Management", desc: "Practical protection to help safeguard your business and its digital assets." },
-                  { title: "Digital Support Outsourcing", desc: "Reliable digital support to help your business operate and grow." },
+                  { title: "Website Strategy & Development", href: "/WebsiteStrategy", desc: "High-performance websites built around your business objectives." },
+                  { title: "Cybersecurity & Threat Management", href: "/CyberSecurity", desc: "Practical protection to help safeguard your business and its digital assets." },
+                  { title: "Digital Support Outsourcing", href: "/DigitalSupport", desc: "Reliable digital support to help your business operate and grow." },
                 ].map((srv, i) => (
                   <div key={i} className="rounded-2xl border border-white/10 p-4">
-                    <div className="font-semibold">{srv.title}</div>
+                    <Link href={srv.href} className="font-semibold underline underline-offset-4">{srv.title}</Link>
                     <p className="text-sm text-gray-300">{srv.desc}</p>
                   </div>
                 ))}
               </div>
 
               <Link href="/service" className="mt-5 block">
-                <button className="w-full inline-flex items-center justify-center gap-2 bg-[#ff1f00] px-5 py-3 rounded-xl font-semibold">
+                <button className="w-full inline-flex items-center justify-center gap-2 bg-[#d92300] px-5 py-3 rounded-xl font-semibold">
                   View All Services
                 </button>
               </Link>
@@ -223,17 +231,17 @@ export default function ArticleView({
 
             {/* 🔥 Expert Advice */}
             <div className="rounded-3xl bg-black/40 border border-white/10 p-6">
-              <div className="mx-auto w-12 h-12 rounded-full bg-[#ff1f00] flex items-center justify-center mb-3">
+              <div className="mx-auto w-12 h-12 rounded-full bg-[#d92300] flex items-center justify-center mb-3">
                 <MessageSquare className="w-6 h-6" />
               </div>
 
-              <h4 className="text-lg font-semibold text-center">Let's Talk About Your Business Needs</h4>
+              <h2 className="text-lg font-semibold text-center">Let&apos;s Talk About Your Business Needs</h2>
               <p className="text-gray-300 text-center mt-1">
                 Get practical advice on building, protecting, and improving the digital systems your business relies on.
               </p>
 
               <Link href="/contactus" className="block mt-4">
-                <button className="w-full bg-white text-[#ff1f00] hover:bg-red-50 px-5 py-3 rounded-xl font-semibold">
+                <button className="w-full bg-white text-[#d92300] hover:bg-red-50 px-5 py-3 rounded-xl font-semibold">
                   Talk to Our Team
                 </button>
               </Link>
@@ -258,6 +266,7 @@ export default function ArticleView({
         </section>
       )}
 
+      </main>
       <Footer />
     </div>
   );

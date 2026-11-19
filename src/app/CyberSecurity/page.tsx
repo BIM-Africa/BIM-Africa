@@ -1,3 +1,5 @@
+import PageSchema from "../Components/PageSchema";
+import { withSocialMetadata } from "@/lib/seo";
 import type { Metadata } from "next";
 import Link from "next/link";
 import {
@@ -23,10 +25,10 @@ import Navbar from "../Components/Navbar";
 import WorkTogether from "../Components/WorkTogether";
 import Footer from "../Components/Footer";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withSocialMetadata({
   title: "BIM Africa | Cybersecurity & Website Security in Mauritius",
   description:
-    "Protect your business website with cybersecurity services in Mauritius. BIM Africa provides website security audits, vulnerability checks, malware removal, website hardening and ongoing security support.",
+    "Cybersecurity services in Mauritius: website security audits, vulnerability checks, malware removal and ongoing protection from BIM Africa. Discuss your needs.",
   keywords: [
     "cybersecurity Mauritius",
     "website security Mauritius",
@@ -48,7 +50,7 @@ export const metadata: Metadata = {
     siteName: "BIM Africa",
     type: "website",
   },
-};
+});
 
 const services = [
   {
@@ -201,7 +203,8 @@ export default function CyberSecurity() {
     >
       <Navbar />
 
-      <main>
+      <main id="main-content">
+      <PageSchema metadata={metadata} />
         {/* ========================== HERO ========================== */}
 
         <section className="relative px-4 sm:px-8 py-10 sm:py-16 md:py-20 max-w-7xl mx-auto">
@@ -243,7 +246,7 @@ export default function CyberSecurity() {
                 </Link>
 
                 <Link
-                  href="wa.me/message/VLID27EWBIPND1"
+                  href="https://wa.me/message/VLID27EWBIPND1"
                   className="inline-flex items-center justify-center gap-2 w-full sm:w-auto bg-[#333333] border border-transparent hover:border-[#ff1f00] text-white px-8 sm:px-10 py-3 sm:py-4 rounded-full transition-all hover:scale-105 text-sm sm:text-base whitespace-nowrap"
                 >
                   Whatsapp Us
@@ -664,10 +667,8 @@ export default function CyberSecurity() {
         </section>
 
         {/* ========================== WORK TOGETHER ========================== */}
-      </main>
-
-{/* ================== Final CTA ================== */}
       <WorkTogether />
+      </main>
       <Footer />
     </div>
   );

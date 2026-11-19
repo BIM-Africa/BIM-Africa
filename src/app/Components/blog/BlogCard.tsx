@@ -2,8 +2,10 @@ import Link from "next/link";
 import Image from "next/image";
 import { Calendar, Clock, Eye, User } from "lucide-react";
 import type { Blog } from "@/lib/blogs";
+import { isoDate, displayDate } from "@/lib/content";
 
 export default function BlogCard({ blog }: { blog: Blog }) {
+  const published = isoDate(blog.createdAt);
   return (
     <Link
       href={`/blog/${blog.slug}`}
@@ -43,7 +45,7 @@ export default function BlogCard({ blog }: { blog: Blog }) {
         </h3>
         <div className="mt-4 flex items-center justify-between text-sm text-gray-300">
           <span className="inline-flex items-center gap-2">
-            <Calendar className="w-4 h-4" /> Posted on: {blog.date}
+            <Calendar className="w-4 h-4" /> Posted on: {published ? <time dateTime={published}>{displayDate(published)}</time> : blog.date}
           </span>
           <span className="text-red-400 group-hover:text-[#ff1f00] text-lg">→</span>
         </div>

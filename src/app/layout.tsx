@@ -3,18 +3,21 @@ import Script from "next/script";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import GoogleTranslate from "./Components/GoogleTranslate";
+import { organizationSchema, websiteSchema, jsonLd } from "@/lib/site";
 
 // ✅ Load fonts
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
   display: "swap", // ✅ Improves Core Web Vitals
+  preload: false,
 });
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
   display: "swap",
+  preload: false,
 });
 
 // ✅ SEO & favicon metadata
@@ -42,7 +45,7 @@ keywords: [
     description:
       "Professional website development, cybersecurity and digital support for businesses in Mauritius, Africa and Europe. Build, protect and support your business.",
     siteName: "BIM Africa",
-    locale: "en_US",
+    locale: "en_MU",
     type: "website",
   },
   icons: {
@@ -63,10 +66,9 @@ keywords: [
     index: true,
     follow: true,
     googleBot: {
-      index: true,
-      follow: true,
       "max-image-preview": "large",
       "max-snippet": -1,
+      "max-video-preview": -1,
     },
   },
   twitter: {
@@ -76,11 +78,7 @@ keywords: [
 
 const organizationJsonLd = {
   "@context": "https://schema.org",
-  "@type": "Organization",
-  name: "BIM Africa",
-  alternateName: "Brand Image Marketer",
-  url: "https://bim.africa",
-  logo: "https://bim.africa/web-app-manifest-512x512.png",
+  "@graph": [organizationSchema, websiteSchema],
 };
 
 // ✅ Root layout component
@@ -97,19 +95,20 @@ export default function RootLayout({
         <meta name="author" content="BIM Africa" />
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
+          dangerouslySetInnerHTML={{ __html: jsonLd(organizationJsonLd) }}
         />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <a href="#main-content" className="skip-link">Skip to main content</a>
         {children}
         <GoogleTranslate />
 
         {/* Google Analytics 4 */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-NTHX1Y2VJZ"
-          strategy="afterInteractive"
+          strategy="lazyOnload"
         />
 
         <Script

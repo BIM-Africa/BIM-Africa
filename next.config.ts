@@ -2,6 +2,13 @@
 import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
+  async redirects() {
+    return [
+      { source: '/:path*', has: [{ type: 'host', value: 'www.bim.africa' }], destination: 'https://bim.africa/:path*', permanent: true },
+      { source: '/index.php', destination: '/', permanent: true },
+      { source: '/DigitalSupportOutsourcing', destination: '/DigitalSupport', permanent: true },
+    ];
+  },
   images: {
     remotePatterns: [
       { protocol: 'https', hostname: 'res.cloudinary.com' },

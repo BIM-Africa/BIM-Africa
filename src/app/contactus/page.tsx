@@ -119,6 +119,7 @@ export default function ContactPage() {
 />
 
       <Navbar />
+      <main id="main-content">
 
      {/* ✅ Hero Section */}
 <section className="px-4 sm:px-6 pt-8 sm:pt-12 pb-2 max-w-6xl mx-auto text-center">
@@ -141,11 +142,11 @@ export default function ContactPage() {
       }
       className="flex items-center gap-3 p-4 rounded-xl bg-white/5 border border-white/10 hover:shadow-md transition"
     >
-      <div className="w-10 h-10 bg-[#ff1f00] rounded-full flex items-center justify-center">
+      <div className="w-10 h-10 bg-[#d92300] rounded-full flex items-center justify-center">
         <Mail className="w-5 h-5 text-white" />
       </div>
       <div>
-        <h3 className="font-medium text-sm mb-1 text-white">Email</h3>
+        <h2 className="font-medium text-sm mb-1 text-white">Email</h2>
         <p className="text-gray-300 text-xs">info@bim.africa</p>
         <p className="text-gray-300 text-xs">sales@bim.africa</p>
       </div>
@@ -155,13 +156,15 @@ export default function ContactPage() {
     <div className="relative flex items-center gap-3 p-4 rounded-xl bg-white/5 border border-white/10 hover:shadow-md transition">
       <button
         type="button"
+        aria-label="Choose a WhatsApp contact"
+        aria-expanded={showWA}
         onClick={() => setShowWA((s) => !s)}
-        className="w-10 h-10 bg-[#ff1f00] rounded-full flex items-center justify-center"
+        className="w-10 h-10 bg-[#d92300] rounded-full flex items-center justify-center"
       >
         <Phone className="w-5 h-5 text-white" />
       </button>
       <div>
-        <h3 className="font-medium text-sm mb-1 text-white">Phone & Whatsapp</h3>
+        <h2 className="font-medium text-sm mb-1 text-white">Phone & Whatsapp</h2>
         <p className="text-gray-300 text-xs">MU: +230 58010730</p>
       </div>
 
@@ -201,22 +204,22 @@ export default function ContactPage() {
 
     {/* Offices */}
     <div className="flex items-center gap-3 p-4 rounded-xl bg-white/5 border border-white/10 hover:shadow-md transition">
-      <div className="w-10 h-10 bg-[#ff1f00] rounded-full flex items-center justify-center">
+      <div className="w-10 h-10 bg-[#d92300] rounded-full flex items-center justify-center">
         <Building className="w-5 h-5 text-white" />
       </div>
       <div>
-        <h3 className="font-medium text-sm mb-1 text-white">Our Markets</h3>
+        <h2 className="font-medium text-sm mb-1 text-white">Our Markets</h2>
         <p className="text-gray-300 text-xs">Mauritius, Luxembourg & Beyond</p>
       </div>
     </div>
 
     {/* Hours */}
     <div className="flex items-center gap-3 p-4 rounded-xl bg-white/5 border border-white/10 hover:shadow-md transition">
-      <div className="w-10 h-10 bg-[#ff1f00] rounded-full flex items-center justify-center">
+      <div className="w-10 h-10 bg-[#d92300] rounded-full flex items-center justify-center">
         <Clock className="w-5 h-5 text-white" />
       </div>
       <div>
-        <h3 className="font-medium text-sm mb-1 text-white">Business Hours</h3>
+        <h2 className="font-medium text-sm mb-1 text-white">Business Hours</h2>
         <p className="text-gray-300 text-xs">
           Weekdays: 9 AM – 5 PM<br />Weekends: Closed
         </p>
@@ -238,7 +241,7 @@ export default function ContactPage() {
       <section className="px-4 sm:px-8 py-12 sm:py-16 max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8">
         {/* Message Form */}
         <div className="bg-gradient-to-br from-red-900/30 to-red-800/20 rounded-2xl p-8 border border-[#ff1f00]">
-          <div className="w-14 h-14 bg-[#ff1f00] rounded-full flex items-center justify-center mb-6 mx-auto">
+          <div className="w-14 h-14 bg-[#d92300] rounded-full flex items-center justify-center mb-6 mx-auto">
             <Send className="w-7 h-7 text-white" />
           </div>
           <h2 className="text-2xl sm:text-3xl font-medium mb-4 text-center">
@@ -252,6 +255,8 @@ export default function ContactPage() {
           <form onSubmit={handleSubmit} className="space-y-5">
             <input
               name="name"
+              aria-label="Your full name"
+              autoComplete="name"
               value={formData.name}
               onChange={handleInputChange}
               placeholder="Your full name"
@@ -261,6 +266,8 @@ export default function ContactPage() {
             <input
               type="email"
               name="email"
+              aria-label="Email address"
+              autoComplete="email"
               value={formData.email}
               onChange={handleInputChange}
               placeholder="your.email@example.com"
@@ -269,6 +276,9 @@ export default function ContactPage() {
             />
             <input
               name="phone"
+              type="tel"
+              aria-label="Phone number"
+              autoComplete="tel"
               value={formData.phone}
               onChange={handleInputChange}
               placeholder="Phone number"
@@ -276,6 +286,7 @@ export default function ContactPage() {
             />
             <textarea
               name="message"
+              aria-label="Tell us about your project"
               rows={4}
               value={formData.message}
               onChange={handleInputChange}
@@ -286,7 +297,7 @@ export default function ContactPage() {
             <button
               type="submit"
               disabled={isSubmitting}
-              className="w-full bg-[#ff1f00] py-3 rounded-lg text-white font-semibold hover:scale-105 transition-transform disabled:opacity-70"
+              className="w-full bg-[#d92300] py-3 rounded-lg text-white font-semibold hover:scale-105 transition-transform disabled:opacity-70"
             >
               {isSubmitting ? "Sending..." : "Send Message"}
             </button>
@@ -317,7 +328,7 @@ export default function ContactPage() {
 
           <a
   href="tel:+23058010730"
-  className="block w-full bg-white text-[#ff1f00] font-semibold px-6 py-3 rounded-lg hover:shadow-lg transition"
+  className="block w-full bg-white text-[#d92300] font-semibold px-6 py-3 rounded-lg hover:shadow-lg transition"
 >
   <div className="flex items-center justify-center gap-2">
     <Phone className="w-5 h-5 text-[#ff1f00]" />
@@ -328,7 +339,7 @@ export default function ContactPage() {
   href="https://wa.me/message/VLID27EWBIPND1"
   target="_blank"
   rel="noopener noreferrer"
-  className="block w-full mt-4 bg-white text-[#ff1f00] font-semibold px-6 py-3 rounded-lg hover:shadow-lg transition"
+  className="block w-full mt-4 bg-white text-[#d92300] font-semibold px-6 py-3 rounded-lg hover:shadow-lg transition"
 >
   <div className="flex items-center justify-center gap-2">
     {/* ✅ Lucide WhatsApp-like icon */}
@@ -347,11 +358,11 @@ export default function ContactPage() {
 
             <div className="space-y-6">
               <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-[#ff1f00] rounded-full flex items-center justify-center flex-shrink-0">
+                <div className="w-12 h-12 bg-[#d92300] rounded-full flex items-center justify-center flex-shrink-0">
                   <Users className="w-6 h-6 text-white" />
                 </div>
                 <div>
-                  <h3 className="text-lg font-bold mb-1">We See Beyond the Website</h3>
+                  <h2 className="text-lg font-bold mb-1">We See Beyond the Website</h2>
                   <p className="text-gray-300 text-sm">
                     A website is part of how your business operates, not an isolated project. We consider how it connects with your customers, processes and wider business needs.
                   </p>
@@ -359,11 +370,11 @@ export default function ContactPage() {
               </div>
 
               <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-[#ff1f00] rounded-full flex items-center justify-center flex-shrink-0">
+                <div className="w-12 h-12 bg-[#d92300] rounded-full flex items-center justify-center flex-shrink-0">
                   <Zap className="w-6 h-6 text-white" />
                 </div>
                 <div>
-                  <h3 className="text-lg font-bold mb-1">Technology With a Purpose</h3>
+                  <h2 className="text-lg font-bold mb-1">Technology With a Purpose</h2>
                   <p className="text-gray-300 text-sm">
                     From business websites to custom applications and security, we choose the right approach for the job. No unnecessary complexity, just technology that serves a clear business purpose.
                   </p>
@@ -371,13 +382,13 @@ export default function ContactPage() {
               </div>
 
               <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-[#ff1f00] rounded-full flex items-center justify-center flex-shrink-0">
+                <div className="w-12 h-12 bg-[#d92300] rounded-full flex items-center justify-center flex-shrink-0">
                   <CheckSquare className="w-6 h-6 text-white" />
                 </div>
                 <div>
-                  <h3 className="text-lg font-bold mb-1">Here for What Comes Next</h3>
+                  <h2 className="text-lg font-bold mb-1">Here for What Comes Next</h2>
                   <p className="text-gray-300 text-sm">
-                    Our work doesn't have to end at launch. With ongoing maintenance, security and technical support, we can help you manage what you've built as your business evolves.
+                    Our work doesn&apos;t have to end at launch. With ongoing maintenance, security and technical support, we can help you manage what you&apos;ve built as your business evolves.
                   </p>
                 </div>
               </div>
@@ -387,6 +398,7 @@ export default function ContactPage() {
       </section>
 
       <WorkTogether />
+      </main>
       <Footer />
     </div>
   );

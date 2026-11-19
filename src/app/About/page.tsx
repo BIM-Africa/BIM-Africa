@@ -1,9 +1,6 @@
-"use client";
-
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 import {
   ShieldCheck,
   Shield,
@@ -72,6 +69,7 @@ export default function ServicesPage() {
     >
       {/* ✅ Navbar */}
       <Navbar />
+      <main id="main-content">
 
       {/* ✅ HERO SECTION */}
       <section className="relative overflow-hidden py-10 sm:py-14 lg:py-16">
@@ -101,8 +99,9 @@ Founded by Rahul in 2019 and incorporated in Mauritius in 2022, BIM Africa helps
     <div className="relative w-full aspect-[16/12] sm:aspect-[16/10] min-h-[250px]">
   <Image
     src={man}
-    alt="BMS Operator at work"
+    alt="BIM Africa team in Mauritius"
     fill
+    sizes="(max-width: 1023px) calc(100vw - 48px), 550px"
     className="object-contain"
     priority
     loading="eager"
@@ -151,8 +150,8 @@ The people behind BIM Africa, bringing together strategy, technical expertise an
                       href={person.profilePdf}
                       target="_blank"
                       rel="noopener noreferrer"
-                      aria-label={`View ${person.name}'s profile summary (PDF)`}
-                      className="inline-flex items-center gap-2 rounded-full bg-[#ff1f00] px-6 py-3 text-sm font-semibold uppercase tracking-wide text-white
+                      aria-label={`View profile: ${person.name}'s summary (PDF)`}
+                      className="inline-flex items-center gap-2 rounded-full bg-[#d92300] px-6 py-3 text-sm font-semibold uppercase tracking-wide text-white
                       shadow-[0_0_20px_#ff1f00aa] border border-white/20
                       translate-y-0 sm:translate-y-4 sm:group-hover:translate-y-0 transition-all duration-500
                       hover:bg-white hover:text-[#ff1f00] focus-visible:opacity-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
@@ -172,9 +171,9 @@ The people behind BIM Africa, bringing together strategy, technical expertise an
                     </span>
                   </div>
 
-                  <h4 className="text-white text-2xl mt-5 font-bold group-hover:text-[#ff1f00] transition-colors duration-300">
+                  <h3 className="text-white text-2xl mt-5 font-bold group-hover:text-[#ff1f00] transition-colors duration-300">
                     {person.name}
-                  </h4>
+                  </h3>
 
                   <p className="text-white/70 mt-4 text-[15px] leading-relaxed group-hover:text-white/90 transition-all duration-300 flex-grow">
                     {person.role}
@@ -205,9 +204,9 @@ The people behind BIM Africa, bringing together strategy, technical expertise an
               <div className="w-16 h-16 rounded-full bg-black/60 border border-[#ff1f00] flex items-center justify-center mx-auto">
                 <ShieldCheck className="w-6 h-6 text-[#ff1f00]" />
               </div>
-              <h4 className="text-white text-xl mt-6 text-center">CLEAR</h4>
+              <h3 className="text-white text-xl mt-6 text-center">CLEAR</h3>
               <p className="text-white text-center mt-4 text-sm">
-                Straightforward communication, transparent recommendations and clear expectations from the beginning. You should always know what we're doing, what it costs and why it matters.
+                Straightforward communication, transparent recommendations and clear expectations from the beginning. You should always know what we&apos;re doing, what it costs and why it matters.
               </p>
             </div>
 
@@ -216,7 +215,7 @@ The people behind BIM Africa, bringing together strategy, technical expertise an
               <div className="w-16 h-16 rounded-full bg-black/60 border border-[#ff1f00] flex items-center justify-center mx-auto">
                 <ShieldCheck className="w-6 h-6 text-[#ff1f00]" />
               </div>
-              <h4 className="text-white text-xl mt-6 text-center">PRACTICAL</h4>
+              <h3 className="text-white text-xl mt-6 text-center">PRACTICAL</h3>
               <p className="text-white text-center mt-4 text-sm">
                 We focus on solutions that solve real business needs rather than adding complexity for the sake of it. The right approach is the one that works for your business.
               </p>
@@ -227,9 +226,9 @@ The people behind BIM Africa, bringing together strategy, technical expertise an
               <div className="w-16 h-16 rounded-full bg-black/60 border border-[#ff1f00] flex items-center justify-center mx-auto">
                 <ShieldCheck className="w-6 h-6 text-[#ff1f00]" />
               </div>
-              <h4 className="text-white text-xl mt-6 text-center">
+              <h3 className="text-white text-xl mt-6 text-center">
                 RESPONSIVE
-              </h4>
+              </h3>
               <p className="text-white text-center mt-4 text-sm">
                 When something needs attention, you should be able to reach the people responsible for it. We believe support should be accessible, timely and straightforward.
               </p>
@@ -240,9 +239,9 @@ The people behind BIM Africa, bringing together strategy, technical expertise an
               <div className="w-16 h-16 rounded-full bg-black/60 border border-[#ff1f00] flex items-center justify-center mx-auto">
                 <ShieldCheck className="w-6 h-6 text-[#ff1f00]" />
               </div>
-              <h4 className="text-white text-xl mt-6 text-center">
+              <h3 className="text-white text-xl mt-6 text-center">
                 LONG-TERM
-              </h4>
+              </h3>
               <p className="text-white text-center mt-4 text-sm">
                 A project does not end simply because it has been delivered. We aim to build lasting client relationships and remain available as your requirements change and grow.
               </p>
@@ -321,6 +320,7 @@ The people behind BIM Africa, bringing together strategy, technical expertise an
 
       {/* ✅ Work Together + Footer */}
       <WorkTogether />
+      </main>
       <Footer />
     </div>
   );

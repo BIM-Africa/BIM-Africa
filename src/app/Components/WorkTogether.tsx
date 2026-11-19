@@ -13,8 +13,8 @@ export default function WorkTogether() {
           {/* round quote button */}
           <div className="flex justify-center relative -mt-4 sm:-mt-6 md:-mt-8 lg:-mt-3 xl:-mt-10 mb-[-1rem] sm:mb-[-1.5rem] md:mb-[-1.75rem] lg:mb-[-2rem] xl:mb-[-2rem] z-10">
             <a href="https://quotation.bim.africa/" target="_blank" rel="noopener noreferrer">
-              <button
-                className="bg-[#ff1f00] text-white rounded-full w-20 h-20 sm:w-24 sm:h-24 lg:w-32 lg:h-32
+              <span
+                className="bg-[#d92300] text-white rounded-full w-20 h-20 sm:w-24 sm:h-24 lg:w-32 lg:h-32
                 flex flex-col items-center justify-center font-bold text-xs sm:text-sm
                 transition-all shadow-lg border-2 border-[#ff1f00]
                 hover:bg-black/100 hover:text-white hover:border-[#ff1f00] hover:scale-105"
@@ -22,7 +22,7 @@ export default function WorkTogether() {
                GET <br />
 INSTANT <br />
 QUOTE
-              </button>
+              </span>
             </a>
           </div>
 

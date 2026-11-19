@@ -1,5 +1,3 @@
-"use client";
-
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
@@ -19,7 +17,10 @@ export default function Footer() {
                 <Link href="/" className="block text-white text-sm">Home</Link>
                 <Link href="/About" className="block text-white text-sm">About Us</Link>
                 <Link href="/service" className="block text-white text-sm">Services</Link>
-                <Link href="/blog" className="block text-white text-sm">Blog</Link>
+                <Link href="/WebsiteStrategy" className="block text-white text-sm">Website Design & Development</Link>
+              <Link href="/CyberSecurity" className="block text-white text-sm">Cybersecurity</Link>
+              <Link href="/DigitalSupport" className="block text-white text-sm">Digital Support</Link>
+              <Link href="/blog" className="block text-white text-sm">Blog</Link>
               </div>
             </div>
             
@@ -49,7 +50,7 @@ export default function Footer() {
                   href="https://wa.me/message/VLID27EWBIPND1"
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label="Join referral program on WhatsApp (Mauritius)"
+                  aria-label="Join now: referral program on WhatsApp (Mauritius)"
                 >
             <button className="bg-[#333333] border border-transparent hover:border-[#ff1f00] text-white px-6 py-2 rounded-full text-sm font-medium transition-colors whitespace-nowrap">                    
               JOIN NOW
@@ -57,17 +58,17 @@ export default function Footer() {
                 </a>
 
                 <div className="flex space-x-3">
-                  <a href="https://www.instagram.com/bimafrica?igsh=dnpmYXQzNTV2eHE4" target="_blank" rel="noopener noreferrer">
+                  <a aria-label="BIM Africa on Instagram" href="https://www.instagram.com/bimafrica?igsh=dnpmYXQzNTV2eHE4" target="_blank" rel="noopener noreferrer">
                     <div className="w-10 h-10 bg-[#ff1f00] rounded-full flex items-center justify-center hover:bg-[#e61c00] transition">
                       <Instagram size={20} className="text-white" />
                     </div>
                   </a>
-                  <a href="https://www.facebook.com/share/17Kr1c4mkp/" target="_blank" rel="noopener noreferrer">
+                  <a aria-label="BIM Africa on Facebook" href="https://www.facebook.com/share/17Kr1c4mkp/" target="_blank" rel="noopener noreferrer">
                     <div className="w-10 h-10 bg-[#ff1f00] rounded-full flex items-center justify-center hover:bg-[#e61c00] transition">
                       <Facebook size={20} className="text-white" />
                     </div>
                   </a>
-                  <a href="https://www.linkedin.com/company/bimafrica/" target="_blank" rel="noopener noreferrer">
+                  <a aria-label="BIM Africa on LinkedIn" href="https://www.linkedin.com/company/bimafrica/" target="_blank" rel="noopener noreferrer">
                     <div className="w-10 h-10 bg-[#ff1f00] rounded-full flex items-center justify-center">
                       <Linked size={20} className="text-white" />
                     </div>
@@ -116,6 +117,9 @@ export default function Footer() {
               <Link href="/" className="block text-white text-sm sm:text-base">Home</Link>
               <Link href="/About" className="block text-white text-sm sm:text-base">About Us</Link>
               <Link href="/service" className="block text-white text-sm sm:text-base">Services</Link>
+              <Link href="/WebsiteStrategy" className="block text-white text-sm">Website Design & Development</Link>
+              <Link href="/CyberSecurity" className="block text-white text-sm">Cybersecurity</Link>
+              <Link href="/DigitalSupport" className="block text-white text-sm">Digital Support</Link>
               <Link href="/blog" className="block text-white text-sm sm:text-base">Blog</Link>
             </div>
           </div>
@@ -144,17 +148,17 @@ export default function Footer() {
               </a>
 
               <div className="flex space-x-2 mt-2">
-                <a href="https://www.instagram.com/bimafrica?igsh=dnpmYXQzNTV2eHE4" target="_blank" rel="noopener noreferrer">
+                <a aria-label="BIM Africa on Instagram" href="https://www.instagram.com/bimafrica?igsh=dnpmYXQzNTV2eHE4" target="_blank" rel="noopener noreferrer">
                   <div className="w-6 h-6 sm:w-8 sm:h-8 lg:w-10 lg:h-10 bg-[#ff1f00] rounded-full flex items-center justify-center hover:bg-[#e61c00] transition">
                     <Instagram size={16} className="text-white sm:w-4 sm:h-4 lg:w-5 lg:h-5" />
                   </div>
                 </a>
-                <a href="https://www.facebook.com/share/17Kr1c4mkp/" target="_blank" rel="noopener noreferrer">
+                <a aria-label="BIM Africa on Facebook" href="https://www.facebook.com/share/17Kr1c4mkp/" target="_blank" rel="noopener noreferrer">
                   <div className="w-6 h-6 sm:w-8 sm:h-8 lg:w-10 lg:h-10 bg-[#ff1f00] rounded-full flex items-center justify-center hover:bg-[#e61c00] transition">
                     <Facebook size={16} className="text-white sm:w-4 sm:h-4 lg:w-5 lg:h-5" />
                   </div>
                 </a>
-                <a href="https://www.linkedin.com/company/bimafrica/" target="_blank" rel="noopener noreferrer">
+                <a aria-label="BIM Africa on LinkedIn" href="https://www.linkedin.com/company/bimafrica/" target="_blank" rel="noopener noreferrer">
                   <div className="w-6 h-6 sm:w-8 sm:h-8 lg:w-10 lg:h-10 bg-[#ff1f00] rounded-full flex items-center justify-center hover:bg-[#e61c00] transition">
                     <Linked size={16} className="text-white sm:w-4 sm:h-4 lg:w-5 lg:h-5" />
                   </div>

@@ -1,3 +1,5 @@
+import PageSchema from "../Components/PageSchema";
+import { withSocialMetadata } from "@/lib/seo";
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -8,12 +10,14 @@ import Footer from '../Components/Footer';
 import WorkTogether from '../Components/WorkTogether';
 import Navbar from '../Components/Navbar';
 import { SITE_URL, getAllBlogs } from '@/lib/blogs';
+import { isoDate, displayDate } from '@/lib/content';
+import { ORGANIZATION_ID } from '@/lib/site';
 
 // ISR: rendered on the server with the blog list already in the HTML.
 export const revalidate = 300; // keep in sync with BLOG_REVALIDATE
 
-export const metadata: Metadata = {
-  title: 'BIM Africa Blog | Website, Cybersecurity & Digital Insights Mauritius',
+export const metadata: Metadata = withSocialMetadata({
+  title: 'BIM Africa Blog | Web Design & Cybersecurity Mauritius',
   description:
     'Professional insights on website development, cybersecurity, SEO and digital support for businesses in Mauritius, Africa and Europe from the BIM Africa team.',
   alternates: { canonical: `${SITE_URL}/blog` },
@@ -25,7 +29,7 @@ export const metadata: Metadata = {
       'Professional insights on website development, cybersecurity, SEO and digital support for businesses in Mauritius, Africa and Europe.',
     siteName: 'BIM Africa',
   },
-};
+});
 
 export default async function BlogPage() {
   const blogs = await getAllBlogs();
@@ -46,8 +50,9 @@ export default async function BlogPage() {
       headline: b.title,
       url: `${SITE_URL}/blog/${b.slug}`,
       image: b.img || undefined,
-      datePublished: b.createdAt,
-      author: { '@type': 'Organization', name: b.author || 'BIM Africa' },
+      datePublished: isoDate(b.createdAt),
+      author: b.author && b.author !== 'BIM Africa'
+        ? { '@type': 'Person', name: b.author } : { '@id': ORGANIZATION_ID },
     })),
   };
 
@@ -66,6 +71,8 @@ export default async function BlogPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, '\\u003c') }}
       />
       <Navbar />
+      <main id="main-content">
+      <PageSchema metadata={metadata} />
 
       {/* ---------------- Hero Section ---------------- */}
       <section className="px-4 sm:px-8 pt-8 sm:pt-12 md:pt-14 max-w-7xl mx-auto text-center">
@@ -83,7 +90,7 @@ export default async function BlogPage() {
         <section className="px-4 sm:px-8 pt-10 max-w-7xl mx-auto">
           <div className="mb-4">
             <div className="flex items-center gap-2 ">
-              <div className="w-9 h-9 rounded-full bg-[#ff1f00] flex items-center justify-center">
+              <div className="w-9 h-9 rounded-full bg-[#d92300] flex items-center justify-center">
                 <TrendingUp className="w-6 h-6 text-white" />
               </div>
               <h2 className="text-2xl sm:text-3xl">Featured Post</h2>
@@ -96,7 +103,7 @@ export default async function BlogPage() {
               className="group relative rounded-3xl my-4 overflow-hidden border border-white/10 bg-black/40 transition-all duration-300 hover:-translate-y-0.5 hover:border-red-500/40 hover:shadow-[0_12px_30px_rgba(255,31,0,0.15)]"
             >
               {/* Badge */}
-              <span className="absolute top-4 right-4 z-10 flex items-center gap-1 px-3 py-1 text-xs font-semibold rounded-full bg-[#ff1f00] text-white">
+              <span className="absolute top-4 right-4 z-10 flex items-center gap-1 px-3 py-1 text-xs font-semibold rounded-full bg-[#d92300] text-white">
                 <TrendingUp className="w-4 h-4 text-white" />
                 Trending Now
               </span>
@@ -126,7 +133,7 @@ export default async function BlogPage() {
                 <div className="p-6 sm:p-8 flex flex-col">
                   <div className="flex flex-wrap items-center gap-3 text-xs text-white mb-2">
                     {post.tag && (
-                      <span className="bg-[#ff1f00] px-2 py-0.5 rounded-full">{post.tag}</span>
+                      <span className="bg-[#d92300] px-2 py-0.5 rounded-full">{post.tag}</span>
                     )}
                     <span className="inline-flex items-center gap-1"> Read time: 
                       <Clock className="w-4 h-4" /> {post.read}
@@ -140,11 +147,11 @@ export default async function BlogPage() {
 
                   <div className="mt-auto pt-5 flex flex-wrap gap-4 items-center justify-between">
                     <div className="flex items-center gap-3">
-                      <div className="w-10 h-10 rounded-full bg-[#ff1f00] flex items-center justify-center shrink-0">
+                      <div className="w-10 h-10 rounded-full bg-[#d92300] flex items-center justify-center shrink-0">
                         <Calendar className="w-4 h-4 text-white" />
                       </div>
                       <span className="text-sm text-gray-300">
-                       Posted on: {post.date}
+                       Posted on: {isoDate(post.createdAt) ? displayDate(isoDate(post.createdAt)!) : post.date}
                       </span>
                     </div>
                     <Link
@@ -225,6 +232,7 @@ export default async function BlogPage() {
       </section>
 
       <WorkTogether />
+      </main>
       <Footer />
     </div>
   );

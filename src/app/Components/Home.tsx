@@ -1,11 +1,8 @@
-"use client";
-
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 import {
-  Instagram, Facebook, Linkedin as Linked, X, ArrowRight, Play,
+  ArrowRight,
 
   ChevronRight,
   ShieldCheck,
@@ -14,12 +11,10 @@ import {
   Clock,
  
 } from "lucide-react";
-import { motion, AnimatePresence } from "framer-motion";
 import quote from "../../Assests/quoteimg.jpeg";
 
 /* Assets */
 import logo from "../../Assests/srv.svg";
-import webStrategy from "../../Assests/WebsiteStrategy.png";
 import man from "../../Assests/bim-africa-rahul-mohabir.jpg"
 import noumarmite from "../../Assests/noumarmite.png";
 import mauritiushealthtravel from "../../Assests/mauritiushealthtravel.png";
@@ -31,23 +26,13 @@ import WorkTogether from "./WorkTogether";
 import Navbar from "./Navbar";
 
 /* Optional: thumbnail for the hero “video” panel; fallback to webStrategy if you don't have one */
-const heroPoster = webStrategy;
 
 export default function ServicesPage() {
-  const [activeSlide, setActiveSlide] = useState(0);
  
 
 
   
   /* animation helpers */
-  const backdropVariants = { hidden: { opacity: 0 }, visible: { opacity: 0.55 }, exit: { opacity: 0 } };
-  const panelVariants = {
-    hidden: { opacity: 0, y: -30, rotateX: 14, transformOrigin: "top center", scale: 0.995 },
-    visible: { opacity: 1, y: 0, rotateX: 0, scale: 1, transition: { duration: 0.3, ease: [0.22, 0.8, 0.2, 1] } },
-    exit: { opacity: 0, y: -28, rotateX: 12, scale: 0.995, transition: { duration: 0.22, ease: "easeInOut" } },
-  };
-  const listContainer = { hidden: {}, visible: { transition: { staggerChildren: 0.05, delayChildren: 0.06 } } };
-  const listItem = { hidden: { opacity: 0, y: 8 }, visible: { opacity: 1, y: 0, transition: { duration: 0.22, ease: "easeOut" } } };
 
   return (
     <div
@@ -60,6 +45,7 @@ export default function ServicesPage() {
       }}
     >
       <Navbar/>
+      <main id="main-content">
       
       <style>{`
         @media (max-width: 640px) {
@@ -78,23 +64,24 @@ export default function ServicesPage() {
 
     <h1 className="text-white sm:text-4xl md:text-5xl lg:text-5xl leading-[1.1]">
       <span className="text-white text-3xl sm:text-4xl md:text-5xl leading-tight">
-        Real <span className="text-[#ff1f00] font-normal">Businesses.</span>
+        Website Design <span className="text-[#ff1f00] font-normal">Mauritius.</span>
         <br />
-        <span className="text-[#ff1f00]">Real </span>Work.
+        <span className="text-[#ff1f00]">Build. Protect. </span>Support.
       </span>
     </h1>
 
 
       <p className="text-white mt-6 max-w-3xl mx-auto">
-      Businesses we've helped build, protect and support through practical work focused on meaningful results. Every project starts with understanding what the business needs and finding the right way to move it forward.      </p>
+      BIM Africa provides website design and development, cybersecurity and digital support for businesses in Mauritius. From a new business website to ongoing maintenance and technical support, we help you build, protect and grow your online presence. Explore our services and customer stories below.      </p>
     </div>
     <div className="relative">
   <div className="rounded-2xl overflow-hidden bg-black/40 shadow-xl">
     <div className="relative aspect-[16/12] sm:aspect-[16/10]">
       <Image
         src={man} // 👈 Your static image
-        alt="BMS Operator at work"
+        alt="Rahul Mohabir from BIM Africa in Mauritius"
         fill
+        sizes="(max-width: 1023px) calc(100vw - 48px), 550px"
         className="object-contain"
         priority // ✅ Ensures it's fetched early (improves LCP)
         loading="eager" // ✅ Prevents lazy loading for LCP image
@@ -129,9 +116,9 @@ export default function ServicesPage() {
             <div className="w-14 h-14 mb-4">
               <Image src={noumarmite} alt="" className="w-14 h-14 object-contain" />
             </div>
-            <h3 className="text-white text-xs sm:text-xl lg:text-sm leading-snug">
-              Mauritius' first Creole-language snack website, bringing local flavours and culture online.
-            </h3>
+            <h2 className="text-white text-xs sm:text-xl lg:text-sm leading-snug">
+              Mauritius&apos; first Creole-language snack website, bringing local flavours and culture online.
+            </h2>
             <Link href="CaseStudy1" className="inline-flex items-center gap-2 mt-6 underline underline-offset-4 decoration-white/60 text-white text-sm sm:text-base hover:text-[#ff1f00]">
               Read the Story <ArrowRight size={16} />
             </Link>
@@ -144,9 +131,9 @@ export default function ServicesPage() {
             <div className="w-14 h-14 mb-4">
               <Image src={mauritiushealthtravel} alt=""  className="w-14 h-14 object-contain" />
             </div>
-            <h3 className="text-white text-xs sm:text-xl lg:text-sm leading-snug">
+            <h2 className="text-white text-xs sm:text-xl lg:text-sm leading-snug">
               Connecting patients with medical providers through an accessible, purpose-built healthcare travel platform.
-            </h3>
+            </h2>
             <Link href="CaseStudy2" className="inline-flex items-center gap-2 text-white mt-6 underline underline-offset-4 decoration-white/60  text-sm sm:text-base hover:text-[#ff1f00]">
               Read the Story <ArrowRight size={16} />
             </Link>
@@ -159,9 +146,9 @@ export default function ServicesPage() {
             <div className="w-14 h-14 mb-4">
               <Image src={mauritiustraveltour} alt="" className="w-14 h-14 object-contain" />
             </div>
-            <h3 className="text-white text-xs sm:text-xl lg:text-sm leading-snug">
+            <h2 className="text-white text-xs sm:text-xl lg:text-sm leading-snug">
               Powered by Next.js, delivering a fast, modern web experience built for performance and growth.
-            </h3>
+            </h2>
             <Link href="CaseStudy3" className="inline-flex items-center gap-2  mt-6 underline underline-offset-4 decoration-white/60 text-white text-sm sm:text-base hover:text-[#ff1f00]">
               Read the Story <ArrowRight size={16} />
             </Link>
@@ -267,7 +254,7 @@ export default function ServicesPage() {
               src={quote}
               alt="Instant Website Quotation Tool"
               fill
-              priority
+              sizes="(max-width: 1023px) calc(100vw - 48px), 550px"
               className="object-contain object-center"
             />
           </div>
@@ -281,9 +268,9 @@ export default function ServicesPage() {
   rel="noopener noreferrer"
   className="block mt-6 sm:mt-8 text-center lg:text-left"
 >
-  <button className="qs-btn inline-flex items-center gap-3 bg-[#ff1f00] hover:bg-red-600 text-white px-5 sm:px-6 py-3 sm:py-4 rounded-full transition-all hover:scale-105">
+  <span className="qs-btn inline-flex items-center gap-3 bg-[#d92300] hover:bg-red-700 text-white px-5 sm:px-6 py-3 sm:py-4 rounded-full transition-all hover:scale-105">
     Get Your Quote in 2 Minutes
-  </button>
+  </span>
 </a>
     </div>
 
@@ -299,7 +286,7 @@ export default function ServicesPage() {
             src={quote}
             alt="Instant Website Quotation Tool"
             fill
-            priority
+            sizes="(max-width: 1023px) calc(100vw - 48px), 550px"
             className="object-contain object-center"
           />
         </div>
@@ -315,6 +302,7 @@ export default function ServicesPage() {
 
       {/* ================== Final CTA + Footer ================== */}
    <WorkTogether/>
+      </main>
      <Footer/>
     </div>
   );

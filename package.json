@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "check:seo": "node scripts/verify-seo.cjs && node scripts/verify-article-seo.cjs && node scripts/audit-pages.cjs"
   },
   "dependencies": {
     "framer-motion": "^12.23.12",

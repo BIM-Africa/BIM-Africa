@@ -40,11 +40,11 @@ export default function LanguageToggle() {
     <button
       type="button"
       onClick={toggle}
-      aria-label={french ? "Switch to English" : "Passer en français"}
+      aria-label={french ? "ENG: Switch to English" : "FR: Passer en français"}
       translate="no"
       className="notranslate bg-white rounded-full p-1 sm:p-2 flex items-center space-x-1"
     >
-      <div className="w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-[#ff1f00] flex items-center justify-center">
+      <div aria-hidden="true" className="w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-[#d92300] flex items-center justify-center">
         <span className="text-white text-xs font-bold">+</span>
       </div>
       <span className="text-black text-xs sm:text-sm font-medium px-1 sm:px-2">

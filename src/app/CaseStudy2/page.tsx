@@ -44,7 +44,7 @@ export default function ServicesPage() {
       `}</style>
 
       {/* ================== MAIN CONTENT ================== */}
-      <main className="py-10">
+      <main id="main-content" className="py-10">
         <div className="mx-auto max-w-[1200px] px-6 grid grid-cols-1 lg:grid-cols-3 gap-10">
 
           {/* ================== LEFT CASE STUDY ================== */}
@@ -69,18 +69,18 @@ export default function ServicesPage() {
             {/* === Chips Section === */}
             <div className="flex flex-wrap gap-3 mb-6">
 
-  <span className="inline-flex items-center whitespace-nowrap px-4 py-2 bg-[#333333] border border-transparent hover:border-[#ff1f00] text-[#ff1f00] text-xs rounded-full">
+  <span className="inline-flex items-center whitespace-nowrap px-4 py-2 bg-[#333333] border border-transparent hover:border-[#ff1f00] text-white text-xs rounded-full">
     Industry: Travel & Hospitality
   </span>
 
-  <span className="inline-flex items-center whitespace-nowrap px-4 py-2 bg-[#333333] border border-transparent hover:border-[#ff1f00] text-[#ff1f00] text-xs rounded-full">
+  <span className="inline-flex items-center whitespace-nowrap px-4 py-2 bg-[#333333] border border-transparent hover:border-[#ff1f00] text-white text-xs rounded-full">
     Service: Website Development
   </span>
   <a
   href="https://mauritiushealthtravel.bim.africa/"
   target="_blank"
   rel="noopener noreferrer"
-  className="inline-flex items-center whitespace-nowrap px-4 py-2 bg-[#333333] border border-transparent hover:border-[#ff1f00] text-[#ff1f00] text-xs rounded-full"
+  className="inline-flex items-center whitespace-nowrap px-4 py-2 bg-[#333333] border border-transparent hover:border-[#ff1f00] text-white text-xs rounded-full"
 >
   Visit Website
 </a>
@@ -164,14 +164,14 @@ export default function ServicesPage() {
           <aside className="space-y-6">
 
             {/* 🔥 Consultation Box */}
-            <div className="rounded-3xl bg-[#ff1f00] p-6">
+            <div className="rounded-3xl bg-[#d92300] p-6">
               <div className="mx-auto w-16 h-16 rounded-full border border-[#ff1f00] flex items-center justify-center mb-4">
                 <TrendingUp className="w-7 h-7 text-white" />
               </div>
 
-              <h4 className="text-xl font-semibold text-center">Your Business Could Be Our Next Success Story.</h4>
-              <p className="text-gray-200 text-center mt-2">
-                Let's build a website that strengthens your brand, earns customer trust, and supports your business growth.
+              <h2 className="text-xl font-semibold text-center">Your Business Could Be Our Next Success Story.</h2>
+              <p className="text-white text-center mt-2">
+                Let&apos;s build a website that strengthens your brand, earns customer trust, and supports your business growth.
               </p>
 
               <a
@@ -180,7 +180,7 @@ export default function ServicesPage() {
                 rel="noopener noreferrer"
                 className="block mt-4"
               >
-                <button className="w-full inline-flex items-center justify-center gap-2 bg-white text-[#ff1f00] hover:bg-red-50 px-5 py-3 rounded-xl font-semibold">
+                <button className="w-full inline-flex items-center justify-center gap-2 bg-white text-[#d92300] hover:bg-red-50 px-5 py-3 rounded-xl font-semibold">
                   <Globe className="w-4 h-4" /> Start Your Project
                 </button>
               </a>
@@ -215,7 +215,7 @@ export default function ServicesPage() {
               </div>
 
               <Link href="/service" className="mt-5 block">
-                <button className="w-full inline-flex items-center justify-center gap-2 bg-[#ff1f00] px-5 py-3 rounded-xl font-semibold">
+                <button className="w-full inline-flex items-center justify-center gap-2 bg-[#d92300] px-5 py-3 rounded-xl font-semibold">
                   View All Services
                 </button>
               </Link>
@@ -223,17 +223,17 @@ export default function ServicesPage() {
 
             {/* 🔥 Expert Advice */}
             <div className="rounded-3xl bg-black/40 border border-white/10 p-6">
-              <div className="mx-auto w-12 h-12 rounded-full bg-[#ff1f00] flex items-center justify-center mb-3">
+              <div className="mx-auto w-12 h-12 rounded-full bg-[#d92300] flex items-center justify-center mb-3">
                 <MessageSquare className="w-6 h-6" />
               </div>
 
-              <h4 className="text-lg font-semibold text-center">Let's Talk About Your Business Needs</h4>
+              <h2 className="text-lg font-semibold text-center">Let&apos;s Talk About Your Business Needs</h2>
               <p className="text-gray-300 text-center mt-1">
                 Get practical advice on building, protecting, and improving the digital systems your business relies on.
               </p>
 
               <Link href="/contactus" className="block mt-4">
-                <button className="w-full bg-white text-[#ff1f00] hover:bg-red-50 px-5 py-3 rounded-xl font-semibold">
+                <button className="w-full bg-white text-[#d92300] hover:bg-red-50 px-5 py-3 rounded-xl font-semibold">
                   Talk to Our Team
                 </button>
               </Link>
